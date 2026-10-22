@@ -262,6 +262,11 @@ svg.fig.wide{max-width:560px}
 .seg button.on{background:var(--brand);color:#fff}
 td.num,th.num{font-variant-numeric:tabular-nums}
 .hl{background:var(--tip-bg)}
+.proof{background:var(--bg);border-color:var(--line);border-left:5px solid var(--brand)}
+.proof>b.lab{background:var(--brand)}
+.proof ol{padding-left:1.4em}
+.proof ol>li{margin:8px 0}
+.proof .qed{text-align:right;margin:2px 0 0;font-weight:700;color:var(--brand)}
 .katex.xw{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:.25em 0}
 .pf-flow span{max-width:100%}
 .prob .pq>div{min-width:0;flex:1}
@@ -1124,8 +1129,24 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>말로: <b>정적분을 윗끝으로 미분하면 피적분함수를 윗끝에서 계산한 값</b>. $g$ 는 $f$ 의 역도함수이다.</p></div>
 <ul>
 <li><b>직관</b>: $g(x+h)-g(x)=\displaystyle\int_x^{x+h}f$ 는 폭 $h$, 높이 $\approx f(x)$ 인 띠의 넓이이므로 $\dfrac{g(x+h)-g(x)}h\approx f(x)$.</li>
-<li><b>증명의 골격</b> ($h\gt0$): $[x,x+h]$ 에서 $f$ 의 최솟값 $m=f(u)$, 최댓값 $M=f(v)$ (극값 정리). 성질 8로 $mh\le\int_x^{x+h}f\le Mh$ ⇒ $f(u)\le\dfrac{g(x+h)-g(x)}h\le f(v)$. $h\to0$ 이면 $u,v\to x$ 이고 $f$ 가 연속이므로 <b>조임 정리</b>로 $g'(x)=f(x)$. 증명 10선 참고.</li>
+<li><b>증명</b>은 바로 아래에 단계별로 적었다 (쓰는 도구: 구간 쪼개기 → 극값 정리 → 성질 8 → 조임 정리).</li>
 </ul>
+<figure><svg class="fig" id="fig53c" viewBox="0 0 440 280"></svg><figcaption>$x$ 에서 $x+h$ 까지의 띠의 넓이 $\int_x^{x+h}f$ 는 높이 $m=f(u)$ 인 직사각형(초록)보다 크고 높이 $M=f(v)$ 인 직사각형(빨강)보다 작다. $h\to0$ 이면 두 높이가 모두 $f(x)$ 로 모인다.</figcaption></figure>
+<div class="box proof"><b class="lab">Proof of FTC 1</b>
+<p><b>목표</b>: $f$ 가 $[a,b]$ 에서 연속이고 $g(x)=\displaystyle\int_a^xf(t)\,dt$ 일 때, $a\lt x\lt b$ 이면 $g'(x)=f(x)$ 이고 $g$ 는 $[a,b]$ 에서 연속이다.</p>
+<ol>
+<li><b>차분을 적분 하나로 만든다.</b> $x$, $x+h$ ($h\ne0$) 가 $(a,b)$ 안에 있다고 하자. 성질 5 (구간 쪼개기) $\int_a^{x+h}f=\int_a^xf+\int_x^{x+h}f$ 에서
+$$g(x+h)-g(x)=\int_x^{x+h}f(t)\,dt,\qquad\frac{g(x+h)-g(x)}h=\frac1h\int_x^{x+h}f(t)\,dt .$$</li>
+<li><b>$h\gt0$: 위아래로 가둔다.</b> $f$ 는 $[x,x+h]$ 에서 연속이므로 <b>극값 정리</b>에 의해 최솟값 $m=f(u)$, 최댓값 $M=f(v)$ ($u,v\in[x,x+h]$) 가 있다. <b>성질 8</b>로 $mh\le\int_x^{x+h}f\le Mh$. $h\gt0$ 으로 나누면
+$$f(u)\ \le\ \frac{g(x+h)-g(x)}h\ \le\ f(v).$$</li>
+<li><b>$h\lt0$ 도 같다.</b> $\int_x^{x+h}f=-\int_{x+h}^xf$ 이고 $-\tfrac1h=\tfrac1{|h|}$ 이므로 몫은 $\tfrac1{|h|}\int_{x+h}^xf$. 구간 $[x+h,x]$ 에서 최솟값 $f(u)$, 최댓값 $f(v)$ 를 잡고 성질 8을 쓰면 2단계와 똑같은 부등식이 나온다 ($u,v\in[x+h,x]$).</li>
+<li><b>$h\to0$.</b> $u$, $v$ 는 항상 $x$ 와 $x+h$ 사이에 있으므로 $h\to0$ 이면 $u\to x$, $v\to x$. $f$ 가 $x$ 에서 <b>연속</b>이므로 $f(u)\to f(x)$, $f(v)\to f(x)$.</li>
+<li><b>조임 정리.</b> 가운데 식이 $f(u)$ 와 $f(v)$ 사이에 끼어 있고 양쪽이 $f(x)$ 로 가므로
+$$g'(x)=\lim_{h\to0}\frac{g(x+h)-g(x)}h=f(x).$$</li>
+<li><b>끝점과 연속.</b> $x=a$ 에서는 $h\gt0$ 만, $x=b$ 에서는 $h\lt0$ 만 쓰면 같은 논의로 한쪽 도함수가 존재하므로 $g$ 는 $a$ 에서 오른쪽 연속, $b$ 에서 왼쪽 연속이다. $(a,b)$ 안에서는 미분가능하므로 연속이다. 따라서 $g$ 는 $[a,b]$ 에서 연속이다.</li>
+</ol>
+<p class="qed">∎</p>
+<p class="mini">쓴 도구: 구간 쪼개기(성질 5) → 극값 정리 → 성질 8 → 연속의 정의 → 조임 정리. $f$ 의 <b>연속성</b>이 4단계에서 필요하다.</p></div>
 <details class="ex"><summary>예제 2 · $g(x)=\displaystyle\int_0^x\sqrt{1+t^2}\,dt$ 의 도함수는?</summary>
 <div class="body">
 <p>$\sqrt{1+t^2}$ 는 연속이므로 FTC1: $g'(x)=\sqrt{1+x^2}$.</p>
@@ -1149,11 +1170,34 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$f$ 가 $[a,b]$ 에서 <b>연속</b>이고 $F'=f$ (곧 $F$ 가 $f$ 의 <b>아무</b> 역도함수)이면</p>
 <div class="formula">$$\int_a^bf(x)\,dx=F(b)-F(a)\ \ =\ \Big[F(x)\Big]_a^b=F(x)\Big|_a^b$$</div></div>
 <ul>
-<li><b>왜 맞나</b>: FTC1에서 $g(x)=\int_a^xf$ 가 하나의 역도함수. 다른 역도함수 $F$ 는 $F=g+C$ (4.9, 평균값 정리). $g(a)=\int_a^af=0$ 이므로 $F(b)-F(a)=g(b)-g(a)=g(b)=\int_a^bf$.</li>
+<li><b>왜 맞나</b>: FTC1의 $g$ 도 역도함수이고, 역도함수끼리는 상수 차이이기 때문. 증명은 아래에 단계별로 있다.</li>
 <li><b>$+C$ 는 필요 없다</b>: 뺄셈에서 사라진다. 가장 간단한 역도함수(예: $e^x$)를 쓰면 된다.</li>
 <li><b>신기한 점</b>: 구간 전체의 값으로 정의된 정적분이 <u>두 끝점 $a,b$ 에서의 $F$ 값</u>만으로 정해진다.</li>
 <li><b>물리 해석</b>: $v=s'$ 이면 $\displaystyle\int_a^bv(t)\,dt=s(b)-s(a)$ — 속도의 정적분은 위치의 변화(변위).</li>
 </ul>
+<div class="box proof"><b class="lab">Proof of FTC 2</b>
+<p><b>목표</b>: $f$ 가 $[a,b]$ 에서 연속이고 $F'=f$ 이면 $\displaystyle\int_a^bf(x)\,dx=F(b)-F(a)$.</p>
+<ol>
+<li><b>FTC 1 의 함수를 하나 만든다.</b> $g(x)=\displaystyle\int_a^xf(t)\,dt$. FTC 1 에 의해 $g$ 는 $[a,b]$ 에서 연속이고 $(a,b)$ 에서 $g'=f$. 곧 $g$ 도 $f$ 의 역도함수이다.</li>
+<li><b>두 역도함수는 상수만 다르다.</b> $(F-g)'=f-f=0$ ($(a,b)$ 에서). 도함수가 0 인 함수는 상수 (평균값 정리의 따름정리, 4.9) 이므로
+$$F(x)=g(x)+C\qquad(a\lt x\lt b).$$</li>
+<li><b>끝점까지 넓힌다.</b> $F$ 와 $g$ 는 둘 다 $[a,b]$ 에서 연속이므로 위 식에서 $x\to a^+$ 와 $x\to b^-$ 로 극한을 취하면 $F(a)=g(a)+C$, $F(b)=g(b)+C$ 가 성립한다.</li>
+<li><b>$g(a)=0$.</b> $g(a)=\displaystyle\int_a^af(t)\,dt=0$ (폭이 0). 그래서 $C=F(a)$.</li>
+<li><b>빼면 끝.</b> 3단계의 두 식을 빼면
+$$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$</li>
+</ol>
+<p class="qed">∎</p>
+<p class="mini">$C$ 는 뺄셈에서 사라지므로 어떤 역도함수 $F$ 를 써도 값이 같다 ($+C$ 가 필요 없는 이유).</p></div>
+<details class="ex"><summary>다른 증명 · 평균값 정리와 리만 합 (FTC 1 없이 FTC 2 를 바로 보이기)</summary>
+<div class="body">
+<ol>
+<li>$[a,b]$ 를 폭 $\Delta x=\tfrac{b-a}n$ 인 $n$ 개로 나눈다: $a=x_0\lt x_1\lt\cdots\lt x_n=b$.</li>
+<li><b>망원합</b>: $\displaystyle F(b)-F(a)=\sum_{i=1}^n\big[F(x_i)-F(x_{i-1})\big]$ (중간 항이 모두 소거).</li>
+<li>각 소구간에서 <b>평균값 정리</b> ($F$ 는 연속이고 미분가능): $F(x_i)-F(x_{i-1})=F'(c_i)\,\Delta x=f(c_i)\,\Delta x$, $c_i\in(x_{i-1},x_i)$.</li>
+<li>따라서 $\displaystyle F(b)-F(a)=\sum_{i=1}^nf(c_i)\,\Delta x$. 우변은 표본점 $c_i$ 를 쓴 <b>리만 합</b>이고, 좌변은 $n$ 에 관계없이 같은 수이다.</li>
+<li>$f$ 가 연속이므로 적분가능하고 $n\to\infty$ 이면 우변 $\to\displaystyle\int_a^bf(x)\,dx$. 좌변은 그대로이므로 $F(b)-F(a)=\displaystyle\int_a^bf(x)\,dx$. ∎</li>
+</ol>
+</div></details>
 <details class="ex"><summary>예제 5 · $\displaystyle\int_1^3e^x\,dx$ 를 구하시오. (5.2 예제 4와 비교)</summary>
 <div class="body">
 <p>$F(x)=e^x$ ⇒ $\displaystyle\int_1^3e^x\,dx=\Big[e^x\Big]_1^3=e^3-e$. 5.2에서는 등비급수와 극한으로 계산했던 값이다.</p>
@@ -1706,6 +1750,7 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <li><b>FTC2</b>: $F'=f$ ⇒ $\displaystyle\int_a^bf\,dx=F(b)-F(a)=\big[F\big]_a^b$. $+C$ 불필요, 가장 간단한 $F$ 사용.</li>
 <li>FTC2의 조건은 <u>구간 전체에서 연속</u> (예: $\int_{-1}^3x^{-2}dx$ 에는 쓸 수 없다).</li>
 <li>$\int_a^x F'(t)\,dt=F(x)-F(a)$ : 미분과 적분은 역과정.</li>
+<li><b>증명 열쇠</b>: FTC1 = 성질 5(띠의 넓이) + 극값 정리 + 성질 8 + 조임 정리. FTC2 = FTC1의 $g$ 와 $F$ 의 도함수가 같다 ⇒ $F=g+C$, $g(a)=0$.</li>
 </ul></div>
 <div class="cs-card"><div class="cs-h"><span class="cs-no">5.4</span>부정적분 · 순변화 정리</div><ul>
 <li>$\int f(x)\,dx=F(x)+C$ ($F'=f$): <b>함수(의 모임)</b>. 정적분은 숫자. 연결: $\int_a^bf\,dx=\left[\int f\,dx\right]_a^b$.</li>
@@ -1803,23 +1848,34 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 </ol><div class="pf-key">🔑 $\tfrac3n$ 밖으로 → 합 공식 → $\tfrac1n\to0$</div></div>
 
 <div class="pf-card"><div class="pf-h"><span class="pf-no">9</span>미적분학의 기본정리 1부 <small>FTC1 (5.3)</small></div>
-<div class="pf-stmt">$f$ 연속 ⇒ $g(x)=\displaystyle\int_a^xf(t)\,dt$ 에 대해 $g'(x)=f(x)$</div>
+<div class="pf-stmt">$f$ 연속, $g(x)=\displaystyle\int_a^xf(t)\,dt$ ⇒ $g'(x)=f(x)$ ($g$ 는 $[a,b]$ 에서 연속)</div>
 <ol class="pf">
-<li>성질 5: $\ g(x+h)-g(x)=\displaystyle\int_a^{x+h}f-\int_a^xf=\int_x^{x+h}f(t)\,dt$.</li>
-<li>$h\gt0$ 일 때 $[x,x+h]$ 에서 $f$ 의 최솟값 $m=f(u)$, 최댓값 $M=f(v)$ (극값 정리).</li>
-<li>성질 8: $\ f(u)\,h\le\displaystyle\int_x^{x+h}f\le f(v)\,h$ ⇒ $\ f(u)\le\dfrac{g(x+h)-g(x)}h\le f(v)$.</li>
-<li>$h\to0$ 이면 $u,v\to x$. $f$ 가 연속이므로 $f(u),f(v)\to f(x)$.</li>
-<li>조임 정리: $\ g'(x)=\displaystyle\lim_{h\to0}\dfrac{g(x+h)-g(x)}h=f(x)$ ∎ &nbsp;($h\lt0$ 도 같은 방식)</li>
-</ol><div class="pf-key">🔑 성질 5로 띠의 넓이 → 성질 8로 최솟값·최댓값 사이 → 조임 정리</div></div>
+<li>성질 5: $\ g(x+h)-g(x)=\displaystyle\int_x^{x+h}f(t)\,dt$, 곧 $\ \dfrac{g(x+h)-g(x)}h=\dfrac1h\displaystyle\int_x^{x+h}f$.</li>
+<li>$h\gt0$: $[x,x+h]$ 에서 $f$ 의 최솟값 $m=f(u)$, 최댓값 $M=f(v)$ (극값 정리).</li>
+<li>성질 8: $\ mh\le\displaystyle\int_x^{x+h}f\le Mh$ ⇒ $\ f(u)\le\dfrac{g(x+h)-g(x)}h\le f(v)$.</li>
+<li>$h\lt0$: $\ \dfrac{g(x+h)-g(x)}h=\dfrac1{|h|}\displaystyle\int_{x+h}^xf$. $[x+h,x]$ 에서 같은 방법으로 같은 부등식.</li>
+<li>$h\to0$ 이면 $u,v\to x$. $f$ 연속이므로 $f(u),f(v)\to f(x)$.</li>
+<li>조임 정리: $\ g'(x)=\displaystyle\lim_{h\to0}\dfrac{g(x+h)-g(x)}h=f(x)$.</li>
+<li>끝점 $x=a,b$ 는 한쪽 극한으로 같은 논의 ⇒ $g$ 는 $[a,b]$ 에서 연속 ∎</li>
+</ol><div class="pf-key">🔑 성질 5(띠의 넓이) → 극값 정리 + 성질 8(가두기) → 연속 + 조임 정리</div></div>
 
 <div class="pf-card"><div class="pf-h"><span class="pf-no">10</span>미적분학의 기본정리 2부 <small>FTC2 (5.3)</small></div>
 <div class="pf-stmt">$f$ 연속, $F'=f$ ⇒ $\displaystyle\int_a^bf(x)\,dx=F(b)-F(a)$</div>
 <ol class="pf">
-<li>$g(x)=\displaystyle\int_a^xf(t)\,dt$ 는 FTC1에 의해 $g'=f$, 곧 $f$ 의 역도함수.</li>
-<li>같은 구간에서 두 역도함수는 상수 차이 (4.9): $\ F(x)=g(x)+C$.</li>
-<li>$g(a)=\displaystyle\int_a^af=0$.</li>
+<li>$g(x)=\displaystyle\int_a^xf(t)\,dt$ 로 두면 FTC1에 의해 $g'=f$ ($g$ 도 $f$ 의 역도함수), $g$ 는 $[a,b]$ 에서 연속.</li>
+<li>$(F-g)'=f-f=0$ on $(a,b)$ ⇒ (평균값 정리의 따름정리) $\ F(x)=g(x)+C$, $a\lt x\lt b$.</li>
+<li>$F$, $g$ 가 $[a,b]$ 에서 연속 ⇒ $x\to a^+$, $x\to b^-$ 극한: $\ F(a)=g(a)+C$, $F(b)=g(b)+C$.</li>
+<li>$g(a)=\displaystyle\int_a^af=0$ ⇒ $C=F(a)$.</li>
 <li>$F(b)-F(a)=[g(b)+C]-[g(a)+C]=g(b)-g(a)=g(b)=\displaystyle\int_a^bf$ ∎</li>
-</ol><div class="pf-key">🔑 $F=g+C$ 에서 $C$ 가 상쇄, $g(a)=0$</div></div>
+</ol>
+<p class="mini" style="margin:6px 0 2px"><b>다른 증명 (평균값 정리 + 리만 합)</b></p>
+<ol class="pf">
+<li>$[a,b]$ 를 $n$ 등분: $a=x_0\lt\cdots\lt x_n=b$, $\Delta x=\tfrac{b-a}n$.</li>
+<li>망원합: $\ F(b)-F(a)=\displaystyle\sum_{i=1}^n\big[F(x_i)-F(x_{i-1})\big]$.</li>
+<li>평균값 정리: $\ F(x_i)-F(x_{i-1})=F'(c_i)\Delta x=f(c_i)\Delta x$ ($c_i\in(x_{i-1},x_i)$).</li>
+<li>$F(b)-F(a)=\displaystyle\sum_{i=1}^nf(c_i)\Delta x$ — 표본점 $c_i$ 의 리만 합 (좌변은 $n$ 과 무관).</li>
+<li>$n\to\infty$: 우변 $\to\displaystyle\int_a^bf$ ⇒ $F(b)-F(a)=\displaystyle\int_a^bf$ ∎</li>
+</ol><div class="pf-key">🔑 FTC1 ⇒ $F=g+C$, $g(a)=0$ (또는 망원합 + 평균값 정리 → 리만 합)</div></div>
 
 <div class="pf-card"><div class="pf-h"><span class="pf-no">11</span>치환적분 공식 <small>Substitution Rule (5.5)</small></div>
 <div class="pf-stmt">$u=g(x)$ ⇒ $\displaystyle\int f(g(x))\,g'(x)\,dx=\int f(u)\,du$</div>
@@ -1984,6 +2040,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="qa"><button>Q40. $\displaystyle\int\tan x\,dx$ 는? (5.5)</button><div class="a">$u=\cos x$, $du=-\sin x\,dx$ ⇒ $-\ln|\cos x|+C=\ln|\sec x|+C$.</div></div>
 <div class="qa"><button>Q41. $\displaystyle\int\dfrac{g'(x)}{g(x)}\,dx$ 와 $\displaystyle\int\dfrac{(\ln x)^n}x\,dx$ 의 결과는? (5.5)</button><div class="a">$\ln|g(x)|+C$ ($u=g$). $\dfrac{(\ln x)^{n+1}}{n+1}+C$ ($u=\ln x$, $n\ne-1$).</div></div>
 <div class="qa"><button>Q42. 짝함수·홀함수의 $[-a,a]$ 적분은? (5.5)</button><div class="a">짝함수 $f(-x)=f(x)$: $\displaystyle\int_{-a}^af=2\int_0^af$. 홀함수 $f(-x)=-f(x)$: $\displaystyle\int_{-a}^af=0$ (넓이가 상쇄). 예: $\int_{-1}^{1}\dfrac{\tan x}{1+x^2+x^4}dx=0$.</div></div>
+<div class="qa"><button>Q43. FTC1 의 증명에서 쓰는 도구를 순서대로 말하시오. 어디서 $f$ 의 연속성이 필요한가? (5.3)</button><div class="a">① 성질 5로 $g(x+h)-g(x)=\int_x^{x+h}f$ ② 극값 정리로 $[x,x+h]$ 의 최솟값 $f(u)$, 최댓값 $f(v)$ ③ 성질 8로 $f(u)\le\frac{g(x+h)-g(x)}h\le f(v)$ ④ $h\to0$ 이면 $u,v\to x$ 이고 <b>$f$ 가 연속이므로</b> $f(u),f(v)\to f(x)$ ⑤ 조임 정리 ⇒ $g'(x)=f(x)$. ($h\lt0$ 도 같은 방식)</div></div>
+<div class="qa"><button>Q44. FTC2 는 FTC1 에서 어떻게 나오는가? (5.3)</button><div class="a">$g(x)=\int_a^xf$ 와 $F$ 는 둘 다 $f$ 의 역도함수 ⇒ $(F-g)'=0$ ⇒ $F=g+C$ (평균값 정리). $g(a)=0$ 이므로 $F(b)-F(a)=[g(b)+C]-[g(a)+C]=g(b)=\int_a^bf$. (다른 증명: 망원합 $F(b)-F(a)=\sum[F(x_i)-F(x_{i-1})]=\sum f(c_i)\Delta x$ 에 평균값 정리를 쓰고 $n\to\infty$.)</div></div>
 </section>
 <!-- ============================ CHECKLIST ============================ -->
 <section class="sec" id="check">
@@ -2429,6 +2487,19 @@ const BLUE='#3a4fd7',RED='#d7503a',GREEN='#1f9d6b',GRAY='#8a90a8',PURP='#5b3fb5'
     plot(g('fig53b'),{x:[-0.1,1.75],y:[-0.1,1.15],ml:38,rects:rs,items:[{f:Math.cos,c:'#1c2030',w:2,lx:1.2,ly:0.4,label:''}],
       texts:[{x:0.45,y:0.4,t:'넓이 = sin(π/2) = 1',anchor:'start',c:BLUE}],
       xt:[0.5,1,1.5],yt:[0.5,1]});
+  }
+  if(g('fig53c')){
+    const f=t=>1.6+0.9*Math.sin(t),x0=1.0,h=1.4,N=60;
+    let m=1e9,M=-1e9,u=x0,v=x0;
+    for(let i=0;i<=400;i++){const t=x0+h*i/400,y=f(t);if(y<m){m=y;u=t}if(y>M){M=y;v=t}}
+    const rs=[];
+    for(let i=0;i<N;i++){const xa=x0+h*i/N,xb=x0+h*(i+1)/N;rs.push({x0:xa,x1:xb,h:f((xa+xb)/2),c:BLUE,fo:.3,sw:0,sc:'none'})}
+    rs.push({x0:x0,x1:x0+h,h:m,c:GREEN,fo:0,sw:1.6});
+    rs.push({x0:x0,x1:x0+h,h:M,c:RED,fo:0,sw:1.6});
+    plot(g('fig53c'),{x:[0.4,3.2],y:[-0.5,3.0],ml:20,rects:rs,items:[{f,c:'#1c2030',w:2,lx:2.7,ly:f(2.7),label:'f'}],
+      pts:[{x:u,y:m,c:GREEN,r:3.6},{x:v,y:M,c:RED,r:3.6}],
+      texts:[{x:u,y:m-0.4,t:'m=f(u)',c:GREEN,anchor:'middle'},{x:v,y:M+0.28,t:'M=f(v)',c:RED,anchor:'middle'},{x:x0,y:-0.3,t:'x',anchor:'middle'},{x:x0+h,y:-0.3,t:'x+h',anchor:'middle'}],
+      xt:[],yt:[]});
   }
   /* 5.4 / 5.5 */
   if(g('fig54a')){
