@@ -755,27 +755,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 </section>
 <section class="sec practice" id="pr4">
 <h2>🧪 Chapter 4 연습문제 (4.6 – 4.9) <span class="pg">풀고 나서 정답 확인 → 채점</span></h2>
-<p class="mini">소단원마다 두 묶음이 있습니다. <b>(자작 연습)</b>은 직접 만든 문제, <b>(교재 Exercises 선별)</b>은 교재 번호로 가리킨 문제입니다. 교재 문제의 <b>문장은 핵심만 줄여 다시 쓴 것이라 원문 그대로가 아니며</b> 풀이는 직접 작성했습니다(번호는 교재 Metric 9판 기준). 증명·그림/표 읽기·CAS·서술형은 뺐고, 계산형은 <b>객관식으로 바꾸지 않고 주관식 그대로</b> 두었습니다. <b>먼저 종이에 풀고</b> → “정답·풀이 보기” → 채점(✔/✘). ✘ 표시한 문제는 “복습 문제만 보기”로 다시 모아 볼 수 있어요.</p>
+<p class="mini">모두 <b>교재 번호로 가리킨 문제</b>입니다: 소단원마다 <b>Exercises 선별</b>, 장 끝에 <b>Review Exercises 선별</b>, 맨 아래에 Review True–False Quiz 의 <b>OX</b>. 문장은 <b>핵심만 줄여 다시 쓴 것이라 원문 그대로가 아니며</b> 풀이는 직접 작성했습니다(번호는 교재 Metric 9판 기준). 증명·그림/표 읽기·CAS·서술형은 뺐고, 계산형은 <b>객관식으로 바꾸지 않고 주관식 그대로</b> 두었습니다. <b>먼저 종이에 풀고</b> → “정답·풀이 보기” → 채점(✔/✘). ✘ 표시한 문제는 “복습 문제만 보기”로 다시 모아 볼 수 있어요.</p>
 <div class="score" data-scope="pr4"><span class="sc">0 / 0 정답</span><button class="onlyno">✘ 복습 문제만 보기</button><button class="reset">기록 초기화</button></div>
-<h3><span class="sq">▸</span>4.6 기술과 미분으로 그래프 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c4-1"><div class="pq"><span class="pn"></span><div>$f(x)=x^3-6x^2+9x+1$ 의 증가·감소 구간, 극값, 오목 구간, 변곡점을 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'(x)=3x^2-12x+9=3(x-1)(x-3)$ ⇒ 증가: $(-\infty,1)$, $(3,\infty)$ / 감소: $(1,3)$. 극대 $f(1)=5$, 극소 $f(3)=1$.<br>$f''(x)=6x-12$ ⇒ CD: $(-\infty,2)$, CU: $(2,\infty)$. 변곡점 $(2,\,3)$.</div></div>
-<div class="prob" data-id="c4-2"><div class="pq"><span class="pn"></span><div>$f(x)=1-\dfrac1{x^2}$ 의 점근선, 증감, 오목성을 분석하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">수직점근선 $x=0$ ($f\to-\infty$), 수평점근선 $y=1$. x절편 $\pm1$.<br>$f'(x)=\dfrac2{x^3}$ ⇒ $(-\infty,0)$ 에서 감소, $(0,\infty)$ 에서 증가, 극값 없음.<br>$f''(x)=-\dfrac6{x^4}\lt0$ ⇒ 두 구간 모두 CD, 변곡점 없음.</div></div>
-<div class="prob" data-id="c4-3"><div class="pq"><span class="pn"></span><div>$f(x)=xe^{-x}$ 의 $x\to\pm\infty$ 극한, 극값, 변곡점을 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x\to\infty$: $f\to0$ (수평점근선 $y=0$), $x\to-\infty$: $f\to-\infty$.<br>$f'(x)=(1-x)e^{-x}$ ⇒ $(-\infty,1)$ 증가, $(1,\infty)$ 감소 ⇒ 절대최댓값 $f(1)=\dfrac1e$.<br>$f''(x)=(x-2)e^{-x}$ ⇒ $x=2$ 에서 부호 변화 ⇒ 변곡점 $\left(2,\dfrac2{e^2}\right)$ (CD: $x\lt2$, CU: $x\gt2$).</div></div>
-<div class="prob" data-id="c4-4"><div class="pq"><span class="pn"></span><div>$f(x)=\sin x+\cos x$, $0\le x\le2\pi$ 의 절대극값과 변곡점을 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'=\cos x-\sin x=0$ ⇒ $x=\dfrac\pi4,\dfrac{5\pi}4$. 절대최댓값 $f(\tfrac\pi4)=\sqrt2$, 절대최솟값 $f(\tfrac{5\pi}4)=-\sqrt2$.<br>$f''=-(\sin x+\cos x)=0$ ⇒ $x=\dfrac{3\pi}4,\dfrac{7\pi}4$ (부호 변화). 변곡점 $(\tfrac{3\pi}4,0)$, $(\tfrac{7\pi}4,0)$. CD: $(0,\tfrac{3\pi}4)$, $(\tfrac{7\pi}4,2\pi)$ / CU: $(\tfrac{3\pi}4,\tfrac{7\pi}4)$.</div></div>
-<div class="prob" data-id="c4-5"><div class="pq"><span class="pn"></span><div>함수족 $f_c(x)=x^3+cx$ 가 극값을 갖는 $c$ 의 범위와 극점의 위치를 구하시오. 전이값은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f_c'(x)=3x^2+c$. 극값이 있으려면 $f_c'$ 의 부호가 바뀌어야 하므로 $c\lt0$.<br>그때 $x=\mp\sqrt{-c/3}$ 에서 극대(왼쪽)·극소(오른쪽). $c\ge0$ 이면 $f_c'\ge0$ ⇒ 증가함수, 극값 없음.<br><b>전이값 $c=0$</b> (모양이 바뀌는 경계).</div></div>
-<div class="prob" data-id="c4-6"><div class="pq"><span class="pn"></span><div>$f(x)=\dfrac{x^2}{x^2-4}$ 의 점근선, 증감, 오목성을 분석하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">수직점근선 $x=\pm2$, 수평점근선 $y=1$, 원점은 $x^2$ 때문에 x축에 닿기만 한다.<br>$f'(x)=-\dfrac{8x}{(x^2-4)^2}$ ⇒ 증가: $(-\infty,-2)$, $(-2,0)$ / 감소: $(0,2)$, $(2,\infty)$. 극대 $f(0)=0$.<br>$f''(x)=\dfrac{24x^2+32}{(x^2-4)^3}$ ⇒ $|x|\gt2$ 에서 CU, $|x|\lt2$ 에서 CD. 변곡점 없음.</div></div>
 <h3><span class="sq">▸</span>4.6 교재 Exercises 선별 <span class='mini'>(그래프·CAS가 필요한 문제와 서술형은 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb46-9"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #9]</b> $f(x)=1+\dfrac1x+\dfrac8{x^2}+\dfrac1{x^3}$ 의 증가·감소 구간과 오목 구간을 <b>정확한 값</b>으로 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -804,34 +785,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="prob" data-id="tb46-39"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #39]</b> $f_c(x)=x^4+cx^2+x$ 에서 변곡점의 개수가 바뀌는 $c$ 와 임계수의 개수가 바뀌는 $c$ 를 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">변곡점: $f''=12x^2+2c$. $c\lt0$ 이면 부호가 바뀌는 두 점, $c\ge0$ 이면 $f''\ge0$ (바뀌지 않음) ⇒ <b>$c=0$</b>.<br>임계수: $f'=4x^3+2cx+1=0$. 3차식은 <b>중근</b>을 가질 때 근의 개수가 바뀐다. 중근이면 $f'=0$ 이고 $(f')'=12x^2+2c=0$ ⇒ $x^2=-\tfrac c6$. 이를 $f'$ 에 넣으면 $4x^3+2cx+1=x\left(4x^2+2c\right)+1=x\cdot\tfrac{4c}3+1=0$ ⇒ $x=-\tfrac3{4c}$.<br>$x^2=\tfrac9{16c^2}=-\tfrac c6$ ⇒ $c^3=-\tfrac{27}8$ ⇒ <b>$c=-\tfrac32$</b>. ($c\lt-\tfrac32$ 이면 임계수 3개, $c\gt-\tfrac32$ 이면 1개)</div></div>
-<h3><span class="sq">▸</span>4.7 최적화 문제 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c4-7"><div class="pq"><span class="pn"></span><div>합이 20인 두 양수의 곱이 최대가 되도록 두 수를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">두 수 $x,\ 20-x$, $f(x)=x(20-x)$, $0\lt x\lt20$. $f'(x)=20-2x=0$ ⇒ $x=10$, $f''=-2\lt0$.<br>답: <b>10, 10</b> (곱 100).</div></div>
-<div class="prob" data-id="c4-8"><div class="pq"><span class="pn"></span><div>240 m 의 울타리로 한쪽이 강에 접한 직사각형 밭(강쪽 울타리 없음)을 만든다. 넓이가 최대인 크기와 그 넓이는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">강에 수직인 변 $x$, 평행한 변 $y=240-2x$. $A(x)=x(240-2x)$, $0\le x\le120$. $A'=240-4x=0$ ⇒ $x=60$.<br>$A(0)=A(120)=0$ 이므로 최대. <b>수직 60 m, 평행 120 m, 넓이 7200 m²</b>.</div></div>
-<div class="prob" data-id="c4-9"><div class="pq"><span class="pn"></span><div>한 변이 12 cm 인 정사각형 종이의 네 모서리에서 한 변 $x$ 인 정사각형을 잘라 내고 접어 윗면이 열린 상자를 만든다. 부피의 최댓값은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$V(x)=x(12-2x)^2$, $0\lt x\lt6$. $V'=(12-2x)(12-6x)=0$ ⇒ $x=2$ 또는 $x=6$. $x=6$ 은 부피 0 이므로 버린다.<br>$V(2)=2\cdot8^2=128$ ⇒ 최대 부피 <b>128 cm³</b> ($x=2$ cm).</div></div>
-<div class="prob" data-id="c4-10"><div class="pq"><span class="pn"></span><div>부피가 108 cm³ 이고 밑면이 정사각형인 윗면 열린 상자의 겉넓이가 최소가 되는 밑변과 높이는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">밑변 $x$, 높이 $h=\dfrac{108}{x^2}$. 겉넓이(밑면 + 옆 4면) $A=x^2+4xh=x^2+\dfrac{432}x$, $x\gt0$.<br>$A'=2x-\dfrac{432}{x^2}=0$ ⇒ $x^3=216$ ⇒ $x=6$. $x\lt6$ 에서 $A'\lt0$, $x\gt6$ 에서 $A'\gt0$ ⇒ 최소.<br>답: <b>밑변 6 cm, 높이 3 cm</b> (겉넓이 108 cm²).</div></div>
-<div class="prob" data-id="c4-11"><div class="pq"><span class="pn"></span><div>점 $(0,3)$ 에서 포물선 $y=x^2$ 에 가장 가까운 점과 그 거리는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$d^2=x^2+(x^2-3)^2=x^4-5x^2+9$ 을 최소화. $(d^2)'=4x^3-10x=2x(2x^2-5)=0$ ⇒ $x=0$ 또는 $x^2=\tfrac52$.<br>$x=0$: $d^2=9$, $x^2=\tfrac52$: $d^2=\tfrac{25}4-\tfrac{25}2+9=\tfrac{11}4$ ⇒ 더 작다.<br>가장 가까운 점 <b>$\left(\pm\dfrac{\sqrt{10}}2,\ \dfrac52\right)$</b>, 거리 $\dfrac{\sqrt{11}}2\approx1.66$.</div></div>
-<div class="prob" data-id="c4-12"><div class="pq"><span class="pn"></span><div>포물선 $y=12-x^2$ 과 $x$ 축 사이에 한 변이 $x$ 축 위에 있는 직사각형을 내접시킬 때 최대 넓이는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">오른쪽 위 꼭짓점 $(x,\,12-x^2)$ ⇒ 가로 $2x$, 세로 $12-x^2$. $A=2x(12-x^2)$, $0\le x\le\sqrt{12}$.<br>$A'=24-6x^2=0$ ⇒ $x=2$. $A(0)=A(\sqrt{12})=0$ ⇒ 최대 $A(2)=2\cdot2\cdot8=$ <b>32</b> (가로 4, 세로 8).</div></div>
-<div class="prob" data-id="c4-13"><div class="pq"><span class="pn"></span><div>가격함수가 $p(x)=100-\dfrac x2$, 비용함수가 $C(x)=500+20x$ 일 때 이윤이 최대가 되는 생산량, 그때의 가격과 이윤은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$R(x)=xp(x)=100x-\dfrac{x^2}2$, $P(x)=R-C=80x-\dfrac{x^2}2-500$. $P'(x)=80-x=0$ ⇒ $x=80$ ($P''=-1\lt0$).<br>가격 $p(80)=60$, 이윤 $P(80)=6400-3200-500=$ <b>2700</b>. (한계수익 $R'=100-x$ = 한계비용 $C'=20$ ⇒ $x=80$)</div></div>
-<div class="prob" data-id="c4-14"><div class="pq"><span class="pn"></span><div>폭 2 km 의 강 한쪽 A 에서 맞은편 C 를 거쳐 C 의 하류 5 km 지점 B 로 간다. 노 젓기 4 km/h, 달리기 5 km/h. C 에서 얼마 떨어진 곳에 상륙해야 가장 빠른가? 그 시간은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">상륙점 D, $|CD|=x$ ⇒ $T(x)=\dfrac{\sqrt{x^2+4}}4+\dfrac{5-x}5$, $0\le x\le5$.<br>$T'=\dfrac x{4\sqrt{x^2+4}}-\dfrac15=0$ ⇒ $5x=4\sqrt{x^2+4}$ ⇒ $25x^2=16x^2+64$ ⇒ $x=\dfrac83$.<br>끝점 비교: $T(0)=1.5$, $T(5)=\dfrac{\sqrt{29}}4\approx1.35$, $T\!\left(\dfrac83\right)=\dfrac{13}{10}=1.3$ ⇒ <b>$x=\tfrac83\approx2.67$ km, 1.3시간</b>.</div></div>
-<div class="prob" data-id="c4-15"><div class="pq"><span class="pn"></span><div>부피가 $128\pi\ \text{cm}^3$ 인 원통형 캔의 겉넓이가 최소가 되는 반지름과 높이는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$h=\dfrac{128\pi}{\pi r^2}=\dfrac{128}{r^2}$. $A(r)=2\pi r^2+2\pi rh=2\pi r^2+\dfrac{256\pi}r$.<br>$A'=4\pi r-\dfrac{256\pi}{r^2}=0$ ⇒ $r^3=64$ ⇒ $r=4$, $h=8=2r$. 최소 겉넓이 $A(4)=32\pi+64\pi=96\pi$.<br>(일반 결과: <b>$h=2r$</b>)</div></div>
 <h3><span class="sq">▸</span>4.7 교재 Exercises 선별 <span class='mini'>(그림이 필요한 문제와 증명 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb47-5"><div class="pq"><span class="pn"></span><div><b>[교재 4.7 #5]</b> $-1\le x\le2$ 에서 직선 $y=x+2$ 와 포물선 $y=x^2$ 사이의 <b>수직 거리의 최댓값</b>은?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -896,25 +849,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="prob" data-id="tb47-85"><div class="pq"><span class="pn"></span><div><b>[교재 4.7 #85]</b> 길이 $L$, 너비 $W$ 인 직사각형에 외접하는 직사각형의 넓이의 최댓값은? (힌트: 각 $\theta$ 로 표현)</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">바깥 직사각형의 변이 안쪽 직사각형과 이루는 각을 $\theta$ ($0\le\theta\le\tfrac\pi2$) 라 하면 가로 $L\cos\theta+W\sin\theta$, 세로 $L\sin\theta+W\cos\theta$.<br>$A=(L^2+W^2)\sin\theta\cos\theta+LW\left(\cos^2\theta+\sin^2\theta\right)=\tfrac12(L^2+W^2)\sin2\theta+LW$. $\sin2\theta\le1$ ($\theta=\tfrac\pi4$) ⇒ $A_{\max}=\tfrac12(L^2+W^2)+LW=\boxed{\tfrac12(L+W)^2}$.</div></div>
-<h3><span class="sq">▸</span>4.8 뉴턴의 방법 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c4-16"><div class="pq"><span class="pn"></span><div>$f(x)=x^2-3$ 에 $x_1=2$ 로 뉴턴의 방법을 적용해 $x_2$, $x_3$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x_{n+1}=x_n-\dfrac{x_n^2-3}{2x_n}$. $x_2=2-\dfrac14=\dfrac74=1.75$, $x_3=\dfrac74-\dfrac{(7/4)^2-3}{7/2}=1.75-\dfrac{1/16}{7/2}\approx1.7321$ ($\sqrt3=1.7320508\dots$).</div></div>
-<div class="prob" data-id="c4-17"><div class="pq"><span class="pn"></span><div>뉴턴의 방법으로 $\sqrt[3]7$ 을 구하기 위해 $x^3-7=0$ 에서 $x_1=2$ 로 시작해 $x_2$, $x_3$ 를 소수 6째 자리까지 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x_{n+1}=x_n-\dfrac{x_n^3-7}{3x_n^2}=\dfrac{2x_n+7/x_n^2}3$. $x_2=\dfrac{23}{12}\approx1.916667$, $x_3\approx1.912938$ ($\sqrt[3]7\approx1.912931$).</div></div>
-<div class="prob" data-id="c4-18"><div class="pq"><span class="pn"></span><div>$x=e^{-x}$ 의 해를 $x_1=0.5$ 로 시작하여 $x_3$ 까지 구하시오 (소수 4자리).</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f(x)=x-e^{-x}$, $f'(x)=1+e^{-x}$. $x_2=0.5-\dfrac{0.5-e^{-0.5}}{1+e^{-0.5}}\approx0.5663$, $x_3\approx0.5671$ (해 $\approx0.567143$).</div></div>
-<div class="prob" data-id="c4-19"><div class="pq"><span class="pn"></span><div>곡선 $y=f(x)$ 의 점 $(3,4)$ 에서의 접선이 $y=2x-2$ 이다. $f(x)=0$ 에 $x_1=3$ 으로 뉴턴의 방법을 쓸 때 $x_2$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x_2$ 는 접선의 $x$절편: $0=2x-2$ ⇒ $\boxed{x_2=1}$. (공식으로: $3-\dfrac{f(3)}{f'(3)}=3-\dfrac42=1$)</div></div>
-<div class="prob" data-id="c4-20"><div class="pq"><span class="pn"></span><div>$f(x)=x^3-2x+2$ 에 $x_1=0$ 으로 뉴턴의 방법을 적용하면 어떻게 되는가?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x_2=0-\dfrac{2}{-2}=1$, $x_3=1-\dfrac{1}{1}=0$, $x_4=1,\dots$ ⇒ <b>0 과 1 을 왕복</b>하며 수렴하지 않는다. 시작값을 바꿔야 한다(예: $x_1=-2$).</div></div>
-<div class="prob" data-id="c4-21"><div class="pq"><span class="pn"></span><div>$x^2-a=0$ 에 뉴턴의 방법을 적용해 점화식을 유도하고, 이를 써서 $\sqrt{10}$ 을 $x_1=3$ 으로 시작해 $x_3$ 까지 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x_{n+1}=x_n-\dfrac{x_n^2-a}{2x_n}=\dfrac12\left(x_n+\dfrac a{x_n}\right)$.<br>$x_2=\dfrac12\left(3+\dfrac{10}3\right)=\dfrac{19}6\approx3.1667$, $x_3=\dfrac12\left(\dfrac{19}6+\dfrac{60}{19}\right)=\dfrac{721}{228}\approx3.16228$ ($\sqrt{10}=3.162277\dots$).</div></div>
 <h3><span class="sq">▸</span>4.8 교재 Exercises 선별 <span class='mini'>(그래프로 시작값을 읽는 문제는 시작값을 풀이에 적었다, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb48-7"><div class="pq"><span class="pn"></span><div><b>[교재 4.8 #7]</b> $\dfrac2x-x^2+1=0$, $x_1=2$ 로 뉴턴의 방법을 써서 $x_3$ 를 소수 4자리까지 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -967,31 +901,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="prob" data-id="tb48-41"><div class="pq"><span class="pn"></span><div><b>[교재 4.8 #41]</b> 자동차 가격 18,000달러, 5년(60개월) 동안 매달 375달러 할부. 월 이자율 $x$ 는 $48x(1+x)^{60}-(1+x)^{60}+1=0$ 의 해이다. 이 방정식을 뉴턴의 방법으로 풀어 월 이자율을 %로 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">$f(x)=48x(1+x)^{60}-(1+x)^{60}+1$, $f'(x)=48(1+x)^{60}+2880x(1+x)^{59}-60(1+x)^{59}$. $x=0$ 은 자명한 해이므로 그래프에서 $0.007$~$0.008$ 사이의 해를 본다 ($x_1=0.008$).<br>수렴값 $x\approx0.0076286$ ⇒ 월 이자율 $\boxed{\approx0.76286\%}$.</div></div>
-<h3><span class="sq">▸</span>4.9 역도함수 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c4-22"><div class="pq"><span class="pn"></span><div>$f(x)=6x^2-4x+5$ 의 가장 일반적인 역도함수를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$F(x)=2x^3-2x^2+5x+C$.</div></div>
-<div class="prob" data-id="c4-23"><div class="pq"><span class="pn"></span><div>$f(x)=\dfrac{(x+1)^2}{x}\ (x\gt0)$ 의 가장 일반적인 역도함수를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">먼저 정리: $\dfrac{x^2+2x+1}{x}=x+2+\dfrac1x$.<br>$F(x)=\dfrac{x^2}2+2x+\ln x+C$ ($x\gt0$, 일반적으로 $\ln|x|$).</div></div>
-<div class="prob" data-id="c4-24"><div class="pq"><span class="pn"></span><div>$f'(x)=3e^x-\dfrac2{1+x^2}$, $f(0)=5$ 일 때 $f(x)$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f(x)=3e^x-2\tan^{-1}x+C$, $f(0)=3+C=5$ ⇒ $C=2$.<br>$f(x)=3e^x-2\tan^{-1}x+2$.</div></div>
-<div class="prob" data-id="c4-25"><div class="pq"><span class="pn"></span><div>$f''(x)=6x+2$, $f(0)=1$, $f(1)=4$ 일 때 $f(x)$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'(x)=3x^2+2x+C$, $f(x)=x^3+x^2+Cx+D$. $f(0)=D=1$, $f(1)=1+1+C+1=4$ ⇒ $C=1$.<br>$f(x)=x^3+x^2+x+1$.</div></div>
-<div class="prob" data-id="c4-26"><div class="pq"><span class="pn"></span><div>입자의 가속도 $a(t)=6t-12$, $v(0)=9$, $s(0)=0$. 위치함수 $s(t)$ 와 정지하는 시각, 그때의 위치를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$v(t)=3t^2-12t+9=3(t-1)(t-3)$, $s(t)=t^3-6t^2+9t$.<br>$v=0$ ⇒ $t=1,\ 3$. $s(1)=4$, $s(3)=0$.</div></div>
-<div class="prob" data-id="c4-27"><div class="pq"><span class="pn"></span><div>지면에서 위로 20 m/s 로 던진 공이 도달하는 최고 높이와 다시 땅에 닿는 시각은? ($g=9.8$ m/s²)</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$s(t)=-4.9t^2+20t$, $v(t)=-9.8t+20$. 최고점: $v=0$ ⇒ $t=\dfrac{20}{9.8}\approx2.04$ s, $s\approx20.4$ m ($=\dfrac{v_0^2}{2g}$).<br>착지: $s=0$ ⇒ $t=\dfrac{20}{4.9}\approx4.08$ s (올라간 시간의 두 배).</div></div>
-<div class="prob" data-id="c4-28"><div class="pq"><span class="pn"></span><div>$F'(x)=x^2-4$, $F(0)=0$ 일 때 $F$ 의 극값과 변곡점은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$F'=x^2-4$ 의 부호 $+\,(x\lt-2)$, $-\,(-2\lt x\lt2)$, $+\,(x\gt2)$ ⇒ $x=-2$ 극대, $x=2$ 극소. $F(x)=\tfrac13x^3-4x$ ⇒ $F(-2)=\tfrac{16}3$, $F(2)=-\tfrac{16}3$.<br>$F''=2x$ 가 $x=0$ 에서 부호 변화 ⇒ 변곡점 $(0,0)$.</div></div>
-<div class="prob" data-id="c4-29"><div class="pq"><span class="pn"></span><div>$f(x)=\sinh x+\dfrac4{\sqrt{1-x^2}}$ 의 역도함수를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$F(x)=\cosh x+4\sin^{-1}x+C$ ($-1\lt x\lt1$).</div></div>
 <h3><span class="sq">▸</span>4.9 교재 Exercises 선별 <span class='mini'>(그래프를 그리는 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb49-7"><div class="pq"><span class="pn"></span><div><b>[교재 4.9 #7]</b> $f(x)=2x^3-\dfrac23x^2+5x$ 의 가장 일반적인 역도함수를 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -1053,35 +962,174 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="prob" data-id="tb49-83"><div class="pq"><span class="pn"></span><div><b>[교재 4.9 #83]</b> 시속 100 km 로 달리던 운전자가 80 m 앞의 사고를 보고 급제동한다. 충돌을 피하려면 필요한 일정한 감속도는?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">$v_0=\dfrac{100000}{3600}\approx27.78$ m/s. 정지까지 거리 $s=\dfrac{v_0^2}{2a}\le80$ ⇒ $a\ge\dfrac{27.78^2}{160}\approx\boxed{4.82}\ \text{m/s}^2$ ($=\dfrac{100^2}{2(0.08)}=62500\ \text{km/h}^2$).</div></div>
+<h3><span class="sq">▸</span>Chapter 4 Review Exercises 선별 <span class='mini'>(교재 4장 맨 끝 문제 · 일부는 4.1–4.5 내용 · 그림/그래프·증명·서술형·CAS 문제는 제외, 번호는 교재 기준)</span></h3>
+<div class="prob" data-id="tbr4-1"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #1]</b> $f(x)=x^3-9x^2+24x-2$ 의 구간 $[0,5]$ 에서의 절대·국소 극값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=3(x-2)(x-4)$ ⇒ 임계수 $2,4$. $f(0)=-2$, $f(2)=18$, $f(4)=14$, $f(5)=18$.<br><b>절대최댓값 18</b> ($x=2$, $x=5$), <b>절대최솟값 $-2$</b> ($x=0$). 국소최댓값 $f(2)=18$, 국소최솟값 $f(4)=14$.</div></div>
+<div class="prob" data-id="tbr4-2"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #2]</b> $f(x)=x\sqrt{1-x}$ 의 $[-1,1]$ 에서의 절대극값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=\dfrac{2-3x}{2\sqrt{1-x}}$ ⇒ 임계수 $x=\tfrac23$. $f(-1)=-\sqrt2$, $f(\tfrac23)=\tfrac23\cdot\tfrac1{\sqrt3}=\tfrac{2\sqrt3}9$, $f(1)=0$.<br>절대최댓값 $\boxed{\tfrac{2\sqrt3}9}$ ($x=\tfrac23$), 절대최솟값 $\boxed{-\sqrt2}$ ($x=-1$).</div></div>
+<div class="prob" data-id="tbr4-3"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #3]</b> $f(x)=\dfrac{3x-4}{x^2+1}$ 의 $[-2,2]$ 에서의 절대·국소 극값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=\dfrac{-3x^2+8x+3}{(x^2+1)^2}=\dfrac{-(3x+1)(x-3)}{(x^2+1)^2}$ ⇒ $[-2,2]$ 의 임계수는 $x=-\tfrac13$ ($x=3$ 은 구간 밖).<br>$f(-2)=-2$, $f(-\tfrac13)=-\tfrac92$, $f(2)=\tfrac25$. <b>절대최댓값 $\tfrac25$</b> ($x=2$, 끝점), <b>절대·국소최솟값 $-\tfrac92$</b> ($x=-\tfrac13$).</div></div>
+<div class="prob" data-id="tbr4-4"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #4]</b> $f(x)=\sqrt{x^2+x+1}$ 의 $[-2,1]$ 에서의 절대극값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=\dfrac{2x+1}{2\sqrt{x^2+x+1}}$ ⇒ $x=-\tfrac12$. $f(-2)=\sqrt3$, $f(-\tfrac12)=\tfrac{\sqrt3}2$, $f(1)=\sqrt3$.<br>절대최댓값 $\sqrt3$ ($x=-2$, $x=1$), 절대최솟값 $\tfrac{\sqrt3}2$ ($x=-\tfrac12$).</div></div>
+<div class="prob" data-id="tbr4-5"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #5]</b> $f(x)=x+2\cos x$ 의 $[-\pi,\pi]$ 에서의 절대·국소 극값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=1-2\sin x=0$ ⇒ $x=\tfrac\pi6,\ \tfrac{5\pi}6$. $f(-\pi)=-\pi-2$, $f(\tfrac\pi6)=\tfrac\pi6+\sqrt3\approx2.256$, $f(\tfrac{5\pi}6)=\tfrac{5\pi}6-\sqrt3\approx0.886$, $f(\pi)=\pi-2$.<br><b>절대·국소최댓값 $\tfrac\pi6+\sqrt3$</b>, <b>절대최솟값 $-\pi-2$</b> ($x=-\pi$), 국소최솟값 $\tfrac{5\pi}6-\sqrt3$.</div></div>
+<div class="prob" data-id="tbr4-6"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #6]</b> $f(x)=x^2e^{-x}$ 의 $[-1,3]$ 에서의 절대·국소 극값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=(2x-x^2)e^{-x}=x(2-x)e^{-x}$ ⇒ $x=0,2$. $f(-1)=e\approx2.718$, $f(0)=0$, $f(2)=4e^{-2}\approx0.541$, $f(3)=9e^{-3}\approx0.448$.<br>절대최댓값 $e$ ($x=-1$, 끝점), 절대·국소최솟값 $0$ ($x=0$), 국소최댓값 $4e^{-2}$ ($x=2$).</div></div>
+<div class="prob" data-id="tbr4-7"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #7]</b> $\displaystyle\lim_{x\to0}\dfrac{e^x-1}{\tan x}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tfrac00$ 꼴 ⇒ 로피탈: $\dfrac{e^x}{\sec^2x}\to\dfrac11=\boxed1$.</div></div>
+<div class="prob" data-id="tbr4-8"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #8]</b> $\displaystyle\lim_{x\to0}\dfrac{\tan4x}{x+\sin2x}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tfrac00$ 꼴 ⇒ 로피탈: $\dfrac{4\sec^24x}{1+2\cos2x}\to\dfrac4{1+2}=\boxed{\tfrac43}$.</div></div>
+<div class="prob" data-id="tbr4-9"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #9]</b> $\displaystyle\lim_{x\to0}\dfrac{e^{2x}-e^{-2x}}{\ln(x+1)}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tfrac00$ 꼴 ⇒ 로피탈: $\dfrac{2e^{2x}+2e^{-2x}}{1/(x+1)}\to\dfrac{4}{1}=\boxed4$.</div></div>
+<div class="prob" data-id="tbr4-10"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #10]</b> $\displaystyle\lim_{x\to\infty}\dfrac{e^{2x}-e^{-2x}}{\ln(x+1)}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">분자는 지수적으로, 분모는 로그로 증가하므로 $\boxed\infty$. (로피탈: $\dfrac{2e^{2x}+2e^{-2x}}{1/(x+1)}=(2e^{2x}+2e^{-2x})(x+1)\to\infty$)</div></div>
+<div class="prob" data-id="tbr4-11"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #11]</b> $\displaystyle\lim_{x\to-\infty}\left(x^2-x^3\right)e^{2x}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=-s$ ($s\to\infty$): $(s^2+s^3)e^{-2s}=\dfrac{s^2+s^3}{e^{2s}}$, $\tfrac\infty\infty$ 꼴이고 지수가 다항식을 이긴다 ⇒ $\boxed0$.</div></div>
+<div class="prob" data-id="tbr4-12"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #12]</b> $\displaystyle\lim_{x\to\pi}(x-\pi)\csc x$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\dfrac{x-\pi}{\sin x}$, $\tfrac00$ 꼴 ⇒ 로피탈: $\dfrac1{\cos x}\to\dfrac1{\cos\pi}=\boxed{-1}$.</div></div>
+<div class="prob" data-id="tbr4-13"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #13]</b> $\displaystyle\lim_{x\to1^+}\left(\dfrac x{x-1}-\dfrac1{\ln x}\right)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\infty-\infty$ 꼴 ⇒ 통분: $\dfrac{x\ln x-(x-1)}{(x-1)\ln x}$, $\tfrac00$. 로피탈: $\dfrac{\ln x}{\ln x+\frac{x-1}x}$ 도 $\tfrac00$ ⇒ 다시: $\dfrac{1/x}{\frac1x+\frac1{x^2}}\to\dfrac1{1+1}=\boxed{\tfrac12}$.</div></div>
+<div class="prob" data-id="tbr4-14"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #14]</b> $\displaystyle\lim_{x\to(\pi/2)^-}(\tan x)^{\cos x}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\infty^0$ 꼴. $y=(\tan x)^{\cos x}$ ⇒ $\ln y=\dfrac{\ln\tan x}{\sec x}$ ($\tfrac\infty\infty$). 로피탈: $\dfrac{\sec^2x/\tan x}{\sec x\tan x}=\dfrac{1/(\sin x\cos x)}{\sin x/\cos^2x}=\dfrac{\cos x}{\sin^2x}\to0$.<br>따라서 $\ln y\to0$ ⇒ $y\to e^0=\boxed1$.</div></div>
+<div class="prob" data-id="tbr4-19"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #19]</b> $y=2-2x-x^3$ 을 4.5 지침(A~H)으로 분석하시오 (그림은 생략, 정보만).</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A 정의역 $\mathbb R$. B $y$절편 2. C 대칭 없음. D 점근선 없음.<br>E $y'=-2-3x^2\lt 0$ ⇒ <b>$(-\infty,\infty)$ 에서 감소</b>. F 극값 없음.<br>G $y''=-6x$ ⇒ <b>CU: $(-\infty,0)$, CD: $(0,\infty)$, 변곡점 $(0,2)$</b>.</div></div>
+<div class="prob" data-id="tbr4-21"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #21]</b> $y=3x^4-4x^3+2$ 를 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A $\mathbb R$. B $y$절편 2. D 점근선 없음.<br>E $y'=12x^2(x-1)$ ⇒ <b>$(-\infty,1)$ 감소, $(1,\infty)$ 증가</b>. F <b>국소최솟값 $f(1)=1$</b> ($x=0$ 은 부호 변화 없음).<br>G $y''=12x(3x-2)$ ⇒ <b>CU: $(-\infty,0)$, $(\tfrac23,\infty)$ / CD: $(0,\tfrac23)$</b>, 변곡점 $(0,2)$, $(\tfrac23,\tfrac{38}{27})$.</div></div>
+<div class="prob" data-id="tbr4-23"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #23]</b> $y=\dfrac1{x(x-3)^2}$ 을 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A 정의역 $x\ne0,3$. B 절편 없음. D 수평점근선 $y=0$, 수직점근선 $x=0$, $x=3$.<br>E $y'=-\dfrac{3(x-1)}{x^2(x-3)^3}$ ⇒ <b>증가 $(1,3)$, 감소 $(-\infty,0)$, $(0,1)$, $(3,\infty)$</b>. F <b>국소최솟값 $f(1)=\tfrac14$</b>.<br>G <b>CU: $(0,3)$, $(3,\infty)$ / CD: $(-\infty,0)$</b>, 변곡점 없음.</div></div>
+<div class="prob" data-id="tbr4-25"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #25]</b> $y=\dfrac{(x-1)^3}{x^2}$ 을 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A $x\ne0$. B $x$절편 1. D 수직점근선 $x=0$, 사선점근선 $y=x-3$ (몫 $x-3+\tfrac{3x-1}{x^2}$).<br>E $y'=\dfrac{(x-1)^2(x+2)}{x^3}$ ⇒ <b>증가 $(-\infty,-2)$, $(0,\infty)$ / 감소 $(-2,0)$</b>. F <b>국소최댓값 $f(-2)=-\tfrac{27}4$</b>.<br>G $y''=\dfrac{6(x-1)}{x^4}$ ⇒ <b>CU: $(1,\infty)$ / CD: $(-\infty,0)$, $(0,1)$</b>, 변곡점 $(1,0)$.</div></div>
+<div class="prob" data-id="tbr4-27"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #27]</b> $y=x\sqrt{2+x}$ 를 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A 정의역 $[-2,\infty)$. B $y$절편 0, $x$절편 $-2,0$. D 점근선 없음.<br>E $y'=\dfrac{3x+4}{2\sqrt{2+x}}$ ⇒ <b>감소 $(-2,-\tfrac43)$, 증가 $(-\tfrac43,\infty)$</b>. F <b>국소(절대)최솟값 $f(-\tfrac43)=-\tfrac49\sqrt6$</b>.<br>G $y''=\dfrac{3x+8}{4(2+x)^{3/2}}\gt 0$ ⇒ <b>정의역 전체에서 CU</b>, 변곡점 없음.</div></div>
+<div class="prob" data-id="tbr4-29"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #29]</b> $y=e^x\sin x$, $-\pi\le x\le\pi$ 를 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">B $y$절편 0, $x$절편 $-\pi,0,\pi$.<br>E $y'=e^x(\sin x+\cos x)=\sqrt2\,e^x\sin(x+\tfrac\pi4)$ ⇒ <b>증가 $(-\tfrac\pi4,\tfrac{3\pi}4)$ / 감소 $(-\pi,-\tfrac\pi4)$, $(\tfrac{3\pi}4,\pi)$</b>.<br>F 국소최댓값 $f(\tfrac{3\pi}4)=\tfrac{\sqrt2}2e^{3\pi/4}$, 국소최솟값 $f(-\tfrac\pi4)=-\tfrac{\sqrt2}2e^{-\pi/4}$.<br>G $y''=2e^x\cos x$ ⇒ <b>CU $(-\tfrac\pi2,\tfrac\pi2)$ / CD $(-\pi,-\tfrac\pi2)$, $(\tfrac\pi2,\pi)$</b>, 변곡점 $(-\tfrac\pi2,-e^{-\pi/2})$, $(\tfrac\pi2,e^{\pi/2})$.</div></div>
+<div class="prob" data-id="tbr4-31"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #31]</b> $y=\sin^{-1}\!\left(\dfrac1x\right)$ 을 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A 정의역 $|1/x|\le1$ ⇒ $(-\infty,-1]\cup[1,\infty)$. B 절편 없음. C <b>원점 대칭(홀함수)</b>. D 수평점근선 $y=0$.<br>E $y'=-\dfrac1{|x|\sqrt{x^2-1}}\lt 0$ ⇒ <b>각 구간에서 감소</b> (양끝 $f(\pm1)=\pm\tfrac\pi2$). F 극값 없음.<br>G <b>CU: $(1,\infty)$ / CD: $(-\infty,-1)$</b>, 변곡점 없음.</div></div>
+<div class="prob" data-id="tbr4-33"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #33]</b> $y=(x-2)e^{-x}$ 를 4.5 지침으로 분석하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">A $\mathbb R$. B $y$절편 $-2$, $x$절편 2. D 수평점근선 $y=0$ ($x\to\infty$). ($x\to-\infty$ 이면 $y\to-\infty$)<br>E $y'=(3-x)e^{-x}$ ⇒ <b>증가 $(-\infty,3)$, 감소 $(3,\infty)$</b>. F <b>국소(절대)최댓값 $f(3)=e^{-3}$</b>.<br>G $y''=(x-4)e^{-x}$ ⇒ <b>CU $(4,\infty)$ / CD $(-\infty,4)$</b>, 변곡점 $(4,2e^{-4})$.</div></div>
+<div class="prob" data-id="tbr4-35"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #35]</b> $f(x)=\dfrac{x^2-1}{x^3}$ 의 증감, 극값, 오목 구간, 변곡점을 미분으로 정확히 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f=x^{-1}-x^{-3}$. $f'=-x^{-2}+3x^{-4}=\dfrac{3-x^2}{x^4}$ ⇒ <b>증가 $(-\sqrt3,0)$, $(0,\sqrt3)$ / 감소 $(-\infty,-\sqrt3)$, $(\sqrt3,\infty)$</b>.<br>극대 $f(\sqrt3)=\tfrac{2\sqrt3}9$, 극소 $f(-\sqrt3)=-\tfrac{2\sqrt3}9$.<br>$f''=2x^{-3}-12x^{-5}=\dfrac{2(x^2-6)}{x^5}$ ⇒ <b>CU $(-\sqrt6,0)$, $(\sqrt6,\infty)$ / CD $(-\infty,-\sqrt6)$, $(0,\sqrt6)$</b>.<br>변곡점 $\left(\sqrt6,\tfrac{5\sqrt6}{36}\right)$, $\left(-\sqrt6,-\tfrac{5\sqrt6}{36}\right)$. ($x=0$ 은 정의역 밖: 수직점근선, $y\to0$ 수평점근선)</div></div>
+<div class="prob" data-id="tbr4-39"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #39]</b> $f(x)=e^{-1/x^2}$ 의 변곡점을 미분으로 정확히 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=\dfrac2{x^3}e^{-1/x^2}$, $f''=e^{-1/x^2}\left(\dfrac4{x^6}-\dfrac6{x^4}\right)=\dfrac{2(2-3x^2)}{x^6}e^{-1/x^2}$.<br>$f''=0$ ⇒ $x^2=\tfrac23$, 부호가 바뀐다. 변곡점 $\boxed{\left(\pm\sqrt{\tfrac23},\ e^{-3/2}\right)}\approx(\pm0.82,\ 0.22)$.</div></div>
+<div class="prob" data-id="tbr4-44"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #44]</b> 함수족 $f(x)=cxe^{-cx^2}$ 에서 $c$ 가 변할 때 극점과 변곡점은 어떻게 변하는가?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'=c(1-2cx^2)e^{-cx^2}$, $f''=2c^2x(2cx^2-3)e^{-cx^2}$.<br><b>$c\gt 0$</b>: 극대 $x=\tfrac1{\sqrt{2c}}$ (값 $\sqrt{c/2}\,e^{-1/2}$), 극소 $x=-\tfrac1{\sqrt{2c}}$. 변곡점 $x=0$, $\pm\sqrt{\tfrac3{2c}}$. $c$ 가 커지면 극점·변곡점은 원점 쪽($\propto\tfrac1{\sqrt c}$)으로 모이고 극값의 크기($\propto\sqrt c$)는 커진다.<br><b>$c\lt 0$</b>: $1-2cx^2\gt 0$ ⇒ $f'$ 의 부호 $=c$ 의 부호 $\lt 0$ ⇒ 극값 없이 감소, 변곡점은 $x=0$ 하나. $c=0$ 이면 $f\equiv0$ (전이값).</div></div>
+<div class="prob" data-id="tbr4-48"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #48]</b> 곡선 $y=ax^3+bx^2$ 의 점 $(1,3)$ 이 변곡점이 되도록 상수 $a,b$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">점을 지난다: $a+b=3$. 변곡점: $y''=6ax+2b=0$ at $x=1$ ⇒ $6a+2b=0$ ⇒ $b=-3a$.<br>$a-3a=3$ ⇒ $\boxed{a=-\tfrac32,\ b=\tfrac92}$. (확인: $y''=-9x+9$ 는 $x=1$ 에서 부호 변화)</div></div>
+<div class="prob" data-id="tbr4-50"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #50]</b> 첫째 수 + 둘째 수의 4배 $=1000$ 이 되는 두 양의 정수 중 곱이 최대인 것은?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">첫째 $x$, 둘째 $y$: $x=1000-4y$, $P=y(1000-4y)$, $0\lt y\lt 250$. $P'=1000-8y=0$ ⇒ $y=125$ (정수), $P''=-8\lt 0$.<br>답: <b>$x=500$, $y=125$</b> (곱 62500).</div></div>
+<div class="prob" data-id="tbr4-52"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #52]</b> 쌍곡선 $xy=8$ 위에서 점 $(3,0)$ 에 가장 가까운 점을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$y=\tfrac8x$, $d^2=(x-3)^2+\tfrac{64}{x^2}$. $(d^2)'=2(x-3)-\tfrac{128}{x^3}=0$ ⇒ $x^4-3x^3-64=0$ ⇒ $x=4$ ($4^4-3\cdot4^3-64=0$).<br>$x=4$ 전후로 부호가 $-\to+$ ⇒ 최소. $y=2$, $d=\sqrt5$. 답 <b>$(4,2)$</b>.</div></div>
+<div class="prob" data-id="tbr4-53"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #53]</b> 반지름 $r$ 인 원에 외접하는 이등변삼각형의 넓이의 최솟값은?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">꼭지각의 절반을 $\alpha$ ($0\lt \alpha\lt \tfrac\pi2$) 라 하면 꼭짓점에서 원의 중심까지 $\dfrac r{\sin\alpha}$ ⇒ 높이 $h=r\left(1+\dfrac1{\sin\alpha}\right)$, 밑변 반 $=h\tan\alpha$.<br>$A(\alpha)=h^2\tan\alpha=r^2\left(1+\dfrac1{\sin\alpha}\right)^2\tan\alpha$. $A'(\alpha)=0$ ⇒ $\sin\alpha=\tfrac12$ ($\alpha=\tfrac\pi6$), 앞뒤로 $-\to+$.<br>$A_{\min}=r^2\cdot9\cdot\dfrac1{\sqrt3}=\boxed{3\sqrt3\,r^2}$ (정삼각형일 때).</div></div>
+<div class="prob" data-id="tbr4-54"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #54]</b> 반지름 $r$ 인 구에 내접하는 원뿔 중 부피가 최대인 것의 부피는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">원뿔의 높이 $h$ ($0\lt h\lt 2r$), 밑면 반지름 $\rho$: $\rho^2=r^2-(h-r)^2=2rh-h^2$.<br>$V=\tfrac\pi3\rho^2h=\tfrac\pi3\left(2rh^2-h^3\right)$, $V'=\tfrac\pi3(4rh-3h^2)=0$ ⇒ $h=\tfrac{4r}3$ (최대).<br>$V_{\max}=\tfrac\pi3\left(\tfrac{32r^3}9-\tfrac{64r^3}{27}\right)=\boxed{\tfrac{32\pi}{81}r^3}$.</div></div>
+<div class="prob" data-id="tbr4-55"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #55]</b> $\triangle ABC$ 에서 $D\in AB$, $CD\perp AB$, $|AD|=|BD|=4$ cm, $|CD|=5$ cm. $CD$ 위의 점 $P$ 를 어디에 잡아야 $|PA|+|PB|+|PC|$ 가 최소인가?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$|PD|=x$ ($0\le x\le5$): $|PA|=|PB|=\sqrt{16+x^2}$, $|PC|=5-x$. $S(x)=2\sqrt{16+x^2}+5-x$.<br>$S'=\dfrac{2x}{\sqrt{16+x^2}}-1=0$ ⇒ $3x^2=16$ ⇒ $x=\dfrac4{\sqrt3}\approx2.31$. 끝점 비교: $S(0)=13$, $S(5)=2\sqrt{41}\approx12.81$, $S(\tfrac4{\sqrt3})\approx11.93$.<br>답: $D$ 에서 $C$ 쪽으로 <b>$\dfrac4{\sqrt3}$ cm</b> 인 점.</div></div>
+<div class="prob" data-id="tbr4-56"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #56]</b> 55번에서 $|CD|=2$ cm 로 바뀌면 점 $P$ 의 최적 위치는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$0\le x\le2$ 에서 $S=2\sqrt{16+x^2}+2-x$. 임계점 $x=\tfrac4{\sqrt3}\approx2.31\gt 2$ 는 구간 밖이다.<br>구간 안에서 $S'=\dfrac{2x}{\sqrt{16+x^2}}-1\lt 0$ ⇒ $S$ 는 감소 ⇒ 최소는 오른쪽 끝점 $x=2$. 답 <b>$P=C$</b> ($S=2\sqrt{20}=4\sqrt5\approx8.94$).</div></div>
+<div class="prob" data-id="tbr4-57"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #57]</b> 깊은 물에서 파장 $L$ 인 파도의 속도는 $v=K\sqrt{\dfrac LC+\dfrac CL}$ ($K,C$ 는 양의 상수). 속도가 최소인 파장 $L$ 은?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">근호 안 $g(L)=\dfrac LC+\dfrac CL$ 을 최소화한다. $g'=\dfrac1C-\dfrac C{L^2}=0$ ⇒ $L^2=C^2$ ⇒ <b>$L=C$</b>.<br>$g'$ 의 부호 $-\to+$ ⇒ 최소 (또는 산술·기하평균). 최소 속도 $K\sqrt2$.</div></div>
+<div class="prob" data-id="tbr4-58"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #58]</b> 부피 $V$ 인 금속 저장탱크를 원기둥 위에 반구를 얹은 모양(바닥도 금속)으로 만들 때 금속이 가장 적게 드는 치수는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">반지름 $r$, 원기둥 높이 $h$. $V=\pi r^2h+\tfrac23\pi r^3$ ⇒ $h=\dfrac V{\pi r^2}-\tfrac23r$.<br>겉넓이 $A=2\pi r^2$ (반구) $+\,2\pi rh$ (옆면) $+\,\pi r^2$ (바닥) $=3\pi r^2+2\pi rh=\tfrac53\pi r^2+\dfrac{2V}r$.<br>$A'=\tfrac{10}3\pi r-\dfrac{2V}{r^2}=0$ ⇒ $r^3=\dfrac{3V}{5\pi}$. 이때 $h=\dfrac V{\pi r^2}-\tfrac23r=\tfrac53r-\tfrac23r=r$.<br>답: <b>$r=h=\sqrt[3]{\dfrac{3V}{5\pi}}$</b> ($A'$ 의 부호가 $-\to+$ 이므로 최소).</div></div>
+<div class="prob" data-id="tbr4-59"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #59]</b> 좌석 15000석 경기장에서 표값이 12달러일 때 평균 관중이 11000명이고, 표값을 1달러 내릴 때마다 평균 관중이 1000명씩 늘어난다. 입장 수입을 최대로 하는 표값은?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">표값 $p$ ⇒ 관중 $11000+1000(12-p)=23000-1000p$ (좌석 한도 15000 이하 ⇒ $p\ge8$). $R(p)=p(23000-1000p)$.<br>$R'=23000-2000p=0$ ⇒ $p=11.5$ ⇒ 관중 11500명 (≤15000 ✓), $R''=-2000\lt 0$.<br>답: <b>11.50달러</b> (수입 132,250달러).</div></div>
+<div class="prob" data-id="tbr4-60"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #60]</b> $x$ 개 생산 비용 $C(x)=1800+25x-0.2x^2+0.001x^3$, 수요함수 $p(x)=48.2-0.03x$. (b) 이윤이 최대가 되는 생산량 (c) 평균비용이 최소가 되는 생산량을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">(b) $P=xp-C=-0.001x^3+0.17x^2+23.2x-1800$, $P'=-0.003x^2+0.34x+23.2=0$ ⇒ $x\approx161.3$ ($P''\lt 0$). 답 <b>약 161개</b>.<br>(c) 평균비용 $\bar C=C/x$ 가 최소이면 $\bar C'=0$ ⇔ $xC'=C$: $0.002x^3-0.2x^2-1800=0$ ⇒ $x^3-100x^2-900000=0$ ⇒ $x\approx143.6$. 답 <b>약 144개</b> (평균비용 약 29.44달러).</div></div>
+<div class="prob" data-id="tbr4-61"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #61]</b> 뉴턴의 방법으로 $x^5-x^4+3x^2-3x-2=0$ 의 구간 $[1,2]$ 안의 해를 소수 6째 자리까지 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f(x)=x^5-x^4+3x^2-3x-2$, $f'(x)=5x^4-4x^3+6x-3$. $f(1)=-2\lt 0\lt f(2)=20$ 이므로 $f(1.3)\approx0.027$ 근처 ⇒ $x_1=1.3$.<br>$x_2=1.297393$, $x_3=1.297383$, $x_4=1.297383$, $x_5=1.297383$ ⇒ $\boxed{1.297383}$ ($x_4,x_5$ 가 소수 6째 자리까지 같다).</div></div>
+<div class="prob" data-id="tbr4-62"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #62]</b> 뉴턴의 방법으로 $\sin x=x^2-3x+1$ 의 모든 해를 소수 6째 자리까지 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f(x)=x^2-3x+1-\sin x$, $f'(x)=2x-3-\cos x$. 그래프(포물선과 사인곡선)의 교점은 두 개: $f(0)=1\gt 0$, $f(1)=-1.84\lt 0$ ⇒ 해 하나는 $(0,1)$, $f(2)=-1.91\lt 0$, $f(3)=0.86\gt 0$ ⇒ 다른 하나는 $(2,3)$.<br>$x_1=0.3$ ⇒ $x\approx\boxed{0.268881}$. $x_1=2.7$ ⇒ $x\approx\boxed{2.770058}$. (마지막 두 근삿값이 소수 6째 자리까지 같을 때 멈춘다)</div></div>
+<div class="prob" data-id="tbr4-63"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #63]</b> 뉴턴의 방법으로 $f(t)=\cos t+t-t^2$ 의 절대최댓값을 소수 8째 자리까지 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'(t)=-\sin t+1-2t=0$ 의 해를 뉴턴으로 구한다 ($g=f'$, $g'=f''=-\cos t-2$). $g(0)=1\gt 0$, $g(1)=-1.84\lt 0$ ⇒ $t_1=0.3$.<br>$t_2=0.33535293$, $t_3=0.33541803$, $t_4=0.33541803$ ⇒ $t^*\approx0.33541803$ ($f''\lt 0$ 이라 최대, $f$ 는 $t\to\pm\infty$ 에서 $-\infty$).<br>$f(t^*)=\boxed{1.16718557}$.</div></div>
+<div class="prob" data-id="tbr4-65"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #65]</b> $f(x)=4\sqrt x-6x^2+3$ 의 가장 일반적인 역도함수는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$4x^{1/2}-6x^2+3$ ⇒ $F(x)=4\cdot\tfrac23x^{3/2}-2x^3+3x+C=\boxed{\tfrac83x^{3/2}-2x^3+3x+C}$.</div></div>
+<div class="prob" data-id="tbr4-66"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #66]</b> $g(x)=\dfrac1x+\dfrac1{x^2+1}$ 의 가장 일반적인 역도함수는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\boxed{\ln|x|+\tan^{-1}x+C}$ (구간 $(-\infty,0)$, $(0,\infty)$ 마다 상수가 다를 수 있다).</div></div>
+<div class="prob" data-id="tbr4-67"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #67]</b> $f(t)=2\sin t-3e^t$ 의 가장 일반적인 역도함수는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\boxed{-2\cos t-3e^t+C}$.</div></div>
+<div class="prob" data-id="tbr4-68"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #68]</b> $f(x)=x^{-3}+\cosh x$ 의 가장 일반적인 역도함수는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\dfrac{x^{-2}}{-2}+\sinh x+C=\boxed{-\dfrac1{2x^2}+\sinh x+C}$.</div></div>
+<div class="prob" data-id="tbr4-69"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #69]</b> $f'(t)=2t-3\sin t$, $f(0)=5$ 일 때 $f$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f(t)=t^2+3\cos t+C$. $f(0)=3+C=5$ ⇒ $C=2$ ⇒ $\boxed{f(t)=t^2+3\cos t+2}$.</div></div>
+<div class="prob" data-id="tbr4-70"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #70]</b> $f'(u)=\dfrac{u^2+\sqrt u}u$, $f(1)=3$ 일 때 $f$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'(u)=u+u^{-1/2}$ ⇒ $f(u)=\tfrac12u^2+2\sqrt u+C$. $f(1)=\tfrac12+2+C=3$ ⇒ $C=\tfrac12$.<br>$\boxed{f(u)=\tfrac12u^2+2\sqrt u+\tfrac12}$.</div></div>
+<div class="prob" data-id="tbr4-71"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #71]</b> $f''(x)=1-6x+48x^2$, $f(0)=1$, $f'(0)=2$ 일 때 $f$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'(x)=x-3x^2+16x^3+C$, $f'(0)=C=2$. $f(x)=\tfrac12x^2-x^3+4x^4+2x+D$, $f(0)=D=1$.<br>$\boxed{f(x)=4x^4-x^3+\tfrac12x^2+2x+1}$.</div></div>
+<div class="prob" data-id="tbr4-72"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #72]</b> $f''(x)=5x^3+6x^2+2$, $f(0)=3$, $f(1)=-2$ 일 때 $f$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f'(x)=\tfrac54x^4+2x^3+2x+C$, $f(x)=\tfrac14x^5+\tfrac12x^4+x^2+Cx+D$.<br>$f(0)=D=3$. $f(1)=\tfrac14+\tfrac12+1+C+3=-2$ ⇒ $C=-\tfrac{27}4$.<br>$\boxed{f(x)=\tfrac14x^5+\tfrac12x^4+x^2-\tfrac{27}4x+3}$.</div></div>
+<div class="prob" data-id="tbr4-73"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #73]</b> 입자의 속도 $v(t)=2t-\dfrac1{1+t^2}$, $s(0)=1$ 일 때 위치 $s(t)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$s(t)=t^2-\tan^{-1}t+C$. $s(0)=0-0+C=1$ ⇒ $\boxed{s(t)=t^2-\tan^{-1}t+1}$.</div></div>
+<div class="prob" data-id="tbr4-74"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #74]</b> 가속도 $a(t)=\sin t+3\cos t$, $s(0)=0$, $v(0)=2$ 일 때 위치 $s(t)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$v(t)=-\cos t+3\sin t+C_1$, $v(0)=-1+C_1=2$ ⇒ $C_1=3$.<br>$s(t)=-\sin t-3\cos t+3t+C_2$, $s(0)=-3+C_2=0$ ⇒ $C_2=3$.<br>$\boxed{s(t)=-\sin t-3\cos t+3t+3}$.</div></div>
+<div class="prob" data-id="tbr4-75"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #75]</b> $f(x)=0.1e^x+\sin x$ 의 역도함수 중 $F(0)=0$ 인 $F(x)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$F(x)=0.1e^x-\cos x+C$, $F(0)=0.1-1+C=0$ ⇒ $C=0.9$ ⇒ $\boxed{F(x)=0.1e^x-\cos x+0.9}$.</div></div>
+<div class="prob" data-id="tbr4-76"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #76]</b> 함수족 $f(x)=x^4+x^3+cx^2$ 에서 임계수의 개수가 바뀌는 전이값과 변곡점의 개수가 바뀌는 전이값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans"><b>임계수</b>: $f'=x(4x^2+3x+2c)$. $x=0$ 은 항상 임계수. 이차식의 판별식 $9-32c$.<br>$c\lt 0$: 서로 다른 세 개 / $c=0$: $x=0$ (이중), $-\tfrac34$ → 2개 / $0\lt c\lt \tfrac9{32}$: 3개 / $c=\tfrac9{32}$: 2개 / $c\gt \tfrac9{32}$: 1개. 전이값 <b>$c=0$, $c=\tfrac9{32}$</b>.<br><b>변곡점</b>: $f''=12x^2+6x+2c$, 판별식 $36-96c$ ⇒ $c\lt \tfrac38$ 이면 부호 변화 두 곳 (변곡점 2개), $c=\tfrac38$ 이면 이중근이라 부호 변화 없음, $c\gt \tfrac38$ 이면 $f''\gt 0$. 전이값 <b>$c=\tfrac38$</b>.</div></div>
+<div class="prob" data-id="tbr4-77"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #77]</b> 헬리콥터가 500 m 상공에 정지해 있다가 낙하산이 안 펴지는 통을 떨어뜨렸다. 통은 충돌 속도 100 m/s 까지 견딘다. 통이 터지는가? ($g=9.8$ m/s²)</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$v(t)=-9.8t$, $s(t)=500-4.9t^2$. 착지: $4.9t^2=500$ ⇒ $t=\sqrt{\dfrac{500}{4.9}}\approx10.10$ s.<br>충돌 속력 $=9.8t=\sqrt{2gh}=\sqrt{9800}\approx99.0$ m/s $\lt 100$ ⇒ <b>터지지 않는다</b>.</div></div>
+<div class="prob" data-id="tbr4-79"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #79]</b> 반지름 30 cm 의 통나무에서 단면이 최대인 직사각형 보(정사각형임이 알려져 있다)를 잘라낸 뒤 남은 네 부분에서 널판 네 장을 자른다. (b) 단면 넓이가 최대인 널판의 치수 (c) 강도가 (폭)×(깊이)² 에 비례할 때 가장 센 보의 치수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">(b) 정사각형 보의 한 변은 $30\sqrt2\approx42.43$ 이므로 반변 $a=15\sqrt2\approx21.21$. 널판 가로 $2u$, 세로 $\sqrt{900-u^2}-a$ ⇒ $A(u)=2u\left(\sqrt{900-u^2}-15\sqrt2\right)$.<br>$A'(u)=0$ 의 근 $u\approx12.72$ ⇒ 널판 <b>가로 $\approx25.44$ cm, 세로 $\approx5.96$ cm</b>.<br>(c) 폭 $2x$, 깊이 $2y$ ($x^2+y^2=900$). 강도 $S\propto2x\cdot4y^2=8x(900-x^2)$. $S'\propto900-3x^2=0$ ⇒ $x=\sqrt{300}$, $y=\sqrt{600}$.<br>답 <b>폭 $2\sqrt{300}\approx34.64$ cm, 깊이 $2\sqrt{600}\approx48.99$ cm</b>.</div></div>
+<div class="prob" data-id="tbr4-81"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #81]</b> $P(E)=\dfrac{e^E+e^{-E}}{e^E-e^{-E}}-\dfrac1E$ 일 때 $\displaystyle\lim_{E\to0^+}P(E)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\infty-\infty$ 꼴. 통분: $\dfrac{E(e^E+e^{-E})-(e^E-e^{-E})}{E(e^E-e^{-E})}$ ($\tfrac00$). 로피탈 1회: $\dfrac{E(e^E-e^{-E})}{(e^E-e^{-E})+E(e^E+e^{-E})}$ (여전히 $\tfrac00$).<br>2회: $\dfrac{(e^E-e^{-E})+E(e^E+e^{-E})}{2(e^E+e^{-E})+E(e^E-e^{-E})}\to\dfrac04$ ⇒ <b>$\boxed0$</b>.</div></div>
+<div class="prob" data-id="tbr4-87"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #87]</b> 반지름 20 m 의 원형 광장 한가운데 기둥 꼭대기에 높이 $h$ 의 조명을 단다. 광장 가장자리 점 $P$ 의 조도 $I$ 는 입사각 $\theta$ 의 코사인에 비례하고 광원까지 거리 $d$ 의 제곱에 반비례한다. (a) $I$ 를 최대로 하는 기둥 높이는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$d^2=h^2+400$, $\cos\theta=\dfrac hd$ ⇒ $I=k\dfrac{\cos\theta}{d^2}=\dfrac{kh}{(h^2+400)^{3/2}}$.<br>$I'=k\dfrac{(h^2+400)-3h^2}{(h^2+400)^{5/2}}=k\dfrac{400-2h^2}{(h^2+400)^{5/2}}=0$ ⇒ $h^2=200$ ⇒ <b>$h=10\sqrt2\approx14.1$ m</b> ($I'$ 부호 $+\to-$).</div></div>
 <h3><span class="sq">▸</span>⭕❌ OX 문제 · Chapter 4 (4.6 – 4.9)</h3>
 <p class="mini">O/X 를 누르면 바로 채점되고 풀이가 열립니다. “[교재 N장 Review T/F #k]” 는 교재 챕터 리뷰의 True–False Quiz 항목을 짧게 다시 쓴 것입니다(일부는 4.1–4.5 내용).</p>
-<div class="prob ox" data-id="ox4-1" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$f''(c)=0$ 이면 점 $(c,f(c))$ 는 $f$ 의 변곡점이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $f''$ 의 <b>부호 변화</b>가 필요하다. 반례 $f(x)=x^4$, $f''(0)=0$ 이지만 $f''\ge0$ 이라 변곡점이 아니다.</div></div>
-<div class="prob ox" data-id="ox4-2" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">그래프에서 눈에 띄지 않는 작은 극값도 $f'$ 의 부호 변화를 따라가면 찾을 수 있다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 4.6 예제 1처럼 $f$ 의 큰 창에서는 숨은 극값(0 근처)이 $f'$ 그래프의 부호 변화로 드러난다.</div></div>
-<div class="prob ox" data-id="ox4-3" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">닫힌구간에서 연속인 함수의 최적화 문제는 임계점만 비교하면 되고 끝점은 볼 필요가 없다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 닫힌구간법은 <b>끝점도 함께</b> 비교한다. 끝점에서 최대·최소가 될 수 있다.</div></div>
-<div class="prob ox" data-id="ox4-4" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">점 $P$ 에서 곡선 위 점까지의 거리 $d$ 를 최소로 하는 점과 $d^2$ 을 최소로 하는 점은 같다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. $d\ge0$ 이고 제곱은 증가함수라 최소점이 같다. 계산이 쉬워서 $d^2$ 을 쓴다.</div></div>
-<div class="prob ox" data-id="ox4-5" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">뉴턴의 방법에서 $f'(x_n)=0$ 이면 $x_{n+1}$ 을 정의할 수 없다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. $x_{n+1}=x_n-f(x_n)/f'(x_n)$ 의 분모가 0. 접선이 수평이어서 $x$축과 만나지 않는다.</div></div>
-<div class="prob ox" data-id="ox4-6" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">뉴턴의 방법은 어떤 시작값 $x_1$ 에서 시작해도 반드시 해로 수렴한다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 반례 $f(x)=x^3-2x+2$, $x_1=0$ 은 $0,1,0,1,\dots$ 로 진동한다.</div></div>
-<div class="prob ox" data-id="ox4-7" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">구간에서 $F$ 와 $G$ 가 모두 $f$ 의 역도함수이면 $F-G$ 는 상수이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 도함수가 같은 두 함수는 구간에서 상수만큼 차이 난다 (평균값 정리의 따름정리).</div></div>
-<div class="prob ox" data-id="ox4-8" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\dfrac1x$ 의 가장 일반적인 역도함수는 정의역 전체에서 $\ln x+C$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $x\lt0$ 에서는 $\ln x$ 가 정의되지 않는다. $\ln|x|$ 이고, 구간 $(-\infty,0)$, $(0,\infty)$ 마다 상수가 다를 수 있다.</div></div>
-<div class="prob ox" data-id="ox4-9" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">속도함수 $v(t)$ 만 알면 위치함수 $s(t)$ 는 유일하게 정해진다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $s(t)$ 는 $v$ 의 역도함수이므로 상수 $C$ 가 남는다. <b>초기 위치 $s(0)$</b> 가 있어야 정해진다.</div></div>
 <div class="prob ox" data-id="tbox4-1" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt"><b>[교재 4장 Review T/F #1]</b> $f'(c)=0$ 이면 $f$ 는 $c$ 에서 반드시 극대 또는 극소이다.</div></div></div>
 <div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
 <div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $f(x)=x^3$ 은 $f'(0)=0$ 이지만 증가함수라 극값이 아니다. $f'(c)=0$ 은 극값의 <b>필요조건</b>일 뿐이다.</div></div>
@@ -1720,33 +1768,8 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 </section>
 <section class="sec practice" id="pr5">
 <h2>🧪 Chapter 5 연습문제 (5.1 – 5.5) <span class="pg">풀고 나서 정답 확인 → 채점</span></h2>
-<p class="mini">소단원마다 두 묶음이 있습니다. <b>(자작 연습)</b>은 직접 만든 문제, <b>(교재 Exercises 선별)</b>은 교재 번호로 가리킨 문제입니다. 교재 문제의 <b>문장은 핵심만 줄여 다시 쓴 것이라 원문 그대로가 아니며</b> 풀이는 직접 작성했습니다(번호는 교재 Metric 9판 기준). 증명·그림/표 읽기·CAS·서술형은 뺐고, 계산형은 <b>객관식으로 바꾸지 않고 주관식 그대로</b> 두었습니다. <b>먼저 종이에 풀고</b> → “정답·풀이 보기” → 채점(✔/✘). ✘ 표시한 문제는 “복습 문제만 보기”로 다시 모아 볼 수 있어요.</p>
+<p class="mini">모두 <b>교재 번호로 가리킨 문제</b>입니다: 소단원마다 <b>Exercises 선별</b>, 장 끝에 <b>Review Exercises 선별</b>, 맨 아래에 Review True–False Quiz 의 <b>OX</b>. 문장은 <b>핵심만 줄여 다시 쓴 것이라 원문 그대로가 아니며</b> 풀이는 직접 작성했습니다(번호는 교재 Metric 9판 기준). 증명·그림/표 읽기·CAS·서술형은 뺐고, 계산형은 <b>객관식으로 바꾸지 않고 주관식 그대로</b> 두었습니다. <b>먼저 종이에 풀고</b> → “정답·풀이 보기” → 채점(✔/✘). ✘ 표시한 문제는 “복습 문제만 보기”로 다시 모아 볼 수 있어요.</p>
 <div class="score" data-scope="pr5"><span class="sc">0 / 0 정답</span><button class="onlyno">✘ 복습 문제만 보기</button><button class="reset">기록 초기화</button></div>
-<h3><span class="sq">▸</span>5.1 넓이와 거리 문제 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c5-1"><div class="pq"><span class="pn"></span><div>$f(x)=x^2$, $0\le x\le2$ 에서 $n=4$ 일 때 $L_4$, $R_4$ 를 구하고 넓이와 비교하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=\tfrac12$. $L_4=\tfrac12(0+\tfrac14+1+\tfrac94)=\tfrac74=1.75$, $R_4=\tfrac12(\tfrac14+1+\tfrac94+4)=\tfrac{15}4=3.75$.<br>실제 넓이 $\tfrac83\approx2.67$ 은 $1.75\lt A\lt3.75$ ($f$ 증가 ⇒ $L_n$ 하합, $R_n$ 상합).</div></div>
-<div class="prob" data-id="c5-2"><div class="pq"><span class="pn"></span><div>$f(x)=\dfrac1x$, $1\le x\le3$, $n=4$ 에서 $R_4$ 와 $L_4$ 를 구하고, 어느 쪽이 과대·과소 추정인지 말하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=\tfrac12$. $R_4=\tfrac12\left(\tfrac23+\tfrac12+\tfrac25+\tfrac13\right)=\tfrac{19}{20}=0.95$, $L_4=\tfrac12\left(1+\tfrac23+\tfrac12+\tfrac25\right)=\tfrac{77}{60}\approx1.283$.<br>$f$ 가 <b>감소</b>이므로 $R_4$ 는 과소, $L_4$ 는 과대 추정. (참값 $\ln3\approx1.0986$)</div></div>
-<div class="prob" data-id="c5-3"><div class="pq"><span class="pn"></span><div>$f(x)=x^3$, $0\le x\le1$ 의 아래 넓이를 $\displaystyle\lim_{n\to\infty}R_n$ 으로 계산하시오. (힌트: $\sum i^3=\left[\tfrac{n(n+1)}2\right]^2$)</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$R_n=\displaystyle\sum_{i=1}^n\left(\tfrac in\right)^3\tfrac1n=\tfrac1{n^4}\left[\tfrac{n(n+1)}2\right]^2=\tfrac14\left(1+\tfrac1n\right)^2\to\dfrac14$. 넓이 $=\dfrac14$.</div></div>
-<div class="prob" data-id="c5-4"><div class="pq"><span class="pn"></span><div>$\displaystyle\sum_{i=1}^n(2i+1)$ 을 $n$ 의 식으로 나타내고 $n=10$ 일 때의 값을 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$2\cdot\dfrac{n(n+1)}2+n=n^2+2n$. $n=10$: $100+20=120$.</div></div>
-<div class="prob" data-id="c5-5"><div class="pq"><span class="pn"></span><div>물체의 속력(m/s)을 2초 간격으로 측정했다: $t=0,2,4,6,8$ 에서 $0,\ 3,\ 5,\ 6,\ 6.5$ (증가). 이동 거리의 하한·상한 추정은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">증가 ⇒ 구간 시작 속도의 합이 하한, 끝 속도의 합이 상한. 하한 $2(0+3+5+6)=28$ m, 상한 $2(3+5+6+6.5)=41$ m. $28\le d\le41$.</div></div>
-<div class="prob" data-id="c5-6"><div class="pq"><span class="pn"></span><div>$f(x)=x^2+1$, $[0,2]$ 에서 중점 합 $M_4$ 를 구하시오 (참값 $\tfrac{14}3$ 과 비교).</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=0.5$, 중점 $0.25,0.75,1.25,1.75$. $M_4=0.5\,(1.0625+1.5625+2.5625+4.0625)=0.5\times9.25=4.625$ (참값 $4.667$).</div></div>
-<div class="prob" data-id="c5-7"><div class="pq"><span class="pn"></span><div>넓이의 정의(오른쪽 끝점의 극한)로 $y=2x$ 아래 $0\le x\le3$ 의 넓이를 구하고 삼각형 넓이와 비교하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=\tfrac3n$, $x_i=\tfrac{3i}n$. $R_n=\sum2\cdot\tfrac{3i}n\cdot\tfrac3n=\tfrac{18}{n^2}\cdot\tfrac{n(n+1)}2=9\left(1+\tfrac1n\right)\to9$. 삼각형: $\tfrac12\cdot3\cdot6=9$ ✓.</div></div>
-<div class="prob" data-id="c5-8"><div class="pq"><span class="pn"></span><div>$\displaystyle\sum_{i=1}^ni(i+1)=\dfrac{n(n+1)(n+2)}3$ 임을 이용해 $n=5$ 의 값을 구하고 직접 더해 확인하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\dfrac{5\cdot6\cdot7}3=70$. 직접: $2+6+12+20+30=70$ ✓. (유도: $\sum i^2+\sum i=\dfrac{n(n+1)(2n+1)}6+\dfrac{n(n+1)}2$)</div></div>
 <h3><span class="sq">▸</span>5.1 교재 Exercises 선별 <span class='mini'>(그래프·표를 읽는 문제와 CAS 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb51-3"><div class="pq"><span class="pn"></span><div><b>[교재 5.1 #3]</b> $f(x)=\dfrac1x$ 아래 $1\le x\le2$ 의 넓이를 직사각형 4개로 추정: (a) 오른쪽 끝점 (b) 왼쪽 끝점. 각각 과소·과대 추정인가?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -1784,34 +1807,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <div class="prob" data-id="tb51-31"><div class="pq"><span class="pn"></span><div><b>[교재 5.1 #31]</b> $y=x^5$ 아래 $0\le x\le2$ 의 넓이를 극한으로 나타내고 $\sum i^5=\dfrac{n^2(n+1)^2(2n^2+2n-1)}{12}$ 로 값을 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">$\Delta x=\tfrac2n$, $x_i=\tfrac{2i}n$. $R_n=\displaystyle\sum\left(\tfrac{2i}n\right)^5\tfrac2n=\dfrac{64}{n^6}\sum_{i=1}^ni^5$.<br>$=\dfrac{64}{n^6}\cdot\dfrac{n^2(n+1)^2(2n^2+2n-1)}{12}=\dfrac{64}{12}\left(1+\tfrac1n\right)^2\left(2+\tfrac2n-\tfrac1{n^2}\right)\to\dfrac{64}{12}\cdot2=\boxed{\dfrac{32}3}$.</div></div>
-<h3><span class="sq">▸</span>5.2 정적분 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c5-9"><div class="pq"><span class="pn"></span><div>$f(x)=x^2-2x$, $0\le x\le4$, $n=4$ 의 오른쪽 끝점 리만 합 $R_4$ 를 구하고, 그것이 무엇을 나타내는지 쓰시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=1$, 오른쪽 끝점 $1,2,3,4$ ⇒ $f=-1,0,3,8$. $R_4=1\cdot(-1+0+3+8)=10$.<br>$f$ 가 $[0,2]$ 에서 음수이므로 (위쪽 직사각형 − 아래쪽 직사각형)의 합으로 $\int_0^4f\,dx=\tfrac{16}3$ 의 근삿값.</div></div>
-<div class="prob" data-id="c5-10"><div class="pq"><span class="pn"></span><div>정리 (4)를 써서 $\displaystyle\int_0^2(x^2+1)\,dx$ 를 계산하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=\tfrac2n$, $x_i=\tfrac{2i}n$. $\sum\left(\tfrac{4i^2}{n^2}+1\right)\tfrac2n=\tfrac8{n^3}\sum i^2+2=\tfrac43\left(1+\tfrac1n\right)\left(2+\tfrac1n\right)+2\to\tfrac83+2=\dfrac{14}3$.</div></div>
-<div class="prob" data-id="c5-11"><div class="pq"><span class="pn"></span><div>넓이로 해석해 계산: (a) $\displaystyle\int_{-2}^2\sqrt{4-x^2}\,dx$ (b) $\displaystyle\int_0^4|x-2|\,dx$</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">(a) 반지름 2 인 반원 ⇒ $\tfrac12\pi\cdot2^2=2\pi$.<br>(b) $|x-2|$ 는 $x=2$ 에서 꺾이는 V 자. 양쪽 삼각형(밑변 2, 높이 2) ⇒ $2+2=4$.</div></div>
-<div class="prob" data-id="c5-12"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_2^5f=6$, $\displaystyle\int_5^7f=-1$ 일 때 $\displaystyle\int_7^2f(x)\,dx$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">성질 5: $\int_2^7f=6+(-1)=5$. 방향을 뒤집으면 $\int_7^2f=-5$.</div></div>
-<div class="prob" data-id="c5-13"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^3f=4$, $\displaystyle\int_0^3g=-5$ 일 때 $\displaystyle\int_0^3\left[2f(x)-g(x)\right]dx$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$2\cdot4-(-5)=13$ (성질 3, 4).</div></div>
-<div class="prob" data-id="c5-14"><div class="pq"><span class="pn"></span><div>성질 8로 $\displaystyle\int_1^4\sqrt x\,dx$ 의 값의 범위를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\sqrt x$ 는 증가 ⇒ $m=1,\ M=2$, $b-a=3$. $1\cdot3\le\int_1^4\sqrt x\,dx\le2\cdot3$ ⇒ $3\le\int\le6$. (참값 $\tfrac{14}3\approx4.67$)</div></div>
-<div class="prob" data-id="c5-15"><div class="pq"><span class="pn"></span><div>$\displaystyle\lim_{n\to\infty}\sum_{i=1}^n\left(3x_i^2+2\right)\Delta x$ 를 구간 $[1,4]$ 위의 적분으로 나타내시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f(x)=3x^2+2$, $a=1,\ b=4$ ⇒ $\displaystyle\int_1^4\left(3x^2+2\right)dx$ (5.3 이후 계산하면 69).</div></div>
-<div class="prob" data-id="c5-16"><div class="pq"><span class="pn"></span><div>중점법으로 $\displaystyle\int_0^3x^2\,dx$ 를 $n=3$ 으로 근사하고 참값 9 와 비교하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\Delta x=1$, 중점 $0.5,1.5,2.5$ ⇒ $M_3=0.25+2.25+6.25=8.75$ (참값 9보다 약간 작다).</div></div>
-<div class="prob" data-id="c5-17"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_3^0(x-1)\,dx$ 의 값은? (힌트: 예제 5(b))</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\int_0^3(x-1)dx=A_1-A_2=2-\tfrac12=\tfrac32$ 이므로 방향을 뒤집으면 $-\tfrac32$.</div></div>
 <h3><span class="sq">▸</span>5.2 교재 Exercises 선별 <span class='mini'>(그림 읽기·증명·CAS 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb52-1"><div class="pq"><span class="pn"></span><div><b>[교재 5.2 #1]</b> $f(x)=x-1$, $-6\le x\le4$, 부분구간 5개, 오른쪽 끝점으로 리만 합을 구하시오. 무엇을 나타내는가?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -1873,43 +1868,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <div class="prob" data-id="tb52-85"><div class="pq"><span class="pn"></span><div><b>[교재 5.2 #85]</b> $\displaystyle\int_1^2x^{-2}\,dx$ 를 구하시오. 표본점을 $x_i^*=\sqrt{x_{i-1}x_i}$ (기하평균)로 잡으시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">어떤 분할이든 $f(x_i^*)=\dfrac1{x_{i-1}x_i}$ 이므로<br>$f(x_i^*)\,\Delta x_i=\dfrac{x_i-x_{i-1}}{x_{i-1}x_i}=\dfrac1{x_{i-1}}-\dfrac1{x_i}$ — 합이 <b>망원급수</b>.<br>$\displaystyle\sum_{i=1}^n\left(\dfrac1{x_{i-1}}-\dfrac1{x_i}\right)=\dfrac1{x_0}-\dfrac1{x_n}=1-\dfrac12=\boxed{\dfrac12}$ (분할을 가늘게 해도 항상 같은 값).</div></div>
-<h3><span class="sq">▸</span>5.3 미적분학의 기본정리 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c5-18"><div class="pq"><span class="pn"></span><div>$g(x)=\displaystyle\int_0^x\sqrt{1+t^4}\,dt$ 일 때 $g'(x)$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\sqrt{1+t^4}$ 는 연속이므로 FTC1: $g'(x)=\sqrt{1+x^4}$.</div></div>
-<div class="prob" data-id="c5-19"><div class="pq"><span class="pn"></span><div>$\dfrac d{dx}\displaystyle\int_1^{x^3}\ln t\,dt\ (x\gt0)$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=x^3$, 연쇄법칙: $\ln(u)\cdot u'=\ln(x^3)\cdot3x^2=3\ln x\cdot3x^2=9x^2\ln x$.</div></div>
-<div class="prob" data-id="c5-20"><div class="pq"><span class="pn"></span><div>$h(x)=\displaystyle\int_x^5\cos(t^2)\,dt$ 일 때 $h'(x)$ 는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">아랫끝이 변수이므로 부호가 바뀐다: $h(x)=-\displaystyle\int_5^x\cos(t^2)dt$ ⇒ $h'(x)=-\cos(x^2)$.</div></div>
-<div class="prob" data-id="c5-21"><div class="pq"><span class="pn"></span><div>$F(x)=\displaystyle\int_{2x}^{x^2}\sin t\,dt$ 의 도함수를 두 가지 방법(FTC1+연쇄법칙, 직접 계산 후 미분)으로 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">(1) $F'(x)=\sin(x^2)\cdot2x-\sin(2x)\cdot2$.<br>(2) $F(x)=\left[-\cos t\right]_{2x}^{x^2}=\cos2x-\cos x^2$ ⇒ $F'(x)=-2\sin2x+2x\sin x^2$. 같은 결과.</div></div>
-<div class="prob" data-id="c5-22"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_1^4\left(2x+3\sqrt x\right)dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$F(x)=x^2+2x^{3/2}$. $F(4)-F(1)=(16+16)-(1+2)=\boxed{29}$.</div></div>
-<div class="prob" data-id="c5-23"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^{\pi/3}\sec x\tan x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$F(x)=\sec x$. $\sec\dfrac\pi3-\sec0=2-1=1$.</div></div>
-<div class="prob" data-id="c5-24"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_1^9\dfrac{x-1}{\sqrt x}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">먼저 정리: $x^{1/2}-x^{-1/2}$. $F(x)=\tfrac23x^{3/2}-2x^{1/2}$.<br>$F(9)=18-6=12$, $F(1)=\tfrac23-2=-\tfrac43$ ⇒ $12+\tfrac43=\dfrac{40}3$.</div></div>
-<div class="prob" data-id="c5-25"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^1\dfrac1{1+x^2}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$F(x)=\tan^{-1}x$. $\tan^{-1}1-\tan^{-1}0=\dfrac\pi4$.</div></div>
-<div class="prob" data-id="c5-26"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^3|x-1|\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x=1$ 에서 꺾이므로 쪼갠다: $\displaystyle\int_0^1(1-x)dx+\int_1^3(x-1)dx=\tfrac12+2=\dfrac52$. (삼각형 두 개의 넓이로도 확인 가능)</div></div>
-<div class="prob" data-id="c5-27"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_{-2}^2\dfrac1{x^4}\,dx=\left[-\dfrac1{3x^3}\right]_{-2}^2=-\dfrac1{12}$ 라고 계산했다. 무엇이 잘못되었는가?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">피적분함수 $\dfrac1{x^4}\gt0$ 인데 값이 음수 ⇒ 오류. $x=0\in[-2,2]$ 에서 <b>불연속(무한)</b>이라 FTC2를 쓸 수 없다. (이 적분은 존재하지 않는다 — 7.8)</div></div>
-<div class="prob" data-id="c5-28"><div class="pq"><span class="pn"></span><div>$g(x)=\displaystyle\int_0^x(t^2-4)\,dt\ (x\ge0)$ 가 증가·감소하는 구간과 최솟값을 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$g'(x)=x^2-4$ ⇒ $(0,2)$ 에서 감소, $(2,\infty)$ 에서 증가, $x=2$ 에서 최소.<br>$g(2)=\displaystyle\int_0^2(t^2-4)dt=\dfrac83-8=-\dfrac{16}3$.</div></div>
-<div class="prob" data-id="c5-29"><div class="pq"><span class="pn"></span><div>속도 $v(t)=t^2-4t+3$ (m/s) 인 물체의 $0\le t\le4$ 동안의 <b>변위</b>를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">변위 $=\displaystyle\int_0^4v\,dt=\left[\dfrac{t^3}3-2t^2+3t\right]_0^4=\dfrac{64}3-32+12=\dfrac43$ m. ($v$ 가 음수인 구간 $1\lt t\lt3$ 이 포함되어 있어 이동 <u>거리</u>와는 다르다. 5.4)</div></div>
 <h3><span class="sq">▸</span>5.3 교재 Exercises 선별 <span class='mini'>(그림 읽기·증명·CAS 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb53-7"><div class="pq"><span class="pn"></span><div><b>[교재 5.3 #7]</b> $g(x)=\displaystyle\int_1^xt^2\,dt$ 의 도함수 $g'(x)$ 를 (a) FTC 1 로 (b) 먼저 적분한 뒤 미분하는 두 방법으로 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -2007,40 +1965,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <div class="prob" data-id="tb53-86"><div class="pq"><span class="pn"></span><div><b>[교재 5.3 #86]</b> $\displaystyle\lim_{n\to\infty}\dfrac1n\left(\sqrt{\tfrac1n}+\sqrt{\tfrac2n}+\sqrt{\tfrac3n}+\cdots+\sqrt{\tfrac nn}\right)$ 을 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">$\dfrac1n\sum_{i=1}^n\sqrt{\tfrac in}$ 은 $f(x)=\sqrt x$ 의 $[0,1]$ 위 오른쪽 끝점 리만 합.<br>$=\displaystyle\int_0^1\sqrt x\,dx=\tfrac23x^{3/2}\Big|_0^1=\boxed{\tfrac23}$.</div></div>
-<h3><span class="sq">▸</span>5.4 부정적분과 순변화 정리 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c5-30"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\left(6x^2-\dfrac4x+3e^x-2\cos x\right)dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$2x^3-4\ln|x|+3e^x-2\sin x+C$.</div></div>
-<div class="prob" data-id="c5-31"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\dfrac{x^3-2x+5}x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">먼저 나눈다: $x^2-2+\dfrac5x$. $\dfrac{x^3}3-2x+5\ln|x|+C$.</div></div>
-<div class="prob" data-id="c5-32"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\dfrac{\sin x}{\cos^2x}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\dfrac1{\cos x}\cdot\dfrac{\sin x}{\cos x}=\sec x\tan x$ ⇒ $\sec x+C$.</div></div>
-<div class="prob" data-id="c5-33"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^{\pi/2}\left(\sin x+2\cos x\right)dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\left[-\cos x+2\sin x\right]_0^{\pi/2}=(0+2)-(-1+0)=\boxed3$.</div></div>
-<div class="prob" data-id="c5-34"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_1^4\dfrac{x+1}{\sqrt x}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x^{1/2}+x^{-1/2}$ ⇒ $\left[\tfrac23x^{3/2}+2x^{1/2}\right]_1^4=\left(\tfrac{16}3+4\right)-\left(\tfrac23+2\right)=\dfrac{20}3$.</div></div>
-<div class="prob" data-id="c5-35"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^{\ln2}\left(e^x+e^{-x}\right)dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\left[e^x-e^{-x}\right]_0^{\ln2}=\left(2-\tfrac12\right)-(1-1)=\dfrac32$.</div></div>
-<div class="prob" data-id="c5-36"><div class="pq"><span class="pn"></span><div>직선 위 물체의 속도가 $v(t)=2t-6$ (m/s) 이다. $0\le t\le5$ 동안의 변위와 이동 거리는?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">변위 $\displaystyle\int_0^5(2t-6)dt=\left[t^2-6t\right]_0^5=-5$ m.<br>$v\le0$ ($t\le3$), $v\ge0$ ($t\ge3$) ⇒ 거리 $=-\displaystyle\int_0^3v+\int_3^5v=9+4=13$ m.</div></div>
-<div class="prob" data-id="c5-37"><div class="pq"><span class="pn"></span><div>한계비용이 $C'(x)=0.06x+4$ (달러/개) 일 때 생산량을 100개에서 200개로 늘리면 비용 증가분은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\displaystyle\int_{100}^{200}(0.06x+4)dx=\left[0.03x^2+4x\right]_{100}^{200}=(1200+800)-(300+400)=1300$ 달러.</div></div>
-<div class="prob" data-id="c5-38"><div class="pq"><span class="pn"></span><div>탱크에서 물이 $r(t)=20e^{-0.1t}$ L/h 의 속도로 샌다. 처음 10시간 동안 샌 물의 양은? (소수 둘째 자리)</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\displaystyle\int_0^{10}20e^{-0.1t}dt=\left[-200e^{-0.1t}\right]_0^{10}=200\left(1-e^{-1}\right)\approx126.42$ L.</div></div>
-<div class="prob" data-id="c5-39"><div class="pq"><span class="pn"></span><div>가속도가 $a(t)=6t$ (m/s²), $v(0)=-4$ m/s 일 때 $v(3)$ 은? (순변화 정리)</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$v(3)-v(0)=\displaystyle\int_0^36t\,dt=\left[3t^2\right]_0^3=27$ ⇒ $v(3)=-4+27=23$ m/s.</div></div>
-<div class="prob" data-id="c5-40"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\ln x\,dx=x\ln x-x+C$ 임을 미분해서 확인하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\dfrac d{dx}(x\ln x-x)=\ln x+x\cdot\dfrac1x-1=\ln x$ ✓. (부정적분은 오른쪽을 미분해 피적분함수가 나오는지로 확인)</div></div>
 <h3><span class="sq">▸</span>5.4 교재 Exercises 선별 <span class='mini'>(해석 서술·그래프·표 읽기 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb54-3"><div class="pq"><span class="pn"></span><div><b>[교재 5.4 #3]</b> 미분하여 $\displaystyle\int\dfrac{dx}{x^2\sqrt{1+x^2}}=-\dfrac{\sqrt{1+x^2}}x+C$ 가 옳음을 확인하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -2123,61 +2047,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <div class="prob" data-id="tb54-81"><div class="pq"><span class="pn"></span><div><b>[교재 5.4 #81]</b> 세균 수가 $t=0$ 에서 4000 이고 증가율이 $1000\cdot2^t$ (마리/시간) 일 때 1시간 후의 개체 수는?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">$P(1)=4000+\displaystyle\int_0^11000\cdot2^t\,dt=4000+\dfrac{1000(2-1)}{\ln2}=4000+\dfrac{1000}{\ln2}\approx\boxed{5443}$.</div></div>
-<h3><span class="sq">▸</span>5.5 치환적분 <span class='mini'>(자작 연습)</span></h3>
-<div class="prob" data-id="c5-41"><div class="pq"><span class="pn"></span><div>$\displaystyle\int(3x^2+1)(x^3+x)^4\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=x^3+x$, $du=(3x^2+1)dx$ ⇒ $\int u^4du=\dfrac{u^5}5+C=\dfrac{(x^3+x)^5}5+C$.</div></div>
-<div class="prob" data-id="c5-42"><div class="pq"><span class="pn"></span><div>$\displaystyle\int xe^{x^2}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=x^2$, $x\,dx=\tfrac12du$ ⇒ $\tfrac12e^{x^2}+C$.</div></div>
-<div class="prob" data-id="c5-43"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\cos3x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=3x$, $dx=\tfrac13du$ ⇒ $\tfrac13\sin3x+C$.</div></div>
-<div class="prob" data-id="c5-44"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\dfrac x{x^2+4}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=x^2+4$, $x\,dx=\tfrac12du$ ⇒ $\tfrac12\ln|u|+C=\tfrac12\ln(x^2+4)+C$ ($x^2+4\gt0$).</div></div>
-<div class="prob" data-id="c5-45"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\sin^3x\cos x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=\sin x$, $du=\cos x\,dx$ ⇒ $\int u^3du=\dfrac{\sin^4x}4+C$.</div></div>
-<div class="prob" data-id="c5-46"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\dfrac{(\ln x)^2}x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=\ln x$, $du=\tfrac1x\,dx$ ⇒ $\dfrac{u^3}3+C=\dfrac{(\ln x)^3}3+C$.</div></div>
-<div class="prob" data-id="c5-47"><div class="pq"><span class="pn"></span><div>$\displaystyle\int x\sqrt{x+1}\,dx$ 를 구하시오. (힌트: $u=x+1$ 이면 $x=u-1$)</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\int(u-1)u^{1/2}du=\int(u^{3/2}-u^{1/2})du=\tfrac25u^{5/2}-\tfrac23u^{3/2}+C=\tfrac25(x+1)^{5/2}-\tfrac23(x+1)^{3/2}+C$.</div></div>
-<div class="prob" data-id="c5-48"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\cot x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\dfrac{\cos x}{\sin x}$, $u=\sin x$ ⇒ $\int\dfrac{du}u=\ln|\sin x|+C$.</div></div>
-<div class="prob" data-id="c5-49"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^1x(1+x^2)^3\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=1+x^2$, $x\,dx=\tfrac12du$, $x:0\to1$ ⇒ $u:1\to2$. $\tfrac12\displaystyle\int_1^2u^3du=\tfrac12\cdot\dfrac{16-1}4=\dfrac{15}8$.</div></div>
-<div class="prob" data-id="c5-50"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^{\pi/2}\sin^2x\cos x\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=\sin x$, $x:0\to\tfrac\pi2$ ⇒ $u:0\to1$. $\int_0^1u^2du=\dfrac13$.</div></div>
-<div class="prob" data-id="c5-51"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_1^4\dfrac{e^{\sqrt x}}{\sqrt x}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=\sqrt x$, $du=\dfrac{dx}{2\sqrt x}$ ⇒ $\dfrac{dx}{\sqrt x}=2du$, $u:1\to2$. $2\displaystyle\int_1^2e^udu=2(e^2-e)$.</div></div>
-<div class="prob" data-id="c5-52"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^3\dfrac x{\sqrt{x^2+16}}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=x^2+16$, $x\,dx=\tfrac12du$, $u:16\to25$. $\tfrac12\displaystyle\int_{16}^{25}u^{-1/2}du=\Big[\sqrt u\Big]_{16}^{25}=5-4=1$.</div></div>
-<div class="prob" data-id="c5-53"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_{-2}^2\left(x^5+3x^2\right)dx$ 를 구하시오. (대칭 이용)</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x^5$ 는 홀함수 ⇒ 0, $3x^2$ 는 짝함수 ⇒ $2\displaystyle\int_0^23x^2dx=2\cdot8=16$.</div></div>
-<div class="prob" data-id="c5-54"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_{-\pi}^{\pi}x^2\sin x\,dx$ 의 값은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f(x)=x^2\sin x$, $f(-x)=x^2(-\sin x)=-f(x)$ ⇒ 홀함수 ⇒ <b>0</b>.</div></div>
-<div class="prob" data-id="c5-55"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^22xe^{x^2}dx$ 에서 $u=x^2$ 로 치환한 뒤 $\displaystyle\int_0^2e^u\,du=e^2-1$ 이라고 했다. 무엇이 틀렸고 올바른 값은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">치환했는데 <b>한계를 $u$ 값으로 바꾸지 않았다</b>. $x:0\to2$ 이면 $u:0\to4$. 옳게는 $\displaystyle\int_0^4e^udu=e^4-1$.</div></div>
-<div class="prob" data-id="c5-56"><div class="pq"><span class="pn"></span><div>$\displaystyle\int\dfrac{e^{2x}}{1+e^{2x}}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=1+e^{2x}$, $du=2e^{2x}dx$ ⇒ $\tfrac12\ln|u|+C=\tfrac12\ln\left(1+e^{2x}\right)+C$.</div></div>
-<div class="prob" data-id="c5-57"><div class="pq"><span class="pn"></span><div>$\displaystyle\int_0^{\ln3}\dfrac{e^x}{(1+e^x)^2}\,dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$u=1+e^x$, $du=e^xdx$, $u:2\to4$. $\displaystyle\int_2^4u^{-2}du=\left[-\dfrac1u\right]_2^4=-\tfrac14+\tfrac12=\dfrac14$.</div></div>
-<div class="prob" data-id="c5-58"><div class="pq"><span class="pn"></span><div>대칭을 이용해 $\displaystyle\int_{-1}^1\left(x^3+x^2+x+1\right)dx$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">홀함수 $x^3+x$ 는 0. 짝함수 $x^2+1$ 는 $2\displaystyle\int_0^1(x^2+1)dx=2\left(\tfrac13+1\right)=\dfrac83$.</div></div>
 <h3><span class="sq">▸</span>5.5 교재 Exercises 선별 <span class='mini'>(그래프로 확인하는 문제·증명 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb55-3"><div class="pq"><span class="pn"></span><div><b>[교재 5.5 #3]</b> $u=x^3+1$ 로 치환하여 $\displaystyle\int x^2\sqrt{x^3+1}\,dx$ 를 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -2305,71 +2174,186 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <div class="prob" data-id="tb55-100"><div class="pq"><span class="pn"></span><div><b>[교재 5.5 #100]</b> (100번 (a): $\int_0^{\pi/2}f(\cos x)dx=\int_0^{\pi/2}f(\sin x)dx$) 를 이용해 $\displaystyle\int_0^{\pi/2}\cos^2x\,dx$ 와 $\displaystyle\int_0^{\pi/2}\sin^2x\,dx$ 를 구하시오.</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">(a) 에서 $f(u)=u^2$ 이면 두 적분은 <b>같다</b>. 합은 $\int_0^{\pi/2}(\cos^2x+\sin^2x)dx=\int_0^{\pi/2}1\,dx=\dfrac\pi2$.<br>따라서 각각 $\boxed{\dfrac\pi4}$.</div></div>
+<h3><span class="sq">▸</span>Chapter 5 Review Exercises 선별 <span class='mini'>(교재 5장 맨 끝 문제 · 그림 읽기·증명·서술형·CAS 문제는 제외, 번호는 교재 기준)</span></h3>
+<div class="prob" data-id="tbr5-2"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #2]</b> $f(x)=x^2-x$, $0\le x\le2$ 에 대해 (a) 오른쪽 끝점, 구간 4개의 리만 합 (b) 정의(오른쪽 끝점)로 $\displaystyle\int_0^2(x^2-x)\,dx$ (c) FTC 로 확인하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">(a) $\Delta x=\tfrac12$, $f(\tfrac12)=-\tfrac14$, $f(1)=0$, $f(\tfrac32)=\tfrac34$, $f(2)=2$ ⇒ $R_4=\tfrac12\left(-\tfrac14+0+\tfrac34+2\right)=\boxed{\tfrac54}$.<br>(b) $x_i=\tfrac{2i}n$: $R_n=\displaystyle\sum\left(\tfrac{4i^2}{n^2}-\tfrac{2i}n\right)\tfrac2n=\dfrac8{n^3}\cdot\dfrac{n(n+1)(2n+1)}6-\dfrac4{n^2}\cdot\dfrac{n(n+1)}2$<br>$=\tfrac43\left(1+\tfrac1n\right)\left(2+\tfrac1n\right)-2\left(1+\tfrac1n\right)\to\tfrac83-2=\boxed{\tfrac23}$.<br>(c) $\left[\tfrac{x^3}3-\tfrac{x^2}2\right]_0^2=\tfrac83-2=\tfrac23$ ✓.</div></div>
+<div class="prob" data-id="tbr5-3"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #3]</b> $\displaystyle\int_0^1\left(x+\sqrt{1-x^2}\right)dx$ 를 넓이로 해석해 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\int_0^1x\,dx=\tfrac12$ (밑변·높이 1 인 직각삼각형). $\int_0^1\sqrt{1-x^2}\,dx$ 는 단위원의 <b>1/4</b> ⇒ $\tfrac\pi4$.<br>합 $=\boxed{\tfrac12+\tfrac\pi4}$.</div></div>
+<div class="prob" data-id="tbr5-4"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #4]</b> $\displaystyle\lim_{n\to\infty}\sum_{i=1}^n\sin x_i\,\Delta x$ 를 구간 $[0,\pi]$ 위의 정적분으로 나타내고 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle=\int_0^\pi\sin x\,dx=\left[-\cos x\right]_0^\pi=1+1=\boxed2$.</div></div>
+<div class="prob" data-id="tbr5-5"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #5]</b> $\displaystyle\int_0^6f(x)\,dx=10$, $\displaystyle\int_0^4f(x)\,dx=7$ 일 때 $\displaystyle\int_4^6f(x)\,dx$ 는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">구간 가법성: $\int_0^6=\int_0^4+\int_4^6$ ⇒ $\int_4^6f=10-7=\boxed3$.</div></div>
+<div class="prob" data-id="tbr5-6"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #6]</b> $\displaystyle\int_1^5\left(x+2x^5\right)dx$ 를 (오른쪽 끝점) 리만 합의 극한으로 나타내고, FTC 로 값을 구해 확인하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\Delta x=\tfrac4n$, $x_i=1+\tfrac{4i}n$ ⇒ $\displaystyle\int_1^5(x+2x^5)dx=\lim_{n\to\infty}\sum_{i=1}^n\left[\left(1+\tfrac{4i}n\right)+2\left(1+\tfrac{4i}n\right)^5\right]\dfrac4n$.<br>FTC: $\left[\tfrac{x^2}2+\tfrac{x^6}3\right]_1^5=\left(\tfrac{25}2+\tfrac{15625}3\right)-\left(\tfrac12+\tfrac13\right)=12+5208=\boxed{5220}$.</div></div>
+<div class="prob" data-id="tbr5-8"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #8]</b> (a) $\displaystyle\int_0^1\dfrac d{dx}\left(e^{\arctan x}\right)dx$ (b) $\displaystyle\dfrac d{dx}\int_0^1e^{\arctan x}\,dx$ (c) $\displaystyle\dfrac d{dx}\int_0^xe^{\arctan t}\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">(a) FTC 2: $e^{\arctan1}-e^{\arctan0}=\boxed{e^{\pi/4}-1}$.<br>(b) 정적분은 <b>상수</b>라 미분하면 $\boxed0$.<br>(c) FTC 1: $\boxed{e^{\arctan x}}$.</div></div>
+<div class="prob" data-id="tbr5-11"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #11]</b> $\displaystyle\int_{-1}^0\left(x^2+5x\right)dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\left[\tfrac{x^3}3+\tfrac{5x^2}2\right]_{-1}^0=0-\left(-\tfrac13+\tfrac52\right)=\boxed{-\tfrac{13}6}$.</div></div>
+<div class="prob" data-id="tbr5-12"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #12]</b> $\displaystyle\int_0^T\left(x^4-8x+7\right)dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\left[\tfrac{x^5}5-4x^2+7x\right]_0^T=\boxed{\tfrac{T^5}5-4T^2+7T}$.</div></div>
+<div class="prob" data-id="tbr5-13"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #13]</b> $\displaystyle\int_0^1\left(1-x^9\right)dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\left[x-\tfrac{x^{10}}{10}\right]_0^1=1-\tfrac1{10}=\boxed{\tfrac9{10}}$.</div></div>
+<div class="prob" data-id="tbr5-14"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #14]</b> $\displaystyle\int_0^1(1-x)^9\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1-x$, $du=-dx$, 한계 $1\to0$: $\int_0^1u^9du=\boxed{\tfrac1{10}}$.</div></div>
+<div class="prob" data-id="tbr5-15"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #15]</b> $\displaystyle\int_1^9\dfrac{\sqrt u-2u^2}u\,du$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\dfrac{\sqrt u-2u^2}u=u^{-1/2}-2u$ ⇒ $\left[2\sqrt u-u^2\right]_1^9=(6-81)-(2-1)=\boxed{-76}$.</div></div>
+<div class="prob" data-id="tbr5-16"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #16]</b> $\displaystyle\int_0^1\left(\sqrt[4]u+1\right)^2du$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">전개: $u^{1/2}+2u^{1/4}+1$ ⇒ $\left[\tfrac23u^{3/2}+\tfrac85u^{5/4}+u\right]_0^1=\tfrac23+\tfrac85+1=\boxed{\tfrac{49}{15}}$.</div></div>
+<div class="prob" data-id="tbr5-17"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #17]</b> $\displaystyle\int_0^1y\left(y^2+1\right)^5dy$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=y^2+1$, $y\,dy=\tfrac12du$, 한계 $1\to2$: $\tfrac12\cdot\tfrac{u^6}6\Big|_1^2=\tfrac{64-1}{12}=\boxed{\tfrac{21}4}$.</div></div>
+<div class="prob" data-id="tbr5-18"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #18]</b> $\displaystyle\int_0^2y^2\sqrt{1+y^3}\,dy$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+y^3$, $y^2dy=\tfrac13du$, 한계 $1\to9$: $\tfrac13\cdot\tfrac23u^{3/2}\Big|_1^9=\tfrac29(27-1)=\boxed{\tfrac{52}9}$.</div></div>
+<div class="prob" data-id="tbr5-19"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #19]</b> $\displaystyle\int_1^5\dfrac{dt}{(t-4)^2}$ 가 존재하는가? 존재하면 값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f(t)=\dfrac1{(t-4)^2}$ 은 구간 안의 $t=4$ 에서 <b>무한 불연속</b>(유계가 아님)이라 정적분이 정의되지 않는다. <b>존재하지 않는다</b>.<br>(함부로 $\left[-\tfrac1{t-4}\right]_1^5=-1-\tfrac13$ 으로 계산하면 양수 함수의 적분이 음수가 되는 모순)</div></div>
+<div class="prob" data-id="tbr5-20"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #20]</b> $\displaystyle\int_0^1\sin(3t)\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=3t$: $\tfrac13\int_0^3\sin u\,du=\tfrac13\left[-\cos u\right]_0^3=\boxed{\tfrac{1-\cos3}3}$.</div></div>
+<div class="prob" data-id="tbr5-21"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #21]</b> $\displaystyle\int_0^1v^2\cos\left(v^3\right)dv$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=v^3$, $v^2dv=\tfrac13du$, 한계 $0\to1$: $\tfrac13\sin u\Big|_0^1=\boxed{\tfrac13\sin1}$.</div></div>
+<div class="prob" data-id="tbr5-22"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #22]</b> $\displaystyle\int_{-1}^1\dfrac{\sin x}{1+x^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f(x)=\dfrac{\sin x}{1+x^2}$ 은 홀함수, 구간은 원점 대칭 ⇒ $\boxed0$.</div></div>
+<div class="prob" data-id="tbr5-23"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #23]</b> $\displaystyle\int_{-\pi/4}^{\pi/4}\dfrac{t^4\tan t}{2+\cos t}\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$t^4$ 은 짝, $\tan t$ 는 홀, $2+\cos t$ 는 짝 ⇒ 피적분함수는 홀함수 ⇒ $\boxed0$.</div></div>
+<div class="prob" data-id="tbr5-24"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #24]</b> $\displaystyle\int_{-2}^{-1}\dfrac{z^2+1}z\,dz$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$z+\tfrac1z$ ⇒ $\left[\tfrac{z^2}2+\ln|z|\right]_{-2}^{-1}=\left(\tfrac12+0\right)-(2+\ln2)=\boxed{-\tfrac32-\ln2}$.</div></div>
+<div class="prob" data-id="tbr5-25"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #25]</b> $\displaystyle\int\dfrac x{x^2+1}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2+1$, $x\,dx=\tfrac12du$ ⇒ $\boxed{\tfrac12\ln(x^2+1)+C}$.</div></div>
+<div class="prob" data-id="tbr5-27"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #27]</b> $\displaystyle\int\dfrac{x+2}{\sqrt{x^2+4x}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2+4x$, $du=2(x+2)dx$ ⇒ $\tfrac12\int u^{-1/2}du=\sqrt u=\boxed{\sqrt{x^2+4x}+C}$.</div></div>
+<div class="prob" data-id="tbr5-28"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #28]</b> $\displaystyle\int\dfrac{\csc^2x}{1+\cot x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+\cot x$, $du=-\csc^2x\,dx$ ⇒ $-\int\dfrac{du}u=\boxed{-\ln|1+\cot x|+C}$.</div></div>
+<div class="prob" data-id="tbr5-30"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #30]</b> $\displaystyle\int\sin x\,\cos(\cos x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$, $du=-\sin x\,dx$ ⇒ $-\int\cos u\,du=\boxed{-\sin(\cos x)+C}$.</div></div>
+<div class="prob" data-id="tbr5-31"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #31]</b> $\displaystyle\int\dfrac{e^{\sqrt x}}{\sqrt x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\sqrt x$, $du=\dfrac{dx}{2\sqrt x}$ ⇒ $2\int e^udu=\boxed{2e^{\sqrt x}+C}$.</div></div>
+<div class="prob" data-id="tbr5-32"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #32]</b> $\displaystyle\int\dfrac{\sin(\ln x)}x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln x$, $du=\dfrac{dx}x$ ⇒ $\int\sin u\,du=\boxed{-\cos(\ln x)+C}$.</div></div>
+<div class="prob" data-id="tbr5-33"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #33]</b> $\displaystyle\int\tan x\,\ln(\cos x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln\cos x$, $du=-\tan x\,dx$ ⇒ $-\int u\,du=\boxed{-\tfrac12\left[\ln(\cos x)\right]^2+C}$.</div></div>
+<div class="prob" data-id="tbr5-34"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #34]</b> $\displaystyle\int\dfrac x{\sqrt{1-x^4}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2$, $x\,dx=\tfrac12du$ ⇒ $\tfrac12\int\dfrac{du}{\sqrt{1-u^2}}=\boxed{\tfrac12\sin^{-1}\left(x^2\right)+C}$.</div></div>
+<div class="prob" data-id="tbr5-35"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #35]</b> $\displaystyle\int\dfrac{x^3}{1+x^4}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+x^4$, $x^3dx=\tfrac14du$ ⇒ $\boxed{\tfrac14\ln\left(1+x^4\right)+C}$.</div></div>
+<div class="prob" data-id="tbr5-36"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #36]</b> $\displaystyle\int\sinh(1+4x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+4x$, $dx=\tfrac14du$ ⇒ $\boxed{\tfrac14\cosh(1+4x)+C}$.</div></div>
+<div class="prob" data-id="tbr5-37"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #37]</b> $\displaystyle\int\dfrac{\sec\theta\tan\theta}{1+\sec\theta}\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+\sec\theta$, $du=\sec\theta\tan\theta\,d\theta$ ⇒ $\boxed{\ln|1+\sec\theta|+C}$.</div></div>
+<div class="prob" data-id="tbr5-38"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #38]</b> $\displaystyle\int_0^{\pi/4}(1+\tan t)^3\sec^2t\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+\tan t$, $du=\sec^2t\,dt$, 한계 $1\to2$: $\tfrac{u^4}4\Big|_1^2=\tfrac{16-1}4=\boxed{\tfrac{15}4}$.</div></div>
+<div class="prob" data-id="tbr5-39"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #39]</b> $\displaystyle\int x(1-x)^{2/3}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1-x$ ⇒ $x=1-u$, $dx=-du$: $-\int(1-u)u^{2/3}du=-\tfrac35u^{5/3}+\tfrac38u^{8/3}$.<br>$=\boxed{-\tfrac35(1-x)^{5/3}+\tfrac38(1-x)^{8/3}+C}$.</div></div>
+<div class="prob" data-id="tbr5-41"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #41]</b> $\displaystyle\int_0^3\left|x^2-4\right|dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x^2-4$ 는 $0\le x\lt 2$ 에서 음수, $2\lt x\le3$ 에서 양수. $\int_0^2(4-x^2)dx=\tfrac{16}3$, $\int_2^3(x^2-4)dx=\tfrac73$.<br>합 $=\boxed{\tfrac{23}3}$.</div></div>
+<div class="prob" data-id="tbr5-42"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #42]</b> $\displaystyle\int_0^4\left|\sqrt x-1\right|dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sqrt x-1$ 은 $x=1$ 에서 부호가 바뀐다. $\int_0^1(1-\sqrt x)dx=1-\tfrac23=\tfrac13$, $\int_1^4(\sqrt x-1)dx=\left(\tfrac{14}3-3\right)=\tfrac53$.<br>합 $=\boxed2$.</div></div>
+<div class="prob" data-id="tbr5-43"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #43]</b> $\displaystyle\int\dfrac{\cos x}{\sqrt{1+\sin x}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+\sin x$, $du=\cos x\,dx$ ⇒ $\int u^{-1/2}du=\boxed{2\sqrt{1+\sin x}+C}$.</div></div>
+<div class="prob" data-id="tbr5-44"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #44]</b> $\displaystyle\int\dfrac{x^3}{\sqrt{x^2+1}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2+1$ ⇒ $x^2=u-1$, $x\,dx=\tfrac12du$: $\tfrac12\int(u-1)u^{-1/2}du=\tfrac12\left(\tfrac23u^{3/2}-2u^{1/2}\right)$.<br>$=\boxed{\tfrac13\left(x^2+1\right)^{3/2}-\left(x^2+1\right)^{1/2}+C}$.</div></div>
+<div class="prob" data-id="tbr5-45"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #45]</b> $y=x\sqrt x$, $0\le x\le4$ 아래의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle\int_0^4x^{3/2}dx=\tfrac25x^{5/2}\Big|_0^4=\tfrac25\cdot32=\boxed{\tfrac{64}5}$.</div></div>
+<div class="prob" data-id="tbr5-46"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #46]</b> $\displaystyle\int_0^{2\pi}\cos^2x\,\sin x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$, $du=-\sin x\,dx$, 한계 $1\to1$ ⇒ 윗끝=아랫끝이므로 $\boxed0$. (또는 $-\tfrac{\cos^3x}3\Big|_0^{2\pi}=0$)</div></div>
+<div class="prob" data-id="tbr5-47"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #47]</b> $y=x^2+5$ 의 그래프 아래, $x$축 위, $x=0$ 에서 $x=4$ 사이의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle\int_0^4(x^2+5)\,dx=\left[\tfrac{x^3}3+5x\right]_0^4=\tfrac{64}3+20=\boxed{\tfrac{124}3}$.</div></div>
+<div class="prob" data-id="tbr5-48"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #48]</b> $y=\sin x$ 의 그래프 아래, $x$축 위, $x=0$ 에서 $x=\tfrac\pi2$ 사이의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle\int_0^{\pi/2}\sin x\,dx=\left[-\cos x\right]_0^{\pi/2}=\boxed1$.</div></div>
+<div class="prob" data-id="tbr5-51"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #51]</b> $F(x)=\displaystyle\int_0^x\dfrac{t^2}{1+t^3}\,dt$ 의 도함수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">FTC 1: $F'(x)=\boxed{\dfrac{x^2}{1+x^3}}$.</div></div>
+<div class="prob" data-id="tbr5-52"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #52]</b> $F(x)=\displaystyle\int_x^1\sqrt{t+\sin t}\,dt$ 의 도함수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">변수가 아랫끝: $F=-\int_1^x\sqrt{t+\sin t}\,dt$ ⇒ $F'(x)=\boxed{-\sqrt{x+\sin x}}$.</div></div>
+<div class="prob" data-id="tbr5-53"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #53]</b> $g(x)=\displaystyle\int_0^{x^4}\cos\left(t^2\right)dt$ 의 도함수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">연쇄법칙: $g'(x)=\cos\left((x^4)^2\right)\cdot4x^3=\boxed{4x^3\cos\left(x^8\right)}$.</div></div>
+<div class="prob" data-id="tbr5-54"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #54]</b> $g(x)=\displaystyle\int_1^{\sin x}\dfrac{1-t^2}{1+t^4}\,dt$ 의 도함수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$g'(x)=\dfrac{1-\sin^2x}{1+\sin^4x}\cdot\cos x=\boxed{\dfrac{\cos^3x}{1+\sin^4x}}$.</div></div>
+<div class="prob" data-id="tbr5-55"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #55]</b> $y=\displaystyle\int_{\sqrt x}^x\dfrac{e^t}t\,dt$ 의 도함수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$y'=\dfrac{e^x}x\cdot1-\dfrac{e^{\sqrt x}}{\sqrt x}\cdot\dfrac1{2\sqrt x}=\dfrac{e^x}x-\dfrac{e^{\sqrt x}}{2x}=\boxed{\dfrac{2e^x-e^{\sqrt x}}{2x}}$.</div></div>
+<div class="prob" data-id="tbr5-56"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #56]</b> $y=\displaystyle\int_{2x}^{3x+1}\sin\left(t^4\right)dt$ 의 도함수를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$y'=\sin\left((3x+1)^4\right)\cdot3-\sin\left((2x)^4\right)\cdot2=\boxed{3\sin\left((3x+1)^4\right)-2\sin\left(16x^4\right)}$.</div></div>
+<div class="prob" data-id="tbr5-57"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #57]</b> 성질 8 로 $\displaystyle\int_1^3\sqrt{x^2+3}\,dx$ 의 값의 범위를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f=\sqrt{x^2+3}$ 는 증가: $m=f(1)=2$, $M=f(3)=\sqrt{12}=2\sqrt3$, $b-a=2$.<br>$\boxed{4\le\displaystyle\int_1^3\sqrt{x^2+3}\,dx\le4\sqrt3}$.</div></div>
+<div class="prob" data-id="tbr5-58"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #58]</b> 성질 8 로 $\displaystyle\int_2^4\dfrac1{x^3+2}\,dx$ 의 값의 범위를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$f=\dfrac1{x^3+2}$ 는 감소: $M=f(2)=\tfrac1{10}$, $m=f(4)=\tfrac1{66}$, $b-a=2$.<br>$\boxed{\tfrac1{33}\le\displaystyle\int_2^4\dfrac{dx}{x^3+2}\le\tfrac15}$.</div></div>
+<div class="prob" data-id="tbr5-63"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #63]</b> 중점법 $n=6$ 으로 $\displaystyle\int_0^3\sin\left(x^3\right)dx$ 를 소수 4자리까지 근사하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\Delta x=\tfrac12$, 중점 $0.25,0.75,1.25,1.75,2.25,2.75$. $M_6=\tfrac12\sum\sin\left(x_i^3\right)\approx\boxed{0.2810}$.</div></div>
+<div class="prob" data-id="tbr5-64"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #64]</b> 입자의 속도가 $v(t)=t^2-t$ m/s 일 때 $[0,5]$ 동안의 (a) 변위 (b) 이동 거리를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">(a) $\displaystyle\int_0^5(t^2-t)dt=\left[\tfrac{t^3}3-\tfrac{t^2}2\right]_0^5=\tfrac{125}3-\tfrac{25}2=\boxed{\tfrac{175}6}\approx29.17$ m.<br>(b) $v=t(t-1)$ 은 $0\lt t\lt 1$ 에서 음수. $\int_0^1v=-\tfrac16$, $\int_1^5v=\tfrac{175}6+\tfrac16=\tfrac{88}3$.<br>거리 $=\tfrac16+\tfrac{88}3=\boxed{\tfrac{59}2}=29.5$ m.</div></div>
+<div class="prob" data-id="tbr5-66"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #66]</b> 레이더 건으로 0.5초 간격(0 ~ 5초)으로 주자의 속력(m/s)을 쟀다: $0,\ 4.67,\ 7.34,\ 8.86,\ 9.73,\ 10.22,\ 10.51,\ 10.67,\ 10.76,\ 10.81,\ 10.81$. 중점법으로 5초 동안 달린 거리를 추정하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">1초 폭 구간 5개의 중점 $t=0.5,1.5,2.5,3.5,4.5$ 의 속력: $4.67,\ 8.86,\ 10.22,\ 10.67,\ 10.81$.<br>$M_5=1\cdot(4.67+8.86+10.22+10.67+10.81)=\boxed{45.23}$ m.</div></div>
+<div class="prob" data-id="tbr5-68"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #68]</b> $f(x)=\begin{cases}-x-1&-3\le x\le0\\-\sqrt{1-x^2}&0\le x\le1\end{cases}$ 일 때 $\displaystyle\int_{-3}^1f(x)\,dx$ 를 넓이의 차로 해석해 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$[-3,-1]$: $x$축 위의 직각삼각형(밑변 2, 높이 2) ⇒ $+2$. $[-1,0]$: 아래쪽 삼각형(밑변 1, 높이 1) ⇒ $-\tfrac12$. $[0,1]$: 단위원의 1/4 이 아래쪽 ⇒ $-\tfrac\pi4$.<br>합 $=2-\tfrac12-\tfrac\pi4=\boxed{\tfrac32-\tfrac\pi4}$.</div></div>
+<div class="prob" data-id="tbr5-69"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #69]</b> $f$ 가 연속이고 $\displaystyle\int_0^2f(x)\,dx=6$ 일 때 $\displaystyle\int_0^{\pi/2}f(2\sin\theta)\cos\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=2\sin\theta$, $du=2\cos\theta\,d\theta$, 한계 $0\to2$: $\tfrac12\int_0^2f(u)du=\tfrac12\cdot6=\boxed3$.</div></div>
+<div class="prob" data-id="tbr5-71"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #71]</b> 곡선 $y=\sinh(cx)$ 의 $x=0$ 에서 $x=1$ 까지 아래 넓이가 1 이 되는 $c$ 의 값을 추정하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle\int_0^1\sinh(cx)dx=\dfrac{\cosh c-1}c=1$ ⇒ $\cosh c-1-c=0$ ($c\ne0$ 인 근). $g(c)=\cosh c-1-c$ 는 $g(1)=-0.46\lt 0$, $g(2)=0.76\gt 0$ ⇒ 해는 $(1,2)$ 에 있다.<br>뉴턴·이분법으로 $c\approx\boxed{1.62}$.</div></div>
+<div class="prob" data-id="tbr5-73"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #73]</b> $f$ 가 연속이고 모든 $x$ 에 대해 $\displaystyle\int_1^xf(t)\,dt=(x-1)e^{2x}+\int_1^xe^{-t}f(t)\,dt$ 일 때 $f(x)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">양변을 $x$ 로 미분 (FTC 1, 곱의 법칙): $f(x)=e^{2x}+2(x-1)e^{2x}+e^{-x}f(x)$.<br>$f(x)\left(1-e^{-x}\right)=e^{2x}(2x-1)$ ⇒ $\boxed{f(x)=\dfrac{e^{2x}(2x-1)}{1-e^{-x}}}$.</div></div>
+<div class="prob" data-id="tbr5-74"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #74]</b> $h(1)=-2$, $h'(1)=2$, $h''(1)=3$, $h(2)=6$, $h'(2)=5$, $h''(2)=13$ 이고 $h''$ 이 연속일 때 $\displaystyle\int_1^2h''(u)\,du$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">FTC 2 (순변화): $\int_1^2h''=h'(2)-h'(1)=5-2=\boxed3$. (나머지 주어진 값은 쓰이지 않는다)</div></div>
+<div class="prob" data-id="tbr5-76"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #76]</b> $\displaystyle\lim_{h\to0}\dfrac1h\int_2^{2+h}\sqrt{1+t^3}\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$F(x)=\int_2^x\sqrt{1+t^3}dt$ 라 두면 주어진 식은 $\dfrac{F(2+h)-F(2)}h\to F'(2)$ (도함수의 정의).<br>FTC 1: $F'(2)=\sqrt{1+8}=\boxed3$.</div></div>
+<div class="prob" data-id="tbr5-78"><div class="pq"><span class="pn"></span><div><b>[교재 5장 Review #78]</b> $\displaystyle\lim_{n\to\infty}\dfrac1n\left[\left(\dfrac1n\right)^9+\left(\dfrac2n\right)^9+\left(\dfrac3n\right)^9+\cdots+\left(\dfrac nn\right)^9\right]$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\dfrac1n\sum_{i=1}^n\left(\dfrac in\right)^9$ 는 $f(x)=x^9$ 의 $[0,1]$ 위 오른쪽 끝점 리만 합 ⇒ $\displaystyle\int_0^1x^9dx=\boxed{\tfrac1{10}}$.</div></div>
 <h3><span class="sq">▸</span>⭕❌ OX 문제 · Chapter 5 (5.1 – 5.5)</h3>
 <p class="mini">O/X 를 누르면 바로 채점되고 풀이가 열립니다. “[교재 N장 Review T/F #k]” 는 교재 챕터 리뷰의 True–False Quiz 항목을 짧게 다시 쓴 것입니다(일부는 4.1–4.5 내용).</p>
-<div class="prob ox" data-id="ox5-1" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$f$ 가 $[a,b]$ 에서 증가함수이면 $L_n\le$ (곡선 아래 넓이) $\le R_n$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 증가함수에서는 왼쪽 끝점 높이가 최솟값, 오른쪽 끝점 높이가 최댓값이라 $L_n$ 은 하합, $R_n$ 은 상합.</div></div>
-<div class="prob ox" data-id="ox5-2" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">중점 합 $M_n$ 은 항상 실제 넓이보다 작다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $f$ 의 오목·볼록에 따라 과대·과소가 달라진다 (볼록이면 과소, 오목이면 과대). 항상 작지 않다.</div></div>
-<div class="prob ox" data-id="ox5-3" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$v(t)\ge0$ 이면 시간 구간에서 속도 그래프 아래 넓이가 이동 거리이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 5.1의 거리 문제: 높이 = 속도, 폭 = 시간이므로 직사각형 넓이가 거리.</div></div>
-<div class="prob ox" data-id="ox5-4" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\displaystyle\int_a^bf(x)\,dx$ 는 $x$ 에 대한 함수이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 정적분은 <b>숫자</b>이고 $x$ 는 더미 변수이다. $\int_a^bf(x)dx=\int_a^bf(t)dt$.</div></div>
-<div class="prob ox" data-id="ox5-5" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$[a,b]$ 에서 불연속인 함수는 적분가능하지 않다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 불연속이 유한 개의 점프뿐이면 적분가능 (정리 3).</div></div>
-<div class="prob ox" data-id="ox5-6" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$a\gt b$ 이고 $f(x)\ge0$ 이면 $\displaystyle\int_a^bf(x)\,dx\ge0$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $a\gt b$ 이면 $\int_a^bf=-\int_b^af\le0$. 성질 6은 $a\le b$ 에서만 성립.</div></div>
-<div class="prob ox" data-id="ox5-7" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\displaystyle\int_a^bf(x)g(x)\,dx=\left(\int_a^bf(x)\,dx\right)\left(\int_a^bg(x)\,dx\right)$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 합·상수배의 규칙만 있고 곱의 규칙은 없다. 반례 $f=g=1$, $[0,2]$: 좌변 2, 우변 4.</div></div>
-<div class="prob ox" data-id="ox5-8" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\displaystyle\int_a^bf(x)\,dx=-\int_b^af(x)\,dx$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 구간을 뒤집으면 $\Delta x=\tfrac{b-a}n$ 의 부호가 바뀌어 적분 값의 부호가 바뀐다.</div></div>
-<div class="prob ox" data-id="ox5-9" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$f$ 가 $[a,b]$ 에서 연속이면 $g(x)=\displaystyle\int_a^xf(t)\,dt$ 는 $f$ 의 역도함수이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. FTC1: $g'(x)=f(x)$.</div></div>
-<div class="prob ox" data-id="ox5-10" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">FTC2로 $\displaystyle\int_a^bf\,dx=F(b)-F(a)$ 를 계산할 때 $F$ 에 $+C$ 를 반드시 붙여야 한다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $[F(b)+C]-[F(a)+C]$ 에서 $C$ 가 상쇄된다. 가장 간단한 역도함수를 쓰면 된다.</div></div>
-<div class="prob ox" data-id="ox5-11" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\displaystyle\int_{-1}^1\dfrac1{x^2}\,dx=\left[-\dfrac1x\right]_{-1}^1=-2$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $\dfrac1{x^2}$ 은 $x=0$ 에서 불연속이라 FTC2를 쓸 수 없다. 피적분함수가 양수인데 음수가 나온 것이 단서.</div></div>
-<div class="prob ox" data-id="ox5-12" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\dfrac d{dx}\displaystyle\int_a^{x^2}f(t)\,dt=f(x^2)$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 연쇄법칙으로 $f(x^2)\cdot2x$.</div></div>
-<div class="prob ox" data-id="ox5-13" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$F'=f$ 이고 $f$ 가 연속이면 $\displaystyle\int_a^xF'(t)\,dt=F(x)-F(a)$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. FTC2의 다른 표현: 미분한 뒤 적분하면 상수 $F(a)$ 를 뺀 $F$ 가 돌아온다.</div></div>
-<div class="prob ox" data-id="ox5-14" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">정적분 $\displaystyle\int_a^bf(x)\,dx$ 는 함수이고, 부정적분 $\displaystyle\int f(x)\,dx$ 는 숫자이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 반대이다. 정적분은 <b>숫자</b>, 부정적분은 <b>함수(의 모임, $+C$)</b>.</div></div>
-<div class="prob ox" data-id="ox5-15" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">속도 $v(t)$ 가 음수가 되는 구간이 있어도 $\displaystyle\int_{t_1}^{t_2}v(t)\,dt$ 는 이동 <u>거리</u>이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 그 값은 <b>변위</b>(순변화)이다. 이동 거리는 $\int|v|\,dt$ 로 부호가 바뀌는 점에서 쪼개 계산한다.</div></div>
-<div class="prob ox" data-id="ox5-16" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$F'$ 이 연속이면 $\displaystyle\int_a^bF'(x)\,dx=F(b)-F(a)$ 이다 (변화율의 적분은 순변화).</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 순변화 정리(FTC2).</div></div>
-<div class="prob ox" data-id="ox5-17" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$\displaystyle\int\tan x\,dx=\ln|\cos x|+C$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $u=\cos x$, $du=-\sin x\,dx$ 이므로 $-\ln|\cos x|+C=\ln|\sec x|+C$. 부호가 틀렸다.</div></div>
-<div class="prob ox" data-id="ox5-18" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">정적분에서 $u=g(x)$ 로 치환한 뒤 $u$ 로 적분하고, 원래 $x$ 의 한계($a$, $b$)를 그대로 대입해도 된다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $u$ 로 적분했으면 한계도 $g(a)$, $g(b)$ 로 바꾸거나, $x$ 로 되돌린 뒤에 $x$ 의 한계를 써야 한다.</div></div>
-<div class="prob ox" data-id="ox5-19" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$f$ 가 $[-a,a]$ 에서 연속인 짝함수이면 $\displaystyle\int_{-a}^af(x)\,dx=0$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. 짝함수는 $2\int_0^af$. 0 이 되는 것은 <b>홀함수</b>일 때.</div></div>
-<div class="prob ox" data-id="ox5-20" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$f$ 가 $[-a,a]$ 에서 연속인 홀함수이면 $\displaystyle\int_{-a}^af(x)\,dx=0$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. $x\gt0$ 쪽 넓이와 $x\lt0$ 쪽 넓이가 부호만 반대라 상쇄된다.</div></div>
-<div class="prob ox" data-id="ox5-21" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt">$u=g(x)$ 로 치환하면 $du=g'(x)\,dx$ 이므로 $\displaystyle\int f(g(x))\,g'(x)\,dx=\int f(u)\,du$ 이다.</div></div></div>
-<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
-<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 연쇄법칙을 거꾸로 쓴 치환적분 공식.</div></div>
 <div class="prob ox" data-id="tbox5-1" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt"><b>[교재 5장 Review T/F #1]</b> $f$, $g$ 가 $[a,b]$ 에서 연속이면 $\displaystyle\int_a^b[f(x)+g(x)]\,dx=\int_a^bf(x)\,dx+\int_a^bg(x)\,dx$ 이다.</div></div></div>
 <div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
 <div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. 정적분의 성질 2 (합의 적분).</div></div>
@@ -2813,7 +2797,7 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 </ul>
 </section>
 <div class="pager" id="pager"><button id="pgPrev"></button><button id="pgNext"></button></div>
-<p class="mini" style="margin-top:34px">출처: Stewart, Clegg, Watson, <i>Calculus: Early Transcendentals</i>, 9th Ed. (Metric Version), §4.6–5.5 · 본 노트는 학습용 요약이며 예제는 교재 내용을 바탕으로 재구성했습니다. “[교재 …]” 표시가 붙은 연습문제·OX 는 교재 번호로 가리키되 문장을 줄여 다시 쓴 것(원문 그대로가 아님)이고 풀이는 직접 작성했으며, 나머지 연습문제·퀴즈는 새로 만든 것입니다.<br>수식 렌더링에 KaTeX(CDN)를 사용하므로 최초 열람 시 인터넷 연결이 필요합니다.</p>
+<p class="mini" style="margin-top:34px">출처: Stewart, Clegg, Watson, <i>Calculus: Early Transcendentals</i>, 9th Ed. (Metric Version), §4.6–5.5 · 본 노트는 학습용 요약이며 예제는 교재 내용을 바탕으로 재구성했습니다. “[교재 …]” 표시가 붙은 연습문제·OX 는 교재 번호로 가리키되 문장을 줄여 다시 쓴 것(원문 그대로가 아님)이고 풀이는 직접 작성했으며, 셀프 퀴즈는 새로 만든 것입니다.<br>수식 렌더링에 KaTeX(CDN)를 사용하므로 최초 열람 시 인터넷 연결이 필요합니다.</p>
 </main>
 </div>
 
