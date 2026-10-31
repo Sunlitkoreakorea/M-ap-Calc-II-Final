@@ -100,11 +100,6 @@ svg.fig{width:100%;max-width:440px;height:auto;background:var(--panel);border:1p
 svg.fig text{fill:var(--ink);font:12px sans-serif}
 figcaption{text-align:center;color:var(--muted);font-size:13px;margin-top:-2px}
 figure{margin:12px 0}
-.qa{border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}
-.qa>button{all:unset;display:block;width:100%;box-sizing:border-box;padding:10px 14px;cursor:pointer;font-weight:600}
-.qa>button:hover{background:var(--brand-soft)}
-.qa .a{display:none;padding:8px 14px 12px;border-top:1px solid var(--line);background:var(--bg)}
-.qa.open .a{display:block}
 .chk{list-style:none;padding:0}
 .chk li{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;border-radius:8px}
 .chk li:hover{background:var(--brand-soft)}
@@ -124,7 +119,6 @@ math[display="block"]{margin:.6em 0;overflow-x:auto}
 @media print{
   nav.side,.progress,.tools{display:none}
   details.ex .body{display:block}
-  .qa .a{display:block}
   body{background:#fff}
 }
 
@@ -284,7 +278,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
     <label><input type="checkbox" class="fcType" value="box" checked>개념</label>
     <label><input type="checkbox" class="fcType" value="ex" checked>예제</label>
     <label><input type="checkbox" class="fcType" value="prob" checked>연습문제</label>
-    <label><input type="checkbox" class="fcType" value="qa" checked>퀴즈</label>
     <span class="grow"></span>
     <label><input type="checkbox" id="fcUnk">모르는 카드만</label>
     <button id="fcShuf">🔀 섞기</button>
@@ -362,7 +355,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
   <a href="#concept">📋 개념 요약 (한 장)</a>
   <a href="#proofs">🧾 증명 13선</a>
   <a href="#cheat">📌 공식 치트시트</a>
-  <a href="#quiz">❓ 셀프 퀴즈</a>
   <a href="#check">✅ 시험 직전 체크리스트</a>
 </nav>
 
@@ -1433,12 +1425,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$f$ 가 $[a,b]$ 에서 연속일 때 <b>윗끝이 변수인 정적분</b></p>
 <div class="formula">$$g(x)=\int_a^xf(t)\,dt,\qquad a\le x\le b$$</div>
 <p>은 $x$ 만의 함수이다. $f\ge0$ 이면 $g(x)$ 는 $a$ 부터 $x$ 까지의 <b>“지금까지의 넓이”</b>. (적분 변수는 $t$, 윗끝은 $x$.)</p></div>
-<details class="ex"><summary>예제 A (직접 만든 예) · $f(t)=1-t$, $g(x)=\displaystyle\int_0^xf(t)\,dt$ 를 구하고 $g'$ 를 $f$ 와 비교하시오.</summary>
-<div class="body">
-<p>$g(x)=\displaystyle\int_0^x(1-t)\,dt=x-\dfrac{x^2}2$ (직사각형 − 삼각형으로도 계산된다). $g(0)=0,\ g(1)=\tfrac12,\ g(2)=0$.</p>
-<p>$g'(x)=1-x=f(x)$ ✓. $f\gt0$ 인 $x\lt1$ 에서 $g$ 는 증가, $f\lt0$ 인 $x\gt1$ 에서 감소 ⇒ $x=1$ 에서 최대.</p>
-</div></details>
-<figure><svg class="fig" id="fig53a" viewBox="0 0 440 280"></svg><figcaption>$f(t)=1-t$ (빨강)와 넓이 함수 $g(x)=x-\tfrac{x^2}2$ (파랑) — $g$ 의 기울기가 $f$ 이고, $f=0$ 인 곳에서 $g$ 가 극대</figcaption></figure>
 <div class="box thm"><b class="lab">FTC 1</b>
 <p>$f$ 가 $[a,b]$ 에서 연속이면 $g(x)=\displaystyle\int_a^xf(t)\,dt$ 는 $[a,b]$ 에서 연속, $(a,b)$ 에서 미분가능하고</p>
 <div class="formula">$$g'(x)=f(x)\qquad\left(\text{즉 }\ \frac d{dx}\int_a^xf(t)\,dt=f(x)\right)$$</div>
@@ -1532,10 +1518,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <p class="mini">1635년 로베르발이 이 넓이를 구했을 땐 매우 어려운 문제였다. 기본정리가 발견된 뒤에는 한 줄이다.</p>
 </div></details>
 <figure><svg class="fig" id="fig53b" viewBox="0 0 440 280"></svg><figcaption>$y=\cos x$ 아래 $0\le x\le\tfrac\pi2$ 의 넓이 $=1$ (예제 8)</figcaption></figure>
-<details class="ex"><summary>예제 B (직접 만든 예) · 5.2 예제 3 의 $\displaystyle\int_0^3(x^3-6x)\,dx$ 를 FTC2 로 다시 계산하시오.</summary>
-<div class="body">
-<p>$F(x)=\dfrac{x^4}4-3x^2$ ⇒ $\displaystyle\Big[\dfrac{x^4}4-3x^2\Big]_0^3=\dfrac{81}4-27=-\dfrac{27}4$. 극한으로 여러 줄 걸렸던 계산과 같은 값이다.</p>
-</div></details>
 <details class="ex"><summary>예제 9 · 다음 계산은 무엇이 잘못되었는가? $\displaystyle\int_{-1}^3\dfrac1{x^2}\,dx=\Big[-\dfrac1x\Big]_{-1}^3=-\dfrac13-1=-\dfrac43$</summary>
 <div class="body">
 <p>① 피적분함수 $\dfrac1{x^2}\gt0$ 이므로 성질 6에 의해 적분값은 <b>양수</b>여야 하는데 음수가 나왔다 ⇒ 오류.</p>
@@ -1596,7 +1578,7 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <p>표에 바로 없으므로 <b>삼각 항등식으로 다시 쓴다</b>: $\dfrac1{\sin\theta}\cdot\dfrac{\cos\theta}{\sin\theta}=\csc\theta\cot\theta$.</p>
 <p>$\displaystyle\int\csc\theta\cot\theta\,d\theta=-\csc\theta+C$.</p>
 </div></details>
-<details class="ex"><summary>예제 3 · $\displaystyle\int_0^3(x^3-6x)\,dx$ (5.2 예제 3, 5.3 예제 B 와 비교)</summary>
+<details class="ex"><summary>예제 3 · $\displaystyle\int_0^3(x^3-6x)\,dx$ (5.2 예제 3 과 비교)</summary>
 <div class="body">
 <p>$\displaystyle\left[\dfrac{x^4}4-3x^2\right]_0^3=\dfrac{81}4-27=-\dfrac{27}4=-6.75$. 5.2의 극한 계산이 한 줄이 된다.</p>
 </div></details>
@@ -1637,10 +1619,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <p class="mini">$F(t)=\tfrac{t^3}3-\tfrac{t^2}2-6t$ 에서 $F(1)=-\tfrac{37}6$, $F(3)=-\tfrac{27}2$, $F(4)=-\tfrac{32}3$. 거리 $=-(F(3)-F(1))+(F(4)-F(3))$.</p>
 </div></details>
 <figure><svg class="fig" id="fig54a" viewBox="0 0 440 280"></svg><figcaption>$v(t)=t^2-t-6$, $1\le t\le4$ — 빨강(음수) 면적 $\tfrac{22}3$, 파랑(양수) 면적 $\tfrac{17}6$. 변위 = 파랑 − 빨강 = $-\tfrac92$, 거리 = 파랑 + 빨강 = $\tfrac{61}6$</figcaption></figure>
-<details class="ex"><summary>예제 B (직접 만든 예) · 한계비용이 $C'(x)=0.02x+5$ (달러/개) 일 때 생산량을 100개에서 300개로 늘리면 비용은 얼마나 증가하는가?</summary>
-<div class="body">
-<p>$C(300)-C(100)=\displaystyle\int_{100}^{300}(0.02x+5)\,dx=\left[0.01x^2+5x\right]_{100}^{300}=(900+1500)-(100+500)=1800$ 달러.</p>
-</div></details>
 <div class="box tip"><b class="lab">단위 감각</b>
 <p>$\displaystyle\int_a^bf(x)\,dx$ 의 단위는 <b>($f$ 의 단위) × ($x$ 의 단위)</b>. 전력 $P$(MW)를 시간 $t$(h)로 적분하면 에너지(MW·h), 속도(m/s)를 시간(s)으로 적분하면 거리(m), 유량(L/분)을 시간(분)으로 적분하면 부피(L). 데이터 표는 5.2의 중점법으로 적분을 근사한다.</p></div>
 
@@ -2711,54 +2689,6 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <li><b>정적분 치환</b>: 한계를 $u$ 값으로 안 바꾸는 실수 / $x$ 가 남은 채로 적분.</li>
 </ul></div>
 </section>
-<!-- ============================ QUIZ ============================ -->
-<section class="sec" id="quiz">
-<h2>❓ 셀프 퀴즈 <span class="pg">질문을 클릭하면 답이 나옵니다</span></h2>
-<div class="qa"><button>Q1. 그래프에서 잘 안 보이는 극값을 확실하게 찾는 방법은? (4.6)</button><div class="a">$f'$ 의 그래프(또는 식)에서 <b>부호가 바뀌는 점</b>을 찾는다. 창을 줌인하면 보이던 극값이 $f'$ 에서는 처음부터 드러난다. 정확한 값은 $f'(x)=0$ 을 풀어 얻는다.</div></div>
-<div class="qa"><button>Q2. 분자에 $x^2(x+1)^3$ 이 있는 유리함수의 $x=0$, $x=-1$ 에서 그래프는? (4.6)</button><div class="a">$x=0$ : 짝수 중복도 ⇒ <b>x축에 닿고 부호 불변</b>. $x=-1$ : 홀수 중복도 ⇒ <b>통과</b>하며 수평접선(평평해짐).</div></div>
-<div class="qa"><button>Q3. 함수족 $\dfrac1{x^2+2x+c}$ 에서 수직점근선의 개수가 바뀌는 $c$ 는? (4.6)</button><div class="a">분모의 판별식 $4-4c$ 의 부호가 바뀌는 <b>$c=1$</b> (전이값). $c\gt1$ 없음, $c=1$ 하나, $c\lt1$ 두 개.</div></div>
-<div class="qa"><button>Q4. 최적화 문제에서 점수가 걸린 두 단계는? (4.7)</button><div class="a">① <b>정의역</b> 쓰기 ② <b>끝점 비교</b>(닫힌구간법) 또는 절대극값 1계 판정법으로 최대·최소 확정. 그리고 답을 문제의 물음 형태로 쓰기.</div></div>
-<div class="qa"><button>Q5. 부피가 고정된 원통형 캔의 겉넓이가 최소일 때 높이와 반지름의 비는? (4.7)</button><div class="a"><b>$h=2r$</b> (높이 = 지름). $A=2\pi r^2+\dfrac{2V}r$ 에서 $A'=0$ ⇒ $V=2\pi r^3$.</div></div>
-<div class="qa"><button>Q6. 점과 곡선 사이 최단거리 문제에서 $d$ 대신 $d^2$ 을 쓰는 이유는? (4.7)</button><div class="a">$d\ge0$ 이면 $d$ 와 $d^2$ 이 같은 점에서 최소이고, $d^2$ 는 제곱근이 없어 미분이 쉽다. 마지막에 거리가 필요하면 $\sqrt{d^2_{\min}}$.</div></div>
-<div class="qa"><button>Q7. 수요함수 $p(x)=a-bx\ (b\gt0)$ 일 때 수익 $R(x)$ 가 최대인 판매량은? (4.7)</button><div class="a">$R(x)=ax-bx^2$, $R'(x)=a-2bx=0$ ⇒ $x=\dfrac a{2b}$ ($R''=-2b\lt0$). 가격은 $p=\dfrac a2$.</div></div>
-<div class="qa"><button>Q8. 이윤 $P=R-C$ 가 최대일 때 만족하는 조건은? (4.7)</button><div class="a">$P'(x)=0$, 곧 <b>$R'(x)=C'(x)$</b> (한계수익 = 한계비용).</div></div>
-<div class="qa"><button>Q9. 뉴턴의 방법의 점화식과 $f'(x_n)=0$ 일 때 일어나는 일은? (4.8)</button><div class="a">$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}$. $f'(x_n)=0$ 이면 접선이 수평이라 $x$축과 만나지 않아 <b>$x_{n+1}$ 정의 불가</b>. 0 에 가까워도 멀리 튄다.</div></div>
-<div class="qa"><button>Q10. $\sqrt a$ 를 뉴턴의 방법으로 구하는 점화식은? (4.8)</button><div class="a">$f(x)=x^2-a$ ⇒ $x_{n+1}=\dfrac12\left(x_n+\dfrac a{x_n}\right)$.</div></div>
-<div class="qa"><button>Q11. 뉴턴의 방법에서 언제 계산을 멈추는가? 항상 수렴하는가? (4.8)</button><div class="a">$x_n$ 과 $x_{n+1}$ 이 <b>요구한 소수 자리까지 같을 때</b>. 항상 수렴하지는 않는다 (예: $x^3-2x+2$, $x_1=0$ 은 $0,1,0,1,\dots$ 진동).</div></div>
-<div class="qa"><button>Q12. 같은 구간에서 $F$, $G$ 가 모두 $f$ 의 역도함수이면 둘의 관계는? 이유는? (4.9)</button><div class="a">$G=F+C$ (상수 차이). $(G-F)'=0$ 이고, 도함수가 0 인 함수는 평균값 정리에 의해 상수이기 때문.</div></div>
-<div class="qa"><button>Q13. $\dfrac1x$ 의 일반 역도함수와 정의역 주의점은? (4.9)</button><div class="a">$\ln|x|+C$. $x\ne0$ 이므로 $(-\infty,0)$ 과 $(0,\infty)$ 에서 상수가 <b>따로</b> 있을 수 있다.</div></div>
-<div class="qa"><button>Q14. $f''$ 이 주어졌을 때 $f$ 를 정하려면 필요한 조건 수는? (4.9)</button><div class="a">역도함수를 두 번 구하므로 상수가 <b>2개</b> ⇒ 조건 2개 (예: $f(0),f(1)$ 또는 $f(0),f'(0)$).</div></div>
-<div class="qa"><button>Q15. 위쪽 방향을 +로 하고 중력가속도만 있을 때 위치함수는? (4.9)</button><div class="a">$s(t)=-4.9t^2+v_0t+s_0$ ($a=-9.8$ m/s², $v(0)=v_0$, $s(0)=s_0$).</div></div>
-<div class="qa"><button>Q16. $f$ 의 그래프가 주어질 때 역도함수 $F$ 의 변곡점은 어디서 생기는가? (4.9)</button><div class="a">$F''=f'$ 이므로 <b>$f$ 의 극대·극소가 되는 점</b>($f'$ 부호 변화). $f=0$ 이고 부호가 바뀌는 점은 $F$ 의 극값.</div></div>
-<div class="qa"><button>Q17. $f$ 가 증가함수일 때 $L_n$, $R_n$, 넓이 $A$ 의 대소 관계는? (5.1)</button><div class="a">$L_n\le A\le R_n$ ($L_n$ 하합, $R_n$ 상합). 감소함수이면 $R_n\le A\le L_n$.</div></div>
-<div class="qa"><button>Q18. 연속 $f\ (\ge0)$ 아래 넓이의 정의식은? (5.1)</button><div class="a">$A=\displaystyle\lim_{n\to\infty}\sum_{i=1}^nf(x_i)\Delta x$, $\Delta x=\dfrac{b-a}n$, $x_i=a+i\Delta x$ (왼쪽 끝점·표본점 $x_i^*$ 를 써도 같은 값).</div></div>
-<div class="qa"><button>Q19. 속도 곡선 $v=f(t)\ (\ge0)$ 아래 넓이의 의미는? (5.1)</button><div class="a">그 시간 동안의 <b>이동 거리</b>. 직사각형의 높이 = 속도, 폭 = 시간이라 넓이가 거리.</div></div>
-<div class="qa"><button>Q20. $\sum_{i=1}^ni,\ \sum i^2,\ \sum i^3$ 의 값은? (5.1, 5.2)</button><div class="a">$\dfrac{n(n+1)}2,\ \dfrac{n(n+1)(2n+1)}6,\ \left[\dfrac{n(n+1)}2\right]^2$.</div></div>
-<div class="qa"><button>Q21. $\displaystyle\int_a^bf(x)\,dx$ 는 함수인가 숫자인가? 부호가 음수이면 무슨 뜻인가? (5.2)</button><div class="a">$x$ 에 의존하지 않는 <b>숫자</b>. 순넓이 $A_1-A_2$ 이므로 음수이면 <b>$x$축 아래쪽 넓이가 더 크다</b>는 뜻.</div></div>
-<div class="qa"><button>Q22. 정리 (4)로 $\displaystyle\int_1^4f$ 를 쓸 때 $\Delta x$, $x_i$ 는? (5.2)</button><div class="a">$\Delta x=\dfrac{4-1}n=\dfrac3n$, $x_i=1+\dfrac{3i}n$. $\displaystyle\int_1^4f=\lim_{n\to\infty}\sum f\!\left(1+\tfrac{3i}n\right)\tfrac3n$.</div></div>
-<div class="qa"><button>Q23. 중점법 공식과 $[0,2]$, $n=4$ 일 때의 중점은? (5.2)</button><div class="a">$\displaystyle\int_a^bf\approx\Delta x\sum f(\bar x_i)$, $\bar x_i=\tfrac12(x_{i-1}+x_i)$. $\Delta x=0.5$, 중점 $0.25,\,0.75,\,1.25,\,1.75$.</div></div>
-<div class="qa"><button>Q24. 정적분의 성질 중 $a\le b$ 가 필요한 것은? (5.2)</button><div class="a">비교 성질 <b>6, 7, 8</b>. 성질 1–5(합, 상수배, 구간 쪼개기, $\int_b^a=-\int_a^b$)는 $a,b$ 순서와 무관.</div></div>
-<div class="qa"><button>Q25. $\displaystyle\int_0^6(x-2)\,dx$ 를 넓이로 계산하면? (5.2)</button><div class="a">$y=x-2$ 는 $x=2$ 에서 0. 아래쪽 삼각형 $A_2=\tfrac12\cdot2\cdot2=2$, 위쪽 $A_1=\tfrac12\cdot4\cdot4=8$ ⇒ $8-2=6$.</div></div>
-<div class="qa"><button>Q26. FTC1은 무엇을 말하는가? $g(x)=\displaystyle\int_a^xf(t)\,dt$ 이면 $g'(x)$ 는? (5.3)</button><div class="a">$f$ 가 연속이면 $\boldsymbol{g'(x)=f(x)}$. 적분한 뒤 미분하면 원래 함수 $f$ 가 돌아온다 ($g$ 는 $f$ 의 역도함수).</div></div>
-<div class="qa"><button>Q27. $\dfrac d{dx}\displaystyle\int_1^{x^4}\sec t\,dt$ 는? (5.3)</button><div class="a">연쇄법칙: $\sec(x^4)\cdot4x^3$. 윗끝이 $u(x)$ 이면 $f(u)\,u'$.</div></div>
-<div class="qa"><button>Q28. FTC2의 식과 표기법은? (5.3)</button><div class="a">$F'=f$ 이면 $\displaystyle\int_a^bf(x)\,dx=F(b)-F(a)=\Big[F(x)\Big]_a^b$. 구간 $[a,b]$ 에서 $f$ 연속.</div></div>
-<div class="qa"><button>Q29. FTC2에서 $+C$ 를 붙이지 않아도 되는 이유는? (5.3)</button><div class="a">$[F(b)+C]-[F(a)+C]$ 에서 $C$ 가 상쇄되므로 아무 역도함수나, 가장 간단한 것을 쓰면 된다.</div></div>
-<div class="qa"><button>Q30. $\displaystyle\int_{-1}^3\dfrac1{x^2}dx=\Big[-\dfrac1x\Big]_{-1}^3=-\dfrac43$ 이 틀린 이유는? (5.3)</button><div class="a">$\dfrac1{x^2}$ 은 $x=0$ 에서 불연속이라 <b>FTC2의 조건(구간 전체에서 연속)</b>을 만족하지 않는다. 또 피적분함수가 양수라 값이 음수일 수 없다 (성질 6).</div></div>
-<div class="qa"><button>Q31. $\displaystyle\int_0^3|x-1|\,dx$ 는 어떻게 계산하나? (5.3)</button><div class="a">$x=1$ 에서 꺾이므로 구간을 쪼갠다: $\int_0^1(1-x)dx+\int_1^3(x-1)dx=\tfrac12+2=\tfrac52$.</div></div>
-<div class="qa"><button>Q32. 정적분과 부정적분의 차이는? (5.4)</button><div class="a">$\int_a^bf\,dx$ 는 <b>숫자</b>, $\int f\,dx$ 는 <b>함수(의 모임)</b> $F(x)+C$ ($F'=f$). 연결은 $\int_a^bf\,dx=\left[\int f\,dx\right]_a^b$ (FTC2).</div></div>
-<div class="qa"><button>Q33. 순변화 정리는? (5.4)</button><div class="a">$\displaystyle\int_a^bF'(x)\,dx=F(b)-F(a)$ — <b>변화율의 적분은 순변화</b>. 예: 속도 → 변위, 한계비용 → 비용 증가분, 유입 속도 → 부피 변화.</div></div>
-<div class="qa"><button>Q34. 변위와 이동 거리의 식은 어떻게 다른가? (5.4)</button><div class="a">변위 $=\displaystyle\int_{t_1}^{t_2}v\,dt$ (부호 포함), 이동 거리 $=\displaystyle\int_{t_1}^{t_2}|v|\,dt$ (속력의 적분).</div></div>
-<div class="qa"><button>Q35. $v(t)=t^2-t-6$, $1\le t\le4$ 의 이동 거리를 구하는 방법은? (5.4)</button><div class="a">$v=(t-3)(t+2)$ 이므로 $t=3$ 에서 부호가 바뀐다. $[1,3]$ 에서는 $-v$, $[3,4]$ 에서는 $v$ 를 적분: $\tfrac{22}3+\tfrac{17}6=\tfrac{61}6\approx10.17$ m (변위는 $-\tfrac92$).</div></div>
-<div class="qa"><button>Q36. $\displaystyle\int_0^{24}P(t)\,dt$ 의 단위는? ($P$: MW, $t$: 시간) (5.4)</button><div class="a">$(f\text{의 단위})\times(x\text{의 단위})$ = MW·h, 곧 <b>에너지</b>.</div></div>
-<div class="qa"><button>Q37. 치환적분 공식과 그 근거는? (5.5)</button><div class="a">$u=g(x)$ 이면 $\displaystyle\int f(g(x))g'(x)\,dx=\int f(u)\,du$. 근거는 연쇄법칙 $\dfrac d{dx}F(g(x))=F'(g(x))g'(x)$ (치환적분은 연쇄법칙의 역).</div></div>
-<div class="qa"><button>Q38. 치환할 $u$ 를 고르는 요령은? (5.5)</button><div class="a">① 미분소 $du=g'(x)dx$ 가 (상수배를 빼고) 피적분함수에 함께 있는 함수. ② 합성함수의 안쪽 함수나 복잡한 부분. 틀려도 다른 치환을 시도한다. 끝나면 $x$ 로 되돌리고 미분해서 검산.</div></div>
-<div class="qa"><button>Q39. 정적분에서 치환할 때 한계는 어떻게 하나? (5.5)</button><div class="a">$x=a,b$ 에 대응하는 $u$ 값 $g(a),g(b)$ 로 <b>한계도 바꾸고</b>, $u$ 로 적분한 뒤 $x$ 로 되돌리지 않고 그대로 계산한다. (섞어서 쓰면 오답)</div></div>
-<div class="qa"><button>Q40. $\displaystyle\int\tan x\,dx$ 는? (5.5)</button><div class="a">$u=\cos x$, $du=-\sin x\,dx$ ⇒ $-\ln|\cos x|+C=\ln|\sec x|+C$.</div></div>
-<div class="qa"><button>Q41. $\displaystyle\int\dfrac{g'(x)}{g(x)}\,dx$ 와 $\displaystyle\int\dfrac{(\ln x)^n}x\,dx$ 의 결과는? (5.5)</button><div class="a">$\ln|g(x)|+C$ ($u=g$). $\dfrac{(\ln x)^{n+1}}{n+1}+C$ ($u=\ln x$, $n\ne-1$).</div></div>
-<div class="qa"><button>Q42. 짝함수·홀함수의 $[-a,a]$ 적분은? (5.5)</button><div class="a">짝함수 $f(-x)=f(x)$: $\displaystyle\int_{-a}^af=2\int_0^af$. 홀함수 $f(-x)=-f(x)$: $\displaystyle\int_{-a}^af=0$ (넓이가 상쇄). 예: $\int_{-1}^{1}\dfrac{\tan x}{1+x^2+x^4}dx=0$.</div></div>
-<div class="qa"><button>Q43. FTC1 의 증명에서 쓰는 도구를 순서대로 말하시오. 어디서 $f$ 의 연속성이 필요한가? (5.3)</button><div class="a">① 성질 5로 $g(x+h)-g(x)=\int_x^{x+h}f$ ② 극값 정리로 $[x,x+h]$ 의 최솟값 $f(u)$, 최댓값 $f(v)$ ③ 성질 8로 $f(u)\le\frac{g(x+h)-g(x)}h\le f(v)$ ④ $h\to0$ 이면 $u,v\to x$ 이고 <b>$f$ 가 연속이므로</b> $f(u),f(v)\to f(x)$ ⑤ 조임 정리 ⇒ $g'(x)=f(x)$. ($h\lt0$ 도 같은 방식)</div></div>
-<div class="qa"><button>Q44. FTC2 는 FTC1 에서 어떻게 나오는가? (5.3)</button><div class="a">$g(x)=\int_a^xf$ 와 $F$ 는 둘 다 $f$ 의 역도함수 ⇒ $(F-g)'=0$ ⇒ $F=g+C$ (평균값 정리). $g(a)=0$ 이므로 $F(b)-F(a)=[g(b)+C]-[g(a)+C]=g(b)=\int_a^bf$. (다른 증명: 망원합 $F(b)-F(a)=\sum[F(x_i)-F(x_{i-1})]=\sum f(c_i)\Delta x$ 에 평균값 정리를 쓰고 $n\to\infty$.)</div></div>
-</section>
 <!-- ============================ CHECKLIST ============================ -->
 <section class="sec" id="check">
 <h2>✅ 시험 직전 체크리스트 <span class="pg">체크 상태는 이 브라우저에 저장됩니다</span> <span class="pg" id="chkstat"></span></h2>
@@ -2797,7 +2727,7 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 </ul>
 </section>
 <div class="pager" id="pager"><button id="pgPrev"></button><button id="pgNext"></button></div>
-<p class="mini" style="margin-top:34px">출처: Stewart, Clegg, Watson, <i>Calculus: Early Transcendentals</i>, 9th Ed. (Metric Version), §4.6–5.5 · 본 노트는 학습용 요약이며 예제는 교재 내용을 바탕으로 재구성했습니다. “[교재 …]” 표시가 붙은 연습문제·OX 는 교재 번호로 가리키되 문장을 줄여 다시 쓴 것(원문 그대로가 아님)이고 풀이는 직접 작성했으며, 셀프 퀴즈는 새로 만든 것입니다.<br>수식 렌더링에 KaTeX(CDN)를 사용하므로 최초 열람 시 인터넷 연결이 필요합니다.</p>
+<p class="mini" style="margin-top:34px">출처: Stewart, Clegg, Watson, <i>Calculus: Early Transcendentals</i>, 9th Ed. (Metric Version), §4.6–5.5 · 본 노트는 학습용 요약이며 예제는 교재 내용을 바탕으로 재구성했습니다. “[교재 …]” 표시가 붙은 연습문제·OX 는 교재 번호로 가리키되 문장을 줄여 다시 쓴 것(원문 그대로가 아님)이고 풀이는 직접 작성했습니다.<br>수식 렌더링에 KaTeX(CDN)를 사용하므로 최초 열람 시 인터넷 연결이 필요합니다.</p>
 </main>
 </div>
 
@@ -2836,8 +2766,6 @@ function armBtn(btn,fn,armedText){
   };
 })();
 
-/* ---------- quiz ---------- */
-$$('.qa>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
 
 /* ---------- checklist persistence ---------- */
 (function(){
@@ -2854,8 +2782,8 @@ $$('.qa>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open
 /* ---------- paged (book) mode ---------- */
 (function(){
   const pages=$$('main section.sec');
-  const short={s46:'4.6',s47:'4.7',s48:'4.8',s49:'4.9',pr4:'Ch4 연습문제',s51:'5.1',s52:'5.2',s53:'5.3',s54:'5.4',s55:'5.5',pr5:'Ch5 연습문제',concept:'📋 개념요약',proofs:'🧾 증명',cheat:'📌 치트시트',quiz:'❓ 퀴즈',check:'✅ 체크리스트'};
-  const full={s46:'4.6 기술과 미분으로 그래프 그리기',s47:'4.7 최적화 문제',s48:'4.8 뉴턴의 방법',s49:'4.9 역도함수',pr4:'Chapter 4 연습문제',s51:'5.1 넓이와 거리 문제',s52:'5.2 정적분',s53:'5.3 미적분학의 기본정리',s54:'5.4 부정적분과 순변화 정리',s55:'5.5 치환적분',pr5:'Chapter 5 연습문제',concept:'개념 요약',proofs:'증명 13선',cheat:'공식 치트시트',quiz:'셀프 퀴즈',check:'시험 직전 체크리스트'};
+  const short={s46:'4.6',s47:'4.7',s48:'4.8',s49:'4.9',pr4:'Ch4 연습문제',s51:'5.1',s52:'5.2',s53:'5.3',s54:'5.4',s55:'5.5',pr5:'Ch5 연습문제',concept:'📋 개념요약',proofs:'🧾 증명',cheat:'📌 치트시트',check:'✅ 체크리스트'};
+  const full={s46:'4.6 기술과 미분으로 그래프 그리기',s47:'4.7 최적화 문제',s48:'4.8 뉴턴의 방법',s49:'4.9 역도함수',pr4:'Chapter 4 연습문제',s51:'5.1 넓이와 거리 문제',s52:'5.2 정적분',s53:'5.3 미적분학의 기본정리',s54:'5.4 부정적분과 순변화 정리',s55:'5.5 치환적분',pr5:'Chapter 5 연습문제',concept:'개념 요약',proofs:'증명 13선',cheat:'공식 치트시트',check:'시험 직전 체크리스트'};
   let cur=0;
   const tl=$('#tabList');
   pages.forEach((p,i)=>{const b=document.createElement('button');b.textContent=short[p.id]||p.id;b.dataset.i=i;b.onclick=()=>show(i,true);tl.appendChild(b)});
@@ -3003,13 +2931,13 @@ function plot(svg,o){
   const fc=$('#fc'),card=$('#fcCard'),F=$('#fcF'),B=$('#fcB');
   let all=[],deck=[],idx=0,known={};
   try{known=JSON.parse(store('fcstate46')||'{}')}catch(e){}
-  const TYPE={box:'개념',ex:'예제',prob:'연습문제',qa:'퀴즈'};
+  const TYPE={box:'개념',ex:'예제',prob:'연습문제'};
   const BOXLAB=c=>{const l=c.querySelector(':scope>b.lab');return l?l.textContent:'개념'};
 
   function build(){
     all=[];
-    const els=$$('main .box, main details.ex, main .prob, main .qa').filter(e=>!e.parentElement.closest('.box,details.ex,.prob,.qa'));
-    const cnt={box:0,ex:0,prob:0,qa:0};
+    const els=$$('main .box, main details.ex, main .prob').filter(e=>!e.parentElement.closest('.box,details.ex,.prob'));
+    const cnt={box:0,ex:0,prob:0};
     els.forEach(el=>{
       const sec=el.closest('section.sec');if(!sec)return;
       const h2=sec.querySelector('h2');
@@ -3025,14 +2953,10 @@ function plot(svg,o){
         type='ex';
         front=`<div class="q">${el.querySelector('summary').innerHTML}</div><div class="fc-hint">풀이를 떠올린 뒤 카드를 눌러 확인</div>`;
         back=el.querySelector('.body').innerHTML;
-      }else if(el.matches('.prob')){
+      }else{
         type='prob';
         front=`<div class="q">${$('.pq>div',el).innerHTML}</div><div class="fc-hint">풀어 본 뒤 카드를 눌러 정답 확인</div>`;
         back=$('.ans',el).innerHTML;
-      }else{
-        type='qa';
-        front=`<div class="q">${$('button',el).innerHTML}</div><div class="fc-hint">카드를 눌러 정답 확인</div>`;
-        back=$('.a',el).innerHTML;
       }
       cnt[type]++;
       all.push({key:type+cnt[type],type,sec:sec.id,secName,sub,label,front,back});
@@ -3193,10 +3117,6 @@ const BLUE='#3a4fd7',RED='#d7503a',GREEN='#1f9d6b',GRAY='#8a90a8',PURP='#5b3fb5'
     plot(g('fig52b'),{x:[0.9,2.1],y:[0,1.2],ml:36,rects:rs,pts:ps,items:[{f:x=>1/x,c:'#1c2030',w:2,lx:1.6,ly:1.1,label:''}],xt:[1,1.2,1.4,1.6,1.8,2],yt:[0.5,1]});
   }
   /* 5.3 */
-  if(g('fig53a'))plot(g('fig53a'),{x:[0,2.1],y:[-0.6,1.1],ml:40,
-    items:[{f:t=>1-t,c:RED,lx:0.05,ly:0.9,label:'f(t)=1−t'},{f:x=>x-x*x/2,c:BLUE,lx:1.45,ly:0.45,label:'g(x)=x−x²/2'}],
-    pts:[{x:1,y:0.5,label:'g 최대 (f=0)',dx:-30,dy:-10,c:BLUE},{x:1,y:0,r:3.4,c:RED}],
-    xt:[0.5,1,1.5,2],yt:[-0.5,0.5,1]});
   if(g('fig53b')){
     const rs=[],N=60;
     for(let i=0;i<N;i++){const xa=(Math.PI/2)*i/N,xb=(Math.PI/2)*(i+1)/N;rs.push({x0:xa,x1:xb,h:Math.cos((xa+xb)/2),c:BLUE,fo:.3,sw:0,sc:'none'})}
