@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AP 미적분 II · 4.6 – 6.5 시험 직전 정리</title>
+<title>AP 미적분 II · 4.7 – 7.3 시험 직전 정리</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
@@ -298,7 +298,7 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 
 <!-- ===================== SIDEBAR ===================== -->
 <nav class="side" id="nav">
-  <h1>AP 미적분 II<br>4.6 – 6.5 시험 직전 정리</h1>
+  <h1>AP 미적분 II<br>4.7 – 7.3 시험 직전 정리</h1>
   <div class="sub">Stewart, <i>Calculus: Early Transcendentals</i> 9e</div>
   <div class="tools">
     <button id="btnTheme">🌓 다크모드</button>
@@ -307,11 +307,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
   </div>
 
   <div class="ch">Chapter 4 · Applications of Differentiation</div>
-  <a href="#s46">4.6 기술과 미분으로 그래프</a>
-  <a class="sm" href="#s46-1">Calculus + Technology 절차</a>
-  <a class="sm" href="#s46-2">다항식 · 유리함수 (예제 1–3)</a>
-  <a class="sm" href="#s46-3">주기함수 (예제 4)</a>
-  <a class="sm" href="#s46-4">함수족 (예제 5)</a>
   <a href="#s47">4.7 최적화 문제</a>
   <a class="sm" href="#s47-1">Steps in Solving</a>
   <a class="sm" href="#s47-2">절대극값의 1계 판정법</a>
@@ -375,6 +370,19 @@ td.num,th.num{font-variant-numeric:tabular-nums}
   <a class="sm" href="#s65-2">적분의 평균값 정리</a>
   <a href="#pr6">🧪 Chapter 6 연습문제</a>
 
+  <div class="ch">Chapter 7 · Techniques of Integration</div>
+  <a href="#s71">7.1 부분적분</a>
+  <a class="sm" href="#s71-1">부정적분 (예제 1–4)</a>
+  <a class="sm" href="#s71-2">정적분 (예제 5)</a>
+  <a class="sm" href="#s71-3">점화식 (예제 6)</a>
+  <a href="#s72">7.2 삼각함수의 적분</a>
+  <a class="sm" href="#s72-1">sin · cos 의 거듭제곱</a>
+  <a class="sm" href="#s72-2">tan · sec 의 거듭제곱</a>
+  <a class="sm" href="#s72-3">곱을 합으로</a>
+  <a href="#s73">7.3 삼각치환</a>
+  <a class="sm" href="#s73-1">치환 표와 예제</a>
+  <a href="#pr7">🧪 Chapter 7 연습문제</a>
+
   <div class="ch">Final</div>
   <a href="#concept">📋 개념 요약 (한 장)</a>
   <a href="#proofs">🧾 증명 13선</a>
@@ -386,116 +394,19 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <main>
 <div class="tabs" id="tabs"><button class="arr" id="tPrev" aria-label="이전 페이지">‹</button><div class="tl" id="tabList"></div><button class="arr" id="tNext" aria-label="다음 페이지">›</button><span class="sep"></span><button id="tMode" title="페이지 넘기기 / 전체 스크롤 전환">📖 전체 보기</button></div>
 <div class="hero">
-  <h1>4.6 – 6.5 시험 직전 학습 노트</h1>
+  <h1>4.7 – 7.3 시험 직전 학습 노트</h1>
   <p>단원 → 소제목(교재 ■ 표시) → 개념 순서로 정리했습니다. 정의·정리는 색 박스, 예제는 클릭해서 풀이를 펼쳐 보세요.</p>
   <div class="pillrow">
-    <span class="pill">4.6 Graphing w/ Technology</span><span class="pill">4.7 Optimization</span>
+    <span class="pill">4.7 Optimization</span>
     <span class="pill">4.8 Newton's Method</span><span class="pill">4.9 Antiderivatives</span>
     <span class="pill">5.1 Area &amp; Distance</span><span class="pill">5.2 Definite Integral</span><span class="pill">5.3 Fundamental Theorem</span><span class="pill">5.4 Net Change</span><span class="pill">5.5 Substitution</span>
     <span class="pill">6.1 Areas Between Curves</span><span class="pill">6.2 Volumes</span><span class="pill">6.3 Cylindrical Shells</span><span class="pill">6.4 Work</span><span class="pill">6.5 Average Value</span>
+    <span class="pill">7.1 Integration by Parts</span><span class="pill">7.2 Trigonometric Integrals</span><span class="pill">7.3 Trigonometric Substitution</span>
   </div>
 </div>
 
 <section class="chap">
-<h2 class="chap-h"><span class="no">4</span>Applications of Differentiation <span class="mini">(4.6 – 4.9)</span></h2>
-<!-- ============================ 4.6 ============================ -->
-<section class="sec" id="s46">
-<h2><span class="n">4.6</span> Graphing with Calculus and Technology <span class="pg">교재 p.329–336</span></h2>
-<p class="mini">핵심 아이디어: 4.5는 “미분 정보 → 손으로 그래프”였고, 4.6은 반대로 “계산기·컴퓨터가 그려 준 그래프 → 미분으로 검증하고 보정”한다. 한 화면에 모든 특징이 담기지 않는 함수가 많기 때문에 창(viewing rectangle)을 바꿔 가며 보고, 눈으로 본 추정을 미분으로 확정한다.</p>
-
-<h3 id="s46-1"><span class="sq">■</span>Calculus + Technology 절차 (창 선택과 검증)</h3>
-<div class="box thm"><b class="lab">Procedure</b>
-<ol>
-<li><b>큰 창</b>으로 끝 행동(end behavior)과 점근선을 확인한다. 극한 $\displaystyle\lim_{x\to\pm\infty}f(x)$, 분모가 0이 되는 점 근처의 극한으로 확정한다.</li>
-<li>$f'$ 의 그래프에서 <b>부호가 바뀌는 지점</b>을 읽는다 ⇒ 1계 도함수 판정법으로 증가·감소, 극대·극소.</li>
-<li>$f''$ 의 그래프에서 <b>부호가 바뀌는 지점</b>을 읽는다 ⇒ 위로 볼록·아래로 볼록, 변곡점.</li>
-<li>세부가 뭉개진 곳은 <b>줌인</b>, 전체 모양이 필요하면 <b>줌아웃</b>. 한 장으로 안 되면 여러 장을 합쳐서 해석한다.</li>
-<li>화면에서 얻은 근삿값은 가능하면 미분(정확한 식)으로 <b>정확값</b>으로 바꾼다.</li>
-</ol></div>
-<div class="box tip"><b class="lab">핵심</b>
-<ul>
-<li>$f$ 의 그래프에서는 안 보이는 극값도 $f'$ 의 그래프에서는 부호 변화로 드러난다 (값이 작거나 구간이 좁을 때).</li>
-<li>변곡점은 $f$ 그래프로 눈대중하기 어렵다. $f''$ 의 부호 변화를 봐야 한다.</li>
-<li>인수 분해된 유리함수는 <b>분모의 영점 ⇒ 수직점근선</b>, <b>분자의 영점 ⇒ x절편</b>이고, 중복도가 짝수이면 x축을 닿기만 하고 홀수이면 통과한다. 이 정보만으로도 미분 없이 대략의 모양이 나온다.</li>
-</ul></div>
-
-<h3 id="s46-2"><span class="sq">■</span>다항식과 유리함수 (예제 1 – 3)</h3>
-<details class="ex"><summary>예제 1 · $f(x)=2x^6+3x^5+3x^3-2x^2$ 의 극대·극소와 오목성을 $f',f''$ 그래프로 추정하시오.</summary>
-<div class="body">
-<p>$f'(x)=12x^5+15x^4+9x^2-4x,\qquad f''(x)=60x^4+60x^3+18x-4$.</p>
-<p><b>큰 창</b> ($-5\le x\le 5$)에서는 $2x^6$ 처럼 위로 열리는 모양만 보이고, 세부는 가려진다. 창을 $[-3,2]\times[-50,100]$ 으로 바꾸면 최솟값이 보이지만 원점 근처의 특징은 여전히 뭉개져 있다.</p>
-<ul>
-<li>$f'$ 의 부호: $x\approx-1.62$ 에서 $-\to+$, $x=0$ 에서 $+\to-$, $x\approx0.35$ 에서 $-\to+$.</li>
-<li>따라서 국소최솟값 $f(-1.62)\approx-15.33$ (절대최솟값), 국소최댓값 $f(0)=0$, 국소최솟값 $f(0.35)\approx-0.10$. <u>마지막 둘은 큰 창에서는 보이지 않았다</u> (원점 근처로 줌인하면 보인다).</li>
-<li>$f''$ 의 부호: $x\approx-1.23$ 에서 $+\to-$, $x\approx0.19$ 에서 $-\to+$.</li>
-<li>위로 볼록(CU): $(-\infty,-1.23)$, $(0.19,\infty)$ / 아래로 볼록(CD): $(-1.23,0.19)$.</li>
-<li>변곡점: $(-1.23,\,-10.18)$, $(0.19,\,-0.05)$.</li>
-</ul>
-<p>결론: 한 장의 그래프로는 부족하고, 서로 다른 창의 그래프를 함께 봐야 정확한 그림이 된다.</p>
-</div></details>
-
-<details class="ex"><summary>예제 2 · $f(x)=\dfrac{x^2+7x+3}{x^2}$ 의 점근선, 극값, 오목성을 구하고 정확값을 미분으로 확인하시오.</summary>
-<div class="body">
-<p>자동 눈금의 첫 그래프는 쓸모가 없다. 창 $[-10,10]\times[-10,10]$ 으로 바꾸면 모양이 보인다.</p>
-<ul>
-<li><b>수직점근선</b> $x=0$ : $\displaystyle\lim_{x\to0}\frac{x^2+7x+3}{x^2}=\infty$ (분자 $\to3&gt;0$, 분모 $\to0^+$).</li>
-<li><b>수평점근선</b> $y=1$ : $f(x)=1+\dfrac7x+\dfrac3{x^2}\to1$ ($x\to\pm\infty$).</li>
-<li><b>x절편</b>: $x^2+7x+3=0$ ⇒ $x=\dfrac{-7\pm\sqrt{37}}{2}\approx-0.46,\ -6.54$.</li>
-</ul>
-<p>미분으로 정확하게:</p>
-<p>$f'(x)=-\dfrac7{x^2}-\dfrac6{x^3}=-\dfrac{7x+6}{x^3}$ ⇒ $f'\gt0$ on $\left(-\tfrac67,0\right)$, $f'\lt0$ on $\left(-\infty,-\tfrac67\right)$ 과 $(0,\infty)$.</p>
-<p>정확한 극솟값: $f\!\left(-\tfrac67\right)=-\dfrac{37}{12}\approx-3.08$.</p>
-<p>$f''(x)=\dfrac{14}{x^3}+\dfrac{18}{x^4}=\dfrac{2(7x+9)}{x^4}$ ⇒ $f''\gt0$ for $x\gt-\tfrac97\ (x\ne0)$, $f''\lt0$ for $x\lt-\tfrac97$.</p>
-<p>CU: $\left(-\tfrac97,0\right)$, $(0,\infty)$ / CD: $\left(-\infty,-\tfrac97\right)$. 변곡점 $\left(-\tfrac97,\,-\tfrac{71}{27}\right)$.</p>
-</div></details>
-<figure><svg class="fig" id="fig46a" viewBox="0 0 440 280"></svg><figcaption>$y=\dfrac{x^2+7x+3}{x^2}$ : 수직점근선 $x=0$, 수평점근선 $y=1$, 극소점 $(-\tfrac67,-\tfrac{37}{12})$</figcaption></figure>
-
-<details class="ex"><summary>예제 3 · $f(x)=\dfrac{x^2(x+1)^3}{(x-2)^2(x-4)^4}$ 를 미분 없이 점근선·절편 정보만으로 스케치하시오.</summary>
-<div class="body">
-<ul>
-<li><b>수직점근선</b>: 분모의 인수 $(x-2)^2,(x-4)^4$ ⇒ $x=2$, $x=4$. 두 인수 모두 짝수 거듭제곱이고 분자가 그 점에서 양수이므로 양쪽에서 $+\infty$.</li>
-<li><b>수평점근선</b>: 분자 5차, 분모 6차 ⇒ $f(x)\to0$ ($x\to\pm\infty$), 곧 $y=0$.</li>
-<li><b>x절편</b>: $x=0$ 은 $x^2$ (짝수 중복) ⇒ <u>닿고 튕겨 나간다</u>(부호 불변). $x=-1$ 은 $(x+1)^3$ (홀수 중복) ⇒ <u>통과하며 수평접선</u>.</li>
-</ul>
-<p>이 정보만으로 큰 줄기가 나온다. 이후 확대·축소로 세부를 확인하면 <b>서로 다른 세 개의 창</b>이 필요하다 (예: $x\approx-20$ 의 절대최솟값 $\approx-0.02$, $x\approx-0.3$ 의 아주 작은 국소최댓값, $x\approx2.5$ 의 국소최솟값 $\approx211$). $f''$ 를 손으로 계산하는 것은 비현실적이므로 컴퓨터 대수 시스템(CAS)에 맡긴다.</p>
-<p><b>교훈</b>: 모든 특징을 한 그래프에 올리려면 과장과 왜곡이 있는 손그림밖에 없다. 그 손그림은 필수 정보(점근선, 절편 거동, 증감)를 요약한 것이다.</p>
-</div></details>
-
-<h3 id="s46-3"><span class="sq">■</span>주기함수 (예제 4)</h3>
-<details class="ex"><summary>예제 4 · $f(x)=\sin(x+\sin2x)$ 의 $[0,\pi]$ 에서 극값, 증감 구간, 변곡점을 추정하시오.</summary>
-<div class="body">
-<p>성질 먼저: 주기 $2\pi$, 홀함수, $|f(x)|\le1$ ⇒ 창은 $[0,\pi]\times[-1.1,1.1]$ 로 바로 정해진다.</p>
-<p>$f'(x)=\cos(x+\sin2x)\,(1+2\cos2x)$ — 임계수는 $\cos(x+\sin2x)=0$ 또는 $\cos2x=-\tfrac12$ ($x=\tfrac\pi3,\tfrac{2\pi}3$).</p>
-<table><tr><th class="l">증가</th><td>$(0,0.6)$, $(1.0,1.6)$, $(2.1,2.5)$</td></tr><tr><th class="l">감소</th><td>$(0.6,1.0)$, $(1.6,2.1)$, $(2.5,\pi)$</td></tr><tr><th class="l">국소최대</th><td>$f(0.62)\approx f(1.57)\approx f(2.52)\approx1$</td></tr><tr><th class="l">국소최소</th><td>$f(\tfrac\pi3)\approx f(\tfrac{2\pi}3)\approx0.94$</td></tr><tr><th class="l">변곡점 ($f''$ 그래프)</th><td>$(0,0)$, $(0.80,0.97)$, $(1.30,0.97)$, $(1.84,0.97)$, $(2.35,0.97)$</td></tr></table>
-<p>$[0,\pi]$ 의 결과를 홀함수·주기성으로 확장하면 $[-2\pi,2\pi]$ 의 전체 그래프가 된다.</p>
-<p class="mini">이 함수는 $f(x)=\sin(x+\sin cx)$ 꼴의 함수족에서 $c=2$ 인 경우로, 주파수 변조(FM)에 나오는 모양이다.</p>
-</div></details>
-
-<h3 id="s46-4"><span class="sq">■</span>함수족 — 상수 $c$ 가 변할 때 (예제 5)</h3>
-<div class="box def"><b class="lab">Family of functions</b>
-<p>식에 임의의 상수가 들어 있어 상수의 값마다 하나의 함수가 정해지는 모임. 목표는 $c$ 가 변할 때 그래프의 <b>공통점</b>과 <b>전이값(transitional value)</b> — 모양이 바뀌는 $c$ — 을 찾는 것.</p></div>
-<details class="ex"><summary>예제 5 · $f(x)=\dfrac1{x^2+2x+c}$ 의 그래프는 $c$ 에 따라 어떻게 변하는가?</summary>
-<div class="body">
-<ul>
-<li><b>공통</b>: 모든 $c$ 에서 $\displaystyle\lim_{x\to\pm\infty}f=0$ ⇒ $x$축이 수평점근선.</li>
-<li><b>수직점근선</b>: $x^2+2x+c=0$ ⇒ $x=-1\pm\sqrt{1-c}$.
-  <ul><li>$c\gt1$ : 없음 / $c=1$ : $x=-1$ 하나 ($f=\frac1{(x+1)^2}$) / $c\lt1$ : 두 개. <b>전이값 $c=1$</b>.</li></ul></li>
-<li>$f'(x)=-\dfrac{2(x+1)}{(x^2+2x+c)^2}$ ⇒ $x=-1$ 에서 $f'=0$, $x\lt-1$ 에서 증가, $x\gt-1$ 에서 감소.</li>
-<li>$c\gt1$ : 절대최댓값 $f(-1)=\dfrac1{c-1}$ ($c$ 가 커지면 0에 가까워진다). $c\lt1$ : $f(-1)=\dfrac1{c-1}$ 은 두 점근선 사이의 국소최댓값(음수).</li>
-<li>변곡점은 $c\gt1$ 일 때만 있고 $x=-1\pm\dfrac{\sqrt{3(c-1)}}3$ ($c\le1$ 이면 없음). $c$ 가 커질수록 벌어진다.</li>
-<li>$c$ 가 $-\infty$ 쪽으로 갈수록 두 수직점근선의 간격 $2\sqrt{1-c}$ 가 커지고, 극점은 $x$축으로 다가간다.</li>
-</ul>
-</div></details>
-<figure><svg class="fig" id="fig46b" viewBox="0 0 440 280"></svg><figcaption>$y=\dfrac1{x^2+2x+c}$ 의 몇몇 $c$ ($c=3,2,1,0,-1$) — $c=1$ 에서 수직점근선의 개수가 바뀐다</figcaption></figure>
-
-<div class="box warn"><b class="lab">시험 함정</b>
-<ul>
-<li>그래프에서 읽은 값은 “근삿값”이다. 문제가 <b>exact</b> 를 요구하면 $f'=0$, $f''=0$ 을 풀어 정확한 값을 쓴다 (예제 2의 $-\tfrac{37}{12}$, $-\tfrac97$).</li>
-<li>$f''(c)=0$ 이라는 사실만으로 변곡점이라고 하지 않는다. <b>$f''$ 의 부호가 바뀌어야</b> 한다.</li>
-<li>점근선 자리($x=0$ 등)는 증가·감소·오목 구간을 쓸 때 <b>구간에서 빼서</b> 쓴다 ($(-\tfrac97,0)\cup(0,\infty)$).</li>
-<li>함수족 문제는 먼저 <b>모든 $c$ 에서 공통인 성질</b>(극한, 대칭)을 쓰고 그다음 <b>전이값</b>을 찾는다.</li>
-</ul></div>
-</section>
+<h2 class="chap-h"><span class="no">4</span>Applications of Differentiation <span class="mini">(4.7 – 4.9)</span></h2>
 <!-- ============================ 4.7 ============================ -->
 <section class="sec" id="s47">
 <h2><span class="n">4.7</span> Optimization Problems <span class="pg">교재 p.336–350</span></h2>
@@ -771,37 +682,9 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 </ul></div>
 </section>
 <section class="sec practice" id="pr4">
-<h2>🧪 Chapter 4 연습문제 (4.6 – 4.9) <span class="pg">풀고 나서 정답 확인 → 채점</span></h2>
+<h2>🧪 Chapter 4 연습문제 (4.7 – 4.9) <span class="pg">풀고 나서 정답 확인 → 채점</span></h2>
 <p class="mini">모두 <b>교재 번호로 가리킨 문제</b>입니다: 소단원마다 <b>Exercises 선별</b>, 장 끝에 <b>Review Exercises 선별</b>, 맨 아래에 Review True–False Quiz 의 <b>OX</b>. 문장은 <b>핵심만 줄여 다시 쓴 것이라 원문 그대로가 아니며</b> 풀이는 직접 작성했습니다(번호는 교재 Metric 9판 기준). 증명·그림/표 읽기·CAS·서술형은 뺐고, 계산형은 <b>객관식으로 바꾸지 않고 주관식 그대로</b> 두었습니다. <b>먼저 종이에 풀고</b> → “정답·풀이 보기” → 채점(✔/✘). ✘ 표시한 문제는 “복습 문제만 보기”로 다시 모아 볼 수 있어요.</p>
 <div class="score" data-scope="pr4"><span class="sc">0 / 0 정답</span><button class="onlyno">✘ 복습 문제만 보기</button><button class="reset">기록 초기화</button></div>
-<h3><span class="sq">▸</span>4.6 교재 Exercises 선별 <span class='mini'>(그래프·CAS가 필요한 문제와 서술형은 제외, 번호는 교재 기준)</span></h3>
-<div class="prob" data-id="tb46-9"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #9]</b> $f(x)=1+\dfrac1x+\dfrac8{x^2}+\dfrac1{x^3}$ 의 증가·감소 구간과 오목 구간을 <b>정확한 값</b>으로 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'(x)=-\dfrac1{x^2}-\dfrac{16}{x^3}-\dfrac3{x^4}=-\dfrac{x^2+16x+3}{x^4}$. 분자의 근 $x=-8\pm\sqrt{61}$ ($\approx-15.81,\,-0.19$), 분모 $x^4\gt0$ ($x\ne0$).<br>증가: $\left(-8-\sqrt{61},\,-8+\sqrt{61}\right)$ / 감소: $\left(-\infty,-8-\sqrt{61}\right)$, $\left(-8+\sqrt{61},0\right)$, $(0,\infty)$.<br>$f''(x)=\dfrac2{x^3}+\dfrac{48}{x^4}+\dfrac{12}{x^5}=\dfrac{2(x^2+24x+6)}{x^5}$, 근 $x=-12\pm\sqrt{138}$.<br>CU: $\left(-12-\sqrt{138},\,-12+\sqrt{138}\right)$, $(0,\infty)$ / CD: $\left(-\infty,-12-\sqrt{138}\right)$, $\left(-12+\sqrt{138},\,0\right)$.</div></div>
-<div class="prob" data-id="tb46-11"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #11]</b> $f(x)=x^2\ln x$. (a) $x\to0^+$ 의 극한을 로피탈로 구하고 (b) 최솟값과 오목 구간을 정확히 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">(a) $\displaystyle\lim_{x\to0^+}x^2\ln x=\lim\dfrac{\ln x}{x^{-2}}\overset{\text{L'H}}{=}\lim\dfrac{1/x}{-2x^{-3}}=\lim\left(-\dfrac{x^2}2\right)=0$.<br>(b) $f'(x)=2x\ln x+x=x(2\ln x+1)=0$ ⇒ $x=e^{-1/2}$ ($x\lt e^{-1/2}$ 에서 $f'\lt0$, 이후 $f'\gt0$) ⇒ 최솟값 $f\!\left(\tfrac1{\sqrt e}\right)=\dfrac1e\cdot\left(-\dfrac12\right)=-\dfrac1{2e}$.<br>$f''(x)=2\ln x+3=0$ ⇒ $x=e^{-3/2}$. CD: $(0,e^{-3/2})$, CU: $(e^{-3/2},\infty)$.</div></div>
-<div class="prob" data-id="tb46-12"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #12]</b> $f(x)=xe^{1/x}$. $x\to0^\pm$ 의 거동, 극값, 오목 구간, 점근선을 분석하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$x\to0^+$: $t=\tfrac1x\to\infty$ 로 보면 $\dfrac{e^t}t\to\infty$ (로피탈) ⇒ $f\to\infty$. $x\to0^-$: $e^{1/x}\to0$ 이 $x$ 보다 훨씬 빨라 $f\to0$ ($f\to0^-$).<br>$f'(x)=e^{1/x}\left(1-\dfrac1x\right)$ ⇒ $x=1$ 에서만 0. $x\lt0$ 과 $x\gt1$ 에서 $f'\gt0$, $0\lt x\lt1$ 에서 $f'\lt0$ ⇒ 국소최솟값 $f(1)=e$.<br>$f''(x)=\dfrac{e^{1/x}}{x^3}$ ⇒ $x\gt0$ 에서 CU, $x\lt0$ 에서 CD, 변곡점 없음. 점근선: $x=0$ (오른쪽에서 $\infty$), 그리고 $x\to\pm\infty$ 에서 $f\approx x+1$ (기울어진 점근선 $y=x+1$).</div></div>
-<div class="prob" data-id="tb46-25"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #25]</b> $f(x)=x^{1/x}$ ($x\gt0$). (a) $x\to0^+$, $x\to\infty$ 의 극한 (b) 극값 (c) 변곡점의 위치(근삿값)를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$\ln f=\dfrac{\ln x}x$. (a) $x\to0^+$: $\ln f\to-\infty$ ⇒ $f\to0$. $x\to\infty$: $\dfrac{\ln x}x\to0$ ⇒ $f\to e^0=1$.<br>(b) $\dfrac{f'}f=\dfrac{1-\ln x}{x^2}$ ⇒ $x=e$ 에서 $f'$ 가 $+\to-$ ⇒ 국소(절대)최댓값 $f(e)=e^{1/e}\approx1.4447$.<br>(c) $f''=0$ 을 풀면 $x\approx0.58$, $x\approx4.37$ 에서 부호가 바뀐다 (수치해).</div></div>
-<div class="prob" data-id="tb46-31"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #31]</b> 함수족 $f_c(x)=e^x+ce^{-x}$ 에서 $c$ 에 따라 극값·변곡점이 어떻게 달라지는가?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'=e^x-ce^{-x}$, $f''=e^x+ce^{-x}$.<br>$c\lt0$: $f'\gt0$ 이라 증가함수, 극값 없음. $f''=0$ ⇔ $e^{2x}=-c$ ⇒ 변곡점이 <b>하나</b> ($x=\tfrac12\ln(-c)$, $c$ 에 따라 $x$ 축 방향으로 이동).<br>$c\gt0$: $f'=0$ ⇔ $x=\tfrac12\ln c$ 에서 극소 하나 (최솟값 $2\sqrt c$), $f''\gt0$ 이라 변곡점 없음. <b>전이값 $c=0$</b> ($f=e^x$).</div></div>
-<div class="prob" data-id="tb46-33"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #33]</b> $f_c(x)=\dfrac{cx}{1+c^2x^2}$ ($c\gt0$) 의 극값과 변곡점은 $c$ 에 따라 어떻게 움직이는가? 전이값은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'=\dfrac{c(1-c^2x^2)}{(1+c^2x^2)^2}$ ⇒ $x=\pm\dfrac1c$ 에서 극대 $\dfrac12$, 극소 $-\dfrac12$ (<b>극값은 $c$ 와 무관</b>하게 $\pm\tfrac12$).<br>변곡점은 $x=0$ 과 $x=\pm\dfrac{\sqrt3}c$. $c$ 가 커질수록 극점과 변곡점이 모두 $y$축으로 모인다 (폭이 $\tfrac1c$ 배). <b>전이값 $c=0$</b> ($f\equiv0$), $c\to-c$ 이면 $x$축에 대칭.</div></div>
-<div class="prob" data-id="tb46-35"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #35]</b> $f_c(x)=cx+\sin x$ 에서 $c$ 에 따라 극값·변곡점은?</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$f'=c+\cos x$. $|c|\lt1$ 이면 $\cos x=-c$ 가 해를 가져 극대·극소가 반복된다. $c\ge1$ 이면 $f'\ge0$ (증가), $c\le-1$ 이면 $f'\le0$ (감소) ⇒ 극값 없음. <b>전이값 $c=\pm1$</b>.<br>$f''=-\sin x$ ⇒ 변곡점은 $x=n\pi$ 에 있고 위치는 $c$ 와 무관, 높이만 $cn\pi$ 로 달라진다 (수직 이동).</div></div>
-<div class="prob" data-id="tb46-37"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #37]</b> $f_c(x)=xe^{-cx}$ 의 $x\to\pm\infty$ 극한, 극점·변곡점, 전이값을 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">$c\gt0$: $x\to\infty$ 에서 $0$, $x\to-\infty$ 에서 $-\infty$. $c\lt0$: $x\to\infty$ 에서 $\infty$, $x\to-\infty$ 에서 $0$.<br>$f'=(1-cx)e^{-cx}$ ⇒ $x=\tfrac1c$ 에서 극값 $\dfrac1{ce}$. $f''=c(cx-2)e^{-cx}$ ⇒ 변곡점 $x=\tfrac2c$ ($f=\tfrac2{ce^2}$).<br>$|c|$ 가 커질수록 극점·변곡점이 원점에 가까워진다. <b>전이값 $c=0$</b> ($f=x$, 직선).</div></div>
-<div class="prob" data-id="tb46-39"><div class="pq"><span class="pn"></span><div><b>[교재 4.6 #39]</b> $f_c(x)=x^4+cx^2+x$ 에서 변곡점의 개수가 바뀌는 $c$ 와 임계수의 개수가 바뀌는 $c$ 를 구하시오.</div></div>
-<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
-<div class="ans">변곡점: $f''=12x^2+2c$. $c\lt0$ 이면 부호가 바뀌는 두 점, $c\ge0$ 이면 $f''\ge0$ (바뀌지 않음) ⇒ <b>$c=0$</b>.<br>임계수: $f'=4x^3+2cx+1=0$. 3차식은 <b>중근</b>을 가질 때 근의 개수가 바뀐다. 중근이면 $f'=0$ 이고 $(f')'=12x^2+2c=0$ ⇒ $x^2=-\tfrac c6$. 이를 $f'$ 에 넣으면 $4x^3+2cx+1=x\left(4x^2+2c\right)+1=x\cdot\tfrac{4c}3+1=0$ ⇒ $x=-\tfrac3{4c}$.<br>$x^2=\tfrac9{16c^2}=-\tfrac c6$ ⇒ $c^3=-\tfrac{27}8$ ⇒ <b>$c=-\tfrac32$</b>. ($c\lt-\tfrac32$ 이면 임계수 3개, $c\gt-\tfrac32$ 이면 1개)</div></div>
 <h3><span class="sq">▸</span>4.7 교재 Exercises 선별 <span class='mini'>(그림이 필요한 문제와 증명 문제는 제외, 번호는 교재 기준)</span></h3>
 <div class="prob" data-id="tb47-5"><div class="pq"><span class="pn"></span><div><b>[교재 4.7 #5]</b> $-1\le x\le2$ 에서 직선 $y=x+2$ 와 포물선 $y=x^2$ 사이의 <b>수직 거리의 최댓값</b>은?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
@@ -1145,7 +1028,7 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="prob" data-id="tbr4-87"><div class="pq"><span class="pn"></span><div><b>[교재 4장 Review #87]</b> 반지름 20 m 의 원형 광장 한가운데 기둥 꼭대기에 높이 $h$ 의 조명을 단다. 광장 가장자리 점 $P$ 의 조도 $I$ 는 입사각 $\theta$ 의 코사인에 비례하고 광원까지 거리 $d$ 의 제곱에 반비례한다. (a) $I$ 를 최대로 하는 기둥 높이는?</div></div>
 <div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
 <div class="ans">$d^2=h^2+400$, $\cos\theta=\dfrac hd$ ⇒ $I=k\dfrac{\cos\theta}{d^2}=\dfrac{kh}{(h^2+400)^{3/2}}$.<br>$I'=k\dfrac{(h^2+400)-3h^2}{(h^2+400)^{5/2}}=k\dfrac{400-2h^2}{(h^2+400)^{5/2}}=0$ ⇒ $h^2=200$ ⇒ <b>$h=10\sqrt2\approx14.1$ m</b> ($I'$ 부호 $+\to-$).</div></div>
-<h3><span class="sq">▸</span>⭕❌ OX 문제 · Chapter 4 (4.6 – 4.9)</h3>
+<h3><span class="sq">▸</span>⭕❌ OX 문제 · Chapter 4 (4.7 – 4.9)</h3>
 <p class="mini">O/X 를 누르면 바로 채점되고 풀이가 열립니다. “[교재 N장 Review T/F #k]” 는 교재 챕터 리뷰의 True–False Quiz 항목을 짧게 다시 쓴 것입니다(일부는 4.1–4.5 내용).</p>
 <div class="prob ox" data-id="tbox4-1" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt"><b>[교재 4장 Review T/F #1]</b> $f'(c)=0$ 이면 $f$ 는 $c$ 에서 반드시 극대 또는 극소이다.</div></div></div>
 <div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
@@ -3371,17 +3254,737 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. $f_{\text{avg}}=\dfrac1{5-2}\cdot12=4$.</div></div>
 </section>
 </section>
+<section class="chap">
+<h2 class="chap-h"><span class="no">7</span>Techniques of Integration <span class="mini">(7.1 – 7.3)</span></h2>
+<!-- ============================ 7.1 ============================ -->
+<section class="sec" id="s71">
+<h2><span class="n">7.1</span> Integration by Parts <span class="pg">교재 p.486–492</span></h2>
+<p class="mini">핵심 아이디어: 곱의 미분법을 거꾸로 쓰면 부분적분이 된다. $\int u\,dv=uv-\int v\,du$ 에서 $u$ 는 미분하면 간단해지는 쪽, $dv$ 는 쉽게 적분되는 쪽으로 고른다.</p>
+
+<h3 id="s71-1"><span class="sq">■</span>부분적분: 부정적분</h3>
+<div class="box thm"><b class="lab">Integration by Parts</b>
+<p>곱의 미분법 $\dfrac d{dx}[f(x)g(x)]=f(x)g'(x)+g(x)f'(x)$ 를 양변 적분해서 정리하면</p>
+<div class="formula">$$\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx$$</div>
+<p>$u=f(x)$, $v=g(x)$ 로 두면 $du=f'(x)\,dx$, $dv=g'(x)\,dx$ 이므로</p>
+<div class="formula">$$\int u\,dv=uv-\int v\,du$$</div></div>
+<div class="box tip"><b class="lab">$u$ 와 $dv$ 고르기</b>
+<p>목표는 오른쪽의 $\int v\,du$ 가 처음 적분보다 <b>쉬워지는 것</b>이다.</p>
+<ul><li>$u$: 미분하면 간단해지는 것 ($x^n$, $\ln x$, $\tan^{-1}x$, $\sin^{-1}x$).</li>
+<li>$dv$: 바로 적분되는 것 ($e^x\,dx$, $\sin x\,dx$, $\cos x\,dx$, $dx$).</li>
+<li>풀이 칸을 $u=\ \ ,\ dv=\ \ $ / $du=\ \ ,\ v=\ \ $ 네 칸으로 적어 두면 실수가 줄어든다.</li></ul></div>
+<details class="ex"><summary>예제 1 · $\displaystyle\int x\sin x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$u=x$, $dv=\sin x\,dx$ 로 두면 $du=dx$, $v=-\cos x$.</p>
+<p>$\displaystyle\int x\sin x\,dx=-x\cos x-\int(-\cos x)\,dx=-x\cos x+\sin x+C$.</p>
+<p class="mini">반대로 $u=\sin x$, $dv=x\,dx$ 로 두면 $\tfrac{x^2}2\sin x-\tfrac12\int x^2\cos x\,dx$ 가 되어 더 어려워진다. 미분해서 $x\sin x$ 가 나오는지 확인한다.</p>
+</div></details>
+<details class="ex"><summary>예제 2 · $\displaystyle\int\ln x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>곱이 안 보이지만 $dv=dx$ 로 두면 된다. $u=\ln x$, $dv=dx$ ⇒ $du=\tfrac1x\,dx$, $v=x$.</p>
+<p>$\displaystyle\int\ln x\,dx=x\ln x-\int x\cdot\tfrac1x\,dx=x\ln x-x+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 3 · $\displaystyle\int t^2e^t\,dt$ 를 구하시오.</summary>
+<div class="body">
+<p>$t^2$ 은 미분할수록 간단해지고 $e^t$ 는 그대로이므로 $u=t^2$, $dv=e^t\,dt$ ⇒ $du=2t\,dt$, $v=e^t$.</p>
+<p>$\displaystyle\int t^2e^t\,dt=t^2e^t-2\int te^t\,dt$.</p>
+<p>남은 적분에 한 번 더: $u=t$, $dv=e^t\,dt$ ⇒ $\int te^t\,dt=te^t-e^t+C$.</p>
+<p>$\displaystyle\int t^2e^t\,dt=t^2e^t-2te^t+2e^t+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 4 · $\displaystyle\int e^x\sin x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$u=e^x$, $dv=\sin x\,dx$: $\displaystyle\int e^x\sin x\,dx=-e^x\cos x+\int e^x\cos x\,dx$.</p>
+<p>다시 $u=e^x$, $dv=\cos x\,dx$ (같은 쪽을 $u$ 로 유지): $\displaystyle\int e^x\cos x\,dx=e^x\sin x-\int e^x\sin x\,dx$.</p>
+<p>처음 적분이 다시 나왔다. 대입하면 $\displaystyle\int e^x\sin x\,dx=-e^x\cos x+e^x\sin x-\int e^x\sin x\,dx$ 이고, 이항해서 2로 나누면</p>
+<p>$\displaystyle\int e^x\sin x\,dx=\tfrac12e^x(\sin x-\cos x)+C$.</p>
+</div></details>
+
+<h3 id="s71-2"><span class="sq">■</span>부분적분: 정적분</h3>
+<div class="box thm"><b class="lab">정적분 형태</b>
+<div class="formula">$$\int_a^bf(x)g'(x)\,dx=\Big[f(x)g(x)\Big]_a^b-\int_a^bg(x)f'(x)\,dx$$</div>
+<p>$uv$ 부분에도 끝값을 넣는 것을 잊지 않는다.</p></div>
+<details class="ex"><summary>예제 5 · $\displaystyle\int_0^1\tan^{-1}x\,dx$ 를 계산하시오.</summary>
+<div class="body">
+<p>$u=\tan^{-1}x$, $dv=dx$ ⇒ $du=\dfrac{dx}{1+x^2}$, $v=x$.</p>
+<p>$\displaystyle\int_0^1\tan^{-1}x\,dx=\Big[x\tan^{-1}x\Big]_0^1-\int_0^1\dfrac x{1+x^2}\,dx=\dfrac\pi4-\int_0^1\dfrac x{1+x^2}\,dx$.</p>
+<p>$t=1+x^2$ 로 치환하면 $\displaystyle\int_0^1\dfrac x{1+x^2}dx=\dfrac12\int_1^2\dfrac{dt}t=\dfrac12\ln2$.</p>
+<p>답: $\dfrac\pi4-\dfrac{\ln2}2\approx0.439$. $\tan^{-1}x\ge0$ 이므로 아래 그림의 넓이와 같다.</p>
+</div></details>
+<figure><svg class="fig" id="fig71a" viewBox="0 0 440 280"></svg><figcaption>예제 5: $y=\tan^{-1}x$ 아래 $0\le x\le1$ 의 넓이 $=\tfrac\pi4-\tfrac12\ln2\approx0.439$</figcaption></figure>
+
+<h3 id="s71-3"><span class="sq">■</span>점화식 (Reduction Formula)</h3>
+<div class="box thm"><b class="lab">$\sin^nx$ 의 점화식</b>
+<div class="formula">$$\int\sin^nx\,dx=-\frac1n\cos x\sin^{n-1}x+\frac{n-1}n\int\sin^{n-2}x\,dx\qquad(n\ge2)$$</div>
+<p>지수가 $n$ 에서 $n-2$ 로 내려가므로 반복하면 $\int\sin x\,dx$ ($n$ 홀수) 또는 $\int dx$ ($n$ 짝수)까지 간다. $\cos^nx$, $(\ln x)^n$, $x^ne^x$, $\tan^nx$, $\sec^nx$ 도 같은 방식의 점화식이 있다 (교재 #54, #57–60).</p></div>
+<details class="ex"><summary>예제 6 · 위 점화식을 증명하시오.</summary>
+<div class="body">
+<p>$u=\sin^{n-1}x$, $dv=\sin x\,dx$ ⇒ $du=(n-1)\sin^{n-2}x\cos x\,dx$, $v=-\cos x$.</p>
+<p>$\displaystyle\int\sin^nx\,dx=-\cos x\sin^{n-1}x+(n-1)\int\sin^{n-2}x\cos^2x\,dx$.</p>
+<p>$\cos^2x=1-\sin^2x$ 를 넣으면 $\displaystyle\int\sin^nx\,dx=-\cos x\sin^{n-1}x+(n-1)\int\sin^{n-2}x\,dx-(n-1)\int\sin^nx\,dx$.</p>
+<p>마지막 항을 왼쪽으로 옮기면 $\displaystyle n\int\sin^nx\,dx=-\cos x\sin^{n-1}x+(n-1)\int\sin^{n-2}x\,dx$. 양변을 $n$ 으로 나누면 끝.</p>
+</div></details>
+
+<div class="box warn"><b class="lab">시험 함정</b>
+<ul>
+<li>$u$ 와 $dv$ 를 거꾸로 고르면 적분이 더 복잡해진다. $\int v\,du$ 가 쉬워졌는지 먼저 본다.</li>
+<li>$\int\ln x\,dx$, $\int\tan^{-1}x\,dx$, $\int\sin^{-1}x\,dx$ 는 $dv=dx$ 로 둔다.</li>
+<li>$e^x\sin x$ 처럼 원래 적분이 되돌아오면 <b>방정식으로 풀고</b> 마지막에 $+C$ 를 붙인다. 두 번째 부분적분에서 $u$ 를 바꾸면 항등식만 나온다.</li>
+<li>정적분에서는 $[uv]_a^b$ 를 빠뜨리지 않는다.</li>
+</ul></div>
+</section>
+<!-- ============================ 7.2 ============================ -->
+<section class="sec" id="s72">
+<h2><span class="n">7.2</span> Trigonometric Integrals <span class="pg">교재 p.493–500</span></h2>
+<p class="mini">핵심 아이디어: 삼각함수의 거듭제곱 곱은 항등식으로 모양을 바꾼 뒤 치환한다. 홀수 지수가 있으면 한 개를 떼어 $du$ 로 쓰고, 모두 짝수면 반각 공식으로 지수를 낮춘다.</p>
+
+<h3 id="s72-1"><span class="sq">■</span>$\sin$ 과 $\cos$ 의 거듭제곱</h3>
+<div class="box thm"><b class="lab">Strategy for $\displaystyle\int\sin^mx\cos^nx\,dx$</b>
+<table>
+<tr><th class="l">경우</th><th class="l">방법</th><th class="l">치환</th></tr>
+<tr><td class="l">$\cos$ 의 지수가 홀수</td><td class="l">$\cos x$ 하나를 떼고 나머지 $\cos^2x=1-\sin^2x$</td><td class="l">$u=\sin x$</td></tr>
+<tr><td class="l">$\sin$ 의 지수가 홀수</td><td class="l">$\sin x$ 하나를 떼고 나머지 $\sin^2x=1-\cos^2x$</td><td class="l">$u=\cos x$</td></tr>
+<tr><td class="l">둘 다 짝수</td><td class="l">반각 공식 $\sin^2x=\tfrac12(1-\cos2x)$, $\cos^2x=\tfrac12(1+\cos2x)$</td><td class="l">(지수를 낮춤)</td></tr>
+</table>
+<p>둘 다 홀수면 어느 쪽을 떼도 된다. $\sin x\cos x=\tfrac12\sin2x$ 도 자주 쓴다.</p></div>
+<details class="ex"><summary>예제 1 · $\displaystyle\int\cos^3x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$\cos^3x=(1-\sin^2x)\cos x$. $u=\sin x$, $du=\cos x\,dx$:</p>
+<p>$\displaystyle\int(1-u^2)\,du=u-\tfrac13u^3+C=\sin x-\tfrac13\sin^3x+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 2 · $\displaystyle\int\sin^5x\cos^2x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$\sin$ 의 지수가 홀수: $\sin^5x\cos^2x=(1-\cos^2x)^2\cos^2x\sin x$. $u=\cos x$, $du=-\sin x\,dx$:</p>
+<p>$\displaystyle-\int(1-u^2)^2u^2\,du=-\int(u^2-2u^4+u^6)\,du=-\tfrac13\cos^3x+\tfrac25\cos^5x-\tfrac17\cos^7x+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 3 · $\displaystyle\int_0^\pi\sin^2x\,dx$ 를 계산하시오.</summary>
+<div class="body">
+<p>짝수 지수뿐이라 반각 공식: $\displaystyle\int_0^\pi\tfrac12(1-\cos2x)\,dx=\left[\tfrac12x-\tfrac14\sin2x\right]_0^\pi=\tfrac\pi2$.</p>
+</div></details>
+<figure><svg class="fig" id="fig72a" viewBox="0 0 440 280"></svg><figcaption>예제 3: $y=\sin^2x$ 아래 넓이는 $\tfrac\pi2$. 곡선은 높이 $\tfrac12$ 를 중심으로 위아래가 대칭이라 평균 높이가 $\tfrac12$</figcaption></figure>
+<details class="ex"><summary>예제 4 · $\displaystyle\int\sin^4x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$\sin^4x=\left[\tfrac12(1-\cos2x)\right]^2=\tfrac14\left(1-2\cos2x+\cos^22x\right)$, 그리고 $\cos^22x=\tfrac12(1+\cos4x)$.</p>
+<p>$\displaystyle\int\sin^4x\,dx=\tfrac14\int\left(\tfrac32-2\cos2x+\tfrac12\cos4x\right)dx=\tfrac14\left(\tfrac32x-\sin2x+\tfrac18\sin4x\right)+C$.</p>
+</div></details>
+
+<h3 id="s72-2"><span class="sq">■</span>$\tan$ 과 $\sec$ 의 거듭제곱</h3>
+<div class="box thm"><b class="lab">Strategy for $\displaystyle\int\tan^mx\sec^nx\,dx$</b>
+<table>
+<tr><th class="l">경우</th><th class="l">방법</th><th class="l">치환</th></tr>
+<tr><td class="l">$\sec$ 의 지수가 짝수 ($n\ge2$)</td><td class="l">$\sec^2x$ 하나를 떼고 나머지 $\sec^2x=1+\tan^2x$</td><td class="l">$u=\tan x$</td></tr>
+<tr><td class="l">$\tan$ 의 지수가 홀수</td><td class="l">$\sec x\tan x$ 하나를 떼고 나머지 $\tan^2x=\sec^2x-1$</td><td class="l">$u=\sec x$</td></tr>
+</table>
+<p>그 밖의 경우는 항등식, 부분적분을 섞어 쓴다. 꼭 외울 두 식:</p>
+<div class="formula">$$\int\tan x\,dx=\ln|\sec x|+C,\qquad\int\sec x\,dx=\ln|\sec x+\tan x|+C$$</div>
+<p>$\int\cot^mx\csc^nx\,dx$ 는 $1+\cot^2x=\csc^2x$ 로 같은 방식으로 푼다.</p></div>
+<details class="ex"><summary>예제 5 · $\displaystyle\int\tan^6x\sec^4x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$\sec$ 지수가 짝수: $\tan^6x\sec^4x=\tan^6x(1+\tan^2x)\sec^2x$. $u=\tan x$:</p>
+<p>$\displaystyle\int(u^6+u^8)\,du=\tfrac17\tan^7x+\tfrac19\tan^9x+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 6 · $\displaystyle\int\tan^5\theta\sec^7\theta\,d\theta$ 를 구하시오.</summary>
+<div class="body">
+<p>$\sec^2\theta$ 를 떼면 $\sec^5\theta$ 가 남아 곤란하다. $\tan$ 지수가 홀수이므로 $\sec\theta\tan\theta$ 를 뗀다:</p>
+<p>$\tan^4\theta\sec^6\theta\cdot\sec\theta\tan\theta=(\sec^2\theta-1)^2\sec^6\theta\cdot\sec\theta\tan\theta$. $u=\sec\theta$:</p>
+<p>$\displaystyle\int(u^2-1)^2u^6\,du=\tfrac1{11}\sec^{11}\theta-\tfrac29\sec^9\theta+\tfrac17\sec^7\theta+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 7 · $\displaystyle\int\tan^3x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$\tan^3x=\tan x(\sec^2x-1)$.</p>
+<p>$\displaystyle\int\tan x\sec^2x\,dx-\int\tan x\,dx=\tfrac12\tan^2x-\ln|\sec x|+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 8 · $\displaystyle\int\sec^3x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>부분적분: $u=\sec x$, $dv=\sec^2x\,dx$ ⇒ $du=\sec x\tan x\,dx$, $v=\tan x$.</p>
+<p>$\displaystyle\int\sec^3x\,dx=\sec x\tan x-\int\sec x\tan^2x\,dx=\sec x\tan x-\int\sec^3x\,dx+\int\sec x\,dx$.</p>
+<p>7.1 예제 4 처럼 이항하면 $\displaystyle\int\sec^3x\,dx=\tfrac12\left(\sec x\tan x+\ln|\sec x+\tan x|\right)+C$.</p>
+</div></details>
+
+<h3 id="s72-3"><span class="sq">■</span>곱을 합으로 바꾸는 공식</h3>
+<div class="box thm"><b class="lab">Product Identities</b>
+<p>$\int\sin mx\cos nx\,dx$, $\int\sin mx\sin nx\,dx$, $\int\cos mx\cos nx\,dx$ 에는</p>
+<ul><li>$\sin A\cos B=\tfrac12\left[\sin(A-B)+\sin(A+B)\right]$</li>
+<li>$\sin A\sin B=\tfrac12\left[\cos(A-B)-\cos(A+B)\right]$</li>
+<li>$\cos A\cos B=\tfrac12\left[\cos(A-B)+\cos(A+B)\right]$</li></ul></div>
+<details class="ex"><summary>예제 9 · $\displaystyle\int\sin4x\cos5x\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$\sin4x\cos5x=\tfrac12\left[\sin(-x)+\sin9x\right]=\tfrac12\left(-\sin x+\sin9x\right)$.</p>
+<p>$\displaystyle\int\sin4x\cos5x\,dx=\tfrac12\left(\cos x-\tfrac19\cos9x\right)+C$.</p>
+</div></details>
+
+<div class="box warn"><b class="lab">시험 함정</b>
+<ul>
+<li>떼어 낸 한 개가 $du$ 가 된다. $\cos$ 를 떼면 $u=\sin x$, $\sin$ 을 떼면 $u=\cos x$ (부호 $-$).</li>
+<li>짝수 지수뿐인데 $\sin^2x=1-\cos^2x$ 로 바꾸면 제자리다. 반각 공식을 쓴다.</li>
+<li>$\int\sec x\,dx$, $\int\tan x\,dx$, $\int\sec^3x\,dx$ 는 결과를 외워 둔다.</li>
+<li>답의 모양이 달라도 (예: $\tfrac12\sin^2x$ 와 $-\tfrac12\cos^2x$) 상수만 다를 수 있다. 미분해서 확인한다.</li>
+</ul></div>
+</section>
+<!-- ============================ 7.3 ============================ -->
+<section class="sec" id="s73">
+<h2><span class="n">7.3</span> Trigonometric Substitution <span class="pg">교재 p.500–506</span></h2>
+<p class="mini">핵심 아이디어: $\sqrt{a^2-x^2}$, $\sqrt{a^2+x^2}$, $\sqrt{x^2-a^2}$ 는 $x$ 를 삼각함수로 바꾸면 피타고라스 항등식 덕분에 근호가 사라진다. 다 풀면 직각삼각형을 그려 $x$ 로 되돌린다.</p>
+
+<h3 id="s73-1"><span class="sq">■</span>치환 표</h3>
+<div class="box thm"><b class="lab">Table of Trigonometric Substitutions</b>
+<table>
+<tr><th class="l">식</th><th class="l">치환</th><th class="l">$\theta$ 범위</th><th class="l">쓰는 항등식</th></tr>
+<tr><td class="l">$\sqrt{a^2-x^2}$</td><td class="l">$x=a\sin\theta$</td><td class="l">$-\tfrac\pi2\le\theta\le\tfrac\pi2$</td><td class="l">$1-\sin^2\theta=\cos^2\theta$</td></tr>
+<tr><td class="l">$\sqrt{a^2+x^2}$</td><td class="l">$x=a\tan\theta$</td><td class="l">$-\tfrac\pi2\lt\theta\lt\tfrac\pi2$</td><td class="l">$1+\tan^2\theta=\sec^2\theta$</td></tr>
+<tr><td class="l">$\sqrt{x^2-a^2}$</td><td class="l">$x=a\sec\theta$</td><td class="l">$0\le\theta\lt\tfrac\pi2$ 또는 $\pi\le\theta\lt\tfrac{3\pi}2$</td><td class="l">$\sec^2\theta-1=\tan^2\theta$</td></tr>
+</table>
+<p>$\theta$ 범위를 이렇게 정하면 치환이 일대일이고 근호 안이 $a^2\cos^2\theta$ 처럼 되어 $\sqrt{\ }$ 가 절댓값 없이 벗겨진다.</p>
+<p><b>역치환</b>: 5.5 의 $u=g(x)$ 와 달리 여기서는 옛 변수를 새 변수의 함수로 쓴다. $\displaystyle\int f(x)\,dx=\int f(g(t))\,g'(t)\,dt$.</p></div>
+
+<details class="ex"><summary>예제 1 · $\displaystyle\int\dfrac{\sqrt{9-x^2}}{x^2}\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>$x=3\sin\theta$ ($-\tfrac\pi2\le\theta\le\tfrac\pi2$), $dx=3\cos\theta\,d\theta$, $\sqrt{9-x^2}=3\cos\theta$.</p>
+<p>$\displaystyle\int\dfrac{3\cos\theta}{9\sin^2\theta}\,3\cos\theta\,d\theta=\int\cot^2\theta\,d\theta=\int(\csc^2\theta-1)\,d\theta=-\cot\theta-\theta+C$.</p>
+<p>삼각형: $\sin\theta=\tfrac x3$ 이면 빗변 3, 높이 $x$, 밑변 $\sqrt{9-x^2}$ 이므로 $\cot\theta=\dfrac{\sqrt{9-x^2}}x$.</p>
+<p>$\displaystyle\int\dfrac{\sqrt{9-x^2}}{x^2}\,dx=-\dfrac{\sqrt{9-x^2}}x-\sin^{-1}\!\left(\dfrac x3\right)+C$.</p>
+</div></details>
+<figure><svg class="fig" id="fig73a" viewBox="0 0 440 280"></svg><figcaption>예제 1 의 기준 삼각형: $\sin\theta=\tfrac x3$ 이면 밑변은 $\sqrt{9-x^2}$. 여기서 $\cot\theta$, $\cos\theta$ 등을 $x$ 로 읽는다</figcaption></figure>
+<details class="ex"><summary>예제 2 · 타원 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 의 넓이를 구하시오.</summary>
+<div class="body">
+<p>제1사분면 부분은 $y=\tfrac ba\sqrt{a^2-x^2}$ ($0\le x\le a$) 이고 대칭이므로 $A=4\cdot\dfrac ba\displaystyle\int_0^a\sqrt{a^2-x^2}\,dx$.</p>
+<p>$x=a\sin\theta$: $x=0$ 이면 $\theta=0$, $x=a$ 이면 $\theta=\tfrac\pi2$.</p>
+<p>$A=4ab\displaystyle\int_0^{\pi/2}\cos^2\theta\,d\theta=2ab\left[\theta+\tfrac12\sin2\theta\right]_0^{\pi/2}=\pi ab$. $a=b=r$ 이면 원의 넓이 $\pi r^2$.</p>
+<p class="mini">정적분이라 끝값을 $\theta$ 로 바꿨으니 $x$ 로 되돌릴 필요가 없다.</p>
+</div></details>
+<figure><svg class="fig" id="fig73b" viewBox="0 0 440 280"></svg><figcaption>예제 2 ($a=3$, $b=2$): 색칠한 1/4 의 넓이를 구해 4배 하면 $\pi ab=6\pi$</figcaption></figure>
+<details class="ex"><summary>예제 3 · $\displaystyle\int\dfrac{dx}{x^2\sqrt{x^2+4}}$ 를 구하시오.</summary>
+<div class="body">
+<p>$x=2\tan\theta$, $dx=2\sec^2\theta\,d\theta$, $\sqrt{x^2+4}=2\sec\theta$.</p>
+<p>$\displaystyle\int\dfrac{2\sec^2\theta}{4\tan^2\theta\cdot2\sec\theta}\,d\theta=\dfrac14\int\dfrac{\sec\theta}{\tan^2\theta}\,d\theta=\dfrac14\int\dfrac{\cos\theta}{\sin^2\theta}\,d\theta$.</p>
+<p>$u=\sin\theta$: $\dfrac14\displaystyle\int\dfrac{du}{u^2}=-\dfrac1{4\sin\theta}+C=-\dfrac{\csc\theta}4+C$.</p>
+<p>$\tan\theta=\tfrac x2$ 인 삼각형에서 빗변 $\sqrt{x^2+4}$, $\csc\theta=\dfrac{\sqrt{x^2+4}}x$ ⇒ $-\dfrac{\sqrt{x^2+4}}{4x}+C$.</p>
+</div></details>
+<details class="ex"><summary>예제 4 · $\displaystyle\int\dfrac x{\sqrt{x^2+4}}\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>삼각치환도 되지만 $u=x^2+4$ 가 훨씬 빠르다: $\dfrac12\displaystyle\int u^{-1/2}\,du=\sqrt{x^2+4}+C$.</p>
+<p class="mini">근호가 보여도 <b>분자에 근호 안의 도함수가 있으면</b> 먼저 일반 치환을 본다.</p>
+</div></details>
+<details class="ex"><summary>예제 5 · $\displaystyle\int\dfrac{dx}{\sqrt{x^2-a^2}}$ ($a\gt0$) 를 구하시오.</summary>
+<div class="body">
+<p>$x=a\sec\theta$, $dx=a\sec\theta\tan\theta\,d\theta$, $\sqrt{x^2-a^2}=a\tan\theta$.</p>
+<p>$\displaystyle\int\dfrac{a\sec\theta\tan\theta}{a\tan\theta}\,d\theta=\int\sec\theta\,d\theta=\ln|\sec\theta+\tan\theta|+C$.</p>
+<p>삼각형에서 $\tan\theta=\dfrac{\sqrt{x^2-a^2}}a$ ⇒ $\ln\left|\dfrac xa+\dfrac{\sqrt{x^2-a^2}}a\right|+C=\ln\left|x+\sqrt{x^2-a^2}\right|+C_1$ ($C_1=C-\ln a$).</p>
+</div></details>
+<details class="ex"><summary>예제 6 · $\displaystyle\int_0^{3\sqrt3/2}\dfrac{x^3}{(4x^2+9)^{3/2}}\,dx$ 를 계산하시오.</summary>
+<div class="body">
+<p>$(4x^2+9)^{3/2}=\left(\sqrt{4x^2+9}\right)^3$. $2x=3\tan\theta$, 곧 $x=\tfrac32\tan\theta$ 로 두면 $dx=\tfrac32\sec^2\theta\,d\theta$, $\sqrt{4x^2+9}=3\sec\theta$. 끝값은 $\theta=0$ 에서 $\theta=\tfrac\pi3$.</p>
+<p>$\displaystyle\int_0^{\pi/3}\dfrac{\tfrac{27}8\tan^3\theta}{27\sec^3\theta}\cdot\tfrac32\sec^2\theta\,d\theta=\dfrac3{16}\int_0^{\pi/3}\dfrac{\sin^3\theta}{\cos^2\theta}\,d\theta=\dfrac3{16}\int_0^{\pi/3}\dfrac{1-\cos^2\theta}{\cos^2\theta}\sin\theta\,d\theta$.</p>
+<p>$u=\cos\theta$ ($1\to\tfrac12$): $-\dfrac3{16}\displaystyle\int_1^{1/2}\left(u^{-2}-1\right)du=\dfrac3{16}\left[u+\dfrac1u\right]_1^{1/2}=\dfrac3{16}\left(\dfrac52-2\right)=\dfrac3{32}$.</p>
+</div></details>
+<details class="ex"><summary>예제 7 · $\displaystyle\int\dfrac x{\sqrt{3-2x-x^2}}\,dx$ 를 구하시오.</summary>
+<div class="body">
+<p>완전제곱: $3-2x-x^2=4-(x+1)^2$. $u=x+1$ 로 두면 $\displaystyle\int\dfrac{u-1}{\sqrt{4-u^2}}\,du$.</p>
+<p>$u=2\sin\theta$: $\displaystyle\int\dfrac{2\sin\theta-1}{2\cos\theta}\,2\cos\theta\,d\theta=\int(2\sin\theta-1)\,d\theta=-2\cos\theta-\theta+C$.</p>
+<p>$=-\sqrt{4-u^2}-\sin^{-1}\dfrac u2+C=-\sqrt{3-2x-x^2}-\sin^{-1}\!\left(\dfrac{x+1}2\right)+C$.</p>
+</div></details>
+
+<div class="box tip"><b class="lab">풀이 순서</b>
+<ol><li>더 쉬운 일반 치환이 없는지 본다 (예제 4).</li>
+<li>근호 안이 이차식이면 <b>완전제곱</b>으로 $a^2\pm u^2$ 꼴을 만든다 (예제 7).</li>
+<li>표에서 치환을 고르고 $dx$ 와 근호를 $\theta$ 로 바꾼다.</li>
+<li>7.2 의 삼각적분으로 계산한다.</li>
+<li>부정적분이면 <b>삼각형</b>으로 $x$ 로 되돌리고, 정적분이면 끝값을 $\theta$ 로 바꾼다.</li></ol></div>
+
+<div class="box warn"><b class="lab">시험 함정</b>
+<ul>
+<li>$\sqrt{a^2+x^2}$ 에 $x=a\sin\theta$ 를 쓰는 실수 (교재 Review T/F #3). 더하기면 $\tan$, 빼기 순서에 따라 $\sin$ 또는 $\sec$.</li>
+<li>$dx$ 바꾸기를 잊는다. $x=a\sin\theta$ 이면 $dx=a\cos\theta\,d\theta$.</li>
+<li>$\theta$ 를 $x$ 로 되돌릴 때 $\theta=\sin^{-1}(x/a)$ 항도 남는다 (예제 1).</li>
+<li>$(4x^2+9)^{3/2}$ 처럼 계수가 있으면 $2x=3\tan\theta$ 로 맞춘다.</li>
+</ul></div>
+</section>
+<section class="sec practice" id="pr7">
+<h2>🧪 Chapter 7 연습문제 (7.1 – 7.3) <span class="pg">풀고 나서 정답 확인 → 채점</span></h2>
+<p class="mini">모두 <b>교재 번호로 가리킨 문제</b>입니다: 소단원마다 <b>Exercises 선별</b>, 장 끝에 <b>Review Exercises 선별</b>, 맨 아래에 Review True–False Quiz 의 <b>OX</b>. 문장은 <b>핵심만 줄여 다시 쓴 것이라 원문 그대로가 아니며</b> 풀이는 직접 작성했습니다(번호는 교재 Metric 9판 기준). 증명·그림/표 읽기·CAS·서술형은 뺐고, 계산형은 <b>객관식으로 바꾸지 않고 주관식 그대로</b> 두었습니다. <b>먼저 종이에 풀고</b> → “정답·풀이 보기” → 채점(✔/✘). ✘ 표시한 문제는 “복습 문제만 보기”로 다시 모아 볼 수 있어요.</p>
+<div class="score" data-scope="pr7"><span class="sc">0 / 0 정답</span><button class="onlyno">✘ 복습 문제만 보기</button><button class="reset">기록 초기화</button></div>
+<h3><span class="sq">▸</span>7.1 교재 Exercises 선별 <span class='mini'>(그래프로 확인하는 문제·증명 문제는 제외, 번호는 교재 기준)</span></h3>
+<div class="prob" data-id="tb71-1"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #1]</b> $u=x$, $dv=e^{2x}dx$ 로 부분적분하여 $\displaystyle\int xe^{2x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$du=dx$, $v=\tfrac12e^{2x}$. $\displaystyle\tfrac12xe^{2x}-\int\tfrac12e^{2x}dx=\boxed{\tfrac12xe^{2x}-\tfrac14e^{2x}+C}$.</div></div>
+<div class="prob" data-id="tb71-2"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #2]</b> $u=\ln x$, $dv=\sqrt x\,dx$ 로 $\displaystyle\int\sqrt x\ln x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$du=\tfrac{dx}x$, $v=\tfrac23x^{3/2}$. $\tfrac23x^{3/2}\ln x-\tfrac23\displaystyle\int x^{1/2}dx=\boxed{\tfrac23x^{3/2}\ln x-\tfrac49x^{3/2}+C}$.</div></div>
+<div class="prob" data-id="tb71-3"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #3]</b> $u=x$, $dv=\cos4x\,dx$ 로 $\displaystyle\int x\cos4x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$v=\tfrac14\sin4x$. $\tfrac14x\sin4x-\tfrac14\displaystyle\int\sin4x\,dx=\boxed{\tfrac14x\sin4x+\tfrac1{16}\cos4x+C}$.</div></div>
+<div class="prob" data-id="tb71-4"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #4]</b> $u=\sin^{-1}x$, $dv=dx$ 로 $\displaystyle\int\sin^{-1}x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$du=\tfrac{dx}{\sqrt{1-x^2}}$, $v=x$. $x\sin^{-1}x-\displaystyle\int\tfrac x{\sqrt{1-x^2}}dx=\boxed{x\sin^{-1}x+\sqrt{1-x^2}+C}$ (남은 적분은 $u=1-x^2$ 치환).</div></div>
+<div class="prob" data-id="tb71-7"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #7]</b> $\displaystyle\int x\sin10x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x$, $v=-\tfrac1{10}\cos10x$. $\boxed{-\tfrac1{10}x\cos10x+\tfrac1{100}\sin10x+C}$.</div></div>
+<div class="prob" data-id="tb71-9"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #9]</b> $\displaystyle\int w\ln w\,dw$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln w$, $v=\tfrac12w^2$. $\tfrac12w^2\ln w-\displaystyle\int\tfrac12w\,dw=\boxed{\tfrac12w^2\ln w-\tfrac14w^2+C}$.</div></div>
+<div class="prob" data-id="tb71-10"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #10]</b> $\displaystyle\int\dfrac{\ln x}{x^2}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln x$, $dv=x^{-2}dx$, $v=-\tfrac1x$. $-\dfrac{\ln x}x+\displaystyle\int\dfrac{dx}{x^2}=\boxed{-\dfrac{\ln x}x-\dfrac1x+C}$.</div></div>
+<div class="prob" data-id="tb71-11"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #11]</b> $\displaystyle\int(x^2+2x)\cos x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">두 번: $u=x^2+2x$ 로 $(x^2+2x)\sin x-\int(2x+2)\sin x\,dx$, 다시 $u=2x+2$ 로 $\int(2x+2)\sin x\,dx=-(2x+2)\cos x+2\sin x$.<br>$\boxed{(x^2+2x)\sin x+(2x+2)\cos x-2\sin x+C}$.</div></div>
+<div class="prob" data-id="tb71-13"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #13]</b> $\displaystyle\int\cos^{-1}x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos^{-1}x$, $dv=dx$, $du=-\tfrac{dx}{\sqrt{1-x^2}}$. $x\cos^{-1}x+\displaystyle\int\tfrac x{\sqrt{1-x^2}}dx=\boxed{x\cos^{-1}x-\sqrt{1-x^2}+C}$.</div></div>
+<div class="prob" data-id="tb71-14"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #14]</b> $\displaystyle\int\ln\sqrt x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\ln\sqrt x=\tfrac12\ln x$ 이고 7.1 예제 2 에서 $\int\ln x\,dx=x\ln x-x$ ⇒ $\boxed{\tfrac12(x\ln x-x)+C}$.</div></div>
+<div class="prob" data-id="tb71-15"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #15]</b> $\displaystyle\int t^4\ln t\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln t$, $v=\tfrac{t^5}5$. $\tfrac{t^5}5\ln t-\displaystyle\int\tfrac{t^4}5dt=\boxed{\tfrac15t^5\ln t-\tfrac1{25}t^5+C}$.</div></div>
+<div class="prob" data-id="tb71-16"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #16]</b> $\displaystyle\int\tan^{-1}(2y)\,dy$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\tan^{-1}2y$, $dv=dy$, $du=\tfrac{2\,dy}{1+4y^2}$. $y\tan^{-1}2y-\displaystyle\int\tfrac{2y}{1+4y^2}dy=\boxed{y\tan^{-1}(2y)-\tfrac14\ln(1+4y^2)+C}$.</div></div>
+<div class="prob" data-id="tb71-17"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #17]</b> $\displaystyle\int t\csc^2t\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=t$, $dv=\csc^2t\,dt$, $v=-\cot t$. $-t\cot t+\displaystyle\int\cot t\,dt=\boxed{-t\cot t+\ln|\sin t|+C}$.</div></div>
+<div class="prob" data-id="tb71-19"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #19]</b> $\displaystyle\int(\ln x)^2\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=(\ln x)^2$, $dv=dx$: $x(\ln x)^2-2\displaystyle\int\ln x\,dx=\boxed{x(\ln x)^2-2x\ln x+2x+C}$.</div></div>
+<div class="prob" data-id="tb71-21"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #21]</b> $\displaystyle\int e^{3x}\cos x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$I=\int e^{3x}\cos x\,dx$. $u=e^{3x}$ 로 두 번: $I=e^{3x}\sin x-3\int e^{3x}\sin x\,dx=e^{3x}\sin x+3e^{3x}\cos x-9I$.<br>$10I=e^{3x}(\sin x+3\cos x)$ ⇒ $\boxed{\tfrac1{10}e^{3x}\sin x+\tfrac3{10}e^{3x}\cos x+C}$.</div></div>
+<div class="prob" data-id="tb71-23"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #23]</b> $\displaystyle\int e^{2\theta}\sin3\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\sin3\theta$ 로 두 번 하면 $I=\tfrac12e^{2\theta}\sin3\theta-\tfrac34e^{2\theta}\cos3\theta-\tfrac94I$ (두 번째에서는 $u=\cos3\theta$).<br>$\tfrac{13}4I=\tfrac14e^{2\theta}(2\sin3\theta-3\cos3\theta)$ ⇒ $\boxed{\tfrac1{13}e^{2\theta}(2\sin3\theta-3\cos3\theta)+C}$.</div></div>
+<div class="prob" data-id="tb71-24"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #24]</b> $\displaystyle\int e^{-\theta}\cos2\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos2\theta$ 로 두 번: $I=-e^{-\theta}\cos2\theta-2\int e^{-\theta}\sin2\theta\,d\theta=-e^{-\theta}\cos2\theta+2e^{-\theta}\sin2\theta-4I$.<br>$\boxed{\tfrac15e^{-\theta}(2\sin2\theta-\cos2\theta)+C}$.</div></div>
+<div class="prob" data-id="tb71-25"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #25]</b> $\displaystyle\int z^3e^z\,dz$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=z^3,z^2,z$ 순서로 세 번 (또는 #58 점화식): $\boxed{e^z\left(z^3-3z^2+6z-6\right)+C}$.</div></div>
+<div class="prob" data-id="tb71-27"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #27]</b> $\displaystyle\int(1+x^2)e^{3x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1+x^2$: $\tfrac13(1+x^2)e^{3x}-\tfrac23\int xe^{3x}dx$, $\int xe^{3x}dx=\tfrac13xe^{3x}-\tfrac19e^{3x}$.<br>$\boxed{\left(\tfrac13x^2-\tfrac29x+\tfrac{11}{27}\right)e^{3x}+C}$.</div></div>
+<div class="prob" data-id="tb71-29"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #29]</b> $\displaystyle\int_0^1x\,3^x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x$, $v=\tfrac{3^x}{\ln3}$. $\left[\tfrac{x3^x}{\ln3}\right]_0^1-\tfrac1{\ln3}\displaystyle\int_0^13^xdx=\tfrac3{\ln3}-\tfrac2{(\ln3)^2}$ ⇒ $\boxed{\tfrac3{\ln3}-\tfrac2{(\ln3)^2}}\approx1.074$.</div></div>
+<div class="prob" data-id="tb71-31"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #31]</b> $\displaystyle\int_0^2y\sinh y\,dy$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=y$, $v=\cosh y$. $\left[y\cosh y\right]_0^2-\displaystyle\int_0^2\cosh y\,dy=\boxed{2\cosh2-\sinh2}$.</div></div>
+<div class="prob" data-id="tb71-33"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #33]</b> $\displaystyle\int_1^5\dfrac{\ln R}{R^2}\,dR$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">#10 의 결과 $-\tfrac{\ln R}R-\tfrac1R$ 에 끝값: $\left(-\tfrac{\ln5}5-\tfrac15\right)-(-1)=\boxed{\tfrac45-\tfrac15\ln5}$.</div></div>
+<div class="prob" data-id="tb71-35"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #35]</b> $\displaystyle\int_0^\pi x\sin x\cos x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin x\cos x=\tfrac12\sin2x$. $u=x$, $v=-\tfrac14\cos2x$: $\left[-\tfrac x4\cos2x\right]_0^\pi+\tfrac14\displaystyle\int_0^\pi\cos2x\,dx=-\tfrac\pi4+0=\boxed{-\tfrac\pi4}$.</div></div>
+<div class="prob" data-id="tb71-37"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #37]</b> $\displaystyle\int_1^5\dfrac M{e^M}\,dM$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\int Me^{-M}dM=-Me^{-M}-e^{-M}$. $\left[-(M+1)e^{-M}\right]_1^5=-6e^{-5}+2e^{-1}=\boxed{2e^{-1}-6e^{-5}}$.</div></div>
+<div class="prob" data-id="tb71-39"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #39]</b> $\displaystyle\int_0^{\pi/3}\sin x\ln(\cos x)\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$ ($1\to\tfrac12$) 로 치환하면 $\displaystyle\int_{1/2}^1\ln u\,du=\left[u\ln u-u\right]_{1/2}^1=-1-\left(-\tfrac12\ln2-\tfrac12\right)=\boxed{\tfrac12\ln2-\tfrac12}$.</div></div>
+<div class="prob" data-id="tb71-41"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #41]</b> $\displaystyle\int_0^\pi\cos x\sinh x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">두 번 부분적분해 $I$ 에 대해 풀면 $\int\cos x\sinh x\,dx=\tfrac12(\sin x\sinh x+\cos x\cosh x)$.<br>$\tfrac12\left[\cos x\cosh x\right]_0^\pi=\tfrac12(-\cosh\pi-1)=\boxed{-\tfrac12(1+\cosh\pi)}$.</div></div>
+<div class="prob" data-id="tb71-43"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #43]</b> 먼저 치환한 뒤 부분적분하여 $\displaystyle\int e^{\sqrt x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$t=\sqrt x$, $x=t^2$, $dx=2t\,dt$: $\displaystyle\int2te^t\,dt=2(t-1)e^t$ ⇒ $\boxed{2\left(\sqrt x-1\right)e^{\sqrt x}+C}$.</div></div>
+<div class="prob" data-id="tb71-44"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #44]</b> 먼저 치환한 뒤 부분적분하여 $\displaystyle\int\cos(\ln x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=e^t$, $dx=e^tdt$: $\int e^t\cos t\,dt=\tfrac12e^t(\cos t+\sin t)$ (예제 4 와 같은 방법).<br>$\boxed{\tfrac12x\left[\cos(\ln x)+\sin(\ln x)\right]+C}$.</div></div>
+<div class="prob" data-id="tb71-45"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #45]</b> $\displaystyle\int_{\sqrt{\pi/2}}^{\sqrt\pi}\theta^3\cos(\theta^2)\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$t=\theta^2$, $dt=2\theta\,d\theta$: $\tfrac12\displaystyle\int_{\pi/2}^\pi t\cos t\,dt=\tfrac12\left[t\sin t+\cos t\right]_{\pi/2}^\pi=\tfrac12\left(-1-\tfrac\pi2\right)=\boxed{-\tfrac12-\tfrac\pi4}$.</div></div>
+<div class="prob" data-id="tb71-47"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #47]</b> $\displaystyle\int x\ln(1+x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln(1+x)$, $v=\tfrac12(x^2-1)$ 로 잡으면 (상수 $-\tfrac12$ 를 넣어 두면 나눗셈이 쉬워진다)<br>$\tfrac12(x^2-1)\ln(1+x)-\tfrac12\displaystyle\int(x-1)\,dx=\boxed{\tfrac12(x^2-1)\ln(1+x)-\tfrac14x^2+\tfrac12x+C}$.</div></div>
+<div class="prob" data-id="tb71-53"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #53]</b> (b) $\displaystyle\int\sin^2x\,dx=\tfrac x2-\tfrac{\sin2x}4+C$ 와 예제 6 의 점화식으로 $\displaystyle\int\sin^4x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$n=4$: $\int\sin^4x\,dx=-\tfrac14\cos x\sin^3x+\tfrac34\int\sin^2x\,dx$<br>$=\boxed{-\tfrac14\cos x\sin^3x+\tfrac38x-\tfrac3{16}\sin2x+C}$.</div></div>
+<div class="prob" data-id="tb71-55"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #55]</b> (b) 점화식 $\displaystyle\int_0^{\pi/2}\sin^nx\,dx=\tfrac{n-1}n\int_0^{\pi/2}\sin^{n-2}x\,dx$ 로 $\displaystyle\int_0^{\pi/2}\sin^3x\,dx$, $\displaystyle\int_0^{\pi/2}\sin^5x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\int_0^{\pi/2}\sin x\,dx=1$. $\int_0^{\pi/2}\sin^3x\,dx=\tfrac23\cdot1=\boxed{\tfrac23}$, $\int_0^{\pi/2}\sin^5x\,dx=\tfrac45\cdot\tfrac23=\boxed{\tfrac8{15}}$.</div></div>
+<div class="prob" data-id="tb71-61"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #61]</b> 점화식 $\displaystyle\int(\ln x)^n\,dx=x(\ln x)^n-n\int(\ln x)^{n-1}dx$ 로 $\displaystyle\int(\ln x)^3\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$n=3,2,1$ 차례로: $\boxed{x\left[(\ln x)^3-3(\ln x)^2+6\ln x-6\right]+C}$.</div></div>
+<div class="prob" data-id="tb71-63"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #63]</b> $y=x^2\ln x$, $y=4\ln x$ 로 둘러싸인 영역의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">교점: $(x^2-4)\ln x=0$ 에서 $x=1,2$. $[1,2]$ 에서 $\ln x\ge0$, $4\ge x^2$ 이므로 위가 $4\ln x$.<br>$\displaystyle\int_1^2(4-x^2)\ln x\,dx$, $u=\ln x$, $v=4x-\tfrac{x^3}3$: $\left[\left(4x-\tfrac{x^3}3\right)\ln x\right]_1^2-\displaystyle\int_1^2\left(4-\tfrac{x^2}3\right)dx=\tfrac{16}3\ln2-\tfrac{29}9$.<br>$\boxed{\tfrac{16}3\ln2-\tfrac{29}9}\approx0.475$.</div></div>
+<div class="prob" data-id="tb71-67"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #67]</b> $y=\cos\dfrac{\pi x}2$, $y=0$, $0\le x\le1$ 인 영역을 $y$ 축 둘레로 돌린 부피를 껍질법으로 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$V=\displaystyle\int_0^12\pi x\cos\tfrac{\pi x}2\,dx$, $u=x$, $v=\tfrac2\pi\sin\tfrac{\pi x}2$:<br>$2\pi\left(\left[\tfrac{2x}\pi\sin\tfrac{\pi x}2\right]_0^1-\tfrac2\pi\displaystyle\int_0^1\sin\tfrac{\pi x}2dx\right)=2\pi\left(\tfrac2\pi-\tfrac4{\pi^2}\right)=\boxed{4-\tfrac8\pi}$.</div></div>
+<div class="prob" data-id="tb71-69"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #69]</b> $y=e^{-x}$, $y=0$, $x=-1$, $x=0$ 으로 둘러싸인 영역을 직선 $x=1$ 둘레로 돌린 부피를 껍질법으로 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">반지름 $1-x$, 높이 $e^{-x}$. $(1-x)e^{-x}$ 의 역도함수는 $xe^{-x}$ (미분해서 확인).<br>$V=2\pi\left[xe^{-x}\right]_{-1}^0=2\pi(0+e)=\boxed{2\pi e}$.</div></div>
+<div class="prob" data-id="tb71-71"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #71]</b> $y=\ln x$, $y=0$, $x=2$ 로 둘러싸인 영역을 (a) $y$ 축 (b) $x$ 축 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">(a) 껍질: $\displaystyle\int_1^22\pi x\ln x\,dx=2\pi\left[\tfrac{x^2}2\ln x-\tfrac{x^2}4\right]_1^2=\boxed{2\pi\left(2\ln2-\tfrac34\right)}$.<br>(b) 원판: $\displaystyle\int_1^2\pi(\ln x)^2dx=\pi\left[x(\ln x)^2-2x\ln x+2x\right]_1^2=\boxed{2\pi\left[(\ln2)^2-2\ln2+1\right]}$.</div></div>
+<div class="prob" data-id="tb71-72"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #72]</b> $f(x)=x\sec^2x$ 의 $\left[0,\tfrac\pi4\right]$ 위 평균값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x$, $v=\tan x$: $\int x\sec^2x\,dx=x\tan x+\ln|\cos x|$.<br>$\dfrac4\pi\left[x\tan x+\ln\cos x\right]_0^{\pi/4}=\dfrac4\pi\left(\dfrac\pi4-\dfrac12\ln2\right)=\boxed{1-\dfrac{2\ln2}\pi}\approx0.559$.</div></div>
+<div class="prob" data-id="tb71-75"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #75]</b> 직선 위 입자의 속도가 $v(t)=t^2e^{-t}$ (m/s) 이다. 처음 $t$ 초 동안 이동한 거리는?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$v\ge0$ 이므로 거리 $=\displaystyle\int_0^ts^2e^{-s}ds=\left[-e^{-s}(s^2+2s+2)\right]_0^t=\boxed{2-e^{-t}(t^2+2t+2)\ \text{m}}$.</div></div>
+<div class="prob" data-id="tb71-77"><div class="pq"><span class="pn"></span><div><b>[교재 7.1 #77]</b> $f(1)=2$, $f(4)=7$, $f'(1)=5$, $f'(4)=3$ 이고 $f''$ 가 연속일 때 $\displaystyle\int_1^4xf''(x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x$, $dv=f''(x)dx$: $\left[xf'(x)\right]_1^4-\displaystyle\int_1^4f'(x)\,dx=(12-5)-(7-2)=\boxed2$.</div></div>
+<h3><span class="sq">▸</span>7.2 교재 Exercises 선별 <span class='mini'>(그래프로 확인하는 문제·증명 문제는 제외, 번호는 교재 기준)</span></h3>
+<div class="prob" data-id="tb72-1"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #1]</b> $\displaystyle\int\sin^3x\cos^2x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin$ 지수 홀수: $(1-\cos^2x)\cos^2x\sin x$, $u=\cos x$: $-\int(u^2-u^4)du=\boxed{\tfrac15\cos^5x-\tfrac13\cos^3x+C}$.</div></div>
+<div class="prob" data-id="tb72-2"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #2]</b> $\displaystyle\int\cos^6y\sin^3y\,dy$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos y$: $-\int u^6(1-u^2)\,du=\boxed{-\tfrac17\cos^7y+\tfrac19\cos^9y+C}$.</div></div>
+<div class="prob" data-id="tb72-3"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #3]</b> $\displaystyle\int_0^{\pi/2}\cos^9x\sin^5x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$ ($1\to0$): $\displaystyle\int_0^1u^9(1-u^2)^2du=\tfrac1{10}-\tfrac2{12}+\tfrac1{14}=\boxed{\tfrac1{210}}$.</div></div>
+<div class="prob" data-id="tb72-4"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #4]</b> $\displaystyle\int_0^{\pi/4}\sin^5x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$ ($1\to\tfrac{\sqrt2}2$): $\displaystyle\int_{\sqrt2/2}^1(1-u^2)^2du=\left[u-\tfrac23u^3+\tfrac15u^5\right]_{\sqrt2/2}^1=\tfrac8{15}-\tfrac{43\sqrt2}{120}$.<br>$\boxed{\tfrac8{15}-\tfrac{43\sqrt2}{120}}\approx0.0266$.</div></div>
+<div class="prob" data-id="tb72-5"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #5]</b> $\displaystyle\int\sin^5(2t)\cos^2(2t)\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos2t$, $du=-2\sin2t\,dt$: $-\tfrac12\int(1-u^2)^2u^2du$<br>$=\boxed{-\tfrac1{14}\cos^7(2t)+\tfrac15\cos^5(2t)-\tfrac16\cos^3(2t)+C}$.</div></div>
+<div class="prob" data-id="tb72-7"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #7]</b> $\displaystyle\int_0^{\pi/2}\cos^2\theta\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle\int_0^{\pi/2}\tfrac12(1+\cos2\theta)\,d\theta=\boxed{\tfrac\pi4}$.</div></div>
+<div class="prob" data-id="tb72-9"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #9]</b> $\displaystyle\int_0^\pi\cos^4(2t)\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\cos^4u=\tfrac38+\tfrac12\cos2u+\tfrac18\cos4u$ ($u=2t$). 코사인 항은 한 주기씩 돌아 0 ⇒ $\tfrac38\pi=\boxed{\tfrac{3\pi}8}$.</div></div>
+<div class="prob" data-id="tb72-11"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #11]</b> $\displaystyle\int_0^{\pi/2}\sin^2x\cos^2x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin^2x\cos^2x=\tfrac14\sin^22x=\tfrac18(1-\cos4x)$ ⇒ $\tfrac18\cdot\tfrac\pi2=\boxed{\tfrac\pi{16}}$.</div></div>
+<div class="prob" data-id="tb72-12"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #12]</b> $\displaystyle\int_0^{\pi/2}(2-\sin\theta)^2\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$4-4\sin\theta+\sin^2\theta$: $2\pi-4+\tfrac\pi4=\boxed{\tfrac{9\pi}4-4}$.</div></div>
+<div class="prob" data-id="tb72-13"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #13]</b> $\displaystyle\int\sqrt{\cos\theta}\,\sin^3\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos\theta$: $-\int u^{1/2}(1-u^2)\,du=\boxed{\tfrac27(\cos\theta)^{7/2}-\tfrac23(\cos\theta)^{3/2}+C}$.</div></div>
+<div class="prob" data-id="tb72-15"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #15]</b> $\displaystyle\int\sin x\sec^5x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$=\int\dfrac{\sin x}{\cos^5x}dx$, $u=\cos x$: $-\int u^{-5}du=\tfrac14u^{-4}=\boxed{\tfrac14\sec^4x+C}$.</div></div>
+<div class="prob" data-id="tb72-16"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #16]</b> $\displaystyle\int\csc^5\theta\cos^3\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$=\int\dfrac{(1-\sin^2\theta)\cos\theta}{\sin^5\theta}d\theta$, $u=\sin\theta$: $\int(u^{-5}-u^{-3})du$<br>$=\boxed{-\tfrac14\csc^4\theta+\tfrac12\csc^2\theta+C}$.</div></div>
+<div class="prob" data-id="tb72-17"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #17]</b> $\displaystyle\int\cot x\cos^2x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\cot x\cos^2x=\dfrac{\cos x(1-\sin^2x)}{\sin x}$, $u=\sin x$: $\int\left(\tfrac1u-u\right)du=\boxed{\ln|\sin x|-\tfrac12\sin^2x+C}$.</div></div>
+<div class="prob" data-id="tb72-19"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #19]</b> $\displaystyle\int\sin^2x\sin2x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin2x=2\sin x\cos x$, $u=\sin x$: $\int2u^3du=\boxed{\tfrac12\sin^4x+C}$.</div></div>
+<div class="prob" data-id="tb72-20"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #20]</b> $\displaystyle\int\sin x\cos\tfrac x2\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin x=2\sin\tfrac x2\cos\tfrac x2$ ⇒ $\int2\sin\tfrac x2\cos^2\tfrac x2\,dx$, $u=\cos\tfrac x2$ ($du=-\tfrac12\sin\tfrac x2dx$): $-4\int u^2du$<br>$=\boxed{-\tfrac43\cos^3\tfrac x2+C}$.</div></div>
+<div class="prob" data-id="tb72-21"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #21]</b> $\displaystyle\int\tan x\sec^3x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sec^2x\cdot\sec x\tan x$, $u=\sec x$: $\boxed{\tfrac13\sec^3x+C}$.</div></div>
+<div class="prob" data-id="tb72-22"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #22]</b> $\displaystyle\int\tan^2\theta\sec^4\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan^2\theta(1+\tan^2\theta)\sec^2\theta$, $u=\tan\theta$: $\boxed{\tfrac13\tan^3\theta+\tfrac15\tan^5\theta+C}$.</div></div>
+<div class="prob" data-id="tb72-23"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #23]</b> $\displaystyle\int\tan^2x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan^2x=\sec^2x-1$ ⇒ $\boxed{\tan x-x+C}$.</div></div>
+<div class="prob" data-id="tb72-25"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #25]</b> $\displaystyle\int\tan^4x\sec^6x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sec^2x$ 하나 떼고 $\sec^4x=(1+u^2)^2$, $u=\tan x$: $\int u^4(1+u^2)^2du$<br>$=\boxed{\tfrac19\tan^9x+\tfrac27\tan^7x+\tfrac15\tan^5x+C}$.</div></div>
+<div class="prob" data-id="tb72-26"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #26]</b> $\displaystyle\int_0^{\pi/4}\sec^6\theta\tan^6\theta\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\tan\theta$ ($0\to1$): $\displaystyle\int_0^1u^6(1+u^2)^2du=\tfrac17+\tfrac29+\tfrac1{11}=\boxed{\tfrac{316}{693}}$.</div></div>
+<div class="prob" data-id="tb72-27"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #27]</b> $\displaystyle\int\tan^3x\sec x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan$ 지수 홀수: $(\sec^2x-1)\sec x\tan x$, $u=\sec x$: $\boxed{\tfrac13\sec^3x-\sec x+C}$.</div></div>
+<div class="prob" data-id="tb72-29"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #29]</b> $\displaystyle\int\tan^3x\sec^6x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\tan x$: $\int u^3(1+u^2)^2du=\boxed{\tfrac18\tan^8x+\tfrac13\tan^6x+\tfrac14\tan^4x+C}$.</div></div>
+<div class="prob" data-id="tb72-30"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #30]</b> $\displaystyle\int_0^{\pi/4}\tan^4t\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan^4t=\tan^2t\sec^2t-\sec^2t+1$ ⇒ $\left[\tfrac13\tan^3t-\tan t+t\right]_0^{\pi/4}=\boxed{\tfrac\pi4-\tfrac23}$.</div></div>
+<div class="prob" data-id="tb72-31"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #31]</b> $\displaystyle\int\tan^5x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan^5x=\tan x(\sec^2x-1)^2=\tan x\sec^4x-2\tan x\sec^2x+\tan x$.<br>$\boxed{\tfrac14\sec^4x-\sec^2x+\ln|\sec x|+C}$ ($\tfrac14\tan^4x-\tfrac12\tan^2x+\ln|\sec x|$ 와 상수만 다르다).</div></div>
+<div class="prob" data-id="tb72-32"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #32]</b> $\displaystyle\int\tan^2x\sec x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan^2x\sec x=\sec^3x-\sec x$ 와 예제 8:<br>$\boxed{\tfrac12\left(\sec x\tan x-\ln|\sec x+\tan x|\right)+C}$.</div></div>
+<div class="prob" data-id="tb72-33"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #33]</b> $\displaystyle\int\dfrac{1-\tan^2x}{\sec^2x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\dfrac{1-\tan^2x}{\sec^2x}=\cos^2x-\sin^2x=\cos2x$ ⇒ $\boxed{\tfrac12\sin2x+C}$.</div></div>
+<div class="prob" data-id="tb72-35"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #35]</b> $\displaystyle\int_0^{\pi/4}\dfrac{\sin^3x}{\cos x}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$ ($1\to\tfrac{\sqrt2}2$): $\displaystyle\int_{\sqrt2/2}^1\dfrac{1-u^2}u\,du=\left[\ln u-\tfrac{u^2}2\right]_{\sqrt2/2}^1=\boxed{\tfrac12\ln2-\tfrac14}$.</div></div>
+<div class="prob" data-id="tb72-37"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #37]</b> $\displaystyle\int_{\pi/6}^{\pi/2}\cot^2x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\cot^2x=\csc^2x-1$: $\left[-\cot x-x\right]_{\pi/6}^{\pi/2}=-\tfrac\pi2+\sqrt3+\tfrac\pi6=\boxed{\sqrt3-\tfrac\pi3}$.</div></div>
+<div class="prob" data-id="tb72-39"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #39]</b> $\displaystyle\int_{\pi/4}^{\pi/2}\cot^5\theta\csc^3\theta\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\cot$ 지수 홀수: $(\csc^2\theta-1)^2\csc^2\theta\cdot\csc\theta\cot\theta$, $u=\csc\theta$ ($\sqrt2\to1$), $du=-\csc\theta\cot\theta\,d\theta$:<br>$\displaystyle\int_1^{\sqrt2}(u^2-1)^2u^2du=\boxed{\tfrac{22\sqrt2}{105}-\tfrac8{105}}$.</div></div>
+<div class="prob" data-id="tb72-41"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #41]</b> $\displaystyle\int\csc x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">분자·분모에 $\csc x-\cot x$ 를 곱하면 분자가 분모의 도함수가 된다: $\dfrac{\csc^2x-\csc x\cot x}{\csc x-\cot x}$.<br>$\boxed{\ln|\csc x-\cot x|+C}$.</div></div>
+<div class="prob" data-id="tb72-43"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #43]</b> $\displaystyle\int\sin8x\cos5x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin8x\cos5x=\tfrac12(\sin3x+\sin13x)$ ⇒ $\boxed{-\tfrac16\cos3x-\tfrac1{26}\cos13x+C}$.</div></div>
+<div class="prob" data-id="tb72-45"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #45]</b> $\displaystyle\int_0^{\pi/2}\cos5t\cos10t\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tfrac12(\cos5t+\cos15t)$: $\tfrac12\left[\tfrac{\sin5t}5+\tfrac{\sin15t}{15}\right]_0^{\pi/2}=\tfrac12\left(\tfrac15-\tfrac1{15}\right)=\boxed{\tfrac1{15}}$.</div></div>
+<div class="prob" data-id="tb72-47"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #47]</b> $\displaystyle\int\dfrac{\sin^2(1/t)}{t^2}\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\tfrac1t$, $du=-\tfrac{dt}{t^2}$: $-\int\sin^2u\,du=-\tfrac u2+\tfrac14\sin2u$ ⇒ $\boxed{-\dfrac1{2t}+\dfrac14\sin\dfrac2t+C}$.</div></div>
+<div class="prob" data-id="tb72-49"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #49]</b> $\displaystyle\int_0^{\pi/6}\sqrt{1+\cos2x}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$1+\cos2x=2\cos^2x$, 구간에서 $\cos x\gt0$ ⇒ $\sqrt2\displaystyle\int_0^{\pi/6}\cos x\,dx=\sqrt2\cdot\tfrac12=\boxed{\tfrac{\sqrt2}2}$.</div></div>
+<div class="prob" data-id="tb72-51"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #51]</b> $\displaystyle\int t\sin^2t\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin^2t=\tfrac12-\tfrac12\cos2t$ 후 둘째 항만 부분적분:<br>$\boxed{\tfrac14t^2-\tfrac14t\sin2t-\tfrac18\cos2t+C}$.</div></div>
+<div class="prob" data-id="tb72-53"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #53]</b> $\displaystyle\int x\tan^2x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x\tan^2x=x\sec^2x-x$. $\int x\sec^2x\,dx=x\tan x-\ln|\sec x|$ (부분적분).<br>$\boxed{x\tan x-\ln|\sec x|-\tfrac12x^2+C}$.</div></div>
+<div class="prob" data-id="tb72-55"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #55]</b> $\displaystyle\int\dfrac{dx}{\cos x-1}$ 을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">분자·분모에 $\cos x+1$ 을 곱하면 $\dfrac{\cos x+1}{-\sin^2x}=-\csc x\cot x-\csc^2x$.<br>$\boxed{\csc x+\cot x+C}$.</div></div>
+<div class="prob" data-id="tb72-59"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #59]</b> $\displaystyle\int\sin3x\sin6x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin3x\sin6x=\tfrac12(\cos3x-\cos9x)$ ⇒ $\boxed{\tfrac16\sin3x-\tfrac1{18}\sin9x+C}$.</div></div>
+<div class="prob" data-id="tb72-61"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #61]</b> $\displaystyle\int_0^{\pi/4}\tan^6x\sec x\,dx=I$ 일 때 $\displaystyle\int_0^{\pi/4}\tan^8x\sec x\,dx$ 를 $I$ 로 나타내시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$J$ 를 구하는 값이라 하자. $\dfrac d{dx}(\tan^7x\sec x)=7\tan^6x\sec^3x+\tan^8x\sec x$, 그리고 $\tan^6x\sec^3x=\tan^6x\sec x+\tan^8x\sec x$.<br>$\left[\tan^7x\sec x\right]_0^{\pi/4}=\sqrt2=7(I+J)+J$ ⇒ $\boxed{J=\tfrac18\left(\sqrt2-7I\right)}$.</div></div>
+<div class="prob" data-id="tb72-63"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #63]</b> $f(x)=\sin^2x\cos^3x$ 의 $[-\pi,\pi]$ 위 평균값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\int\sin^2x\cos^3x\,dx=\tfrac13\sin^3x-\tfrac15\sin^5x$ 이고 $\sin(\pm\pi)=0$ ⇒ 적분 0, 평균 $\boxed0$.</div></div>
+<div class="prob" data-id="tb72-65"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #65]</b> $y=\sin^2x$, $y=\sin^3x$, $0\le x\le\pi$ 로 둘러싸인 영역의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$0\le\sin x\le1$ 이라 $\sin^2x\ge\sin^3x$. $\displaystyle\int_0^\pi\sin^2x\,dx=\tfrac\pi2$, $\displaystyle\int_0^\pi\sin^3x\,dx=\tfrac43$ ⇒ $\boxed{\tfrac\pi2-\tfrac43}$.</div></div>
+<div class="prob" data-id="tb72-69"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #69]</b> $y=\sin x$, $y=0$, $\tfrac\pi2\le x\le\pi$ 인 영역을 $x$ 축 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\displaystyle\int_{\pi/2}^\pi\pi\sin^2x\,dx=\pi\left[\tfrac x2-\tfrac{\sin2x}4\right]_{\pi/2}^\pi=\boxed{\tfrac{\pi^2}4}$.</div></div>
+<div class="prob" data-id="tb72-71"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #71]</b> $y=\sin x$, $y=\cos x$, $0\le x\le\tfrac\pi4$ 로 둘러싸인 영역을 직선 $y=1$ 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">축 $y=1$ 에서 먼 곡선은 $\sin x$: $R=1-\sin x$, $r=1-\cos x$. $R^2-r^2=2\cos x-2\sin x-\cos2x$.<br>$\pi\left[2\sin x+2\cos x-\tfrac12\sin2x\right]_0^{\pi/4}=\boxed{\pi\left(2\sqrt2-\tfrac52\right)}$.</div></div>
+<div class="prob" data-id="tb72-73"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #73]</b> 직선 위 입자의 속도가 $v(t)=\sin\omega t\cos^2\omega t$ 이다. $f(0)=0$ 일 때 위치 $s=f(t)$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos\omega t$: $\int\sin\omega t\cos^2\omega t\,dt=-\dfrac{\cos^3\omega t}{3\omega}+C$, $f(0)=0$ ⇒ $C=\tfrac1{3\omega}$.<br>$\boxed{s=\dfrac{1-\cos^3\omega t}{3\omega}}$.</div></div>
+<div class="prob" data-id="tb72-74"><div class="pq"><span class="pn"></span><div><b>[교재 7.2 #74]</b> 가정용 전압이 $E(t)=155\sin(120\pi t)$ 이다. RMS 전압은 한 주기 동안 $E^2$ 의 평균값의 제곱근이다. (a) RMS 전압 (b) RMS 가 220 V 가 되는 진폭 $A$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">한 주기 $[0,\tfrac1{60}]$ 에서 $\sin^2$ 의 평균은 $\tfrac12$ ⇒ (a) $\sqrt{155^2\cdot\tfrac12}=\tfrac{155}{\sqrt2}\approx\boxed{110\ \text{V}}$.<br>(b) $\tfrac A{\sqrt2}=220$ ⇒ $A=220\sqrt2\approx\boxed{311\ \text{V}}$.</div></div>
+<h3><span class="sq">▸</span>7.3 교재 Exercises 선별 <span class='mini'>(그림 해석·증명 문제는 제외, 번호는 교재 기준)</span></h3>
+<div class="prob" data-id="tb73-5"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #5]</b> $x=\sin\theta$ 로 $\displaystyle\int\dfrac{x^3}{\sqrt{1-x^2}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$dx=\cos\theta\,d\theta$, $\sqrt{1-x^2}=\cos\theta$: $\int\sin^3\theta\,d\theta=-\cos\theta+\tfrac13\cos^3\theta$.<br>$\cos\theta=\sqrt{1-x^2}$ ⇒ $\boxed{-\sqrt{1-x^2}+\tfrac13(1-x^2)^{3/2}+C}$.</div></div>
+<div class="prob" data-id="tb73-6"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #6]</b> $x=3\tan\theta$ 로 $\displaystyle\int\dfrac{x^3}{\sqrt{9+x^2}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\int27\tan^3\theta\sec\theta\,d\theta=27\left(\tfrac13\sec^3\theta-\sec\theta\right)$, $\sec\theta=\tfrac{\sqrt{9+x^2}}3$.<br>$\boxed{\tfrac13(9+x^2)^{3/2}-9\sqrt{9+x^2}+C}$.</div></div>
+<div class="prob" data-id="tb73-7"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #7]</b> $x=\tfrac52\sec\theta$ 로 $\displaystyle\int\dfrac{\sqrt{4x^2-25}}x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sqrt{4x^2-25}=5\tan\theta$, $dx=\tfrac52\sec\theta\tan\theta\,d\theta$: $\int5\tan^2\theta\,d\theta=5\tan\theta-5\theta$.<br>$\boxed{\sqrt{4x^2-25}-5\sec^{-1}\!\left(\tfrac{2x}5\right)+C}$.</div></div>
+<div class="prob" data-id="tb73-8"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #8]</b> $x=\sqrt2\sin\theta$ 로 $\displaystyle\int\dfrac{\sqrt{2-x^2}}{x^2}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">예제 1 과 같은 꼴: $\int\cot^2\theta\,d\theta=-\cot\theta-\theta$, $\cot\theta=\tfrac{\sqrt{2-x^2}}x$.<br>$\boxed{-\dfrac{\sqrt{2-x^2}}x-\sin^{-1}\dfrac x{\sqrt2}+C}$.</div></div>
+<div class="prob" data-id="tb73-9"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #9]</b> $\displaystyle\int x^3\sqrt{16+x^2}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=16+x^2$ 로 바로 풀린다: $\tfrac12\int(u-16)u^{1/2}du=\tfrac15u^{5/2}-\tfrac{16}3u^{3/2}$.<br>$=\boxed{\tfrac1{15}(16+x^2)^{3/2}(3x^2-32)+C}$.</div></div>
+<div class="prob" data-id="tb73-10"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #10]</b> $\displaystyle\int\dfrac{x^2}{\sqrt{9-x^2}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=3\sin\theta$: $\int9\sin^2\theta\,d\theta=\tfrac92\theta-\tfrac94\sin2\theta=\tfrac92\theta-\tfrac92\sin\theta\cos\theta$.<br>$\boxed{\tfrac92\sin^{-1}\tfrac x3-\tfrac x2\sqrt{9-x^2}+C}$.</div></div>
+<div class="prob" data-id="tb73-11"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #11]</b> $\displaystyle\int\dfrac{\sqrt{x^2-1}}{x^4}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\sec\theta$: $\int\dfrac{\tan\theta}{\sec^4\theta}\sec\theta\tan\theta\,d\theta=\int\sin^2\theta\cos\theta\,d\theta=\tfrac13\sin^3\theta$, $\sin\theta=\tfrac{\sqrt{x^2-1}}x$.<br>$\boxed{\dfrac{(x^2-1)^{3/2}}{3x^3}+C}$.</div></div>
+<div class="prob" data-id="tb73-12"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #12]</b> $\displaystyle\int_0^3\dfrac x{\sqrt{36-x^2}}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=36-x^2$ 이면 충분: $\left[-\sqrt{36-x^2}\right]_0^3=-\sqrt{27}+6=\boxed{6-3\sqrt3}$.</div></div>
+<div class="prob" data-id="tb73-13"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #13]</b> $\displaystyle\int_0^a\dfrac{dx}{(a^2+x^2)^{3/2}}$ ($a\gt0$) 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=a\tan\theta$ ($0\to\tfrac\pi4$): $\displaystyle\int_0^{\pi/4}\dfrac{a\sec^2\theta}{a^3\sec^3\theta}d\theta=\dfrac1{a^2}\left[\sin\theta\right]_0^{\pi/4}=\boxed{\dfrac1{\sqrt2\,a^2}}$.</div></div>
+<div class="prob" data-id="tb73-14"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #14]</b> $\displaystyle\int\dfrac{dt}{t^2\sqrt{t^2-16}}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$t=4\sec\theta$: $\int\dfrac{4\sec\theta\tan\theta}{16\sec^2\theta\cdot4\tan\theta}d\theta=\tfrac1{16}\int\cos\theta\,d\theta=\tfrac1{16}\sin\theta$, $\sin\theta=\tfrac{\sqrt{t^2-16}}t$.<br>$\boxed{\dfrac{\sqrt{t^2-16}}{16t}+C}$.</div></div>
+<div class="prob" data-id="tb73-15"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #15]</b> $\displaystyle\int_2^3\dfrac{dx}{(x^2-1)^{3/2}}$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\sec\theta$: $\int\dfrac{\sec\theta\tan\theta}{\tan^3\theta}d\theta=\int\csc\theta\cot\theta\,d\theta=-\csc\theta=-\dfrac x{\sqrt{x^2-1}}$.<br>$\left[-\dfrac x{\sqrt{x^2-1}}\right]_2^3=-\dfrac3{\sqrt8}+\dfrac2{\sqrt3}=\boxed{\dfrac{2\sqrt3}3-\dfrac{3\sqrt2}4}$.</div></div>
+<div class="prob" data-id="tb73-16"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #16]</b> $\displaystyle\int_0^{2/3}\sqrt{4-9x^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=3x$: $\tfrac13\displaystyle\int_0^2\sqrt{4-u^2}\,du$ 는 반지름 2 인 원의 $\tfrac14$ 넓이 $\pi$ 의 $\tfrac13$ ⇒ $\boxed{\tfrac\pi3}$.</div></div>
+<div class="prob" data-id="tb73-17"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #17]</b> $\displaystyle\int_0^{1/2}x\sqrt{1-4x^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=1-4x^2$: $-\tfrac18\displaystyle\int_1^0u^{1/2}du=\tfrac18\cdot\tfrac23=\boxed{\tfrac1{12}}$.</div></div>
+<div class="prob" data-id="tb73-18"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #18]</b> $\displaystyle\int_0^2\dfrac{dt}{\sqrt{4+t^2}}$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$t=2\tan\theta$ ($0\to\tfrac\pi4$): $\displaystyle\int_0^{\pi/4}\sec\theta\,d\theta=\ln\left(\sqrt2+1\right)$ ⇒ $\boxed{\ln(1+\sqrt2)}$.</div></div>
+<div class="prob" data-id="tb73-19"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #19]</b> $\displaystyle\int\dfrac{\sqrt{x^2-9}}{x^3}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=3\sec\theta$: $\int\dfrac{3\tan\theta}{27\sec^3\theta}3\sec\theta\tan\theta\,d\theta=\tfrac13\int\sin^2\theta\,d\theta=\tfrac16\theta-\tfrac16\sin\theta\cos\theta$.<br>$\sin\theta\cos\theta=\tfrac{\sqrt{x^2-9}}x\cdot\tfrac3x$ ⇒ $\boxed{\tfrac16\sec^{-1}\tfrac x3-\dfrac{\sqrt{x^2-9}}{2x^2}+C}$.</div></div>
+<div class="prob" data-id="tb73-20"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #20]</b> $\displaystyle\int_0^1\dfrac{dx}{(x^2+1)^2}$ 을 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\tan\theta$ ($0\to\tfrac\pi4$): $\displaystyle\int_0^{\pi/4}\cos^2\theta\,d\theta=\left[\tfrac\theta2+\tfrac{\sin2\theta}4\right]_0^{\pi/4}=\boxed{\tfrac\pi8+\tfrac14}$.</div></div>
+<div class="prob" data-id="tb73-21"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #21]</b> $\displaystyle\int_0^ax^2\sqrt{a^2-x^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=a\sin\theta$: $a^4\displaystyle\int_0^{\pi/2}\sin^2\theta\cos^2\theta\,d\theta=a^4\cdot\tfrac\pi{16}=\boxed{\tfrac{\pi a^4}{16}}$ (7.2 #11).</div></div>
+<div class="prob" data-id="tb73-23"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #23]</b> $\displaystyle\int\dfrac x{\sqrt{x^2-7}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2-7$: $\boxed{\sqrt{x^2-7}+C}$. 삼각치환보다 빠르다 (예제 4).</div></div>
+<div class="prob" data-id="tb73-25"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #25]</b> $\displaystyle\int\dfrac{\sqrt{1+x^2}}x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\tan\theta$: $\int\dfrac{\sec^3\theta}{\tan\theta}d\theta=\int\left(\csc\theta+\sec\theta\tan\theta\right)d\theta=\ln|\csc\theta-\cot\theta|+\sec\theta$.<br>$\boxed{\sqrt{1+x^2}+\ln\left|\dfrac{\sqrt{1+x^2}-1}x\right|+C}$.</div></div>
+<div class="prob" data-id="tb73-27"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #27]</b> $\displaystyle\int_0^{0.6}\dfrac{x^2}{\sqrt{9-25x^2}}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$5x=3\sin\theta$ ($0\to\tfrac\pi2$): $\displaystyle\int_0^{\pi/2}\dfrac{\tfrac9{25}\sin^2\theta}{3\cos\theta}\cdot\tfrac35\cos\theta\,d\theta=\tfrac9{125}\cdot\tfrac\pi4=\boxed{\tfrac{9\pi}{500}}$.</div></div>
+<div class="prob" data-id="tb73-28"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #28]</b> $\displaystyle\int_0^1\sqrt{x^2+1}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\tan\theta$: $\int\sec^3\theta\,d\theta=\tfrac12(\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|)$ (7.2 예제 8), $0\to\tfrac\pi4$.<br>$\boxed{\tfrac12\left[\sqrt2+\ln(1+\sqrt2)\right]}\approx1.148$.</div></div>
+<div class="prob" data-id="tb73-29"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #29]</b> $\displaystyle\int\dfrac{dx}{\sqrt{x^2+2x+5}}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x^2+2x+5=(x+1)^2+4$, $x+1=2\tan\theta$: $\int\sec\theta\,d\theta$.<br>$\ln\left|\tfrac{\sqrt{x^2+2x+5}}2+\tfrac{x+1}2\right|$ ⇒ $\boxed{\ln\left|\sqrt{x^2+2x+5}+x+1\right|+C}$.</div></div>
+<div class="prob" data-id="tb73-30"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #30]</b> $\displaystyle\int_0^1\sqrt{x-x^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x-x^2=\tfrac14-\left(x-\tfrac12\right)^2$: 반지름 $\tfrac12$ 인 반원 아래 넓이 ⇒ $\tfrac12\pi\left(\tfrac12\right)^2=\boxed{\tfrac\pi8}$.</div></div>
+<div class="prob" data-id="tb73-33"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #33]</b> $\displaystyle\int\sqrt{x^2+2x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$(x+1)^2-1$, $x+1=\sec\theta$: $\int\tan^2\theta\sec\theta\,d\theta=\tfrac12(\sec\theta\tan\theta-\ln|\sec\theta+\tan\theta|)$ (7.2 #32).<br>$\boxed{\tfrac12(x+1)\sqrt{x^2+2x}-\tfrac12\ln\left|x+1+\sqrt{x^2+2x}\right|+C}$.</div></div>
+<div class="prob" data-id="tb73-35"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #35]</b> $\displaystyle\int x\sqrt{1-x^4}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2$: $\tfrac12\int\sqrt{1-u^2}\,du$, $u=\sin\theta$: $\tfrac12\int\cos^2\theta\,d\theta=\tfrac14\theta+\tfrac14\sin\theta\cos\theta$.<br>$\boxed{\tfrac14\sin^{-1}(x^2)+\tfrac14x^2\sqrt{1-x^4}+C}$.</div></div>
+<div class="prob" data-id="tb73-36"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #36]</b> $\displaystyle\int_0^{\pi/2}\dfrac{\cos t}{\sqrt{1+\sin^2t}}\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\sin t$ ($0\to1$): $\displaystyle\int_0^1\dfrac{du}{\sqrt{1+u^2}}$, 다시 $u=\tan\theta$: $\displaystyle\int_0^{\pi/4}\sec\theta\,d\theta=\boxed{\ln(1+\sqrt2)}$.</div></div>
+<div class="prob" data-id="tb73-39"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #39]</b> $f(x)=\dfrac{\sqrt{x^2-1}}x$ 의 $[1,7]$ 위 평균값을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\sec\theta$: $\int\tan^2\theta\,d\theta=\tan\theta-\theta$ ⇒ $\int\tfrac{\sqrt{x^2-1}}x\,dx=\sqrt{x^2-1}-\sec^{-1}x$.<br>$\dfrac16\left[\sqrt{x^2-1}-\sec^{-1}x\right]_1^7=\boxed{\tfrac16\left(\sqrt{48}-\sec^{-1}7\right)}\approx0.917$.</div></div>
+<div class="prob" data-id="tb73-40"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #40]</b> 쌍곡선 $9x^2-4y^2=36$ 과 직선 $x=3$ 으로 둘러싸인 영역의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$y=\pm\tfrac32\sqrt{x^2-4}$, $2\le x\le3$. $A=3\displaystyle\int_2^3\sqrt{x^2-4}\,dx$, $\int\sqrt{x^2-a^2}\,dx=\tfrac x2\sqrt{x^2-a^2}-\tfrac{a^2}2\ln\left|x+\sqrt{x^2-a^2}\right|$.<br>$A=3\left[\tfrac32\sqrt5-2\ln(3+\sqrt5)+2\ln2\right]=\boxed{\tfrac92\sqrt5-6\ln\tfrac{3+\sqrt5}2}\approx4.29$.</div></div>
+<div class="prob" data-id="tb73-43"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #43]</b> $y=\dfrac9{x^2+9}$, $y=0$, $x=0$, $x=3$ 으로 둘러싸인 영역을 $x$ 축 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$V=\displaystyle\int_0^3\dfrac{81\pi}{(x^2+9)^2}dx$, $x=3\tan\theta$ ($0\to\tfrac\pi4$): $3\pi\displaystyle\int_0^{\pi/4}\cos^2\theta\,d\theta=3\pi\left(\tfrac\pi8+\tfrac14\right)=\boxed{\tfrac{3\pi^2}8+\tfrac{3\pi}4}$.</div></div>
+<div class="prob" data-id="tb73-44"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #44]</b> 곡선 $y=x\sqrt{1-x^2}$ 아래 $0\le x\le1$ 인 영역을 직선 $x=1$ 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">껍질: $V=\displaystyle\int_0^12\pi(1-x)x\sqrt{1-x^2}\,dx=2\pi\left(\int_0^1x\sqrt{1-x^2}dx-\int_0^1x^2\sqrt{1-x^2}dx\right)=2\pi\left(\tfrac13-\tfrac\pi{16}\right)$ (#21, $a=1$).<br>$\boxed{\tfrac{2\pi}3-\tfrac{\pi^2}8}$.</div></div>
+<div class="prob" data-id="tb73-46"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #46]</b> 포물선 $y=\tfrac12x^2$ 이 원판 $x^2+y^2\le8$ 을 두 부분으로 나눈다. 두 부분의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">교점: $x^2+\tfrac{x^4}4=8$ 에서 $x=\pm2$. 위쪽 부분: $\displaystyle\int_{-2}^2\left(\sqrt{8-x^2}-\tfrac{x^2}2\right)dx=2\left[\tfrac x2\sqrt{8-x^2}+4\sin^{-1}\tfrac x{2\sqrt2}\right]_0^2-\tfrac83=2\pi+\tfrac43$.<br>원 전체 $8\pi$ 에서 빼면 나머지. $\boxed{2\pi+\tfrac43,\quad6\pi-\tfrac43}$.</div></div>
+<div class="prob" data-id="tb73-47"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #47]</b> 원 $x^2+(y-R)^2=r^2$ ($r\lt R$) 을 $x$ 축 둘레로 돌려 만든 토러스의 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">와셔: $y=R\pm\sqrt{r^2-x^2}$, $R_{\text{out}}^2-R_{\text{in}}^2=4R\sqrt{r^2-x^2}$.<br>$V=4\pi R\displaystyle\int_{-r}^r\sqrt{r^2-x^2}\,dx=4\pi R\cdot\tfrac{\pi r^2}2=\boxed{2\pi^2Rr^2}$.</div></div>
+<div class="prob" data-id="tb73-50"><div class="pq"><span class="pn"></span><div><b>[교재 7.3 #50]</b> 지름 10 m 인 원기둥 물탱크가 옆으로 누워 있다 (원형 단면이 수직). 물의 깊이가 7 m 일 때 전체 용량의 몇 % 를 쓰고 있는가?</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">단면 원 $x^2+y^2=25$, 물은 $-5\le y\le2$. 비율 $=\dfrac1{25\pi}\displaystyle\int_{-5}^22\sqrt{25-y^2}\,dy$.<br>$\int\sqrt{25-y^2}\,dy=\tfrac y2\sqrt{25-y^2}+\tfrac{25}2\sin^{-1}\tfrac y5$ ⇒ 물 단면적 $=\sqrt{21}\cdot2+25\sin^{-1}\tfrac25+\tfrac{25\pi}2\approx58.7$ m², 전체는 $25\pi\approx78.5$ m² ⇒ 약 $\boxed{74.8\%}$.</div></div>
+<h3><span class="sq">▸</span>Chapter 7 Review Exercises 선별 <span class='mini'>(시험 범위 7.1–7.3 의 기법과 치환으로 풀리는 문제만. 부분분수·이상적분·수치적분·적분표 문제는 제외, 번호는 교재 기준)</span></h3>
+<div class="prob" data-id="tbr7-1"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #1]</b> $\displaystyle\int_1^2\dfrac{(x+1)^2}x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">전개해서 나누면 $x+2+\tfrac1x$. $\left[\tfrac{x^2}2+2x+\ln x\right]_1^2=\boxed{\tfrac72+\ln2}$.</div></div>
+<div class="prob" data-id="tbr7-4"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #4]</b> $\displaystyle\int_0^{\pi/6}t\sin2t\,dt$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=t$, $v=-\tfrac12\cos2t$: $\left[-\tfrac t2\cos2t\right]_0^{\pi/6}+\tfrac12\displaystyle\int_0^{\pi/6}\cos2t\,dt=-\tfrac\pi{24}+\tfrac{\sqrt3}8$ ⇒ $\boxed{\tfrac{\sqrt3}8-\tfrac\pi{24}}$.</div></div>
+<div class="prob" data-id="tbr7-6"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #6]</b> $\displaystyle\int_1^2x^5\ln x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln x$, $v=\tfrac{x^6}6$: $\left[\tfrac{x^6}6\ln x-\tfrac{x^6}{36}\right]_1^2=\tfrac{32}3\ln2-\tfrac{63}{36}$ ⇒ $\boxed{\tfrac{32}3\ln2-\tfrac74}$.</div></div>
+<div class="prob" data-id="tbr7-7"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #7]</b> $\displaystyle\int_0^{\pi/2}\sin^3\theta\cos^2\theta\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos\theta$ ($1\to0$): $\displaystyle\int_0^1(1-u^2)u^2du=\tfrac13-\tfrac15=\boxed{\tfrac2{15}}$.</div></div>
+<div class="prob" data-id="tbr7-8"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #8]</b> $\displaystyle\int\dfrac{dx}{x^2\sqrt{16-x^2}}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=4\sin\theta$: $\displaystyle\int\dfrac{4\cos\theta}{16\sin^2\theta\cdot4\cos\theta}d\theta=\tfrac1{16}\int\csc^2\theta\,d\theta=-\tfrac1{16}\cot\theta$, $\cot\theta=\tfrac{\sqrt{16-x^2}}x$.<br>$\boxed{-\dfrac{\sqrt{16-x^2}}{16x}+C}$.</div></div>
+<div class="prob" data-id="tbr7-9"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #9]</b> $\displaystyle\int\dfrac{\sin(\ln t)}t\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\ln t$: $\int\sin u\,du$ ⇒ $\boxed{-\cos(\ln t)+C}$.</div></div>
+<div class="prob" data-id="tbr7-10"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #10]</b> $\displaystyle\int_0^1\dfrac{\sqrt{\tan^{-1}x}}{1+x^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\tan^{-1}x$ ($0\to\tfrac\pi4$): $\displaystyle\int_0^{\pi/4}u^{1/2}du=\boxed{\tfrac23\left(\tfrac\pi4\right)^{3/2}}$.</div></div>
+<div class="prob" data-id="tbr7-11"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #11]</b> $\displaystyle\int x(\ln x)^2\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=(\ln x)^2$, $v=\tfrac{x^2}2$: $\tfrac{x^2}2(\ln x)^2-\int x\ln x\,dx$, 그리고 $\int x\ln x\,dx=\tfrac{x^2}2\ln x-\tfrac{x^2}4$.<br>$\boxed{\tfrac14x^2\left[2(\ln x)^2-2\ln x+1\right]+C}$.</div></div>
+<div class="prob" data-id="tbr7-12"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #12]</b> $\displaystyle\int\sin x\cos x\ln(\cos x)\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\cos x$: $-\int u\ln u\,du=-\tfrac{u^2}2\ln u+\tfrac{u^2}4$.<br>$\boxed{-\tfrac12\cos^2x\ln(\cos x)+\tfrac14\cos^2x+C}$.</div></div>
+<div class="prob" data-id="tbr7-13"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #13]</b> $\displaystyle\int_1^2\dfrac{\sqrt{x^2-1}}x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\sec\theta$ ($0\to\tfrac\pi3$): $\displaystyle\int_0^{\pi/3}\tan^2\theta\,d\theta=\left[\tan\theta-\theta\right]_0^{\pi/3}=\boxed{\sqrt3-\tfrac\pi3}$.</div></div>
+<div class="prob" data-id="tbr7-15"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #15]</b> $\displaystyle\int e^{\sqrt[3]x}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$w=\sqrt[3]x$, $x=w^3$, $dx=3w^2dw$: $3\int w^2e^w\,dw=3e^w(w^2-2w+2)$ (7.1 예제 3).<br>$\boxed{3e^{\sqrt[3]x}\left(x^{2/3}-2x^{1/3}+2\right)+C}$.</div></div>
+<div class="prob" data-id="tbr7-17"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #17]</b> $\displaystyle\int x^2\tan^{-1}x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\tan^{-1}x$, $v=\tfrac{x^3}3$: $\tfrac{x^3}3\tan^{-1}x-\tfrac13\displaystyle\int\dfrac{x^3}{1+x^2}dx$, $\dfrac{x^3}{1+x^2}=x-\dfrac x{1+x^2}$.<br>$\boxed{\tfrac13x^3\tan^{-1}x-\tfrac16x^2+\tfrac16\ln(1+x^2)+C}$.</div></div>
+<div class="prob" data-id="tbr7-20"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #20]</b> $\displaystyle\int\dfrac{\sec^6\theta}{\tan^2\theta}\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sec^2\theta$ 하나 떼고 $\sec^4\theta=(1+u^2)^2$, $u=\tan\theta$: $\int\dfrac{(1+u^2)^2}{u^2}du=\int\left(u^{-2}+2+u^2\right)du$.<br>$\boxed{-\cot\theta+2\tan\theta+\tfrac13\tan^3\theta+C}$.</div></div>
+<div class="prob" data-id="tbr7-21"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #21]</b> $\displaystyle\int x\cosh x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x$, $v=\sinh x$: $\boxed{x\sinh x-\cosh x+C}$.</div></div>
+<div class="prob" data-id="tbr7-23"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #23]</b> $\displaystyle\int\dfrac{dx}{\sqrt{x^2-4x}}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x^2-4x=(x-2)^2-4$, $x-2=2\sec\theta$: $\int\sec\theta\,d\theta=\ln|\sec\theta+\tan\theta|$.<br>$\boxed{\ln\left|x-2+\sqrt{x^2-4x}\right|+C}$.</div></div>
+<div class="prob" data-id="tbr7-26"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #26]</b> $\displaystyle\int\tan^5\theta\sec^3\theta\,d\theta$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tan$ 지수 홀수: $(\sec^2\theta-1)^2\sec^2\theta\cdot\sec\theta\tan\theta$, $u=\sec\theta$: $\int(u^2-1)^2u^2du$.<br>$\boxed{\tfrac17\sec^7\theta-\tfrac25\sec^5\theta+\tfrac13\sec^3\theta+C}$.</div></div>
+<div class="prob" data-id="tbr7-27"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #27]</b> $\displaystyle\int_0^2\sqrt{x^2-2x+2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$(x-1)^2+1$, $x-1=\tan\theta$ ($-\tfrac\pi4\to\tfrac\pi4$): $\displaystyle\int_{-\pi/4}^{\pi/4}\sec^3\theta\,d\theta=\left[\tfrac12(\sec\theta\tan\theta+\ln|\sec\theta+\tan\theta|)\right]_{-\pi/4}^{\pi/4}$<br>$=\boxed{\sqrt2+\ln(\sqrt2+1)}$.</div></div>
+<div class="prob" data-id="tbr7-28"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #28]</b> $\displaystyle\int\cos\sqrt t\,dt$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$w=\sqrt t$, $dt=2w\,dw$: $\int2w\cos w\,dw=2w\sin w+2\cos w$ ⇒ $\boxed{2\sqrt t\sin\sqrt t+2\cos\sqrt t+C}$.</div></div>
+<div class="prob" data-id="tbr7-29"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #29]</b> $\displaystyle\int\dfrac{dx}{x\sqrt{x^2+1}}$ 을 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=\tan\theta$: $\int\dfrac{\sec^2\theta}{\tan\theta\sec\theta}d\theta=\int\csc\theta\,d\theta=\ln|\csc\theta-\cot\theta|$.<br>$\boxed{\ln\left|\dfrac{\sqrt{x^2+1}-1}x\right|+C}$.</div></div>
+<div class="prob" data-id="tbr7-30"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #30]</b> $\displaystyle\int e^x\cos x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">7.1 예제 4 와 같이 두 번 부분적분해 $I$ 에 대해 푼다: $\boxed{\tfrac12e^x(\sin x+\cos x)+C}$.</div></div>
+<div class="prob" data-id="tbr7-34"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #34]</b> $\displaystyle\int x\sin x\cos x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\tfrac12\int x\sin2x\,dx$, $u=x$: $\boxed{-\tfrac14x\cos2x+\tfrac18\sin2x+C}$.</div></div>
+<div class="prob" data-id="tbr7-35"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #35]</b> $\displaystyle\int_0^{\pi/2}\cos^3x\sin2x\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin2x=2\sin x\cos x$, $u=\cos x$: $\displaystyle\int_0^12u^4du=\boxed{\tfrac25}$.</div></div>
+<div class="prob" data-id="tbr7-37"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #37]</b> $\displaystyle\int_{-3}^3\dfrac x{1+|x|}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">피적분함수가 홀함수이고 구간이 대칭 ⇒ $\boxed0$.</div></div>
+<div class="prob" data-id="tbr7-40"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #40]</b> $\displaystyle\int_0^{\pi/4}\dfrac{x\sin x}{\cos^3x}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x$, $dv=\dfrac{\sin x}{\cos^3x}dx$ ⇒ $v=\tfrac12\sec^2x$.<br>$\left[\tfrac x2\sec^2x\right]_0^{\pi/4}-\tfrac12\displaystyle\int_0^{\pi/4}\sec^2x\,dx=\tfrac\pi4-\tfrac12$ ⇒ $\boxed{\tfrac\pi4-\tfrac12}$.</div></div>
+<div class="prob" data-id="tbr7-41"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #41]</b> $\displaystyle\int\dfrac{x^2}{(4-x^2)^{3/2}}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$x=2\sin\theta$: $\int\dfrac{4\sin^2\theta}{8\cos^3\theta}2\cos\theta\,d\theta=\int\tan^2\theta\,d\theta=\tan\theta-\theta$.<br>$\boxed{\dfrac x{\sqrt{4-x^2}}-\sin^{-1}\dfrac x2+C}$.</div></div>
+<div class="prob" data-id="tbr7-42"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #42]</b> $\displaystyle\int(\sin^{-1}x)^2\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=(\sin^{-1}x)^2$, $dv=dx$: $x(\sin^{-1}x)^2-\int\dfrac{2x\sin^{-1}x}{\sqrt{1-x^2}}dx$. 다시 $u=\sin^{-1}x$, $dv=\tfrac{x\,dx}{\sqrt{1-x^2}}$ ($v=-\sqrt{1-x^2}$).<br>$\boxed{x(\sin^{-1}x)^2+2\sqrt{1-x^2}\,\sin^{-1}x-2x+C}$.</div></div>
+<div class="prob" data-id="tbr7-45"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #45]</b> $\displaystyle\int(\cos x+\sin x)^2\cos2x\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$(\cos x+\sin x)^2=1+\sin2x$ ⇒ $\int(\cos2x+\sin2x\cos2x)\,dx=\int\left(\cos2x+\tfrac12\sin4x\right)dx$.<br>$\boxed{\tfrac12\sin2x-\tfrac18\cos4x+C}$.</div></div>
+<div class="prob" data-id="tbr7-46"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #46]</b> $\displaystyle\int x\cos^3(x^2)\sqrt{\sin(x^2)}\,dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=x^2$ 로 $\tfrac12\int\cos^3u\sqrt{\sin u}\,du$, 다시 $s=\sin u$: $\tfrac12\int(1-s^2)s^{1/2}ds$.<br>$\boxed{\tfrac13\sin^{3/2}(x^2)-\tfrac17\sin^{7/2}(x^2)+C}$.</div></div>
+<div class="prob" data-id="tbr7-47"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #47]</b> $\displaystyle\int_0^{1/2}\dfrac{xe^{2x}}{(1+2x)^2}\,dx$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=xe^{2x}$, $dv=\dfrac{dx}{(1+2x)^2}$ ⇒ $du=e^{2x}(1+2x)\,dx$, $v=-\dfrac1{2(1+2x)}$. 그러면 $\int v\,du$ 에서 $(1+2x)$ 가 약분된다.<br>$\left[-\dfrac{xe^{2x}}{2(1+2x)}+\dfrac{e^{2x}}4\right]_0^{1/2}=-\dfrac e8+\dfrac e4-\dfrac14=\boxed{\dfrac e8-\dfrac14}$.</div></div>
+<div class="prob" data-id="tbr7-48"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #48]</b> $\displaystyle\int_{\pi/4}^{\pi/3}\dfrac{\sqrt{\tan\theta}}{\sin2\theta}\,d\theta$ 를 계산하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$\sin2\theta=\dfrac{2\tan\theta}{\sec^2\theta}$ 이므로 피적분함수 $=\dfrac{\sec^2\theta}{2\sqrt{\tan\theta}}$. $u=\tan\theta$ ($1\to\sqrt3$):<br>$\displaystyle\int_1^{\sqrt3}\dfrac{du}{2\sqrt u}=\left[\sqrt u\right]_1^{\sqrt3}=\boxed{\sqrt[4]3-1}$.</div></div>
+<div class="prob" data-id="tbr7-49"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #49]</b> $\displaystyle\int\dfrac{dx}{\sqrt{e^x-4}}$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\sqrt{e^x-4}$, $e^x=u^2+4$, $dx=\dfrac{2u\,du}{u^2+4}$: $\int\dfrac{2\,du}{u^2+4}=\tan^{-1}\dfrac u2$ ⇒ $\boxed{\tan^{-1}\!\left(\tfrac12\sqrt{e^x-4}\right)+C}$.</div></div>
+<div class="prob" data-id="tbr7-50"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #50]</b> $\displaystyle\int x\sin\left(\sqrt{1+x^2}\right)dx$ 를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$u=\sqrt{1+x^2}$, $x\,dx=u\,du$: $\int u\sin u\,du=\sin u-u\cos u$.<br>$\boxed{\sin\sqrt{1+x^2}-\sqrt{1+x^2}\cos\sqrt{1+x^2}+C}$.</div></div>
+<div class="prob" data-id="tbr7-82"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #82]</b> 쌍곡선 $y^2-x^2=1$ 과 직선 $y=3$ 으로 둘러싸인 영역의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">위쪽 가지 $y=\sqrt{1+x^2}$, 교점 $x=\pm2\sqrt2$. $A=2\displaystyle\int_0^{2\sqrt2}\left(3-\sqrt{1+x^2}\right)dx$, $\int\sqrt{1+x^2}dx=\tfrac12\left(x\sqrt{1+x^2}+\ln(x+\sqrt{1+x^2})\right)$.<br>$A=12\sqrt2-\left(6\sqrt2+\ln(3+2\sqrt2)\right)=\boxed{6\sqrt2-\ln(3+2\sqrt2)}\approx6.72$.</div></div>
+<div class="prob" data-id="tbr7-83"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #83]</b> $y=\cos x$ 와 $y=\cos^2x$ 사이, $0\le x\le\pi$ 의 넓이를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$[0,\tfrac\pi2]$ 에서 $\cos x\ge\cos^2x$, $[\tfrac\pi2,\pi]$ 에서 $\cos x\le0\le\cos^2x$.<br>$\left(1-\tfrac\pi4\right)+\left(\tfrac\pi4+1\right)=\boxed2$.</div></div>
+<div class="prob" data-id="tbr7-85"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #85]</b> $y=\cos^2x$, $0\le x\le\tfrac\pi2$ 아래 영역을 $x$ 축 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">$V=\pi\displaystyle\int_0^{\pi/2}\cos^4x\,dx=\pi\cdot\tfrac38\cdot\tfrac\pi2=\boxed{\tfrac{3\pi^2}{16}}$.</div></div>
+<div class="prob" data-id="tbr7-86"><div class="pq"><span class="pn"></span><div><b>[교재 7장 Review #86]</b> #85 의 영역을 $y$ 축 둘레로 돌린 부피를 구하시오.</div></div>
+<div class="pbtns"><button class="showans">정답·풀이 보기</button><button class="ok">✔ 맞음</button><button class="no">✘ 복습</button></div>
+<div class="ans">껍질: $V=2\pi\displaystyle\int_0^{\pi/2}x\cos^2x\,dx=2\pi\left[\tfrac{x^2}4+\tfrac x4\sin2x+\tfrac18\cos2x\right]_0^{\pi/2}=2\pi\left(\tfrac{\pi^2}{16}-\tfrac14\right)=\boxed{\tfrac{\pi^3}8-\tfrac\pi2}$.</div></div>
+<h3><span class="sq">▸</span>⭕❌ OX 문제 · Chapter 7 (7.1 – 7.3)</h3>
+<p class="mini">O/X 를 누르면 바로 채점되고 풀이가 열립니다. “[교재 N장 Review T/F #k]” 는 교재 챕터 리뷰의 True–False Quiz 항목을 짧게 다시 쓴 것입니다(7장 퀴즈 중 시험 범위 7.1–7.3 에 해당하는 항목만).</p>
+<div class="prob ox" data-id="tbox7-1" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt"><b>[교재 7장 Review T/F #1]</b> $\displaystyle\int\tan^{-1}x\,dx$ 는 부분적분으로 구할 수 있다.</div></div></div>
+<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
+<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. $u=\tan^{-1}x$, $dv=dx$ 로 두면 $x\tan^{-1}x-\tfrac12\ln(1+x^2)+C$ (7.1 예제 5 와 같은 방법).</div></div>
+<div class="prob ox" data-id="tbox7-2" data-a="T"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt"><b>[교재 7장 Review T/F #2]</b> $\displaystyle\int x^5e^x\,dx$ 는 부분적분을 다섯 번 하면 구할 수 있다.</div></div></div>
+<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
+<div class="ans"><div class="res"></div><b>정답: O (참)</b><br><b>O</b>. $u=x^5,x^4,\dots,x$ 순서로 하면 매번 지수가 1씩 내려가 다섯 번 뒤 $\int e^x\,dx$ 가 남는다 (점화식 7.1 #58).</div></div>
+<div class="prob ox" data-id="tbox7-3" data-a="F"><div class="pq"><span class="pn"></span><div><b>[OX]</b> 다음 명제가 참(O)인지 거짓(X)인지 판단하시오.<div class="stmt"><b>[교재 7장 Review T/F #3]</b> $\displaystyle\int\dfrac{dx}{\sqrt{25+x^2}}$ 에 알맞은 삼각치환은 $x=5\sin\theta$ 이다.</div></div></div>
+<div class="pbtns"><button class="oxb" data-v="T">⭕ O (참)</button><button class="oxb" data-v="F">❌ X (거짓)</button><button class="showans">정답·풀이 보기</button><button class="ok" hidden>✔</button><button class="no" hidden>✘</button></div>
+<div class="ans"><div class="res"></div><b>정답: X (거짓)</b><br><b>X</b>. $\sqrt{a^2+x^2}$ 꼴은 $x=5\tan\theta$ 로 바꿔야 $\sqrt{25+25\tan^2\theta}=5\sec\theta$ 가 된다. $x=5\sin\theta$ 는 $\sqrt{a^2-x^2}$ 꼴에 쓴다.</div></div>
+</section>
+</section>
 <!-- ============================ CONCEPT SUMMARY ============================ -->
 <section class="sec" id="concept">
-<h2>📋 개념 요약 <span class="pg">4.6 – 6.5 · 한 장으로 끝내는 핵심 개념</span></h2>
+<h2>📋 개념 요약 <span class="pg">4.7 – 7.3 · 한 장으로 끝내는 핵심 개념</span></h2>
 <p class="mini">예제·풀이는 빼고 <b>정의 · 정리 · 판정법</b>만 모았습니다. 세부 설명은 각 절 탭에서 확인하세요.</p>
 <div class="cs-grid">
-<div class="cs-card"><div class="cs-h"><span class="cs-no">4.6</span>기술과 미분으로 그래프</div><ul>
-<li><b>절차</b>: 큰 창(끝 행동·점근선, 극한으로 확정) → $f'$ 의 <u>부호 변화</u>(증감·극값) → $f''$ 의 <u>부호 변화</u>(오목·변곡) → 줌인·줌아웃 → 정확값은 미분으로.</li>
-<li>숨은 극값은 $f'$ 그래프로, 변곡점은 $f''$ 그래프로 찾는다. 한 장의 그래프로 부족하면 여러 창을 합쳐 해석.</li>
-<li>인수분해된 유리함수: 분모의 영점 ⇒ 수직점근선, 분자의 영점 ⇒ $x$절편 (짝수 중복도는 닿기만, 홀수 중복도는 통과).</li>
-<li>함수족: 모든 $c$ 에서의 공통 성질 + <b>전이값</b> (예: $\dfrac1{x^2+2x+c}$ 의 $c=1$).</li>
-</ul></div>
 <div class="cs-card"><div class="cs-h"><span class="cs-no">4.7</span>최적화 문제</div><ul>
 <li><b>6단계</b>: 이해 → 그림 → 기호 → $Q$ 를 식으로 → 조건식으로 한 변수 + <u>정의역</u> → 절대최대·최소.</li>
 <li>닫힌구간이면 <b>끝점까지 비교</b>. 열린구간이면 <b>절대극값의 1계 판정법</b> ($f'$ 가 $+\to-$ ⇒ 절대최대, $-\to+$ ⇒ 절대최소).</li>
@@ -3465,6 +4068,25 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <li>$f_{\text{avg}}=\dfrac1{b-a}\displaystyle\int_a^bf(x)\,dx$.</li>
 <li><b>적분의 평균값 정리</b>: $f$ 연속 ⇒ $f(c)=f_{\text{avg}}$ 인 $c\in[a,b]$ 존재, $\int_a^bf=f(c)(b-a)$.</li>
 <li>평균 속도 = 속도 함수의 평균값 (순변화 정리).</li>
+</ul></div>
+<div class="cs-card"><div class="cs-h"><span class="cs-no">7.1</span>부분적분</div><ul>
+<li>$\int u\,dv=uv-\int v\,du$ (곱의 미분법의 역). 정적분은 $\left[uv\right]_a^b-\int_a^bv\,du$.</li>
+<li>$u$: 미분하면 간단해지는 것 ($x^n$, $\ln x$, $\tan^{-1}x$, $\sin^{-1}x$). $dv$: 바로 적분되는 것.</li>
+<li>$\int\ln x\,dx$, $\int\tan^{-1}x\,dx$ 는 $dv=dx$. $x^ne^x$ 는 $n$ 번 반복.</li>
+<li>$e^x\sin x$ 처럼 원래 적분이 돌아오면 방정식으로 푼다.</li>
+<li>점화식: $\int\sin^nx\,dx=-\tfrac1n\cos x\sin^{n-1}x+\tfrac{n-1}n\int\sin^{n-2}x\,dx$.</li>
+</ul></div>
+<div class="cs-card"><div class="cs-h"><span class="cs-no">7.2</span>삼각함수의 적분</div><ul>
+<li>$\sin^m\cos^n$: $\cos$ 지수 홀수면 $\cos$ 하나 떼고 $u=\sin x$, $\sin$ 지수 홀수면 $\sin$ 하나 떼고 $u=\cos x$, 둘 다 짝수면 반각 공식.</li>
+<li>$\tan^m\sec^n$: $\sec$ 지수 짝수면 $\sec^2$ 떼고 $u=\tan x$, $\tan$ 지수 홀수면 $\sec\tan$ 떼고 $u=\sec x$.</li>
+<li>$\int\tan x=\ln|\sec x|$, $\int\sec x=\ln|\sec x+\tan x|$, $\int\sec^3x=\tfrac12(\sec x\tan x+\ln|\sec x+\tan x|)$.</li>
+<li>$\sin mx\cos nx$ 등은 곱을 합으로 바꾼다.</li>
+</ul></div>
+<div class="cs-card"><div class="cs-h"><span class="cs-no">7.3</span>삼각치환</div><ul>
+<li>$\sqrt{a^2-x^2}$: $x=a\sin\theta$ / $\sqrt{a^2+x^2}$: $x=a\tan\theta$ / $\sqrt{x^2-a^2}$: $x=a\sec\theta$.</li>
+<li>$dx$ 도 바꾼다. 부정적분은 직각삼각형으로 $x$ 로 되돌리고, 정적분은 끝값을 $\theta$ 로 바꾼다.</li>
+<li>근호 안이 이차식이면 먼저 완전제곱. 분자에 근호 안의 도함수가 있으면 일반 치환이 더 빠르다.</li>
+<li>타원 넓이 $\pi ab$.</li>
 </ul></div>
 </div>
 </section>
@@ -3609,12 +4231,6 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <section class="sec" id="cheat">
 <h2>📌 공식 치트시트 <span class="pg">시험장 들어가기 5분 전에</span></h2>
 <div class="cs-grid">
-<div class="cs-card"><div class="cs-h"><span class="cs-no">4.6</span>그래프 점검표</div><ul>
-<li>점근선: $\lim_{x\to\pm\infty}f$ (수평), 분모 영점 근처 극한 (수직)</li>
-<li>절편: $f(0)$, $f(x)=0$ (중복도 짝수 ⇒ 접촉, 홀수 ⇒ 통과)</li>
-<li>$f'$ 부호 변화 ⇒ 극값 / $f''$ 부호 변화 ⇒ 변곡점</li>
-<li>정확값 요구 ⇒ 미분으로 풀기 (예: $f'=0$, $f''=0$)</li>
-</ul></div>
 <div class="cs-card"><div class="cs-h"><span class="cs-no">4.7</span>자주 쓰는 모형</div><ul>
 <li>직사각형 $A=xy$, 울타리 $P=2x+y$ (한 변 강)</li>
 <li>열린 상자 $V=x(L-2x)^2$ ⇒ $x=L/6$</li>
@@ -3691,8 +4307,19 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <li>펌프: $W=\int\rho g\,A(x)\,(\text{이동 거리})\,dx$, 물 $\rho=1000$</li>
 <li>$f_{\text{avg}}=\frac1{b-a}\int_a^bf$, $\int_a^bf=f(c)(b-a)$</li>
 </ul></div>
+<div class="cs-card"><div class="cs-h"><span class="cs-no">7.1–7.2</span>부분적분 · 삼각적분</div><ul>
+<li>$\int u\,dv=uv-\int v\,du$</li>
+<li>$\int\ln x=x\ln x-x$, $\int xe^x=(x-1)e^x$, $\int e^x\sin x=\frac12e^x(\sin x-\cos x)$</li>
+<li>$\sin^2x=\frac12(1-\cos2x)$, $\cos^2x=\frac12(1+\cos2x)$, $\sin x\cos x=\frac12\sin2x$</li>
+<li>$\int\tan x=\ln|\sec x|$, $\int\sec x=\ln|\sec x+\tan x|$, $\int\csc x=\ln|\csc x-\cot x|$</li>
+<li>$\int\sec^3x=\frac12(\sec x\tan x+\ln|\sec x+\tan x|)$</li>
+</ul></div>
+<div class="cs-card"><div class="cs-h"><span class="cs-no">7.3</span>삼각치환</div><ul>
+<li>$\sqrt{a^2-x^2}\to a\sin\theta$, $\sqrt{a^2+x^2}\to a\tan\theta$, $\sqrt{x^2-a^2}\to a\sec\theta$</li>
+<li>$\int\frac{dx}{\sqrt{x^2\pm a^2}}=\ln|x+\sqrt{x^2\pm a^2}|$, $\int\frac{dx}{\sqrt{a^2-x^2}}=\sin^{-1}\frac xa$</li>
+</ul></div>
 </div>
-<div class="cs-tip"><b>⚠ 시험 함정 TOP 18</b>
+<div class="cs-tip"><b>⚠ 시험 함정 TOP 21</b>
 <ul>
 <li><b>최적화</b>: 정의역을 쓰지 않고 끝점을 비교하지 않는다 / 최대·최소 확인 누락.</li>
 <li><b>최적화</b>: 단위 불일치, 소거 후 식이 한 변수가 아님.</li>
@@ -3712,15 +4339,15 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <li><b>와셔</b>: $\pi(R-r)^2$ 으로 쓰는 실수. 맞는 식은 $\pi(R^2-r^2)$.</li>
 <li><b>회전축</b>: $y=k$, $x=h$ 둘레일 때 반지름을 축까지의 거리로 바꾸지 않는다.</li>
 <li><b>일</b>: kg 에 $g$ 를 안 곱하거나 cm 를 m 로 안 바꾼다. Hooke 의 $x$ 는 늘어난 양.</li>
+<li><b>부분적분</b>: $u$, $dv$ 를 거꾸로 골라 더 어려워진다 / 정적분에서 $[uv]_a^b$ 누락.</li>
+<li><b>삼각적분</b>: 짝수 지수뿐인데 $\sin^2=1-\cos^2$ 로 바꿔 제자리. 반각 공식을 쓴다.</li>
+<li><b>삼각치환</b>: $\sqrt{a^2+x^2}$ 에 $\sin$ 을 쓰거나 $dx$ 를 안 바꾸고, $x$ 로 되돌리기를 잊는다.</li>
 </ul></div>
 </section>
 <!-- ============================ CHECKLIST ============================ -->
 <section class="sec" id="check">
 <h2>✅ 시험 직전 체크리스트 <span class="pg">체크 상태는 이 브라우저에 저장됩니다</span> <span class="pg" id="chkstat"></span></h2>
 <ul class="chk" id="chklist">
-<li><input type="checkbox"><span><b>4.6</b> 큰 창 → $f'$ 부호 변화 → $f''$ 부호 변화 → 줌인 순서로 그래프를 분석하고, 정확값은 미분으로 구할 수 있다.</span></li>
-<li><input type="checkbox"><span><b>4.6</b> 인수분해된 유리함수에서 점근선과 $x$절편(중복도에 따른 거동)을 미분 없이 읽는다.</span></li>
-<li><input type="checkbox"><span><b>4.6</b> 함수족($\frac1{x^2+2x+c}$ 등)에서 공통 성질과 전이값을 설명할 수 있다.</span></li>
 <li><input type="checkbox"><span><b>4.7</b> 최적화 6단계를 말하고, 정의역·끝점 비교를 빠뜨리지 않는다.</span></li>
 <li><input type="checkbox"><span><b>4.7</b> 울타리·상자·원통 캔·내접 도형 문제를 한 변수 함수로 세울 수 있다.</span></li>
 <li><input type="checkbox"><span><b>4.7</b> 거리 문제에 $d^2$ 를, 시간 문제에 $\frac{\text{거리}}{\text{속력}}$ 를 쓸 수 있다 (보트 문제의 끝점 비교).</span></li>
@@ -3753,12 +4380,17 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <li><input type="checkbox"><span><b>6.3</b> 원통껍질법으로 부피를 구하고, 원판·와셔법과 언제 바꿔 쓰는지 설명한다.</span></li>
 <li><input type="checkbox"><span><b>6.4</b> 변하는 힘, Hooke 의 법칙, 케이블, 물탱크 문제에서 일을 적분으로 세운다.</span></li>
 <li><input type="checkbox"><span><b>6.5</b> 평균값을 구하고 적분의 평균값 정리로 $c$ 를 찾는다.</span></li>
-<li><input type="checkbox"><span><b>전체</b> Chapter 4·5·6 연습문제의 ✘ 복습 문제를 다시 풀었다.</span></li>
+<li><input type="checkbox"><span><b>7.1</b> $u$, $dv$ 를 골라 부분적분하고, 원래 적분이 돌아오는 경우를 방정식으로 푼다.</span></li>
+<li><input type="checkbox"><span><b>7.1</b> 점화식 ($\sin^nx$, $(\ln x)^n$, $x^ne^x$)을 유도하고 쓴다.</span></li>
+<li><input type="checkbox"><span><b>7.2</b> $\sin^m\cos^n$, $\tan^m\sec^n$ 에서 어떤 인수를 뗄지 바로 고른다. 반각·곱→합 공식을 외운다.</span></li>
+<li><input type="checkbox"><span><b>7.2</b> $\int\tan x$, $\int\sec x$, $\int\sec^3x$, $\int\csc x$ 를 보지 않고 쓴다.</span></li>
+<li><input type="checkbox"><span><b>7.3</b> 근호 모양에 맞는 삼각치환을 고르고, 삼각형으로 $x$ 로 되돌린다 (완전제곱 포함).</span></li>
+<li><input type="checkbox"><span><b>전체</b> Chapter 4·5·6·7 연습문제의 ✘ 복습 문제를 다시 풀었다.</span></li>
 <li><input type="checkbox"><span><b>전체</b> 증명 13선을 “식 가리기”로 한 번씩 재현했다.</span></li>
 </ul>
 </section>
 <div class="pager" id="pager"><button id="pgPrev"></button><button id="pgNext"></button></div>
-<p class="mini" style="margin-top:34px">출처: Stewart, Clegg, Watson, <i>Calculus: Early Transcendentals</i>, 9th Ed. (Metric Version), §4.6–6.5 · 본 노트는 학습용 요약이며 예제는 교재 내용을 바탕으로 재구성했습니다. “[교재 …]” 표시가 붙은 연습문제·OX 는 교재 번호로 가리키되 문장을 줄여 다시 쓴 것(원문 그대로가 아님)이고 풀이는 직접 작성했습니다.<br>수식 렌더링에 KaTeX(CDN)를 사용하므로 최초 열람 시 인터넷 연결이 필요합니다.</p>
+<p class="mini" style="margin-top:34px">출처: Stewart, Clegg, Watson, <i>Calculus: Early Transcendentals</i>, 9th Ed. (Metric Version), §4.7–7.3 · 본 노트는 학습용 요약이며 예제는 교재 내용을 바탕으로 재구성했습니다. “[교재 …]” 표시가 붙은 연습문제·OX 는 교재 번호로 가리키되 문장을 줄여 다시 쓴 것(원문 그대로가 아님)이고 풀이는 직접 작성했습니다.<br>수식 렌더링에 KaTeX(CDN)를 사용하므로 최초 열람 시 인터넷 연결이 필요합니다.</p>
 </main>
 </div>
 
@@ -3813,8 +4445,8 @@ function armBtn(btn,fn,armedText){
 /* ---------- paged (book) mode ---------- */
 (function(){
   const pages=$$('main section.sec');
-  const short={s46:'4.6',s47:'4.7',s48:'4.8',s49:'4.9',pr4:'Ch4 연습문제',s51:'5.1',s52:'5.2',s53:'5.3',s54:'5.4',s55:'5.5',pr5:'Ch5 연습문제',s61:'6.1',s62:'6.2',s63:'6.3',s64:'6.4',s65:'6.5',pr6:'Ch6 연습문제',concept:'📋 개념요약',proofs:'🧾 증명',cheat:'📌 치트시트',check:'✅ 체크리스트'};
-  const full={s46:'4.6 기술과 미분으로 그래프 그리기',s47:'4.7 최적화 문제',s48:'4.8 뉴턴의 방법',s49:'4.9 역도함수',pr4:'Chapter 4 연습문제',s51:'5.1 넓이와 거리 문제',s52:'5.2 정적분',s53:'5.3 미적분학의 기본정리',s54:'5.4 부정적분과 순변화 정리',s55:'5.5 치환적분',pr5:'Chapter 5 연습문제',s61:'6.1 곡선 사이의 넓이',s62:'6.2 부피',s63:'6.3 원통껍질법',s64:'6.4 일',s65:'6.5 함수의 평균값',pr6:'Chapter 6 연습문제',concept:'개념 요약',proofs:'증명 13선',cheat:'공식 치트시트',check:'시험 직전 체크리스트'};
+  const short={s46:'4.6',s47:'4.7',s48:'4.8',s49:'4.9',pr4:'Ch4 연습문제',s51:'5.1',s52:'5.2',s53:'5.3',s54:'5.4',s55:'5.5',pr5:'Ch5 연습문제',s61:'6.1',s62:'6.2',s63:'6.3',s64:'6.4',s65:'6.5',pr6:'Ch6 연습문제',s71:'7.1',s72:'7.2',s73:'7.3',pr7:'Ch7 연습문제',concept:'📋 개념요약',proofs:'🧾 증명',cheat:'📌 치트시트',check:'✅ 체크리스트'};
+  const full={s46:'4.6 기술과 미분으로 그래프 그리기',s47:'4.7 최적화 문제',s48:'4.8 뉴턴의 방법',s49:'4.9 역도함수',pr4:'Chapter 4 연습문제',s51:'5.1 넓이와 거리 문제',s52:'5.2 정적분',s53:'5.3 미적분학의 기본정리',s54:'5.4 부정적분과 순변화 정리',s55:'5.5 치환적분',pr5:'Chapter 5 연습문제',s61:'6.1 곡선 사이의 넓이',s62:'6.2 부피',s63:'6.3 원통껍질법',s64:'6.4 일',s65:'6.5 함수의 평균값',pr6:'Chapter 6 연습문제',s71:'7.1 부분적분',s72:'7.2 삼각함수의 적분',s73:'7.3 삼각치환',pr7:'Chapter 7 연습문제',concept:'개념 요약',proofs:'증명 13선',cheat:'공식 치트시트',check:'시험 직전 체크리스트'};
   let cur=0;
   const tl=$('#tabList');
   pages.forEach((p,i)=>{const b=document.createElement('button');b.textContent=short[p.id]||p.id;b.dataset.i=i;b.onclick=()=>show(i,true);tl.appendChild(b)});
@@ -4095,17 +4727,6 @@ function fixWide(){
 const BLUE='#3a4fd7',RED='#d7503a',GREEN='#1f9d6b',GRAY='#8a90a8',PURP='#5b3fb5',GOLD='#c98a12';
 (function(){
   const g=id=>document.getElementById(id);
-  /* 4.6 */
-  if(g('fig46a'))plot(g('fig46a'),{x:[-8,8],y:[-5,10],
-    items:[{f:x=>(x*x+7*x+3)/(x*x),c:BLUE,lx:3.2,ly:2.4,label:'f'}],
-    hlines:[{y:1,c:RED}],vlines:[{x:0,c:RED}],
-    pts:[{x:-6/7,y:-37/12,label:'극소 (−6/7, −37/12)',dx:8,dy:18,c:GREEN},{x:-9/7,y:-71/27,label:'변곡',dx:-34,dy:-8,c:RED}],
-    xt:[-8,-6,-4,-2,2,4,6,8],yt:[-4,-2,2,4,6,8,10]});
-  if(g('fig46b')){
-    const fam=(c,col,lab,lx,ly)=>({f:x=>1/(x*x+2*x+c),c:col,lx,ly,label:lab,w:2});
-    plot(g('fig46b'),{x:[-5,4],y:[-2,2],items:[fam(3,BLUE,'c=3',1.4,0.3),fam(2,GREEN,'c=2',1.4,0.55),fam(1,PURP,'c=1',-0.9,1.8),fam(0,GOLD,'c=0',1.0,0.9),fam(-1,RED,'c=−1',1.6,0.2)],
-      xt:[-4,-2,2,4],yt:[-2,-1,1,2]});
-  }
   /* 4.7 */
   if(g('fig47a'))plot(g('fig47a'),{x:[0,600],y:[0,200000],ml:48,
     items:[{f:x=>1200*x-2*x*x,c:BLUE,lx:380,ly:150000,label:'A(x)'}],
@@ -4284,6 +4905,43 @@ const BLUE='#3a4fd7',RED='#d7503a',GREEN='#1f9d6b',GRAY='#8a90a8',PURP='#5b3fb5'
       pts:[{x:-1,y:2,label:'c = −1',dx:-50,dy:-8,c:RED},{x:1,y:2,label:'c = 1',dx:6,dy:-8,c:RED},{x:2,y:5,label:'(2, 5)',dx:-44,dy:4,c:INK6}],
       texts:[{x:2.05,y:2.15,t:'평균값 2',c:GREEN},{x:-0.7,y:4.3,t:'y = 1 + x²',c:BLUE}],
       xt:[-1,1,2],yt:[1,2,3,4,5]});
+  }
+  /* 7.1 */
+  if(g('fig71a'))plot(g('fig71a'),{x:[-0.15,1.45],y:[-0.08,1.05],
+    bands:[{a:0,b:1,lo:()=>0,hi:Math.atan,c:BLUE,fo:.22}],
+    items:[{f:Math.atan,c:BLUE,a:-0.15,b:1.45}],
+    vlines:[{x:1,c:GRAY}],
+    texts:[{x:0.62,y:0.18,t:'넓이 ≈ 0.439',c:BLUE,anchor:'middle'},{x:1.02,y:0.88,t:'y = tan⁻¹x',c:BLUE}],
+    xt:[0.5,1],yt:[0.25,0.5,0.75,1]});
+  /* 7.2 */
+  if(g('fig72a')){
+    const s2=x=>Math.sin(x)**2,P=Math.PI;
+    plot(g('fig72a'),{x:[-0.1,3.45],y:[-0.14,1.12],
+      bands:[{a:0,b:P,lo:()=>0,hi:s2,c:BLUE,fo:.22}],
+      items:[{f:s2,c:BLUE,a:0,b:3.45}],
+      hlines:[{y:0.5,c:GREEN}],
+      texts:[{x:P/2,y:1.04,t:'y = sin²x',c:BLUE,anchor:'middle'},{x:3.2,y:0.55,t:'1/2',c:GREEN},
+        {x:P/2,y:-0.11,t:'π/2',anchor:'middle'},{x:P,y:-0.11,t:'π',anchor:'middle'}],
+      xt:[],yt:[0.5,1]});
+  }
+  /* 7.3 */
+  if(g('fig73a')){
+    const A=[0.5,0],Bx=0.5+Math.sqrt(5),B=[Bx,0],C=[Bx,2],m=0.16;
+    plot(g('fig73a'),{x:[0,3.4],y:[-0.45,2.5],ml:14,
+      polys:[{p:[A,B,C],c:BLUE,fo:.12,sc:BLUE,sw:2.2}],
+      segs:[{p:[Bx-m,0],q:[Bx-m,m],c:GRAY,w:1.2},{p:[Bx-m,m],q:[Bx,m],c:GRAY,w:1.2}],
+      texts:[{x:1.45,y:1.25,t:'3',c:INK6,anchor:'end',w:700},{x:Bx+0.1,y:1.0,t:'x',c:RED,w:700},
+        {x:0.5+Math.sqrt(5)/2,y:-0.3,t:'√(9 − x²)',c:GREEN,anchor:'middle',w:700},{x:0.95,y:0.12,t:'θ',c:INK6,w:700}],
+      xt:[],yt:[]});
+  }
+  if(g('fig73b')){
+    const up=x=>2*Math.sqrt(Math.max(0,1-x*x/9));
+    plot(g('fig73b'),{x:[-3.7,3.7],y:[-2.5,2.5],
+      bands:[{a:0,b:3,lo:()=>0,hi:up,c:BLUE,fo:.3}],
+      items:[{f:up,c:BLUE,a:-3,b:3,N:600},{f:x=>-up(x),c:BLUE,a:-3,b:3,N:600}],
+      pts:[{x:3,y:0,label:'(a, 0)',dx:-46,dy:-8,c:INK6},{x:0,y:2,label:'(0, b)',dx:6,dy:-6,c:INK6}],
+      texts:[{x:1.2,y:0.6,t:'¼ A',c:BLUE,anchor:'middle',w:700}],
+      xt:[-3,3],yt:[-2,2]});
   }
 })();
 
