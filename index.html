@@ -441,15 +441,17 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 </ul>
 
 <h3 id="s47-3"><span class="sq">■</span>기하·거리·시간 문제 (예제 1 – 5)</h3>
+<figure><svg class="fig" id="fig47s1" viewBox="0 0 440 280"></svg><figcaption>예제 1 그림: 강 쪽 변에는 울타리가 없어서 울타리는 $x$, $y$, $x$ 세 변에만 쓴다</figcaption></figure>
 <details class="ex"><summary>예제 1 · 길이 1200 m 의 울타리로 한쪽이 강에 접한 직사각형 밭을 만든다(강쪽 울타리 불필요). 넓이가 최대가 되는 가로·세로는?</summary>
 <div class="body">
 <p>강에 수직인 변을 $x$, 강과 평행한 변을 $y$ 라 하면 $A=xy$, 울타리 조건 $2x+y=1200$ ⇒ $y=1200-2x$.</p>
 <p>$A(x)=1200x-2x^2,\quad 0\le x\le600$. $A'(x)=1200-4x=0$ ⇒ $x=300$.</p>
 <p>닫힌구간법: $A(0)=0,\ A(300)=180000,\ A(600)=0$ ⇒ 최대 $180{,}000\ \text{m}^2$. (또는 $A''=-4\lt0$.)</p>
 <p>$y=1200-600=600$. 답: <b>강에 수직 300 m, 평행 600 m</b>.</p>
-</div></details>
 <figure><svg class="fig" id="fig47a" viewBox="0 0 440 280"></svg><figcaption>$A(x)=1200x-2x^2$ — 양 끝점에서 $A=0$, 가운데 $x=300$ 에서 최대</figcaption></figure>
+</div></details>
 
+<figure><svg class="fig" id="fig47s2" viewBox="0 0 440 280"></svg><figcaption>예제 2 그림: 반지름 $r$, 높이 $h$ 인 원통 캔. 윗면·아랫면·옆면이 모두 금속이다</figcaption></figure>
 <details class="ex"><summary>예제 2 · 부피 1 L (=1000 cm³) 의 원통형 캔을 만들 때 금속(겉넓이)이 최소가 되는 반지름과 높이는?</summary>
 <div class="body">
 <p>$A=2\pi r^2+2\pi rh$ (위·아래 원 + 옆면 직사각형 $2\pi r\times h$), 조건 $\pi r^2h=1000$ ⇒ $h=\dfrac{1000}{\pi r^2}$.</p>
@@ -460,6 +462,7 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="box tip"><b class="lab">Note · 음함수 미분으로 풀기</b>
 <p>$h$ 를 소거하지 않고 $A=2\pi r^2+2\pi rh$, $\pi r^2h=1000$ 을 $r$ 로 각각 미분한다 ($h$ 를 $r$ 의 함수로 본다). 최소에서 $A'=0$ 이므로 $2r+h+rh'=0$ 과 $rh'+2h=0$ 에서 두 식을 빼면 $2r-h=0$, 곧 $h=2r$. 소거가 번거로울 때 쓸 수 있다.</p></div>
 
+<figure><svg class="fig" id="fig47s3" viewBox="0 0 440 280"></svg><figcaption>예제 3 그림: 포물선 위의 점 $(x,y)$ 와 점 $(1,4)$ 사이의 거리 $d$</figcaption></figure>
 <details class="ex"><summary>예제 3 · 포물선 $y^2=2x$ 위에서 점 $(1,4)$ 에 가장 가까운 점은?</summary>
 <div class="body">
 <p>거리 $d=\sqrt{(x-1)^2+(y-4)^2}$ 는 제곱근 때문에 번거롭다. <b>$d^2$ 을 최소화</b>해도 같은 점이 나온다 ($x=\tfrac12y^2$ 대입).</p>
@@ -468,6 +471,7 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>가장 가까운 점 <b>$(2,2)$</b>, 거리 $\sqrt{f(2)}=\sqrt5$.</p>
 </div></details>
 
+<figure><svg class="fig" id="fig47s4" viewBox="0 0 440 280"></svg><figcaption>예제 4 그림: A 에서 노를 저어 D 에 내린 뒤 강가를 따라 B 까지 달린다. C 는 A 의 맞은편, $x=|CD|$</figcaption></figure>
 <details class="ex"><summary>예제 4 · 폭 3 km 의 강 한쪽의 점 A 에서 건너편 8 km 하류의 점 B 로 가려 한다. 노 젓기 6 km/h, 달리기 8 km/h 일 때 어디에 상륙해야 가장 빨리 도착하는가?</summary>
 <div class="body">
 <p>A 의 맞은편 점을 C, 상륙점을 D 라 하고 $x=|CD|$ 로 둔다. 노 젓는 거리 $\sqrt{x^2+9}$, 달리는 거리 $8-x$. $\text{시간}=\dfrac{\text{거리}}{\text{속력}}$ 이므로</p>
@@ -475,9 +479,10 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$T'(x)=\dfrac{x}{6\sqrt{x^2+9}}-\dfrac18=0$ ⇒ $4x=3\sqrt{x^2+9}$ ⇒ $7x^2=81$ ⇒ $x=\dfrac9{\sqrt7}\approx3.40$.</p>
 <p><b>닫힌구간법</b>으로 끝점과 비교: $T(0)=1.5$, $T\!\left(\tfrac9{\sqrt7}\right)=1+\tfrac{\sqrt7}8\approx1.33$, $T(8)=\tfrac{\sqrt{73}}6\approx1.42$ ⇒ 최소는 $x=9/\sqrt7$ km.</p>
 <p>답: C 에서 B 쪽으로 약 3.4 km 지점 (A 의 하류 쪽 $\approx3.4$ km). 약 1.33시간.</p>
-</div></details>
 <figure><svg class="fig" id="fig47b" viewBox="0 0 440 280"></svg><figcaption>$T(x)$ — 끝점($x=0$: 1.5, $x=8$: 1.42)보다 내부 임계점이 더 작다. 하지만 끝점도 반드시 비교한다.</figcaption></figure>
+</div></details>
 
+<figure><svg class="fig" id="fig47s5" viewBox="0 0 440 280"></svg><figcaption>예제 5 그림: 반지름 $r$ 인 반원에 내접한 직사각형. 오른쪽 위 꼭짓점 $(x,y)$ 는 반원 위에 있다</figcaption></figure>
 <details class="ex"><summary>예제 5 · 반지름 $r$ 인 반원에 내접하는 직사각형 중 넓이가 최대인 것의 넓이는?</summary>
 <div class="body">
 <p><b>풀이 1 (미분)</b>: 반원 $x^2+y^2=r^2$ ($y\ge0$), 제1사분면의 꼭짓점 $(x,y)$ ⇒ 가로 $2x$, 세로 $y$.</p>
@@ -536,8 +541,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$f(x)=x^3-2x-5,\ f'(x)=3x^2-2$. ($f(1)=-6,\ f(2)=-1,\ f(3)=16$ 이므로 $x_1=2$ 가 자연스러운 시작.)</p>
 <p>$x_2=2-\dfrac{f(2)}{f'(2)}=2-\dfrac{-1}{10}=2.1$.</p>
 <p>$x_3=2.1-\dfrac{(2.1)^3-2(2.1)-5}{3(2.1)^2-2}=2.1-\dfrac{0.061}{11.23}\approx2.0946$ (소수 4자리까지 정확).</p>
-</div></details>
 <figure><svg class="fig" id="fig48a" viewBox="0 0 440 280"></svg><figcaption>$x_1=2$ 의 접선 $y=10x-21$ 이 $x$축과 만나는 점이 $x_2=2.1$</figcaption></figure>
+</div></details>
 
 <details class="ex"><summary>예제 2 · 뉴턴의 방법으로 $\sqrt[6]{2}$ 를 소수 8째 자리까지 구하시오.</summary>
 <div class="body">
@@ -554,8 +559,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$y=\cos x$ 와 $y=x$ 의 그래프가 1보다 약간 작은 곳에서 만나므로 $x_1=1$ 로 시작한다:</p>
 <p>$x_2\approx0.75036387,\ x_3\approx0.73911289,\ x_4\approx0.73908513,\ x_5\approx0.73908513$.</p>
 <p>$x_4,x_5$ 가 같으므로 해 $\approx\mathbf{0.739085}$. 계산기 그래프를 보고 $x_1=0.75$ 로 시작하면 $0.73911114,\ 0.73908513$ 으로 한 단계 덜 걸린다.</p>
-</div></details>
 <figure><svg class="fig" id="fig48b" viewBox="0 0 440 280"></svg><figcaption>$y=\cos x$ 와 $y=x$ 의 교점 ($x\approx0.739085$)</figcaption></figure>
+</div></details>
 
 <div class="box tip"><b class="lab">응용 · 제곱근·역수 알고리즘</b>
 <ul>
@@ -668,8 +673,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$a(t)=-9.8$, $v(0)=15$ ⇒ $v(t)=-9.8t+15$. $s(0)=130$ ⇒ $s(t)=-4.9t^2+15t+130$.</p>
 <p><b>최고점</b>: $v(t)=0$ ⇒ $t=\dfrac{15}{9.8}\approx1.53$ s (이때 높이 $\approx141.5$ m).</p>
 <p><b>착지</b>: $s(t)=0$ ⇒ $4.9t^2-15t-130=0$ ⇒ $t=\dfrac{15\pm\sqrt{2773}}{9.8}$. 음수 해는 버리고 $t=\dfrac{15+\sqrt{2773}}{9.8}\approx6.9$ s.</p>
-</div></details>
 <figure><svg class="fig" id="fig49b" viewBox="0 0 440 280"></svg><figcaption>$s(t)=-4.9t^2+15t+130$ — 최고점 $t\approx1.53$ s, 착지 $t\approx6.9$ s</figcaption></figure>
+</div></details>
 
 <div class="box warn"><b class="lab">시험 함정</b>
 <ul>
@@ -1116,10 +1121,10 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <table><tr><th>$n$</th><th>$L_n$</th><th>$R_n$</th></tr>
 <tr><td>10</td><td>0.2850000</td><td>0.3850000</td></tr><tr><td>20</td><td>0.3087500</td><td>0.3587500</td></tr><tr><td>30</td><td>0.3168519</td><td>0.3501852</td></tr><tr><td>50</td><td>0.3234000</td><td>0.3434000</td></tr><tr><td>100</td><td>0.3283500</td><td>0.3383500</td></tr><tr><td>1000</td><td>0.3328335</td><td>0.3338335</td></tr></table>
 <p>$A$ 는 $\tfrac13$ 에 가까워지는 것처럼 보인다.</p>
-</div></details>
-<div class="grid2">
 <figure><svg class="fig" id="fig51a" viewBox="0 0 440 280"></svg><figcaption>$R_4$ (오른쪽 끝점, 위로 삐져나옴)</figcaption></figure>
 <figure><svg class="fig" id="fig51b" viewBox="0 0 440 280"></svg><figcaption>$L_4$ (왼쪽 끝점, 곡선 아래)</figcaption></figure>
+</div></details>
+<div class="grid2">
 </div>
 <div class="box tip"><b class="lab">위·아래 판정</b>
 <ul>
@@ -1166,8 +1171,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p><b>구간 시작의 속도</b>를 쓰면: $(8+9+10+12+13+12)\times5=320$ m &nbsp;(= $L_6$).</p>
 <p><b>구간 끝의 속도</b>를 쓰면: $(9+10+12+13+12+11)\times5=335$ m &nbsp;(= $R_6$).</p>
 <p>높이 = 속도, 폭 = 시간이므로 직사각형의 넓이가 곧 거리다. 측정을 더 자주 할수록 직사각형 합이 <b>속도 곡선 아래 넓이</b>에 가까워진다.</p>
-</div></details>
 <figure><svg class="fig" id="fig51c" viewBox="0 0 440 280"></svg><figcaption>속도 데이터와 $L_6$ 의 직사각형 (높이 = 속도, 폭 = 5 s, 넓이 = 거리)</figcaption></figure>
+</div></details>
 <div class="box thm"><b class="lab">일반식 (5)</b>
 <p>$v=f(t)\ge0$, $a\le t\le b$, $\Delta t=\dfrac{b-a}n$ 이면 이동 거리는</p>
 <div class="formula">$$d=\lim_{n\to\infty}\sum_{i=1}^nf(t_{i-1})\,\Delta t=\lim_{n\to\infty}\sum_{i=1}^nf(t_i)\,\Delta t$$</div>
@@ -1221,7 +1226,6 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$$=\int_0^\pi\left(x^3+x\sin x\right)dx$$</p>
 </div></details>
 </div>
-<figure><svg class="fig" id="fig52a" viewBox="0 0 440 280"></svg><figcaption>$\int_0^3(x^3-6x)\,dx=A_1-A_2=\tfrac94-9=-\tfrac{27}4$ — $x=\sqrt6\approx2.449$ 에서 부호가 바뀐다</figcaption></figure>
 
 <h3 id="s52-2"><span class="sq">■</span>Evaluating Definite Integrals (정적분을 극한으로 계산)</h3>
 <div class="box thm"><b class="lab">식 (5)–(8) · 거듭제곱의 합</b>
@@ -1243,6 +1247,7 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <p>$=\displaystyle\lim_{n\to\infty}\left[\tfrac{81}4\left(1+\tfrac1n\right)^2-27\left(1+\tfrac1n\right)\right]=\tfrac{81}4-27=-\tfrac{27}4=-6.75$</p>
 <p>이 값은 $A_1-A_2$ ($A_1=\tfrac94$, $A_2=9$) 이다. 아래 표: $n$ 이 커지면 $R_n\to-6.75$.</p>
 <table><tr><th>$n$</th><th>40</th><th>100</th><th>500</th><th>1000</th><th>5000</th></tr><tr><th>$R_n$</th><td>−6.3998</td><td>−6.6130</td><td>−6.7229</td><td>−6.7365</td><td>−6.7473</td></tr></table>
+<figure><svg class="fig" id="fig52a" viewBox="0 0 440 280"></svg><figcaption>$\int_0^3(x^3-6x)\,dx=A_1-A_2=\tfrac94-9=-\tfrac{27}4$ — $x=\sqrt6\approx2.449$ 에서 부호가 바뀐다</figcaption></figure>
 </div></details>
 <details class="ex"><summary>예제 4 · $\displaystyle\int_1^3e^x\,dx$ 를 합의 극한으로 쓰고 값을 구하시오.</summary>
 <div class="body">
@@ -1264,8 +1269,8 @@ td.num,th.num{font-variant-numeric:tabular-nums}
 <div class="body">
 <p>$\Delta x=\tfrac15$, 끝점 $1,1.2,\dots,2.0$ ⇒ 중점 $1.1,1.3,1.5,1.7,1.9$.</p>
 <p>$\displaystyle\int_1^2\frac1xdx\approx\tfrac15\left(\tfrac1{1.1}+\tfrac1{1.3}+\tfrac1{1.5}+\tfrac1{1.7}+\tfrac1{1.9}\right)\approx0.691908$ &nbsp;(참값 $\ln2\approx0.693147$)</p>
-</div></details>
 <figure><svg class="fig" id="fig52b" viewBox="0 0 440 280"></svg><figcaption>예제 6: $y=\dfrac1x$, $n=5$ 중점 직사각형 (점 = 중점에서의 높이)</figcaption></figure>
+</div></details>
 <h4>🔬 리만 합 실험 — 함수·방법·$n$ 을 바꿔 보기</h4>
 <div class="lab-ui">
   <label>함수 <select id="labFn"></select></label>
@@ -1424,8 +1429,8 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <div class="body">
 <p>$A=\displaystyle\int_0^b\cos x\,dx=\Big[\sin x\Big]_0^b=\sin b-\sin0=\sin b$. 특히 $b=\tfrac\pi2$ 이면 면적 $=\sin\tfrac\pi2=1$.</p>
 <p class="mini">1635년 로베르발이 이 넓이를 구했을 땐 매우 어려운 문제였다. 기본정리가 발견된 뒤에는 한 줄이다.</p>
-</div></details>
 <figure><svg class="fig" id="fig53b" viewBox="0 0 440 280"></svg><figcaption>$y=\cos x$ 아래 $0\le x\le\tfrac\pi2$ 의 넓이 $=1$ (예제 8)</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 9 · 다음 계산은 무엇이 잘못되었는가? $\displaystyle\int_{-1}^3\dfrac1{x^2}\,dx=\Big[-\dfrac1x\Big]_{-1}^3=-\dfrac13-1=-\dfrac43$</summary>
 <div class="body">
 <p>① 피적분함수 $\dfrac1{x^2}\gt0$ 이므로 성질 6에 의해 적분값은 <b>양수</b>여야 하는데 음수가 나왔다 ⇒ 오류.</p>
@@ -1518,15 +1523,15 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 </table>
 <div class="box thm"><b class="lab">변위와 이동 거리</b>
 <div class="formula">$$\text{변위}=\int_{t_1}^{t_2}v(t)\,dt\qquad\qquad\text{이동 거리}=\int_{t_1}^{t_2}|v(t)|\,dt$$</div>
-<p>$v\gt0$ 인 구간은 오른쪽, $v\lt0$ 인 구간은 왼쪽으로 이동. 거리는 속력 $|v|$ 의 적분이라 <b>$v$ 의 부호가 바뀌는 점에서 구간을 쪼개</b> 계산한다. 그림에서 (위쪽 − 아래쪽 넓이) = 변위, (위쪽 + 아래쪽 넓이) = 거리.</p></div>
+<p>$v\gt0$ 인 구간은 오른쪽, $v\lt0$ 인 구간은 왼쪽으로 이동. 거리는 속력 $|v|$ 의 적분이라 <b>$v$ 의 부호가 바뀌는 점에서 구간을 쪼개</b> 계산한다. 속도 그래프로 보면 ($t$ 축 위쪽 넓이 − 아래쪽 넓이) = 변위, (위쪽 + 아래쪽 넓이) = 거리.</p></div>
 <details class="ex"><summary>예제 6 · 직선 위 입자의 속도가 $v(t)=t^2-t-6$ (m/s) 이다. $1\le t\le4$ 에서 (a) 변위 (b) 이동 거리를 구하시오.</summary>
 <div class="body">
 <p>(a) $\displaystyle\int_1^4(t^2-t-6)\,dt=\left[\dfrac{t^3}3-\dfrac{t^2}2-6t\right]_1^4=-\dfrac{32}3-\left(-\dfrac{37}6\right)=-\dfrac92$ m. 4.5 m <b>왼쪽</b>으로 이동한 셈이다.</p>
 <p>(b) $v(t)=(t-3)(t+2)$ ⇒ $[1,3]$ 에서 $v\le0$, $[3,4]$ 에서 $v\ge0$. 쪼개서</p>
 <p>$\displaystyle\int_1^4|v|\,dt=\int_1^3\!\left(-t^2+t+6\right)dt+\int_3^4\!\left(t^2-t-6\right)dt=\dfrac{22}3+\dfrac{17}6=\dfrac{61}6\approx10.17$ m.</p>
 <p class="mini">$F(t)=\tfrac{t^3}3-\tfrac{t^2}2-6t$ 에서 $F(1)=-\tfrac{37}6$, $F(3)=-\tfrac{27}2$, $F(4)=-\tfrac{32}3$. 거리 $=-(F(3)-F(1))+(F(4)-F(3))$.</p>
-</div></details>
 <figure><svg class="fig" id="fig54a" viewBox="0 0 440 280"></svg><figcaption>$v(t)=t^2-t-6$, $1\le t\le4$ — 빨강(음수) 면적 $\tfrac{22}3$, 파랑(양수) 면적 $\tfrac{17}6$. 변위 = 파랑 − 빨강 = $-\tfrac92$, 거리 = 파랑 + 빨강 = $\tfrac{61}6$</figcaption></figure>
+</div></details>
 <div class="box tip"><b class="lab">단위 감각</b>
 <p>$\displaystyle\int_a^bf(x)\,dx$ 의 단위는 <b>($f$ 의 단위) × ($x$ 의 단위)</b>. 전력 $P$(MW)를 시간 $t$(h)로 적분하면 에너지(MW·h), 속도(m/s)를 시간(s)으로 적분하면 거리(m), 유량(L/분)을 시간(분)으로 적분하면 부피(L). 데이터 표는 5.2의 중점법으로 적분을 근사한다.</p></div>
 
@@ -2327,8 +2332,8 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <p>교점: $x^2=2x-x^2$ 에서 $2x(x-1)=0$, 즉 $x=0,1$. 점 $(0,0)$, $(1,1)$.</p>
 <p>$x=\tfrac12$ 를 넣으면 $2x-x^2=\tfrac34\gt\tfrac14=x^2$ 이므로 위가 $y_T=2x-x^2$, 아래가 $y_B=x^2$.</p>
 <p>$A=\displaystyle\int_0^1(2x-2x^2)\,dx=2\left[\tfrac{x^2}2-\tfrac{x^3}3\right]_0^1=2\left(\tfrac12-\tfrac13\right)=\tfrac13$.</p>
-</div></details>
 <figure><svg class="fig" id="fig61a" viewBox="0 0 440 280"></svg><figcaption>예제 2: 파랑 $y_T=2x-x^2$, 빨강 $y_B=x^2$. 진한 띠가 대표 직사각형 (높이 $y_T-y_B$, 폭 $\Delta x$)</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 3 · 교점을 정확히 구할 수 없을 때: $y=\dfrac x{\sqrt{x^2+1}}$ 와 $y=x^4-x$ 사이의 넓이를 근사하시오.</summary>
 <div class="body">
 <p>$\dfrac x{\sqrt{x^2+1}}=x^4-x$ 는 손으로 풀 수 없다. 그래프를 그려 보면 교점은 원점과 $x\approx1.18$ 이고, 그 사이에서 첫 번째 곡선이 위에 있다.</p>
@@ -2346,8 +2351,8 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <p>$A=\displaystyle\int_0^{\pi/4}(\cos x-\sin x)\,dx+\int_{\pi/4}^{\pi/2}(\sin x-\cos x)\,dx=\big[\sin x+\cos x\big]_0^{\pi/4}+\big[-\cos x-\sin x\big]_{\pi/4}^{\pi/2}$</p>
 <p>$=\left(\sqrt2-1\right)+\left(-1+\sqrt2\right)=2\sqrt2-2\approx0.828$.</p>
 <p class="mini">영역이 $x=\tfrac\pi4$ 에 대해 대칭이라 $A=2\int_0^{\pi/4}(\cos x-\sin x)\,dx$ 로 계산해도 된다.</p>
-</div></details>
 <figure><svg class="fig" id="fig61b" viewBox="0 0 440 280"></svg><figcaption>예제 4: $x=\tfrac\pi4$ 왼쪽($A_1$)은 $\cos x$ 가 위, 오른쪽($A_2$)은 $\sin x$ 가 위</figcaption></figure>
+</div></details>
 
 <h3 id="s61-3"><span class="sq">■</span>$y$ 로 적분하기</h3>
 <div class="box def"><b class="lab">Integrating with respect to $y$</b>
@@ -2362,8 +2367,8 @@ $$F(b)-F(a)=\big[g(b)+C\big]-\big[g(a)+C\big]=g(b)-g(a)=g(b)=\int_a^bf(t)\,dt.$$
 <p>$A=\displaystyle\int_{-2}^4\left[(y+1)-\left(\tfrac12y^2-3\right)\right]dy=\int_{-2}^4\left(-\tfrac12y^2+y+4\right)dy=\left[-\tfrac{y^3}6+\tfrac{y^2}2+4y\right]_{-2}^4$</p>
 <p>$=\left(-\tfrac{64}6+8+16\right)-\left(\tfrac43+2-8\right)=18$.</p>
 <p class="mini">$x$ 로 적분하면 아래쪽 경계가 $x=-1$ 에서 포물선의 아래 가지 $-\sqrt{2x+6}$ 와 직선 $y=x-1$ 로 바뀌어서 두 조각으로 나눠야 한다.</p>
-</div></details>
 <figure><svg class="fig" id="fig61c" viewBox="0 0 440 280"></svg><figcaption>예제 5: 가로 띠의 길이 = $x_R-x_L=(y+1)-\left(\tfrac12y^2-3\right)$</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 6 · $y=\tfrac1x$, $y=x$, $y=\tfrac14x$ ($x\gt0$) 로 둘러싸인 영역의 넓이를 (a) $x$ 로 (b) $y$ 로 적분해 구하시오.</summary>
 <div class="body">
 <p>교점: $y=x$ 와 $y=\tfrac1x$ 는 $(1,1)$, $y=\tfrac14x$ 와 $y=\tfrac1x$ 는 $\left(2,\tfrac12\right)$.</p>
@@ -2441,14 +2446,14 @@ $A=\displaystyle\int_0^{1/2}(4y-y)\,dy+\int_{1/2}^1\left(\tfrac1y-y\right)dy=\le
 <div class="body">
 <p>교점 $(0,0)$, $(1,1)$. $0\le x\le1$ 에서 $x\ge x^2$ 이므로 바깥 반지름 $R=x$, 안쪽 반지름 $r=x^2$.</p>
 <p>$V=\displaystyle\int_0^1\pi\left(x^2-x^4\right)dx=\pi\left[\tfrac{x^3}3-\tfrac{x^5}5\right]_0^1=\tfrac{2\pi}{15}$.</p>
-</div></details>
 <figure><svg class="fig" id="fig62a" viewBox="0 0 440 280"></svg><figcaption>예제 4: 영역(파랑)과 $x$ 축에 대칭인 모양(점선). $x$ 에서 자르면 바깥 반지름 $R=x$, 안쪽 반지름 $r=x^2$ 인 와셔</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 5 · 예제 4 의 영역을 직선 $y=2$ 둘레로 돌린 입체의 부피를 구하시오.</summary>
 <div class="body">
 <p>축 $y=2$ 는 영역 위에 있다. 축에서 <b>먼</b> 곡선이 $y=x^2$ 이므로 $R=2-x^2$, 가까운 곡선 $y=x$ 까지는 $r=2-x$.</p>
 <p>$V=\displaystyle\int_0^1\pi\left[(2-x^2)^2-(2-x)^2\right]dx=\pi\int_0^1\left(x^4-5x^2+4x\right)dx=\pi\left(\tfrac15-\tfrac53+2\right)=\tfrac{8\pi}{15}$.</p>
-</div></details>
 <figure><svg class="fig" id="fig62b" viewBox="0 0 440 280"></svg><figcaption>예제 5: 축이 $y=2$ (초록 점선). 반지름은 축에서 아래로 잰 거리 $R=2-x^2$, $r=2-x$</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 6 · 예제 4 의 영역을 직선 $x=-1$ 둘레로 돌린 입체의 부피를 구하시오.</summary>
 <div class="body">
 <p>축이 수직이므로 $y$ 로 적분한다. 곡선을 $x=y$, $x=\sqrt y$ 로 쓰면 $0\le y\le1$ 에서 $\sqrt y\ge y$.</p>
@@ -2466,17 +2471,20 @@ $A=\displaystyle\int_0^{1/2}(4y-y)\,dy+\int_{1/2}^1\left(\tfrac1y-y\right)dy=\le
 <tr><td class="l">빗변이 $s$ 인 직각이등변삼각형</td><td class="l">$\tfrac14s^2$</td></tr>
 <tr><td class="l">지름이 $s$ 인 반원</td><td class="l">$\tfrac\pi8s^2$</td></tr>
 </table></div>
+<figure><svg class="fig" id="fig62s7" viewBox="0 0 440 280"></svg><figcaption>예제 7 그림: 밑면은 반지름 1 인 원판. $x$ 축에 수직으로 자른 단면은 밑면의 현을 한 변으로 하는 정삼각형</figcaption></figure>
 <details class="ex"><summary>예제 7 · 밑면이 반지름 1 인 원판이고, 밑면에 수직이며 서로 평행한 단면이 정삼각형인 입체의 부피를 구하시오.</summary>
 <div class="body">
 <p>밑면을 $x^2+y^2=1$ 로 두고 $x$ 축에 수직으로 자른다. 단면 삼각형의 한 변은 원을 가로지르는 현이라 길이 $2y=2\sqrt{1-x^2}$.</p>
 <p>$A(x)=\tfrac{\sqrt3}4\left(2\sqrt{1-x^2}\right)^2=\sqrt3\left(1-x^2\right)$.</p>
 <p>$V=\displaystyle\int_{-1}^1\sqrt3(1-x^2)\,dx=2\sqrt3\int_0^1(1-x^2)\,dx=2\sqrt3\cdot\tfrac23=\tfrac{4\sqrt3}3\approx2.31$.</p>
 </div></details>
+<figure><svg class="fig" id="fig62s8" viewBox="0 0 440 280"></svg><figcaption>예제 8 그림: 밑면이 한 변 $L$ 인 정사각형이고 높이가 $h$ 인 각뿔</figcaption></figure>
 <details class="ex"><summary>예제 8 · 밑면이 한 변 $L$ 인 정사각형이고 높이가 $h$ 인 각뿔의 부피를 구하시오.</summary>
 <div class="body">
 <p>꼭짓점을 원점에, $x$ 축을 각뿔의 중심축 방향으로 둔다. 꼭짓점에서 거리 $x$ 인 곳의 단면은 한 변 $s$ 인 정사각형이고, 닮음에서 $\dfrac sL=\dfrac xh$, 즉 $s=\dfrac{Lx}h$.</p>
 <p>$A(x)=\dfrac{L^2}{h^2}x^2$, $V=\displaystyle\int_0^h\dfrac{L^2}{h^2}x^2\,dx=\dfrac{L^2}{h^2}\cdot\dfrac{h^3}3=\dfrac13L^2h$.</p>
 </div></details>
+<figure><svg class="fig" id="fig62s9" viewBox="0 0 440 280"></svg><figcaption>예제 9 그림: 반지름 4 인 원기둥의 밑면에서, 지름을 지나며 $30^\circ$ 기울어진 평면으로 잘라 낸 쐐기</figcaption></figure>
 <details class="ex"><summary>예제 9 · 반지름 4 인 원기둥에서 두 평면으로 쐐기를 잘라 낸다. 한 평면은 원기둥 축에 수직이고, 다른 평면은 첫 평면과 지름을 따라 $30^\circ$ 로 만난다. 쐐기의 부피를 구하시오.</summary>
 <div class="body">
 <p>두 평면이 만나는 지름을 $x$ 축으로, 밑면을 $x^2+y^2=16$ 으로 둔다. $x$ 축에 수직인 단면은 직각삼각형으로, 밑변 $y=\sqrt{16-x^2}$, 높이 $y\tan30^\circ=\dfrac y{\sqrt3}$.</p>
@@ -2510,8 +2518,8 @@ $A=\displaystyle\int_0^{1/2}(4y-y)\,dy+\int_{1/2}^1\left(\tfrac1y-y\right)dy=\le
 <div class="body">
 <p>$2x^2-x^3=x^2(2-x)=0$ 에서 $0\le x\le2$. 껍질의 반지름 $x$, 둘레 $2\pi x$, 높이 $2x^2-x^3$.</p>
 <p>$V=\displaystyle\int_0^22\pi x(2x^2-x^3)\,dx=2\pi\int_0^2(2x^3-x^4)\,dx=2\pi\left[\tfrac{x^4}2-\tfrac{x^5}5\right]_0^2=2\pi\left(8-\tfrac{32}5\right)=\tfrac{16\pi}5$.</p>
-</div></details>
 <figure><svg class="fig" id="fig63a" viewBox="0 0 440 280"></svg><figcaption>예제 1: 진한 띠(반지름 $x$, 높이 $f(x)$, 두께 $\Delta x$)를 $y$ 축 둘레로 돌리면 원통껍질 하나가 된다. 점선은 $y$ 축 반대편에 생기는 같은 높이의 벽</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 2 · $y=x$ 와 $y=x^2$ 사이의 영역을 $y$ 축 둘레로 돌린 입체의 부피를 구하시오.</summary>
 <div class="body">
 <p>$0\le x\le1$, 껍질의 반지름 $x$, 높이 $x-x^2$.</p>
@@ -2608,14 +2616,15 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <div class="box thm"><b class="lab">층 하나의 일</b>
 <div class="formula">$$\Delta W\approx\underbrace{\rho\cdot A(x)\,\Delta x}_{\text{질량}}\cdot g\cdot\underbrace{(\text{그 층이 올라가는 거리})}_{\text{거리}}$$</div>
 <p>물을 얇은 수평 층으로 자른다. 같은 층의 물은 거의 같은 거리만큼 올라간다. 물의 밀도는 $\rho=1000\ \text{kg/m}^3$, 단면적 $A(x)$ 는 탱크 모양(닮음비 등)에서 구한다.</p></div>
+<figure><svg class="fig" id="fig64s5" viewBox="0 0 440 280"></svg><figcaption>예제 5 그림: 뒤집힌 원뿔 탱크 (높이 10 m, 윗면 반지름 4 m) 에 물이 8 m 높이까지 차 있다</figcaption></figure>
 <details class="ex"><summary>예제 5 · 높이 10 m, 밑면 반지름 4 m 인 원뿔을 뒤집은 모양의 탱크에 물이 8 m 높이까지 차 있다. 물을 모두 탱크 꼭대기로 퍼 올리는 일을 구하시오.</summary>
 <div class="body">
 <p>꼭대기에서 아래로 깊이 $x$ 를 잰다. 물은 깊이 2 m 에서 10 m 까지 있다.</p>
 <p>깊이 $x$ 에서 층의 반지름 $r$: 닮음으로 $\dfrac r{10-x}=\dfrac4{10}$, $r=\tfrac25(10-x)$.</p>
 <p>층의 질량 $\approx1000\cdot\pi\cdot\tfrac4{25}(10-x)^2\Delta x=160\pi(10-x)^2\Delta x$, 무게 $\approx1568\pi(10-x)^2\Delta x$, 올라가는 거리 $x$.</p>
 <p>$W=\displaystyle\int_2^{10}1568\pi\,x(10-x)^2\,dx=1568\pi\left[50x^2-\tfrac{20x^3}3+\tfrac{x^4}4\right]_2^{10}=1568\pi\cdot\tfrac{2048}3\approx3.4\times10^6$ J.</p>
-</div></details>
 <figure><svg class="fig" id="fig64a" viewBox="0 0 440 280"></svg><figcaption>예제 5: 원뿔 탱크의 옆모습. 깊이 $x$ 의 물 층(반지름 $r=\tfrac25(10-x)$, 두께 $\Delta x$)은 꼭대기까지 $x$ 만큼 올라간다</figcaption></figure>
+</div></details>
 
 <div class="box warn"><b class="lab">시험 함정</b>
 <ul>
@@ -2651,8 +2660,8 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <details class="ex"><summary>예제 2 · 예제 1 의 $f(x)=1+x^2$, $[-1,2]$ 에서 적분의 평균값 정리가 말하는 $c$ 를 구하시오.</summary>
 <div class="body">
 <p>$f_{\text{avg}}=2$ 이므로 $1+c^2=2$, $c=\pm1$. 두 값 모두 $[-1,2]$ 안에 있다. 이처럼 $c$ 가 하나보다 많을 수도 있다.</p>
-</div></details>
 <figure><svg class="fig" id="fig65a" viewBox="0 0 440 280"></svg><figcaption>예제 1·2: 높이 $f_{\text{avg}}=2$ 인 직사각형(초록)의 넓이 $2\times3=6$ 은 곡선 아래 넓이와 같다. $f(c)=2$ 인 점은 $c=-1$, $c=1$</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 3 · 자동차의 시간 $[t_1,t_2]$ 위 평균 속도가 그동안의 속도 함수의 평균값과 같음을 보이시오.</summary>
 <div class="body">
 <p>위치를 $s(t)$ 라 하면 평균 속도는 정의상 $\dfrac{\Delta s}{\Delta t}=\dfrac{s(t_2)-s(t_1)}{t_2-t_1}$.</p>
@@ -3308,8 +3317,8 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <p>$\displaystyle\int_0^1\tan^{-1}x\,dx=\Big[x\tan^{-1}x\Big]_0^1-\int_0^1\dfrac x{1+x^2}\,dx=\dfrac\pi4-\int_0^1\dfrac x{1+x^2}\,dx$.</p>
 <p>$t=1+x^2$ 로 치환하면 $\displaystyle\int_0^1\dfrac x{1+x^2}dx=\dfrac12\int_1^2\dfrac{dt}t=\dfrac12\ln2$.</p>
 <p>답: $\dfrac\pi4-\dfrac{\ln2}2\approx0.439$. $\tan^{-1}x\ge0$ 이므로 아래 그림의 넓이와 같다.</p>
-</div></details>
 <figure><svg class="fig" id="fig71a" viewBox="0 0 440 280"></svg><figcaption>예제 5: $y=\tan^{-1}x$ 아래 $0\le x\le1$ 의 넓이 $=\tfrac\pi4-\tfrac12\ln2\approx0.439$</figcaption></figure>
+</div></details>
 
 <h3 id="s71-3"><span class="sq">■</span>점화식 (Reduction Formula)</h3>
 <div class="box thm"><b class="lab">$\sin^nx$ 의 점화식</b>
@@ -3358,8 +3367,8 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <details class="ex"><summary>예제 3 · $\displaystyle\int_0^\pi\sin^2x\,dx$ 를 계산하시오.</summary>
 <div class="body">
 <p>짝수 지수뿐이라 반각 공식: $\displaystyle\int_0^\pi\tfrac12(1-\cos2x)\,dx=\left[\tfrac12x-\tfrac14\sin2x\right]_0^\pi=\tfrac\pi2$.</p>
-</div></details>
 <figure><svg class="fig" id="fig72a" viewBox="0 0 440 280"></svg><figcaption>예제 3: $y=\sin^2x$ 아래 넓이는 $\tfrac\pi2$. 곡선은 높이 $\tfrac12$ 를 중심으로 위아래가 대칭이라 평균 높이가 $\tfrac12$</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 4 · $\displaystyle\int\sin^4x\,dx$ 를 구하시오.</summary>
 <div class="body">
 <p>$\sin^4x=\left[\tfrac12(1-\cos2x)\right]^2=\tfrac14\left(1-2\cos2x+\cos^22x\right)$, 그리고 $\cos^22x=\tfrac12(1+\cos4x)$.</p>
@@ -3441,16 +3450,16 @@ $V=\displaystyle\int_0^4\pi\left[(\sqrt y+1)^2-\left(\tfrac y2+1\right)^2\right]
 <p>$\displaystyle\int\dfrac{3\cos\theta}{9\sin^2\theta}\,3\cos\theta\,d\theta=\int\cot^2\theta\,d\theta=\int(\csc^2\theta-1)\,d\theta=-\cot\theta-\theta+C$.</p>
 <p>삼각형: $\sin\theta=\tfrac x3$ 이면 빗변 3, 높이 $x$, 밑변 $\sqrt{9-x^2}$ 이므로 $\cot\theta=\dfrac{\sqrt{9-x^2}}x$.</p>
 <p>$\displaystyle\int\dfrac{\sqrt{9-x^2}}{x^2}\,dx=-\dfrac{\sqrt{9-x^2}}x-\sin^{-1}\!\left(\dfrac x3\right)+C$.</p>
-</div></details>
 <figure><svg class="fig" id="fig73a" viewBox="0 0 440 280"></svg><figcaption>예제 1 의 기준 삼각형: $\sin\theta=\tfrac x3$ 이면 밑변은 $\sqrt{9-x^2}$. 여기서 $\cot\theta$, $\cos\theta$ 등을 $x$ 로 읽는다</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 2 · 타원 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 의 넓이를 구하시오.</summary>
 <div class="body">
 <p>제1사분면 부분은 $y=\tfrac ba\sqrt{a^2-x^2}$ ($0\le x\le a$) 이고 대칭이므로 $A=4\cdot\dfrac ba\displaystyle\int_0^a\sqrt{a^2-x^2}\,dx$.</p>
 <p>$x=a\sin\theta$: $x=0$ 이면 $\theta=0$, $x=a$ 이면 $\theta=\tfrac\pi2$.</p>
 <p>$A=4ab\displaystyle\int_0^{\pi/2}\cos^2\theta\,d\theta=2ab\left[\theta+\tfrac12\sin2\theta\right]_0^{\pi/2}=\pi ab$. $a=b=r$ 이면 원의 넓이 $\pi r^2$.</p>
 <p class="mini">정적분이라 끝값을 $\theta$ 로 바꿨으니 $x$ 로 되돌릴 필요가 없다.</p>
-</div></details>
 <figure><svg class="fig" id="fig73b" viewBox="0 0 440 280"></svg><figcaption>예제 2 ($a=3$, $b=2$): 색칠한 1/4 의 넓이를 구해 4배 하면 $\pi ab=6\pi$</figcaption></figure>
+</div></details>
 <details class="ex"><summary>예제 3 · $\displaystyle\int\dfrac{dx}{x^2\sqrt{x^2+4}}$ 를 구하시오.</summary>
 <div class="body">
 <p>$x=2\tan\theta$, $dx=2\sec^2\theta\,d\theta$, $\sqrt{x^2+4}=2\sec\theta$.</p>
@@ -4537,6 +4546,7 @@ function plot(svg,o){
     for(let i=N;i>=0;i--){const t=bd.a+(bd.b-bd.a)*i/N;P.push(bd.y?[bd.lo(t),t]:[t,bd.lo(t)])}
     s+=`<polygon points="${pp(P)}" fill="${bd.c}" fill-opacity="${bd.fo??.26}" stroke="none"/>`;
   });
+  (o.lines||[]).forEach(l=>{s+=`<polyline points="${pp(l.p)}" fill="none" stroke="${l.c||'#666'}" stroke-width="${l.w||1.6}" ${l.dash?'stroke-dasharray="5 4"':''}/>`});
   (o.polys||[]).forEach(q=>{s+=`<polygon points="${pp(q.p)}" fill="${q.c||'none'}" fill-opacity="${q.fo??.5}" stroke="${q.sc||q.c||'#666'}" stroke-width="${q.sw??1.2}" ${q.dash?'stroke-dasharray="5 4"':''}/>`});
   rects.forEach(r=>{
     const ya=Y(Math.max(r.h,0)),yb=Y(Math.min(r.h,0));
@@ -4544,10 +4554,12 @@ function plot(svg,o){
   });
   vlines.forEach(l=>{s+=`<line x1="${X(l.x)}" x2="${X(l.x)}" y1="${m.t}" y2="${H-m.b}" stroke="${l.c||'#999'}" stroke-width="1.2" stroke-dasharray="${l.dash===false?'':'5 4'}"/>`});
   hlines.forEach(l=>{s+=`<line y1="${Y(l.y)}" y2="${Y(l.y)}" x1="${m.l}" x2="${W-m.r}" stroke="${l.c||'#999'}" stroke-width="1.2" stroke-dasharray="${l.dash===false?'':'5 4'}"/>`});
+  if(!o.noaxes){ /* noaxes: plain diagram (setup pictures) */
   if(y0<0&&y1>0)s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Y(0)}" y2="${Y(0)}" stroke="#8a90a8" stroke-width="1"/>`;
   else s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${H-m.b}" y2="${H-m.b}" stroke="#8a90a8"/>`;
   if(x0<0&&x1>0)s+=`<line y1="${m.t}" y2="${H-m.b}" x1="${X(0)}" x2="${X(0)}" stroke="#8a90a8" stroke-width="1"/>`;
   else s+=`<line y1="${m.t}" y2="${H-m.b}" x1="${m.l}" x2="${m.l}" stroke="#8a90a8"/>`;
+  }
   items.forEach(it=>{
     let d='',first=true;
     const N=it.N||320;
@@ -4627,7 +4639,9 @@ function plot(svg,o){
       }else if(el.matches('details.ex')){
         type='ex';
         front=`<div class="q">${el.querySelector('summary').innerHTML}</div><div class="fc-hint">풀이를 떠올린 뒤 카드를 눌러 확인</div>`;
-        back=el.querySelector('.body').innerHTML;
+        /* cards stay text-only: figures carry ids and are drawn once on the page */
+        const bc=el.querySelector('.body').cloneNode(true);bc.querySelectorAll('figure').forEach(f=>f.remove());
+        back=bc.innerHTML;
       }else{
         type='prob';
         front=`<div class="q">${$('.pq>div',el).innerHTML}</div><div class="fc-hint">풀어 본 뒤 카드를 눌러 정답 확인</div>`;
@@ -4943,6 +4957,89 @@ const BLUE='#3a4fd7',RED='#d7503a',GREEN='#1f9d6b',GRAY='#8a90a8',PURP='#5b3fb5'
       texts:[{x:1.2,y:0.6,t:'¼ A',c:BLUE,anchor:'middle',w:700}],
       xt:[-3,3],yt:[-2,2]});
   }
+
+  /* ---------- setup pictures (shown with the problem, no answers in them) ---------- */
+  const D={noaxes:true,ml:14,xt:[],yt:[]};
+  const arc=(cx,cy,rx,ry,t0,t1,n=60)=>{const P=[];for(let i=0;i<=n;i++){const t=t0+(t1-t0)*i/n;P.push([cx+rx*Math.cos(t),cy+ry*Math.sin(t)])}return P};
+  /* 4.7 ex1: field along a river */
+  if(g('fig47s1'))plot(g('fig47s1'),{...D,x:[0,10.3],y:[0,6],
+    polys:[{p:[[0,4.6],[10.3,4.6],[10.3,6],[0,6]],c:BLUE,fo:.18,sw:0},{p:[[2.5,1],[7.8,1],[7.8,4.6],[2.5,4.6]],c:GREEN,fo:.12,sw:0}],
+    segs:[{p:[2.5,1],q:[2.5,4.6],c:INK6,w:3},{p:[7.8,1],q:[7.8,4.6],c:INK6,w:3},{p:[2.5,1],q:[7.8,1],c:INK6,w:3},{p:[2.5,4.6],q:[7.8,4.6],c:BLUE,w:2,dash:true}],
+    texts:[{x:5.15,y:5.15,t:'강',c:BLUE,anchor:'middle',w:700},{x:5.15,y:4.05,t:'이 변은 울타리 없음',c:BLUE,anchor:'middle'},
+      {x:2.2,y:2.7,t:'x',c:RED,anchor:'end',w:700},{x:8.1,y:2.7,t:'x',c:RED,w:700},{x:5.15,y:0.45,t:'y',c:RED,anchor:'middle',w:700},
+      {x:5.15,y:2.5,t:'울타리 x + y + x = 1200 m',c:INK6,anchor:'middle'}]});
+  /* 4.7 ex2: cylindrical can */
+  if(g('fig47s2')){
+    const cx=5.15,rx=2,ry=0.45;
+    plot(g('fig47s2'),{...D,x:[0,10.3],y:[0,6],
+      polys:[{p:[[cx-rx,1],[cx+rx,1],[cx+rx,5],[cx-rx,5]],c:BLUE,fo:.08,sw:0},{p:arc(cx,5,rx,ry,0,2*Math.PI),c:BLUE,fo:.18,sc:INK6,sw:2}],
+      lines:[{p:arc(cx,1,rx,ry,Math.PI,2*Math.PI),c:INK6,w:2},{p:arc(cx,1,rx,ry,0,Math.PI),c:GRAY,w:1.4,dash:true}],
+      segs:[{p:[cx-rx,1],q:[cx-rx,5],c:INK6,w:2},{p:[cx+rx,1],q:[cx+rx,5],c:INK6,w:2},{p:[cx,5],q:[cx+rx,5],c:RED,w:2.4},{p:[cx+rx+0.6,1],q:[cx+rx+0.6,5],c:GREEN,w:2.4}],
+      pts:[{x:cx,y:5,r:3,c:RED}],
+      texts:[{x:cx+rx/2,y:5.18,t:'r',c:RED,anchor:'middle',w:700},{x:cx+rx+0.85,y:3,t:'h',c:GREEN,w:700},{x:cx,y:0.25,t:'부피 1000 cm³',c:INK6,anchor:'middle'}]});
+  }
+  /* 4.7 ex3: point on y^2 = 2x nearest to (1,4) */
+  if(g('fig47s3'))plot(g('fig47s3'),{x:[-1,6.2],y:[-3.4,5.2],
+    items:[{fy:y=>y*y/2,c:BLUE,a:-3.3,b:3.45}],
+    segs:[{p:[1,4],q:[4.5,3],c:RED,w:2,dash:true}],
+    pts:[{x:1,y:4,label:'(1, 4)',dx:-44,dy:-6,c:INK6},{x:4.5,y:3,label:'(x, y)',dx:8,dy:16,c:BLUE}],
+    texts:[{x:2.85,y:3.75,t:'d',c:RED,anchor:'middle',w:700},{x:4.6,y:-2.2,t:'y² = 2x',c:BLUE}],
+    xt:[2,4,6],yt:[-2,2,4]});
+  /* 4.7 ex4: crossing the river */
+  if(g('fig47s4'))plot(g('fig47s4'),{...D,x:[-1.6,9.6],y:[-1.1,4.0],
+    polys:[{p:[[-1.6,0],[9.6,0],[9.6,3],[-1.6,3]],c:BLUE,fo:.12,sw:0}],
+    segs:[{p:[-1.6,3],q:[9.6,3],c:INK6,w:2},{p:[-1.6,0],q:[9.6,0],c:INK6,w:2},{p:[0,3],q:[0,0],c:GRAY,w:1.4,dash:true},
+      {p:[0,3],q:[2.2,0],c:RED,w:2.6},{p:[2.2,0],q:[8,0],c:GREEN,w:3.2},{p:[0,-0.55],q:[8,-0.55],c:GRAY,w:1.2}],
+    pts:[{x:0,y:3,label:'A',dx:-4,dy:-8,c:INK6},{x:0,y:0,label:'C',dx:-14,dy:16,c:INK6},{x:2.2,y:0,label:'D',dx:-4,dy:16,c:INK6},{x:8,y:0,label:'B',dx:-4,dy:16,c:INK6}],
+    texts:[{x:-0.2,y:1.4,t:'3 km',c:INK6,anchor:'end'},{x:4,y:-0.95,t:'C 에서 B 까지 8 km',c:INK6,anchor:'middle'},{x:1.1,y:0.22,t:'x',c:INK6,anchor:'middle',w:700},
+      {x:1.45,y:1.75,t:'노 젓기 6 km/h',c:RED},{x:5.1,y:0.3,t:'달리기 8 km/h',c:GREEN,anchor:'middle'}]});
+  /* 4.7 ex5: rectangle in a semicircle */
+  if(g('fig47s5')){
+    const xa=0.55,ya=Math.sqrt(1-xa*xa);
+    plot(g('fig47s5'),{...D,x:[-1.35,1.35],y:[-0.18,1.4],
+      polys:[{p:[[-xa,0],[xa,0],[xa,ya],[-xa,ya]],c:BLUE,fo:.22,sc:BLUE,sw:2}],
+      items:[{f:x=>Math.sqrt(Math.max(0,1-x*x)),c:INK6,a:-1,b:1,N:400}],
+      segs:[{p:[-1.2,0],q:[1.2,0],c:INK6,w:2},{p:[0,0],q:[-0.8,0.6],c:RED,w:2}],
+      pts:[{x:xa,y:ya,label:'(x, y)',dx:8,dy:-4,c:BLUE},{x:0,y:0,r:3,c:INK6}],
+      texts:[{x:-0.47,y:0.36,t:'r',c:RED,anchor:'middle',w:700}]});
+  }
+  /* 6.2 ex7: disk base, equilateral-triangle cross-sections */
+  if(g('fig62s7')){
+    const P=(x,z,h=0)=>[x+0.5*z,0.35*z+h];
+    const base=[];for(let i=0;i<=80;i++){const t=2*Math.PI*i/80;base.push(P(Math.cos(t),Math.sin(t)))}
+    const tri=x=>{const zc=Math.sqrt(1-x*x),hgt=Math.sqrt(3)*zc;return [P(x,-zc),P(x,zc),P(x,0,hgt)]};
+    plot(g('fig62s7'),{...D,x:[-1.8,1.9],y:[-0.5,1.65],
+      polys:[{p:base,c:GRAY,fo:.12,sc:INK6,sw:1.8},{p:tri(-0.55),c:BLUE,fo:.08,sc:BLUE,sw:1,dash:true},{p:tri(0.45),c:BLUE,fo:.3,sc:BLUE,sw:2}],
+      segs:[{p:[-1.55,0],q:[1.7,0],c:GRAY,w:1.2,dash:true},{p:[0,0],q:[-1,0],c:RED,w:2.2}],
+      texts:[{x:-0.5,y:-0.13,t:'반지름 1',c:RED,anchor:'middle'},{x:1.72,y:0.04,t:'x',c:GRAY},{x:0.62,y:1.25,t:'정삼각형 단면',c:BLUE}]});
+  }
+  /* 6.2 ex8: square pyramid */
+  if(g('fig62s8')){
+    const P=(x,z,h=0)=>[x+0.5*z,0.35*z+h],A=P(0,0,1.55),c1=P(-1,-1),c2=P(1,-1),c3=P(1,1),c4=P(-1,1);
+    plot(g('fig62s8'),{...D,x:[-2.1,2.1],y:[-0.75,1.7],
+      polys:[{p:[c1,c2,A],c:BLUE,fo:.22,sw:0},{p:[c2,c3,A],c:BLUE,fo:.12,sw:0}],
+      segs:[{p:c1,q:c2,c:INK6,w:2},{p:c2,q:c3,c:INK6,w:2},{p:c1,q:A,c:INK6,w:2},{p:c2,q:A,c:INK6,w:2},{p:c3,q:A,c:INK6,w:2},
+        {p:c3,q:c4,c:GRAY,w:1.3,dash:true},{p:c4,q:c1,c:GRAY,w:1.3,dash:true},{p:c4,q:A,c:GRAY,w:1.3,dash:true},{p:A,q:P(0,0),c:GREEN,w:2,dash:true}],
+      texts:[{x:(c1[0]+c2[0])/2,y:c1[1]-0.28,t:'L',c:RED,anchor:'middle',w:700},{x:(c2[0]+c3[0])/2+0.12,y:(c2[1]+c3[1])/2-0.1,t:'L',c:RED,w:700},{x:0.08,y:0.75,t:'h',c:GREEN,w:700}]});
+  }
+  /* 6.2 ex9: wedge cut from a cylinder */
+  if(g('fig62s9')){
+    const k=Math.tan(Math.PI/6),P=(x,y,z=0)=>[x+0.55*y,0.38*y+z];
+    const base=[P(-1,0),...Array.from({length:61},(_,i)=>{const t=Math.PI*i/60;return P(Math.cos(t),Math.sin(t))}).reverse(),P(1,0)];
+    const topArc=Array.from({length:61},(_,i)=>{const t=Math.PI*i/60;return P(Math.cos(t),Math.sin(t),k*Math.sin(t))});
+    plot(g('fig62s9'),{...D,x:[-1.3,1.85],y:[-0.38,1.45],
+      polys:[{p:base,c:GRAY,fo:.14,sc:INK6,sw:1.6},{p:[P(1,0),...topArc,P(-1,0)],c:BLUE,fo:.28,sc:BLUE,sw:2}],
+      lines:[{p:[P(0,0),P(0,1),P(0,1,k),P(0,0)],c:RED,w:1.6,dash:true}],
+      segs:[{p:P(0,1),q:P(0,1,k),c:INK6,w:1.4},{p:P(-1,0),q:P(1,0),c:INK6,w:2.2},{p:P(0,0),q:P(0.5,0.866),c:GREEN,w:2}],
+      texts:[{x:P(0,0)[0]+0.2,y:P(0,0)[1]+0.08,t:'30°',c:RED,w:700},{x:P(0.25,0.43)[0]+0.08,y:P(0.25,0.43)[1]-0.12,t:'반지름 4',c:GREEN},
+        {x:P(1,0)[0]+0.05,y:P(1,0)[1]-0.12,t:'지름',c:INK6}]});
+  }
+  /* 6.4 ex5: inverted cone tank */
+  if(g('fig64s5'))plot(g('fig64s5'),{...D,x:[-6.2,6.2],y:[-0.6,11.2],
+    bands:[{y:true,a:0,b:8,lo:y=>-0.4*y,hi:y=>0.4*y,c:BLUE,fo:.22}],
+    segs:[{p:[0,0],q:[-4,10],c:INK6,w:2},{p:[0,0],q:[4,10],c:INK6,w:2},{p:[-4,10],q:[4,10],c:INK6,w:2},{p:[-3.2,8],q:[3.2,8],c:BLUE,w:1.4,dash:true},
+      {p:[-5,0],q:[-5,10],c:GREEN,w:2},{p:[5,0],q:[5,8],c:BLUE,w:2},{p:[0,10.35],q:[4,10.35],c:RED,w:2}],
+    texts:[{x:2,y:10.6,t:'4 m',c:RED,anchor:'middle',w:700},{x:-5.25,y:5,t:'10 m',c:GREEN,anchor:'end',w:700},{x:5.25,y:4,t:'물 8 m',c:BLUE,w:700}]});
 })();
 
 /* ---------- Riemann sum lab (5.2) ---------- */
